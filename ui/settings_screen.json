@@ -16,7 +16,6 @@
     "$include_controls_and_settings_sections": false,
     "$include_migrated_json_ui_settings_tabs|default": false,
     "$is_global_texture_packs_visible|default": true,
-    "$is_realm_slot|default": false,
     "$realm_no_world_edit|default": false,
     "$include_realm_invite_link_settings|default": false
   },
@@ -36,7 +35,6 @@
     "$include_controls_and_settings_sections": false,
     "$include_migrated_json_ui_settings_tabs|default": false,
     "$is_global_texture_packs_visible|default": true,
-    "$is_realm_slot|default": false,
     "$realm_no_world_edit|default": false,
     "$include_realm_invite_link_settings|default": false
   },

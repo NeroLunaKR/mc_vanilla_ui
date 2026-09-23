@@ -994,7 +994,6 @@
         "play_button@settings_common.action_button_dark_text": {
           "variables": {
             "requires": "$realm_no_world_edit",
-            "ignored": "$is_realm_slot",
             "$button_text": "realmsSettingsScreen.playRealmButton",
             "$pressed_button_name": "play_world_button",
             "$default_button_texture": "textures/ui/button_borderless_light",
@@ -1066,12 +1065,6 @@
       {
         "selector_group_label@settings_common.selector_group_label": {
           "$group_label_text|default": "realmsSettingsScreen.selectorSectionLabelRealm",
-          "variables": [
-            {
-              "requires": "$is_realm_slot",
-              "$group_label_text": "realmsSettingsScreen.worldSectionTitle"
-            }
-          ],
           "text": "$group_label_text",
           "offset": [ 2, 0 ],
           "layer": 2
@@ -1079,10 +1072,6 @@
       },
       {
         "world_button@settings_common.section_toggle_base": {
-          "variables": {
-            "requires": "$is_realm_slot",
-            "$button_text": "realmsSlotsScreen.gamesettings"
-          },
           "$toggle_view_binding_name": "world_button_toggle",
           "$toggle_group_forced_index": "$world_toggle_index",
           "$glyph_texture": "textures/ui/world_glyph",
@@ -1097,7 +1086,6 @@
       },
       {
         "members_button@settings_common.section_toggle_base": {
-          "ignored": "$is_realm_slot",
           "$toggle_view_binding_name": "members_button_toggle",
           "$toggle_group_forced_index": "$members_toggle_index",
           "$glyph_texture": "textures/ui/multiplayer_glyph",
@@ -1118,7 +1106,6 @@
       },
       {
         "subscription_button@settings_common.section_toggle_base": {
-          "ignored": "$is_realm_slot",
           "$toggle_view_binding_name": "subscription_button_toggle",
           "$toggle_group_forced_index": "$subscription_toggle_index",
           "$glyph_texture": "textures/ui/subscription_glyph",
@@ -1154,7 +1141,6 @@
       },
       {
         "invite_links_button@settings_common.section_toggle_base": {
-          "ignored": "$is_realm_slot",
           "$toggle_view_binding_name": "invite_links_button_toggle",
           "$toggle_group_forced_index": "$invite_links_toggle_index",
           "$glyph_texture": "textures/ui/share_google_glyph",
@@ -1175,7 +1161,6 @@
       },
       {
         "advanced_button@settings_common.section_toggle_base": {
-          "ignored": "$is_realm_slot",
           "$toggle_view_binding_name": "advanced_button_toggle",
           "$toggle_group_forced_index": "$advanced_toggle_index",
           "$glyph_texture": "textures/ui/advanced_glyph",
@@ -1211,7 +1196,6 @@
       },
       {
         "players_section@realms_settings.generic_section_wrapper": {
-          "ignored": "$is_realm_slot",
           "$section_button_name|default": "members_button_toggle",
           "$section_content_name|default": "realms_allowlist.friends_containing_panel",
           "$friend_panel_size": [ "100%", "100%c" ]
@@ -1219,21 +1203,18 @@
       },
       {
         "subscription_section@realms_settings.generic_section_wrapper": {
-          "ignored": "$is_realm_slot",
           "$section_button_name|default": "subscription_button_toggle",
           "$section_content_name|default": "realms_settings.subscriptions_section"
         }
       },
       {
         "invite_links_section@realms_settings.generic_section_wrapper": {
-          "ignored": "$is_realm_slot",
           "$section_button_name|default": "invite_links_button_toggle",
           "$section_content_name|default": "realms_settings.invite_links_section"
         }
       },
       {
         "advanced_section@realms_settings.generic_section_wrapper": {
-          "ignored": "$is_realm_slot",
           "$section_button_name|default": "advanced_button_toggle",
           "$section_content_name|default": "realms_settings.advanced_section"
         }
@@ -1339,8 +1320,7 @@
     "$section_header_panels|default": "common.empty_panel",
     "$section_footer_panels|default": "common.empty_panel",
     "$dialog_content": "realms_settings.standalone_dialog_content",
-    "$realm_no_world_edit|default": true,
-    "$is_realm_slot|default": false
+    "$realm_no_world_edit|default": true
   },
 
   "screen_realm_hub_manage_members@realms_settings.realms_settings_screen_base_no_selector_area": {
