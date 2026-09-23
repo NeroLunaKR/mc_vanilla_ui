@@ -147,9 +147,7 @@
                       "size": [ 4, "100%" ]
                     }
                   },
-                  {
-                    "$left_button": {}
-                  },
+                  { "$left_button": {} },
                   {
                     "padding_01": {
                       "type": "panel",
@@ -230,7 +228,6 @@
       }
     ]
   },
-
 
   "csb_buy_container": {
     "ignored": "($pre_release or $left_button_ignored)",

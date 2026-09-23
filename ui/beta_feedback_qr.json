@@ -1,13 +1,6 @@
-// Copyright (c) Mojang AB.  All rights reserved.
-
 {
   "namespace": "beta_feedback_qr",
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
   "beta_feedback_qr@common.base_screen": {
     "button_mappings": [
       {
@@ -37,11 +30,6 @@
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    dialog
-  //
-  // -----------------------------------------------
   "beta_feedback_qr_popup@common_dialogs.main_panel_one_button": {
     "size": [ 380, 210 ],
     "$text_name": "betaFeedback.qr.title",
@@ -63,9 +51,7 @@
     "size": [ "100% - 4px", "100% - 4px" ],
     "orientation": "horizontal",
     "controls": [
-      {
-        "left_panel@beta_feedback_qr.left_panel": {}
-      },
+      { "left_panel@beta_feedback_qr.left_panel": {} },
       {
         "divider@common.vertical_divider": {
           "size": [ 8, "100%" ],
@@ -73,17 +59,10 @@
           "anchor_to": "top_middle"
         }
       },
-      {
-        "right_panel@beta_feedback_qr.right_panel": {}
-      }
+      { "right_panel@beta_feedback_qr.right_panel": {} }
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    panels
-  //
-  // -----------------------------------------------
   "left_panel": {
     "type": "stack_panel",
     "size": [ "50% - 6px", "100%" ],

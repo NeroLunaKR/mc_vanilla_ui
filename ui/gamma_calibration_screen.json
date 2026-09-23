@@ -1,7 +1,6 @@
 {
   "namespace": "gamma_calibration",
 
-
   "stack_panel_centering_panel": {
     "type": "panel",
     "$control_name|default": "common.empty_panel",
@@ -79,17 +78,13 @@
           "$texture_name": "textures/ui/not_visible_creeper"
         }
       },
-      {
-        "padding_0@gamma_calibration.horizontal_padding": {}
-      },
+      { "padding_0@gamma_calibration.horizontal_padding": {} },
       {
         "barely_visible_image@gamma_calibration.image_panel": {
           "$texture_name": "textures/ui/barely_visible_creeper"
         }
       },
-      {
-        "padding_1@gamma_calibration.horizontal_padding": {}
-      },
+      { "padding_1@gamma_calibration.horizontal_padding": {} },
       {
         "easily_visible_image@gamma_calibration.image_panel": {
           "$texture_name": "textures/ui/easily_visible_creeper"
@@ -118,7 +113,7 @@
       {
         "reset_button_panel@gamma_calibration.stack_panel_align_right_panel": {
           "$control_name": "gamma_calibration.reset_button",
-            "size": [ "60%", "100%c" ]
+          "size": [ "60%", "100%c" ]
         }
       }
     ]
@@ -236,8 +231,8 @@
       },
       {
         "button_stack_panel@gamma_calibration.stack_panel_centering_panel": {
-            "$control_name": "gamma_calibration.button_stack",
-            "size": [ "100%", "100%c" ]
+          "$control_name": "gamma_calibration.button_stack",
+          "size": [ "100%", "100%c" ]
         }
       }
     ]
@@ -246,5 +241,4 @@
   "gamma_calibration_screen@common.base_screen": {
     "$screen_content": "gamma_calibration.main_panel"
   }
-
 }

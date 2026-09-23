@@ -1,10 +1,6 @@
 {
   "namespace": "common",
 
-  //---------------------------------------------------------------------------
-  // Common controls
-  //---------------------------------------------------------------------------
-
   "empty_panel": {
     "type": "panel"
   },
@@ -43,7 +39,6 @@
 
   "button": {
     "type": "button",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -59,22 +54,18 @@
     "focus_magnet_enabled": true,
     "$focus_wrap_enabled|default": true,
     "focus_wrap_enabled": "$focus_wrap_enabled",
-
     "$button_focus_precedence|default": 0,
     "default_focus_precedence": "$button_focus_precedence",
-
     "$button_tts_name|default": "accessibility.button.tts.title",
     "$button_tts_header|default": "",
     "$tts_section_header|default": "",
     "$button_tts_control_type_order_priority|default": 100,
     "$button_tts_index_priority|default": 150,
-
     "tts_name": "$button_tts_name",
     "tts_control_header": "$button_tts_header",
     "tts_section_header": "$tts_section_header",
     "tts_control_type_order_priority": "$button_tts_control_type_order_priority",
     "tts_index_priority": "$button_tts_index_priority",
-
     "layer": 1,
     "sound_name": "random.click",
     "sound_volume": 1.0,
@@ -95,7 +86,6 @@
         "mapping_type": "focused"
       }
     ],
-
     "$button_bindings|default": [],
     "bindings": "$button_bindings"
   },
@@ -293,23 +283,17 @@
     ]
   },
 
-  "tts_activate_sibling@common.button": { // If there's a label or panel or disabled button that needs to be selectable for TTS, or controller navigation.  Just put this next to it.
+  "tts_activate_sibling@common.button": {
     "sound_volume": 0,
-    "size": [ "100%sm", "100%sm" ], // Since this uses sibling max, the control needs to either be isolated with just this as a sibling, or needs to be the largest in the set.
-    "$pressed_button_name": "button.focus_filler", // Might need an offset to look correct, it depends on what this is a sibling of.
+    "size": [ "100%sm", "100%sm" ],
+    "$pressed_button_name": "button.focus_filler",
     "$button_tts_name": "",
     "focus_enabled": true,
     "tts_inherit_siblings": true,
     "controls": [
-      {
-        "default@common.empty_panel": {}
-      },
-      {
-        "pressed@common.label_hover": {}
-      },
-      {
-        "hover@common.label_hover": {}
-      }
+      { "default@common.empty_panel": {} },
+      { "pressed@common.label_hover": {} },
+      { "hover@common.label_hover": {} }
     ]
   },
 
@@ -365,7 +349,6 @@
 
   "toggle@common.toggle_visuals": {
     "type": "toggle",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -379,17 +362,13 @@
     "$toggle_focus_enabled|default": true,
     "focus_enabled": "$toggle_focus_enabled",
     "focus_magnet_enabled": true,
-
     "$default_focus_precedence|default": 0,
     "default_focus_precedence": "$default_focus_precedence",
-
     "$allow_controller_back_button_mapping|default": false,
-
     "layer": 1,
     "sound_name": "random.click",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
-
     "checked_control": "checked",
     "unchecked_control": "unchecked",
     "checked_hover_control": "checked_hover",
@@ -398,7 +377,6 @@
     "unchecked_locked_control": "unchecked_locked",
     "checked_locked_hover_control": "checked_locked_hover",
     "unchecked_locked_hover_control": "unchecked_locked_hover",
-
     "$radio_toggle_group|default": false,
     "$toggle_default_state|default": false,
     "$toggle_group_forced_index|default": -1,
@@ -416,7 +394,6 @@
     "$toggle_grid_collection_name|default": "",
     "$toggle_collection_details_type|default": "none",
     "$toggle_collection_detail_name|default": "",
-
     "$toggle_tts_name|default": "accessibility.toggle.tts.title",
     "$toggle_tts_header_binding_type|default": "none",
     "$toggle_tts_header_binding_condition|default": "visible",
@@ -433,27 +410,21 @@
     "$toggle_tts_inherit_siblings|default": false,
     "$tts_section_header|default": "",
     "$tts_skip_enumeration|default": false,
-
     "$ignore_tts_enabled_bind|default": false,
     "$toggle_focus_bind|default": "",
-
     "radio_toggle_group": "$radio_toggle_group",
     "toggle_name": "$toggle_name",
     "toggle_default_state": "$toggle_default_state",
     "toggle_group_forced_index": "$toggle_group_forced_index",
     "toggle_group_default_selected": "$toggle_group_default_selected",
     "toggle_grid_collection_name": "$toggle_grid_collection_name",
-
     "$enable_directional_toggling|default": false,
     "$toggle_on_button|default": "toggle.toggle_on",
     "$toggle_off_button|default": "toggle.toggle_off",
-
     "$toggle_tts_enabled_binding_type|default": "none",
-
     "enable_directional_toggling": "$enable_directional_toggling",
     "toggle_on_button": "$toggle_on_button",
     "toggle_off_button": "$toggle_off_button",
-
     "tts_toggle_on": "$toggle_tts_toggle_on_text",
     "tts_toggle_off": "$toggle_tts_toggle_off_text",
     "tts_name": "$toggle_tts_name",
@@ -465,7 +436,6 @@
     "tts_inherit_siblings": "$toggle_tts_inherit_siblings",
     "tts_ignore_count": false,
     "tts_skip_enumeration": "$tts_skip_enumeration",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -498,13 +468,10 @@
         "input_mode_condition": "gamepad"
       }
     ],
-
     "$toggle_property_bag|default": {
       "#toggle_state": true
     },
-
     "property_bag": "$toggle_property_bag",
-
     "bindings": [
       {
         "binding_type": "$toggle_binding_type",
@@ -616,7 +583,6 @@
     "hover_alpha": 1.0,
     "pressed_color": [ 1.0, 1.0, 0.2, 1.0 ],
     "pressed_alpha": 0.65,
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -806,9 +772,7 @@
     "$background_control_name|default": "slider_background",
     "$progress_control_name|default": "slider_progress",
     "$progress_clip_direction|default": "left",
-
     "color": "$slider_default_border_color",
-
     "controls": [
       {
         "sizing_panel": {
@@ -852,7 +816,6 @@
 
   "slider_bar_hover@common.slider_bar_default": {
     "color": "$slider_hover_border_color",
-
     "$background_control": "common.slider_background_hover",
     "$progress_control": "common.slider_progress_hover",
     "$background_control_name": "slider_background_hover",
@@ -881,7 +844,6 @@
 
   "slider": {
     "type": "slider",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -893,31 +855,23 @@
     "focus_change_left": "$focus_override_left",
     "focus_change_right": "$focus_override_right",
     "focus_enabled": true,
-
     "$default_focus_precedence|default": 0,
     "default_focus_precedence": "$default_focus_precedence",
-
     "$slider_select_on_hover|default": false,
     "slider_select_on_hover": "$slider_select_on_hover",
-
     "layer": 1,
     "always_listen_to_input": false,
     "always_handle_pointer": true,
     "slider_box_control": "slider_box",
-
-    // Slider box
     "$slider_box_layout|default": "common.slider_button_layout",
     "$slider_box_hover_layout|default": "common.slider_button_hover_layout",
     "$slider_box_locked_layout|default": "common.slider_button_locked_layout",
     "$slider_box_indent_layout|default": "common.slider_button_indent_layout",
     "$slider_box_size|default": [ 10, 16 ],
-
-    // Slider
     "$slider_track_button|default": "button.slider_skip_track",
     "$slider_direction|default": "horizontal",
     "$slider_steps|default": 1,
     "$slider_collection_name|default": "",
-
     "slider_name": "$slider_name",
     "slider_track_button": "$slider_name",
     "slider_direction": "$slider_direction",
@@ -935,55 +889,45 @@
     "$slider_timeout_binding_type|default": "none",
     "$slider_timeout_binding_condition|default": "once",
     "$slider_timeout_binding_name|default": "#slider_timeout",
-
     "$slider_tts_binding_type|default": "global",
     "$slider_tts_binding_condition|default": "visible",
-
     "$slider_tts_header|default": "",
     "$slider_tts_header_binding_type|default": "none",
     "$slider_tts_header_binding_condition|default": "visible",
     "$slider_header_collection_name": "",
-    "$slider_tts_override_value|default": " ", // The header will likely always displays the slider value
+    "$slider_tts_override_value|default": " ",
     "$slider_tts_name|default": "accessibility.slider.tts.title",
     "$slider_tts_text_value|default": "",
     "$tts_section_header|default": "",
-
     "default_control": "slider_bar_default",
     "hover_control": "slider_bar_hover",
     "background_control": "slider_background",
     "background_hover_control": "slider_background_hover",
     "progress_control": "slider_progress",
     "progress_hover_control": "slider_progress_hover",
-
     "tts_control_header": "$slider_tts_header",
     "tts_section_header": "$tts_section_header",
     "tts_override_control_value": "$slider_tts_override_value",
     "tts_name": "$slider_tts_name",
     "tts_value_changed": "$slider_tts_text_value",
-
-
     "$slider_small_decrease_button|default": "slider.small_decrease",
     "$slider_small_increase_button|default": "slider.small_increase",
     "$slider_selected_button|default": "slider.selected",
     "$slider_deselected_button|default": "slider.deselected",
-
     "slider_small_decrease_button": "$slider_small_decrease_button",
     "slider_small_increase_button": "$slider_small_increase_button",
     "slider_selected_button": "$slider_selected_button",
     "slider_deselected_button": "$slider_deselected_button",
-
     "$slider_step_factory_control_ids": {
       "slider_step": "@common.slider_step",
       "slider_step_hover": "@common.slider_step_hover",
       "slider_step_progress": "@common.slider_step_progress",
       "slider_step_progress_hover": "@common.slider_step_progress_hover"
     },
-
     "factory": {
       "name": "slider_step_factory",
       "control_ids": "$slider_step_factory_control_ids"
     },
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -1038,9 +982,7 @@
           "$slider_track_button": "$slider_name"
         }
       },
-      {
-        "slider_bar_default@common.slider_bar_default": {}
-      },
+      { "slider_bar_default@common.slider_bar_default": {} },
       {
         "slider_bar_hover@common.slider_bar_hover": {
           "visible": false
@@ -1104,14 +1046,12 @@
 
   "dropdown": {
     "type": "panel",
-
     "$dropdown_content|default": "common.empty_panel",
     "$dropdown_toggle|default": "common.checkbox",
     "$dropdown_name|default": "dropdown_control",
     "$dropdown_scroll_content_size|default": [ "100%", "500%" ],
     "$dropdown_toggle_name|default": "($dropdown_name + '_toggle')",
     "$dropdown_background|default": "common.dropdown_background",
-
     "controls": [
       {
         "$dropdown_name@$dropdown_toggle": {
@@ -1127,13 +1067,12 @@
           "$toggle_tts_name": "accessibility.dropdown.tts.title",
           "$toggle_tts_toggle_on_text": "",
           "$toggle_tts_toggle_off_text": "",
-          "tts_control_type_order_priority": -1 // This should happen before labels whose default starts at 0
+          "tts_control_type_order_priority": -1
         }
       },
       {
         "dropdown_content": {
           "type": "input_panel",
-          // we really want this on top of everything
           "layer": 42,
           "size": "$dropdown_scroll_content_size",
           "$anchor_dropdown_content_from|default": "top_left",
@@ -1242,7 +1181,6 @@
     ]
   },
 
-  // This copy is for the border of images that we want to be allow to be overridden separately with resource packs - we want this to be different from button use
   "square_image_border_white": {
     "type": "image",
     "layer": 2,
@@ -1273,14 +1211,13 @@
   "non_interact_focus_border_button@common.button": {
     "size": [ "100%", "100%" ],
     "sound_volume": 0.0,
-    "$pressed_button_name|default": "button.focus_filler", // This event is not intended to be handled anywhere
-    "$button_tts_name": "", // We don't want TTS to say "button" here
+    "$pressed_button_name|default": "button.focus_filler",
+    "$button_tts_name": "",
     "$default_focus_border_control|default": "common.empty_panel",
     "$hover_focus_border_control|default": "common.non_interact_focus_border",
     "$pressed_focus_border_control|default": "common.non_interact_focus_border",
     "$content_inside|default": "common.empty_panel",
     "$border_size|default": [ "100%", "100%" ],
-
     "controls": [
       {
         "default@$default_focus_border_control": {
@@ -1311,9 +1248,7 @@
     "$focus_border_consume_hover_events|default": true,
     "size": [ "100%", "100%cm" ],
     "controls": [
-      {
-        "label@$tts_label_panel": {}
-      },
+      { "label@$tts_label_panel": {} },
       {
         "focus_border@common.non_interact_focus_border_button": {
           "size": "$focus_border_size",
@@ -1370,9 +1305,7 @@
 
   "text_edit_box_label": {
     "type": "label",
-
     "$text_edit_box_label_hide_hyphen|default": false,
-
     "localize": false,
     "enable_profanity_filter": "$enable_profanity_filter",
     "shadow": "$shadow",
@@ -1383,7 +1316,6 @@
     "font_size": "$font_size",
     "text_alignment": "$text_alignment",
     "hide_hyphen": "$text_edit_box_label_hide_hyphen",
-
     "$shadow|default": false,
     "$enable_profanity_filter|default": false,
     "$newline_refresh|default": "#newline_refresh",
@@ -1392,26 +1324,20 @@
     "$locked_text_alpha|default": 0.5,
     "$font_size|default": "normal",
     "$text_alignment|default": "left",
-
     "$text_edit_box_collection_details_binding_type|default": "none",
     "$text_edit_box_collection_details_binding_name|default": "",
     "$text_edit_box_collection_details_binding_prefix|default": "",
-
     "$text_edit_box_content_binding_type|default": "global",
     "$text_edit_box_content_binding_name|default": "#text_box_item_name",
     "$text_edit_box_binding_condition|default": "visible",
     "$text_box_name|default": "#text_box_name",
-
     "$text_color_binding_name|default": "#edit_box_text_color",
     "$text_color_binding_type|default": "none",
-
     "text": "#item_name",
     "$text_edit_box_binding_type": "global",
     "$text_edit_box_binding_collection_name": "",
-
     "$text_box_tts_name|default": "",
     "tts_name": "$text_box_tts_name",
-
     "property_bag": {
       "#property_field": "#item_name"
     },
@@ -1441,7 +1367,6 @@
 
   "text_edit_box_place_holder_label": {
     "type": "label",
-
     "localize": true,
     "shadow": "$shadow",
     "color": "$place_holder_text_color",
@@ -1450,26 +1375,21 @@
     "locked_alpha": "$locked_text_alpha",
     "font_size": "$font_size",
     "text_alignment": "$text_alignment",
-
     "$shadow|default": false,
     "$text_alpha|default": 1.0,
     "$locked_text_alpha|default": 0.5,
     "$font_size|default": "normal",
     "$text_alignment|default": "left",
-
     "$text_edit_box_placeholder_content_binding_type|default": "global",
     "$text_edit_box_placeholder_content_binding_name|default": "#text_box_item_name",
     "$text_edit_box_placeholder_binding_condition|default": "visible",
     "$text_box_name|default": "#text_box_name",
-
     "$place_holder_text|default": "",
     "$place_holder_tts|default": "$place_holder_text",
-
     "text": "$place_holder_text",
     "tts_override_control_value": "$place_holder_tts",
     "$text_edit_box_placeholder_binding_type": "global",
     "$text_edit_box_placeholder_binding_collection_name": "",
-
     "bindings": [
       {
         "binding_type": "$text_edit_box_placeholder_content_binding_type",
@@ -1518,7 +1438,6 @@
 
   "text_edit_box": {
     "type": "edit_box",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -1530,57 +1449,47 @@
     "focus_change_left": "$focus_override_left",
     "focus_change_right": "$focus_override_right",
     "focus_enabled": true,
-
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 1,
     "enabled": "#enabled",
-
     "$text_box_name|default": "#text_box_name",
     "$text_box_enabled_binding_name|default": "#text_box_enabled",
     "$text_edit_box_enabled_binding_type|default": "global",
     "$text_edit_box_grid_collection_name|default": "",
     "$text_edit_clipping_panel_size|default": [ "100%", "100%" ],
+    "$text_edit_clip_offset|default": [ 0, 0 ],
     "$text_edit_box_label_size|default": [ "default", "default" ],
     "$text_edit_box_label_anchor_point|default": "right_middle",
     "$text_edit_box_label_min_size|default": [ "100%", 0 ],
     "$text_edit_box_label_offset|default": [ 0, 0 ],
     "$text_edit_box_label_anims|default": [],
     "$text_edit_box_label_animation_reset_name|default": "",
-
     "text_box_name": "$text_box_name",
     "text_edit_box_grid_collection_name": "$text_edit_box_grid_collection_name",
-
     "$deselectable_binding_type|default": "none",
     "$deselectable_binding_name|default": "#can_be_deselected",
-
     "$text_edit_box_focusable_binding_name|default": "#text_edit_box_focusable",
-
     "$text_edit_visible_binding_name|default": "#text_edit_box_visible",
     "$text_edit_visible_binding_collection_name|default": "",
     "$text_edit_visible_binding_type|default": "none",
-
     "$text_edit_type_name|default": "accessibility.textbox.tts.title",
     "$text_box_tts_header|default": "",
     "$tts_section_header|default": "",
     "$tts_skip_enumeration|default": false,
     "$tts_override_control_value|default": " ",
-
     "tts_name": "$text_edit_type_name",
     "tts_control_header": "$text_box_tts_header",
     "tts_section_header": "$tts_section_header",
     "tts_skip_enumeration": "$tts_skip_enumeration",
     "tts_override_control_value": "$tts_override_control_value",
-
     "$text_edit_box_collection_details_binding_type|default": "none",
     "$text_edit_box_collection_details_binding_name|default": "",
     "$text_edit_box_collection_details_binding_prefix|default": "",
-
     "$store_factory_collection_details|default": "collection_details",
     "$store_factory_binding_type|default": "collection",
     "$store_factory_collection_prefix|default": "factory",
     "$store_factory_collection_name|default": "factory_collection",
-
     "bindings": [
       {
         "binding_type": "$text_edit_box_collection_details_binding_type",
@@ -1615,35 +1524,27 @@
         "binding_collection_prefix": "$store_factory_collection_prefix"
       }
     ],
-
     "locked_control": "locked",
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "pressed",
-
     "max_length": 14,
     "$text_edit_box_text_type|default": "ExtendedASCII",
     "text_type": "$text_edit_box_text_type",
-
     "$virtual_keyboard_buffer_control|default": "",
     "virtual_keyboard_buffer_control": "$virtual_keyboard_buffer_control",
-
     "$text_edit_text_control|default": "display_text",
     "text_control": "$text_edit_text_control",
     "$place_holder_control": "common.text_edit_box_place_holder_label",
     "$text_background_default": "common.edit_box_indent",
     "$text_background_hover": "common.edit_box_indent_hover",
     "place_holder_control": "place_holder_control",
-
     "$text_edit_box_hovered_button_id|default": "button.text_edit_box_hovered",
-
     "$text_edit_box_clear_from_button_id|default": "button.menu_clear",
     "$text_edit_box_clear_to_button_id|default": "button.text_edit_box_clear",
     "$text_edit_box_clear_scope|default": "view",
-
     "$text_edit_box_selected_to_button_id|default": "button.text_edit_box_selected",
     "$text_edit_box_deselected_to_button_id|default": "button.text_edit_box_deselected",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -1658,7 +1559,6 @@
         "handle_select": false,
         "handle_deselect": true,
         "mapping_type": "global",
-        // Deselect textbox and allow selection of another UI control with same mouse press
         "consume_event": false
       },
       {
@@ -1694,24 +1594,20 @@
         "mapping_type": "focused"
       }
     ],
-
     "$shadow": false,
     "$font_size": "normal",
     "$color|default": [ 1, 1, 1, 1 ],
     "$alpha|default": 1.0,
     "$disabled_alpha|default": 0.5,
     "$text_offset|default": [ 0, 0 ],
-
     "$place_holder_text_hover_color|default": "$text_box_text_color",
     "place_holder_text_hover_color": "$place_holder_text_hover_color",
-
     "$text_clear_button_enabled|default": false,
     "$text_clear_button_size|default": [ 15, 15 ],
     "$text_clear_button_offset|default": [ 0, 0 ],
     "$magnifying_glass_enabled|default": false,
     "$magnifying_glass_size|default": [ 10, 10 ],
     "$magnifying_glass_offset|default": [ 0, 0 ],
-
     "controls": [
       {
         "centering_panel": {
@@ -1726,6 +1622,7 @@
                 "anchor_to": "left_middle",
                 "offset": "$text_offset",
                 "clips_children": true,
+                "clip_offset": "$text_edit_clip_offset",
                 "$disabled_color|default": "$color",
                 "controls": [
                   {
@@ -1796,7 +1693,6 @@
                           }
                         }
                       ],
-
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -1904,7 +1800,6 @@
                           }
                         }
                       ],
-
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -1944,7 +1839,6 @@
 
   "transparent_text_edit_box": {
     "type": "edit_box",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -1956,12 +1850,10 @@
     "focus_change_left": "$focus_override_left",
     "focus_change_right": "$focus_override_right",
     "focus_enabled": true,
-
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 1,
     "enabled": "#enabled",
-
     "$text_box_name|default": "#text_box_name",
     "$text_box_enabled_binding_name|default": "#text_box_enabled",
     "$text_edit_box_enabled_binding_type|default": "global",
@@ -1970,10 +1862,8 @@
     "$text_edit_box_label_anchor_point|default": "right_middle",
     "$text_edit_box_label_min_size|default": [ "100%", 0 ],
     "$text_edit_box_label_offset|default": [ 0, 0 ],
-
     "text_box_name": "$text_box_name",
     "text_edit_box_grid_collection_name": "$text_edit_box_grid_collection_name",
-
     "bindings": [
       {
         "binding_type": "$text_edit_box_enabled_binding_type",
@@ -1982,23 +1872,19 @@
         "binding_name_override": "#enabled"
       }
     ],
-
     "locked_control": "locked",
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "pressed",
-
     "max_length": 14,
     "text_type": "ExtendedASCII",
     "$box_texture|default": "textures/ui/imagetaggedcorner",
-
     "$text_edit_text_control|default": "display_text",
     "text_control": "$text_edit_text_control",
     "$place_holder_control": "common.text_edit_box_place_holder_label",
     "$text_background_default": "common.transparent_edit_box_indent",
     "$text_background_hover": "common.transparent_edit_box_indent_hover",
     "place_holder_control": "place_holder_control",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -2022,7 +1908,6 @@
         "mapping_type": "global"
       }
     ],
-
     "$shadow": false,
     "$font_size": "normal",
     "$color|default": [ 1, 1, 1, 1 ],
@@ -2032,7 +1917,6 @@
     "$text_offset|default": [ 0, 0 ],
     "$place_holder_text_hover_color|default": "$text_box_text_color",
     "place_holder_text_hover_color": "$place_holder_text_hover_color",
-
     "controls": [
       {
         "clipper_panel": {
@@ -2077,7 +1961,6 @@
                     }
                   }
                 ],
-
                 "bindings": [
                   {
                     "binding_type": "view",
@@ -2115,8 +1998,8 @@
   "multiline_text_edit_box@common.text_edit_box": {
     "enabled_newline": true,
     "max_length": 100,
+    "$text_edit_clip_offset": [ 0, -3 ],
     "$text_edit_box_label_size": [ "100%", "100%" ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -2165,7 +2048,6 @@
     "enabled_newline": true,
     "max_length": 100,
     "$text_edit_box_label_size": [ "100%", "100%" ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -2213,11 +2095,9 @@
   "text_edit_control@common.text_edit_box": {
     "size": [ "fill", "100%" ],
     "layer": 1,
-
     "property_bag": {
       "#property_field": "#item_name"
     },
-
     "max_length": 30,
     "$text_edit_binding_name": "#text_box_item_name",
     "$text_edit_box_label_size": [ "default", 10 ],
@@ -2226,16 +2106,13 @@
     "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
     "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
     "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
-
     "$text_clear_button_enabled": true,
     "$text_clear_button_size": [ 15, 15 ],
     "$text_clear_button_offset": [ 2, 0 ],
     "$magnifying_glass_enabled": true,
     "$magnifying_glass_size": [ 8, 8 ],
     "$magnifying_glass_offset": [ 0, -0.5 ],
-
     "focus_wrap_enabled": false,
-
     "$focus_id": "recipe_search_bar",
     "$text_edit_type_name": "accessibility.tts.searchbar",
     "$tts_skip_enumeration": true
@@ -2416,16 +2293,12 @@
           "layer": 2,
           "font_type": "$font_type",
           "font_size": "$font_size",
-
           "font_scale_factor": "$single_line_font_scale_factor",
-
           "$single_line_label_color|default": "$body_text_color",
           "color": "$single_line_label_color",
-
           "text_alignment": "left",
           "$single_line_label_text|default": "",
           "text": "$single_line_label_text",
-
           "controls": "$underline_control",
           "$label_text_bindings|default": [],
           "bindings": "$label_text_bindings"
@@ -2433,10 +2306,6 @@
       }
     ]
   },
-
-  /////////////////////////////////////////////////////////////////////////////
-  // Gamepad helper common
-  /////////////////////////////////////////////////////////////////////////////
 
   "gamepad_helper_icon_description": {
     "type": "label",
@@ -2485,7 +2354,6 @@
     "$gamepad_helper_visible_binding_name|default": "#gamepad_helper_visible",
     "$gamepad_helper_visible_binding_type|default": "global",
     "$gamepad_helper_binding_condition|default": "none",
-
     "bindings": [
       {
         "binding_type": "$gamepad_helper_visible_binding_type",
@@ -2554,7 +2422,6 @@
       { "gamepad_helper_b@common.gamepad_helper_b": {} }
     ]
   },
-
 
   "container_gamepad_helpers@gamepad_helpers": {
     "$x_y_a_b_stack_panel_orientation|default": "horizontal",
@@ -2634,11 +2501,6 @@
       }
     ]
   },
-
-  /////////////////////////////////////////////////////////////////////////////
-  // Gamepad Pocket Trigger and Bumper Helpers
-  /////////////////////////////////////////////////////////////////////////////
-
 
   "tabs_left_gamepad_helpers": {
     "type": "panel",
@@ -2730,10 +2592,6 @@
 
   "container_b_gamepad_helper@common.gamepad_helper_b_14": {},
 
-  /////////////////////////////////////////////////////////////////////////////
-  // Keyboard helper common
-  /////////////////////////////////////////////////////////////////////////////
-
   "keyboard_helper_description": {
     "type": "label",
     "color": "$gamepad_description_text_color",
@@ -2782,7 +2640,6 @@
             {
               "image@common.keyboard_helper_icon_image": {
                 "size": "$icon_size",
-
                 "controls": [
                   {
                     "keyboard_character": {
@@ -2826,9 +2683,6 @@
     "size": [ "98%", 16 ]
   },
 
-  // Buttons
-  /////////////////////////////////////////////////////////////////////////////
-
   "gamepad_icon_button@common.gamepad_helper_icon_image": {
     "$gamepad_icon_size|default": [ 26, 26 ],
     "$gamepad_icon_visible_binding_name|default": "#gamepad_helper_visible",
@@ -2859,6 +2713,7 @@
     "$icon_description_bind": "#button_a_description",
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
+
   "gamepad_helper_face_down@gamepad_helper": {
     "$icon_texture": "#controller_fixed_face_down_icon",
     "$icon_description_bind": "#button_a_description",
@@ -2876,6 +2731,7 @@
     "$icon_description_bind": "#button_b_description",
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
+
   "gamepad_helper_face_right@gamepad_helper": {
     "$icon_texture": "#controller_fixed_face_right_icon",
     "$icon_description_bind": "#button_b_description",
@@ -2893,6 +2749,7 @@
     "$icon_description_bind": "#button_x_description",
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
+
   "gamepad_helper_face_left@gamepad_helper": {
     "$icon_texture": "#controller_fixed_face_left_icon",
     "$icon_description_bind": "#button_x_description",
@@ -2910,6 +2767,7 @@
     "$icon_description_bind": "#button_y_description",
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
+
   "gamepad_helper_face_up@common.gamepad_helper": {
     "$icon_texture": "#controller_fixed_face_up_icon",
     "$icon_description_bind": "#button_y_description",
@@ -2927,9 +2785,6 @@
     "$description_bind": "#button_keyboard_description"
   },
 
-  // Triggers
-  /////////////////////////////////////////////////////////////////////////////
-
   "gamepad_helper_left_trigger@gamepad_helper": {
     "$icon_texture": "#controller_left_trigger",
     "$icon_description_bind": "#controller_left_trigger_description",
@@ -2941,7 +2796,6 @@
     "$icon_description_bind": "#controller_right_trigger_description",
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
-
 
   "keyboard_left_trigger@keyboard_helper": {
     "$text_color": "$keyboard_helper_keys",
@@ -2955,9 +2809,6 @@
     "$keyboard_character": "]"
   },
 
-  // D-Pad
-  /////////////////////////////////////////////////////////////////////////////
-
   "gamepad_icon_dpad@gamepad_helper_icon_image": {
     "texture": "textures/ui/gamepad_icon_dpad",
     "size": [ 21, 21 ]
@@ -2967,9 +2818,6 @@
     "$icon_description_bind": "#button_dpad_description",
     "$icon_image_ref": "icon@common.gamepad_icon_dpad"
   },
-
-  // D-Pad - Directional
-  /////////////////////////////////////////////////////////////////////////////
 
   "gamepad_helper_dpad_down@gamepad_helper": {
     "$icon_texture": "#controller_dpad_down_icon",
@@ -2995,9 +2843,6 @@
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
 
-  // Thumbstick
-  /////////////////////////////////////////////////////////////////////////////
-
   "gamepad_icon_thumbstick@gamepad_helper_icon_image": {
     "$icon_texture": "textures/ui/gamepad_icon_thumbstick",
     "size": [ 12, 9 ]
@@ -3007,9 +2852,6 @@
     "$icon_description_bind": "#button_thumbstick_description",
     "$icon_image_ref": "icon@common.gamepad_icon_thumbstick"
   },
-
-  // Thumbstick Buttons
-  /////////////////////////////////////////////////////////////////////////////
 
   "gamepad_helper_thumbstick_right@gamepad_helper": {
     "$icon_texture": "#controller_right_stick_icon",
@@ -3022,9 +2864,6 @@
     "$icon_description_bind": "#button_thumbstick_left_description",
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
-
-  // Bumpers
-  /////////////////////////////////////////////////////////////////////////////
 
   "gamepad_helper_left_bumper@gamepad_helper": {
     "$icon_texture": "#controller_left_bumper_icon",
@@ -3039,10 +2878,6 @@
     "$gamepad_description_offset": [ 2, 0 ],
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
-
-  //---------------------------------------------------------------------------
-  // #region common inventory
-  //---------------------------------------------------------------------------
 
   "dialog_background_common": {
     "type": "image",
@@ -3071,53 +2906,38 @@
     "texture": "textures/ui/dialog_background_opaque"
   },
 
-  // Title area has space for text
-  // Area under hollow available for controls
   "dialog_background_hollow_1@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_1"
   },
 
-  // Title area has space for text
-  // Area under hollow available for buttons
   "dialog_background_hollow_2@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_2"
   },
 
-  // Title area has space for text
-  // No other area available besides hollow area
   "dialog_background_hollow_3@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_3"
   },
 
-  // No area available besides hollow area
-  // Good for tabbed content areas
   "dialog_background_hollow_4@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_4"
   },
+
   "dialog_background_hollow_4_thin@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_4_thin"
   },
 
-  // Title area has space for text (smaller than hollow 2)
-  // Area under hollow available for buttons
   "dialog_background_hollow_5@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_5"
   },
 
-  // Title area has space for text
-  // Area under hollow available for controls (larger than hollow 1)
   "dialog_background_hollow_6@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_6"
   },
 
-  // Title area has space for controls
-  // No other area available besides hollow area
   "dialog_background_hollow_7@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_7"
   },
 
-  // Title Area has no space for controls
-  // small icon button area in bottom right corner, size of icon button area does not change with scaling
   "dialog_background_hollow_8@dialog_background_hollow_common": {
     "texture": "textures/ui/dialog_background_hollow_8"
   },
@@ -3205,13 +3025,12 @@
     "type": "label",
     "font_type": "MinecraftTen",
     "backup_font_type": "UIFont",
-    "color": "$generic_button_text_color", // We have to specify a color for unit tests - expect to override this when used.
-
+    "color": "$generic_button_text_color",
     "variables": [
       {
-        "requires": "(not $is_low_memory_device)", // We don't load MinecraftTen in these cases so we need to revert to Mojangles.
+        "requires": "(not $is_low_memory_device)",
         "font_scale_factor": 1.39,
-        "offset": [ 0, -2 ] // Because of how the font is rendered it looks like it is offset down from the center of the render area
+        "offset": [ 0, -2 ]
       }
     ]
   },
@@ -3263,16 +3082,13 @@
     "$button_tts_header|default": "accessibility.button.close",
     "$tts_section_header|default": "",
     "$tts_skip_enumeration|default": false,
-
     "$close_button_visible_collection_details|default": "none",
     "$close_button_visible_collection_prefix|default": "",
     "$close_button_visible_collection_name|default": "",
-
     "tts_name": "$button_tts_name",
     "tts_control_header": "$button_tts_header",
     "tts_section_header": "$tts_section_header",
     "tts_skip_enumeration": "$tts_skip_enumeration",
-
     "bindings": [
       {
         "binding_type": "$close_button_visible_collection_details",
@@ -3330,7 +3146,6 @@
         "default@common.close_button_panel": {
           "$close_button_texture": "textures/ui/close_button_default",
           "$button_alpha": "$default_button_alpha"
-
         }
       },
       {
@@ -3359,7 +3174,6 @@
         "default@common.close_button_panel": {
           "$close_button_texture": "textures/ui/close_button_default_light",
           "$button_alpha": "$default_button_alpha"
-
         }
       },
       {
@@ -3402,7 +3216,6 @@
     "$button_tts_name": "accessibility.button.tts.title",
     "$button_tts_header": "accessibility.button.close",
     "$tts_skip_enumeration": true,
-
     "controls": [
       {
         "default@common.close_button_panel": {
@@ -3425,13 +3238,10 @@
   "help_button@common.button": {
     "size": [ 15, 15 ],
     "layer": 1,
-
     "$default_texture|default": "textures/ui/how_to_play_button_default_light",
     "$hover_texture|default": "textures/ui/how_to_play_button_hover_light",
     "$pressed_texture|default": "textures/ui/how_to_play_button_pressed_light",
-
     "$pressed_button_name": "button.help",
-
     "controls": [
       {
         "default": {
@@ -3546,7 +3356,6 @@
                     "binding_name": "#progressive_select_bar_ratio",
                     "binding_name_override": "#clip_ratio",
                     "binding_condition": "always_when_visible"
-
                   }
                 ]
               }
@@ -3775,7 +3584,7 @@
   },
 
   "hover_text": {
-    "$hover_text_max_width|default": 0, // A value greater than zero will result in line breaks being added to limit width
+    "$hover_text_max_width|default": 0,
     "type": "custom",
     "renderer": "hover_text_renderer",
     "hover_text_max_width": "$hover_text_max_width",
@@ -4074,14 +3883,10 @@
     "size": [ "100%c", "100%c" ],
     "offset": "$offset",
     "layer": 30,
-
     "$offset|default": [ 0, "-16px" ],
     "$alpha_anim|default": "@common.anim_item_details_alpha",
-
     "controls": [
-      {
-        "item_panel_image@common.item_panel_image": {}
-      }
+      { "item_panel_image@common.item_panel_image": {} }
     ],
     "bindings": [
       {
@@ -4098,11 +3903,8 @@
     "visible": "#visible",
     "alpha": "$alpha_anim",
     "texture": "textures/ui/purpleBorder",
-
     "controls": [
-      {
-        "item_text_label@common.item_text_label": {}
-      }
+      { "item_text_label@common.item_text_label": {} }
     ]
   },
 
@@ -4112,11 +3914,7 @@
     "alpha": "$alpha_anim",
     "text": "#selected_hover_text",
     "color": "$item_hover_text_color",
-    // Hover texts get formatted and localized before they make it to the UI.
-    // Localizing them twice risks breaking the formatted text.
     "localize": false
-    // Disable profanity filter for this control so that
-    // we can enable it on the fly only for items with custom names
   },
 
   "selected_item_details_factory": {
@@ -4158,21 +3956,17 @@
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "offset": "$offset",
-
     "$offset|default": [ 0, "6%" ],
     "$alpha_anim_background|default": "@common.anim_item_lock_notification_background_alpha",
     "$alpha_anim_text|default": "@common.anim_item_lock_notification_text_alpha",
-
     "controls": [
       {
         "notification_background_image": {
           "type": "image",
           "size": [ "100%c + 12px", "100%c + 5px" ],
           "layer": 30,
-
           "alpha": "$alpha_anim_background",
           "texture": "textures/ui/hud_tip_text_background",
-
           "controls": [
             {
               "notification_text_label": {
@@ -4194,12 +3988,6 @@
     "control_name": "@common.item_lock_notification"
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region toolbars
-  //---------------------------------------------------------------------------
-
   "layout_toggle_content": {
     "type": "panel",
     "controls": [
@@ -4209,7 +3997,6 @@
           "offset": [ 0, -1 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-
           "layer": 1
         }
       }
@@ -4218,7 +4005,6 @@
 
   "layout_template_toggle@common_toggles.light_template_toggle": {
     "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-
     "$default_texture": "textures/ui/recipe_book_button_borderless_light",
     "$hover_texture": "textures/ui/recipe_book_button_borderless_lightpressednohover",
     "$pressed_texture": "textures/ui/recipe_book_button_borderless_lighthover",
@@ -4229,7 +4015,6 @@
     "size": [ 25, 18 ],
     "$button_content": "common.layout_toggle_content",
     "$toggle_name": "layout_toggle",
-
     "$template_toggle": "common.layout_template_toggle",
     "$allow_controller_back_button_mapping": "$is_ps4",
     "$toggle_tts_name": "accessibility.toggle.view.tts.title"
@@ -4238,7 +4023,6 @@
   "recipe_book_layout_toggle@common.layout_toggle": {
     "$icon_control": "common.recipe_book_icon",
     "$toggle_group_forced_index": "$recipe_book_layout_index",
-
     "$focus_id": "recipe_book_layout_toggle",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_recipe_book_layout"
@@ -4247,7 +4031,6 @@
   "survival_layout_toggle@common.layout_toggle": {
     "$icon_control": "common.inventory_icon",
     "$toggle_group_forced_index": "$survival_layout_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_survival_layout"
   },
@@ -4294,13 +4077,6 @@
     "texture": "textures/ui/toolbar_background"
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // Scroll
-  //---------------------------------------------------------------------------
-
-
   "empty_panel_size_y_0": {
     "type": "panel",
     "size": [ "100%", 0 ]
@@ -4313,7 +4089,6 @@
     "anchor_to": "top_left",
     "$view_port_clip_background|default": true,
     "clips_children": "$view_port_clip_background",
-
     "controls": [
       {
         "background@$scroll_background_image_control": {
@@ -4333,14 +4108,11 @@
           "offset": "$scroll_view_port_offset",
           "size": "$scroll_view_port_size",
           "max_size": "$scroll_view_port_max_size",
-
           "$scroll_view_port_clips_children|default": true,
           "clips_children": "$scroll_view_port_clips_children",
-
           "controls": [
             {
               "scrolling_content@$scrolling_content": {
-
                 "layer": 1,
                 "$scrolling_content_anchor_from|default": "top_left",
                 "$scrolling_content_anchor_to|default": "top_left",
@@ -4361,7 +4133,6 @@
     "clips_children": true,
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-
     "controls": [
       {
         "stack_panel": {
@@ -4381,7 +4152,6 @@
               "panel": {
                 "type": "panel",
                 "size": [ "100%c", "100%" ],
-
                 "controls": [
                   {
                     "centered_panel": {
@@ -4427,40 +4197,31 @@
   "scroll_view_control": {
     "type": "scroll_view",
     "size": "$scroll_view_control_size",
-
     "$scroll_view_control_anchor|default": "center",
     "anchor_to": "$scroll_view_control_anchor",
     "anchor_from": "$scroll_view_control_anchor",
-
     "scroll_speed": 15,
     "scrollbar_track_button": "button.scrollbar_skip_track",
     "scrollbar_touch_button": "button.scrollbar_touch",
     "touch_mode": "$use_touch_mode",
     "always_listen_to_input": true,
     "always_handle_pointer": true,
-
     "$always_handle_scrolling|default": false,
     "always_handle_scrolling": "$always_handle_scrolling",
-
     "$scrollbar_always_visible|default": false,
     "scrollbar_always_visible": "$scrollbar_always_visible",
-
     "scrollbar_track": "track",
     "scrollbar_box": "box",
     "scroll_content": "scrolling_content",
     "scroll_view_port": "scrolling_view_port",
     "scroll_box_and_track_panel": "bar_and_track",
-
     "$jump_to_bottom_on_update|default": false,
     "jump_to_bottom_on_update": "$jump_to_bottom_on_update",
-
     "$scroll_background_image_control|default": "common.scroll_indent_image",
     "$scroll_track_image_control|default": "common.scroll_indent_image",
     "$force_scroll_to_end_binding_name|default": "",
     "$force_scroll_to_end_binding_type|default": "none",
-
     "$focus_for_tts_enabled": "#focus_for_tts_enabled_binding",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -4469,7 +4230,6 @@
         "button_up_right_of_first_refusal": true
       }
     ],
-
     "bindings": [
       {
         "binding_name": "#gesture_control_enabled"
@@ -4485,14 +4245,12 @@
         "binding_condition": "always_when_visible"
       }
     ],
-
     "controls": [
       {
         "stack_panel": {
           "ignored": "$scroll_bar_contained",
           "type": "stack_panel",
           "orientation": "horizontal",
-
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "$scroll_view_stack_panel_size|default": [ "100%", "100%" ],
@@ -4556,10 +4314,8 @@
           "visible": "$scroll_box_visible",
           "contained": true,
           "draggable": "vertical",
-
           "$scroll_box_mouse_image_control|default": "common.scrollbar_box_image",
           "$scroll_box_touch_image_control|default": "common.touch_scrollbar_box_image",
-
           "button_mappings": [
             {
               "from_button_id": "button.menu_select",
@@ -4584,7 +4340,6 @@
         }
       }
     ]
-
   },
 
   "scroll_box_indent": {
@@ -4662,17 +4417,10 @@
 
   "scrolling_panel": {
     "type": "panel",
-    // Size and offset of the area within this control that contains the visible
-    // scrolling content area and scroll box/track
     "$scrolling_pane_size|default": [ "100%", "100%" ],
     "$scrolling_pane_size_touch|default": [ "100%", "100%" ],
     "$scrolling_pane_offset|default": [ 0, 0 ],
-
     "$scroll_view_control_size|default": [ "100%", "100%" ],
-
-    // Sizes and offsets of the background behind the scrolling content, the
-    // viewport containing the scrolling content, the scroll track, and the area
-    // in which the scroll box is drawn.
     "$background_size|default": [ "100%", "100%" ],
     "$background_offset|default": [ 0, 0 ],
     "$scroll_view_port_size|default": [ "100%", "100%" ],
@@ -4684,9 +4432,6 @@
     "$scroll_bar_contained|default": false,
     "$scroll_size|default": [ 4, "100%" ],
     "$scroll_box_size|default": [ "100%", "100%" ],
-
-    // The touch version of the scroll track and bar are narrower by default,
-    // but these overrides can themselves be overridden.
     "$background_size_touch|default": [ "100%", "100%" ],
     "$background_offset_touch|default": [ 0, 0 ],
     "$scroll_view_port_size_touch|default": [ "100%", "100%" ],
@@ -4698,17 +4443,7 @@
     "$scroll_bar_contained_touch|default": true,
     "$scroll_size_touch|default": [ 4, "100%" ],
     "$wider_scroll_area|default": false,
-
     "$allow_scrolling_even_when_content_fits|default": true,
-
-    // The images used for the background, scroll track, and scroll box (for
-    // mouse and for touch) can be overridden by specifying
-    // $scroll_background_image_control, $scroll_track_image_control,
-    // $scroll_box_mouse_image_control, and $scroll_box_touch_image_control.
-
-    // The content you want inside the scrolling viewport must be specified
-    // by defining $scrolling_content.
-
     "$scroll_box_visible|default": true,
     "$scroll_box_visible_touch|default": false,
     "$use_touch_mode|default": false,
@@ -4807,25 +4542,18 @@
     "$durability_bar_offset": [ 0, 8 ]
   },
 
-  //---------------------------------------------------------------------------
-  // Inventory Item
-  //---------------------------------------------------------------------------
-
   "container_slot_button_prototype": {
     "type": "button",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
     "$focus_override_left|default": "",
     "$focus_override_right|default": "",
-
     "$focus_id_binding_type|default": "collection",
     "$focus_override_down_binding_type|default": "collection",
     "$focus_override_up_binding_type|default": "collection",
     "$focus_override_left_binding_type|default": "collection",
     "$focus_override_right_binding_type|default": "collection",
-
     "focus_identifier": "$focus_id",
     "focus_change_down": "$focus_override_down",
     "focus_change_up": "$focus_override_up",
@@ -4835,7 +4563,6 @@
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
     "$highlight_control|default": "common.highlight_slot_panel",
-
     "default_focus_precedence": 1,
     "hover_control": "hover",
     "layer": 1,
@@ -4948,9 +4675,7 @@
       }
     ],
     "controls": [
-      {
-        "hover@$highlight_control": {}
-      }
+      { "hover@$highlight_control": {} }
     ]
   },
 
@@ -5015,7 +4740,6 @@
 
   "pocket_ui_container_slot": {
     "type": "button",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -5029,7 +4753,6 @@
     "focus_enabled": true,
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
-
     "default_focus_precedence": 1,
     "layer": 1,
     "hover_control": "hover",
@@ -5069,7 +4792,6 @@
       {
         "hover": {
           "type": "panel",
-
           "controls": [
             {
               "highlight_square@common.pocket_ui_highlight_slot": {
@@ -5128,7 +4850,6 @@
     "$item_renderer_offset|default": [ 0, 0 ],
     "$background_images|default": "common.cell_image_panel",
     "$background_image_control_name|default": "bg",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -5142,14 +4863,12 @@
     "focus_enabled": true,
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
-
     "$tts_name|default": "",
     "$tts_control_header|default": "",
     "$tts_header_binding_type|default": "none",
     "tts_name": "$tts_name",
     "tts_control_header": "$tts_control_header",
     "tts_ignore_count": true,
-
     "bindings": [
       {
         "binding_type": "$tts_header_binding_type",
@@ -5157,7 +4876,6 @@
         "binding_name": "$tts_control_header"
       }
     ],
-
     "controls": [
       {
         "item_cell": {
@@ -5313,24 +5031,16 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Container Grid
-  //---------------------------------------------------------------------------
-
   "container_grid": {
     "type": "grid",
     "grid_rescaling_type": "horizontal",
-
     "size": [ "100%", "default" ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-
     "$item_collection_name|default": "inventory_items",
     "$grid_item_template|default": "common.container_item",
-
     "collection_name": "$item_collection_name",
     "grid_item_template": "$grid_item_template",
-
     "bindings": [
       {
         "binding_name": "#collection_total_items",
@@ -5345,10 +5055,6 @@
   "pocket_container_grid@common.container_grid": {
     "$grid_item_template": "common.pocket_ui_container_item"
   },
-
-  //---------------------------------------------------------------------------
-  // Container Scroll Panel
-  //---------------------------------------------------------------------------
 
   "container_scroll_box_image": {
     "type": "image",
@@ -5385,7 +5091,6 @@
 
   "container_scroll_panel@common.scrolling_panel_with_offset": {
     "$scrolling_content|default": "common.container_grid",
-
     "$scrolling_pane_offset": [ 0, 0 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
     "$scrolling_pane_size_touch": [ "100% + 10px", "100%" ],
@@ -5396,7 +5101,6 @@
     "$scroll_view_port_offset_touch": [ 0, 1 ],
     "$scroll_box_size": [ 4, "100%" ],
     "$wider_scroll_area": true,
-
     "$scroll_bar_right_padding_size": [ 0, 0 ],
     "$scroll_background_image_control": "common.container_scroll_background_image",
     "$background_size_touch": [ "100% - 10px", "100%" ],
@@ -5404,7 +5108,6 @@
     "$scroll_box_mouse_image_control": "common.container_scroll_box_image",
     "$scroll_box_touch_image_control": "common.container_touch_scrollbar_box_image",
     "$allow_scrolling_even_when_content_fits": false,
-
     "$scrolling_panel_base_button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -5440,10 +5143,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Selectable Slot
-  //---------------------------------------------------------------------------
-
   "pocket_ui_highlight_selected_slot": {
     "type": "image",
     "texture": "textures/ui/pocket_ui_highlight_selected_slot",
@@ -5452,10 +5151,6 @@
     "anchor_from": "center",
     "anchor_to": "center"
   },
-
-  //---------------------------------------------------------------------------
-  // Pocket Hotbar
-  //---------------------------------------------------------------------------
 
   "pocket_hotbar_panel": {
     "type": "input_panel",
@@ -5472,7 +5167,6 @@
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 1,
-
           "$item_collection_name": "hotbar_items",
           "grid_item_template": "common.pocket_ui_container_item"
         }
@@ -5517,18 +5211,12 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Pocket Layout
-  //---------------------------------------------------------------------------
-
   "pocket_hotbar_and_content_panels": {
     "type": "stack_panel",
     "orientation": "vertical",
-
     "size": [ "100% - 4px", "100% - 2px" ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
-
     "controls": [
       {
         "pocket_content_panels@common.pocket_content_panels": {
@@ -5561,11 +5249,9 @@
     "type": "stack_panel",
     "size": [ "100%", "100%" ],
     "orientation": "horizontal",
-
     "$middle_offset_visible|default": true,
     "$left_panel_control|default": "common.blank_pocket_content_panel",
     "$right_panel_control|default": "common.blank_pocket_content_panel",
-
     "controls": [
       { "left_panel@$left_panel_control": {} },
       {
@@ -5586,10 +5272,6 @@
       { "right_panel@$right_panel_control": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Container panel
-  //---------------------------------------------------------------------------
 
   "inventory_selected_icon@common.item_renderer": {
     "layer": 50,
@@ -5800,7 +5482,6 @@
     "size": [ 14, 14 ],
     "layer": 60,
     "follows_cursor": true,
-
     "bindings": [
       {
         "binding_name": "#gamepad_cursor_visible",
@@ -5870,7 +5551,6 @@
     ]
   },
 
-  // Bottom half of ui, inventory panel
   "inventory_panel_bottom_half": {
     "type": "panel",
     "size": [ "100%", "50%" ],
@@ -5899,7 +5579,6 @@
     ]
   },
 
-  // Common panel contains the bg image and the close button
   "common_panel": {
     "type": "panel",
     "$dialog_background|default": "common.dialog_background_opaque",
@@ -5966,7 +5645,6 @@
     ]
   },
 
-  // Root panel all others parented to
   "root_panel": {
     "type": "input_panel",
     "size": [ 176, 166 ],
@@ -6063,14 +5741,9 @@
     ]
   },
 
-  // Base Input Panel
   "input_panel": {
     "type": "input_panel"
   },
-
-  //---------------------------------------------------------------------------
-  // Screens, survival inventory and crafting
-  //---------------------------------------------------------------------------
 
   "screen_exit_size_animation_push": {
     "anim_type": "size",
@@ -6117,8 +5790,6 @@
     "resettable": true
   },
 
-  //Fade Animations
-
   "screen_exit_animation_push_fade": {
     "anim_type": "alpha",
     "easing": "out_cubic",
@@ -6158,8 +5829,6 @@
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
-
-  //Wipe Animations
 
   "screen_exit_animation_push_offset": {
     "anim_type": "offset",
@@ -6201,9 +5870,6 @@
     "end_event": "screen.entrance_end"
   },
 
-  // This animation does nothing and is used to maintain the previous
-  // screen during a transition to a new one to avoid graphical glitches
-  // that may occur when no animation is used at all.
   "screen_exit_animation_no_offset": {
     "anim_type": "offset",
     "easing": "out_cubic",
@@ -6213,8 +5879,6 @@
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
-
-  //container
 
   "container_screen_exit_animation_push": {
     "anim_type": "offset",
@@ -6255,8 +5919,6 @@
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
-
-  // Alpha
 
   "screen_exit_animation_push_alpha": {
     "anim_type": "alpha",
@@ -6301,8 +5963,6 @@
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
-
-  ////
 
   "loading_bar_init_animation_push": {
     "anim_type": "alpha",
@@ -6374,20 +6034,17 @@
           "prevent_touch_input": false,
           "ttsSectionContainer": true,
           "variables": [
-            // Screen sizes - you should be using one of these unless explicitly told otherwise - in which case that size should be added as a variable here
-            // Win10
             {
-              //Desktop Texel Size: [376, 250]
               "requires": "$desktop_screen",
-              "$narrow_screen_size": [ 280, "100% - 10px" ], // Realms Pending Invitations, Add Players
-              "$play_screen_size": [ 282, "100% - 50px" ], // Play Screen
-              "$tabbed_upsell_screen_size": [ 310, 173 ], // Trial Tabbed Upsell Screen
-              "$realms_create_screen_size": [ 267, 240 ], // Realms Create
-              "$large_screen_size": [ 317, "100% - 10px" ], // Multiplayer Invitations
-              "$store_screen_size": [ "100% - 4px", "100% - 4px" ], // Store Home
-              "$skin_pack_screen_size": [ "100% - 4px", "100% - 50px" ], // Skin Pack
-              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ], // Texture Pack
-              "$upsell_screen_size": [ "177%y - 208.5px", "100% - 4px" ], // Skin Pack Upsell
+              "$narrow_screen_size": [ 280, "100% - 10px" ],
+              "$play_screen_size": [ 282, "100% - 50px" ],
+              "$tabbed_upsell_screen_size": [ 310, 173 ],
+              "$realms_create_screen_size": [ 267, 240 ],
+              "$large_screen_size": [ 317, "100% - 10px" ],
+              "$store_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$skin_pack_screen_size": [ "100% - 4px", "100% - 50px" ],
+              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ],
+              "$upsell_screen_size": [ "177%y - 208.5px", "100% - 4px" ],
               "$create_world_upsell_screen_size": [ 360, 183 ],
               "$create_realm_upsell_screen_size": [ 360, 183 ],
               "$create_realm_upsell_play_screen_size": [ 360, 213 ],
@@ -6397,47 +6054,45 @@
               "$max_upsell_screen_size": [ 250, 259.125 ],
               "$rating_prompt_screen_size": [ 250, 87 ],
               "$max_skin_pack_screen_size": [ 310, "56.25%x - 65.25px + 118.5px" ],
-              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Picker, Command Block screen
+              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ],
               "$extra_large_max_screen_size": [ 370, "100% - 50px" ],
-              "$xbl_immediate_signin_screen_size": [ 317, 158 ], // XBL Immediate Signin Popup
-              "$xbl_optional_signin_screen_size": [ 317, 158 ], // XBL Optional Signin Popup
-              "$xbl_console_signin_screen_size": [ 316, 161 ], // XBL Console Signin Popup
-              "$xbl_console_qr_signin_screen_size": [ 364, 182 ], // XBL Console QR Signin Popup
-              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 50px" ], // XBL Console Signin Succeeded Popup
-              "$xbl_first_launch_screen_size": [ 317, 146 ], // Trial Upsell
-              "$xbl_gamer_profile_screen_size": [ 260, "100% - 50px" ], // XBL Console Signin Succeeded Popup
-              "$modal_screen_size": [ 204, 140 ], // Pop-up dialogue boxes and modal progress screens
+              "$xbl_immediate_signin_screen_size": [ 317, 158 ],
+              "$xbl_optional_signin_screen_size": [ 317, 158 ],
+              "$xbl_console_signin_screen_size": [ 316, 161 ],
+              "$xbl_console_qr_signin_screen_size": [ 364, 182 ],
+              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 50px" ],
+              "$xbl_first_launch_screen_size": [ 317, 146 ],
+              "$xbl_gamer_profile_screen_size": [ 260, "100% - 50px" ],
+              "$modal_screen_size": [ 204, 140 ],
               "$tall_modal_screen_size": [ 204, 172 ],
-              "$patch_notes_screen_size": [ 300, "100% - 4px" ], // Patch Notes Screen
-              "$mob_effect_screen_size": [ "90%", "90%" ], // Mob Effect Screen
-              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ], //Coin Purchase Screen
-              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ], //Coin Purchase Screen, with FAQ
-              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ], //Coin Purchase Screen, when not enough coins for current purchase
-              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
-              "$choose_realm_screen_size": [ "70%", "85%" ], //Choose Realm Screen
-              "$custom_templates_screen_size": [ "70%", "85%" ], //Custom Templates Screen
-              "$world_modal_screen_size": [ 290, 100 ], // world convert and world loading modal progress screens
-              "$day_one_experience_intro_screen_size": [ "60%", "85%" ], // Day One Experience intro popup
-              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ], // Day One Experience import progress modal screen
-              "$world_conversion_complete_screen_size": [ 290, 160 ], // World Conversion complete modal screen
-              "$gamepad_disconnect_screen_size": [ 300, 100 ], //custom gamepad disconnected modal size, to contain all languages in title
+              "$patch_notes_screen_size": [ 300, "100% - 4px" ],
+              "$mob_effect_screen_size": [ "90%", "90%" ],
+              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ],
+              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ],
+              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ],
+              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ],
+              "$choose_realm_screen_size": [ "70%", "85%" ],
+              "$custom_templates_screen_size": [ "70%", "85%" ],
+              "$world_modal_screen_size": [ 290, 100 ],
+              "$day_one_experience_intro_screen_size": [ "60%", "85%" ],
+              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ],
+              "$world_conversion_complete_screen_size": [ 290, 160 ],
+              "$gamepad_disconnect_screen_size": [ 300, 100 ],
               "$storage_migration_progress_size": [ 290, 100 ],
               "$store_modal_screen_size": [ "80%", "80%" ],
               "$csb_upsell_screen_size": [ "90%", "60%x" ]
             },
-            // PE edition
             {
-              //Pocket Texel Size:  [320, 210]
               "requires": "($pocket_screen)",
-              "$narrow_screen_size": [ "90.3225%", "100% - 4px" ], // Realms Pending Invitations, Add Players
-              "$play_screen_size": [ "83.4375%", "100% - 4px" ], // Play Screen
-              "$tabbed_upsell_screen_size": [ 310, 173 ], // Trial Tabbed Upsell Screen
-              "$realms_create_screen_size": [ "71.2766%", "100% - 4px" ], // Realms Create
-              "$large_screen_size": [ "70.3215%", "100% - 4px" ], // Multiplayer Invitations
-              "$store_screen_size": [ "100% - 4px", "100% - 4px" ], // Store Home, purchase Skin Pack
-              "$skin_pack_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Pack
-              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ], // Texture Pack
-              "$upsell_screen_size": [ "100% - 76px", "100% - 4px" ], // Skin Pack Upsell
+              "$narrow_screen_size": [ "90.3225%", "100% - 4px" ],
+              "$play_screen_size": [ "83.4375%", "100% - 4px" ],
+              "$tabbed_upsell_screen_size": [ 310, 173 ],
+              "$realms_create_screen_size": [ "71.2766%", "100% - 4px" ],
+              "$large_screen_size": [ "70.3215%", "100% - 4px" ],
+              "$store_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$skin_pack_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ],
+              "$upsell_screen_size": [ "100% - 76px", "100% - 4px" ],
               "$create_world_upsell_screen_size": [ "100% - 4px", 223 ],
               "$create_realm_upsell_screen_size": [ "100% - 4px", 223 ],
               "$create_realm_upsell_play_screen_size": [ "100% - 4px", 219 ],
@@ -6446,31 +6101,31 @@
               "$max_resource_pack_screen_size": [ 313.3, 206 ],
               "$max_upsell_screen_size": [ "100% - 76px", "56.25%x + 118.5px" ],
               "$max_skin_pack_screen_size": [ "100% - 4px", "56.25%x - 65.25px + 118.5px" ],
-              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Picker, Command Block screen
+              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ],
               "$extra_large_max_screen_size": [ 370, "100% - 50px" ],
-              "$xbl_immediate_signin_screen_size": [ 316, 153 ], // XBL Immediate Signin Popup
-              "$xbl_optional_signin_screen_size": [ 316, 153 ], // XBL Optional Signin Popup
-              "$xbl_console_signin_screen_size": [ 316, 161 ], // XBL Console Signin Popup
-              "$xbl_console_qr_signin_screen_size": [ 364, 182 ], // XBL Console QR Signin Popup
-              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 4px" ], // XBL Console Signin Succeeded Popup
-              "$xbl_first_launch_screen_size": [ 316, 146 ], // Trial Upsell
-              "$xbl_gamer_profile_screen_size": [ 316, "100% - 4px" ], // XBL Console Signin Succeeded Popup
-              "$modal_screen_size": [ 204, 140 ], // Pop-up dialogue boxes and modal progress screens
+              "$xbl_immediate_signin_screen_size": [ 316, 153 ],
+              "$xbl_optional_signin_screen_size": [ 316, 153 ],
+              "$xbl_console_signin_screen_size": [ 316, 161 ],
+              "$xbl_console_qr_signin_screen_size": [ 364, 182 ],
+              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 4px" ],
+              "$xbl_first_launch_screen_size": [ 316, 146 ],
+              "$xbl_gamer_profile_screen_size": [ 316, "100% - 4px" ],
+              "$modal_screen_size": [ 204, 140 ],
               "$rating_prompt_screen_size": [ 250, 87 ],
               "$tall_modal_screen_size": [ 204, 172 ],
-              "$patch_notes_screen_size": [ 300, "100% - 4px" ], // Patch Notes Screen
-              "$mob_effect_screen_size": [ "90%", "90%" ], // Mob Effect Screen
-              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ], //Coin Purchase Screen
-              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ], //Coin Purchase Screen, with FAQ
-              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ], //Coin Purchase Screen, when not enough coins for current purchase
-              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
-              "$choose_realm_screen_size": [ "70%", "85%" ], //Choose Realm Screen
-              "$custom_templates_screen_size": [ "70%", "85%" ], //Custom Templates Screen
-              "$world_modal_screen_size": [ 290, 100 ], // world convert and world loading modal progress screens
-              "$day_one_experience_intro_screen_size": [ "60%", "85%" ], // Day One Experience intro popup
-              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ], // Day One Experience import progress modal screen
-              "$world_conversion_complete_screen_size": [ 290, 160 ], // World Conversion complete modal screen
-              "$gamepad_disconnect_screen_size": [ 300, 100 ], //custom gamepad disconnected modal size, to contain all languages in title
+              "$patch_notes_screen_size": [ 300, "100% - 4px" ],
+              "$mob_effect_screen_size": [ "90%", "90%" ],
+              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ],
+              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ],
+              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ],
+              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ],
+              "$choose_realm_screen_size": [ "70%", "85%" ],
+              "$custom_templates_screen_size": [ "70%", "85%" ],
+              "$world_modal_screen_size": [ 290, 100 ],
+              "$day_one_experience_intro_screen_size": [ "60%", "85%" ],
+              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ],
+              "$world_conversion_complete_screen_size": [ 290, 160 ],
+              "$gamepad_disconnect_screen_size": [ 300, 100 ],
               "$storage_migration_progress_size": [ 290, 100 ],
               "$store_modal_screen_size": [ "100% - 20px", "100% - 20px" ],
               "$csb_upsell_screen_size": [ "100%-4px", "100%-4px" ]
@@ -6543,7 +6198,6 @@
           "propagate_alpha": true,
           "animation_reset_name": "screen_animation_reset",
           "disable_anim_fast_forward": true,
-
           "controls": [
             {
               "loading_bars@common_store.progress_loading_bars": {
@@ -6552,7 +6206,6 @@
               }
             }
           ],
-
           "anims": [
             "@common.loading_bar_init_animation_push",
             "@common.loading_bar_init_animation_pop"
@@ -6620,9 +6273,7 @@
           ]
         }
       },
-      {
-        "header_bar@$header_bar_control": {}
-      }
+      { "header_bar@$header_bar_control": {} }
     ]
   },
 
@@ -6683,9 +6334,7 @@
         "outer_left@common.left_safezone_horizontal_buffer": {
           "$safezone_binding_name": "#safezone_outer_left",
           "controls": [
-            {
-              "outer_left_safe_zone_stack@common.safe_zone_stack": {}
-            }
+            { "outer_left_safe_zone_stack@common.safe_zone_stack": {} }
           ]
         }
       },
@@ -6695,9 +6344,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
-            {
-              "inner_left_safe_zone_stack@common.safe_zone_stack": {}
-            }
+            { "inner_left_safe_zone_stack@common.safe_zone_stack": {} }
           ]
         }
       },
@@ -6706,9 +6353,7 @@
         "inner_right@common.right_safezone_horizontal_buffer": {
           "$safezone_binding_name": "#safezone_inner_right",
           "controls": [
-            {
-              "inner_right_safe_zone_stack@common.safe_zone_stack": {}
-            }
+            { "inner_right_safe_zone_stack@common.safe_zone_stack": {} }
           ]
         }
       },
@@ -6716,9 +6361,7 @@
         "outer_right@common.right_safezone_horizontal_buffer": {
           "$safezone_binding_name": "#safezone_outer_right",
           "controls": [
-            {
-              "outer_right_safe_zone_stack@common.safe_zone_stack": {}
-            }
+            { "outer_right_safe_zone_stack@common.safe_zone_stack": {} }
           ]
         }
       }
@@ -6764,10 +6407,7 @@
     "type": "panel"
   },
 
-  "modal_screen@common.base_screen": {
-    // necessary to have this screen as long as
-    // ScreenChooser::isModalScreen() is hard coded to this name
-  },
+  "modal_screen@common.base_screen": {},
 
   "realms_error_modal_screen@common.modal_screen": {
     "force_render_below": true
@@ -6837,7 +6477,6 @@
     "$additional_screen_content": "common.stack_splitting_overlay",
     "$gamepad_cursor|default": true,
     "gamepad_cursor": "$gamepad_cursor",
-
     "$screen_animations|default": [
       "@common.container_screen_exit_animation_push",
       "@common.container_screen_exit_animation_pop",
@@ -6848,7 +6487,6 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -6983,8 +6621,6 @@
     ]
   },
 
-  // Making screens full screen //
-
   "fullscreen_header": {
     "type": "stack_panel",
     "size": [ "100%", "100%" ],
@@ -7037,7 +6673,7 @@
       {
         "back_button@common.back_title_button": {
           "offset": [ 0, -1 ],
-          "layer": 200 //This should always be on top, let's ensure that
+          "layer": 200
         }
       }
     ]
@@ -7048,9 +6684,6 @@
     "texture": "textures/ui/StoreTopBar",
     "size": [ "100%", 23 ]
   },
-
-
-  //////////  Common Tool Tip Objects  //////////
 
   "tooltip_background": {
     "type": "image",
@@ -7065,9 +6698,7 @@
     "$tooltip_panel_content_background_alpha|default": 1.0,
     "alpha": "$tooltip_panel_content_background_alpha",
     "controls": [
-      {
-        "tooltip_panel_content@$tooltip_panel_content": {}
-      }
+      { "tooltip_panel_content@$tooltip_panel_content": {} }
     ]
   },
 
@@ -7079,10 +6710,9 @@
     "$tooltip_popup_visible_binding|default": "",
     "$tooltip_panel_offset|default": [ 0, "-100%c - 2px" ],
     "$tooltip_panel_size|default": [ "100%", "100%cm + 8px" ],
-
     "size": "$tooltip_panel_size",
     "offset": "$tooltip_panel_offset",
-    "layer": 200, // always on top
+    "layer": 200,
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "controls": [
@@ -7101,9 +6731,6 @@
                 "type": "panel",
                 "size": [ "100%y", "100%sm" ],
                 "min_size": [ 8, 8 ],
-                // The max y is 200 due to the fact that we have no way to say use inherited max sibling height
-                //   - 200 was used in thoughts that whatever text was used would not need more that 200px
-                //   allowing the image to grow and string with the height of the text object
                 "max_size": [ 12, 200 ],
                 "controls": [
                   {
@@ -7209,11 +6836,10 @@
     "$tooltip_popup_visible_binding|default": "",
     "$tooltip_panel_offset|default": [ 0, -2 ],
     "$tooltip_content|default": "common.empty_panel",
-
     "min_size": [ 25, "default" ],
     "size": [ "100%c - 6px", "100%cm + 8px" ],
     "offset": "$tooltip_panel_offset",
-    "layer": 200, // always on top
+    "layer": 200,
     "anchor_from": "top_middle",
     "anchor_to": "bottom_middle",
     "$dynamic_tooltip_popup_with_custom_content_bindings|default": [
@@ -7226,9 +6852,7 @@
     ],
     "bindings": "$dynamic_tooltip_popup_with_custom_content_bindings",
     "controls": [
-      {
-        "tooltip_content@$tooltip_content": {}
-      },
+      { "tooltip_content@$tooltip_content": {} },
       {
         "tooltip_chevron": {
           "ignored": "$ignore_tooltip_popup_chevron",
@@ -7248,8 +6872,6 @@
     ]
   },
 
-  // Tool tip with centered chevron
-  // $tool_tip_text_max_size defines how text wraps (x wraps with a '-' and y will cut off with '...')
   "dynamic_tooltip_popup_with_image_and_text@common.tooltip_background": {
     "$override_tooltip_popup_image|default": false,
     "$tooltip_popup_image|default": "",
@@ -7257,11 +6879,10 @@
     "$ignore_tooltip_popup_chevron|default": false,
     "$tooltip_popup_visible_binding|default": "",
     "$tooltip_panel_offset|default": [ 0, -2 ],
-
     "min_size": [ 25, "default" ],
     "size": [ "100%c - 6px", "100%cm + 8px" ],
     "offset": "$tooltip_panel_offset",
-    "layer": 200, // always on top
+    "layer": 200,
     "anchor_from": "top_middle",
     "anchor_to": "bottom_middle",
     "$dynamic_tooltip_popup_with_image_and_text_bindings|default": [
@@ -7288,9 +6909,6 @@
                 "type": "panel",
                 "size": [ "100%y", "100%sm" ],
                 "min_size": [ 8, 8 ],
-                // The max y is 200 due to the fact that we have no way to say use inherited max sibling height
-                //   - 200 was used in thoughts that whatever text was used would not need more that 200px
-                //   allowing the image to grow and string with the height of the text object
                 "max_size": [ 15, 200 ],
                 "controls": [
                   {
@@ -7379,7 +6997,6 @@
     ]
   },
 
-  // Helper for tooltips intended to be left of the control
   "dynamic_tooltip_left@dynamic_tooltip_popup_with_image_and_text": {
     "$tooltip_panel_offset": [ 0, 0 ],
     "$tooltip_chevron_anchor": "right_middle",
@@ -7390,7 +7007,6 @@
     "anchor_from": "left_middle"
   },
 
-  // Helper for tooltips intended to be below control
   "dynamic_tooltip_below@dynamic_tooltip_popup_with_image_and_text": {
     "$tooltip_panel_offset": [ 0, 2 ],
     "anchor_to": "top_middle",
@@ -7400,7 +7016,6 @@
     "$tooltip_popup_chevron_texture": "textures/ui/tooltip_inverted_chevron"
   },
 
-  // Helper for tooltips intended to be below control
   "dynamic_custom_tooltip_below@dynamic_tooltip_popup_with_custom_content": {
     "$tooltip_panel_offset": [ 0, 2 ],
     "anchor_to": "top_middle",
@@ -7410,7 +7025,6 @@
     "$tooltip_popup_chevron_texture": "textures/ui/tooltip_inverted_chevron"
   },
 
-  // Helper for tooltips with dynamic positioning
   "dynamic_tooltip": {
     "type": "panel",
     "$tooltip_above_binding_name|default": "",
@@ -7419,7 +7033,9 @@
     "controls": [
       {
         "above@common.empty_panel": {
-          "controls": [ { "content@dynamic_tooltip_popup_with_image_and_text": {} } ],
+          "controls": [
+            { "content@dynamic_tooltip_popup_with_image_and_text": {} }
+          ],
           "bindings": [
             {
               "binding_name": "$tooltip_above_binding_name",
@@ -7432,7 +7048,9 @@
       },
       {
         "below@common.empty_panel": {
-          "controls": [ { "content@dynamic_tooltip_below": {} } ],
+          "controls": [
+            { "content@dynamic_tooltip_below": {} }
+          ],
           "bindings": [
             {
               "binding_name": "(not $tooltip_above_binding_name)",
@@ -7446,18 +7064,15 @@
     ]
   },
 
-  ///////////////////////////////////////////////////////////////////////////
-
-
-  // Legacy In Game Close Button //
-
   "legacy_pocket_close_button_default": {
     "type": "image",
     "texture": "textures/ui/legacy_pocket_close_button_default"
   },
+
   "legacy_pocket_close_button_pressed@common.legacy_pocket_close_button_default": {
     "texture": "textures/ui/legacy_pocket_close_button_pressed"
   },
+
   "legacy_pocket_close_button@common.button": {
     "$pressed_button_name": "button.menu_exit",
     "size": [ 18, 18 ],
@@ -7477,11 +7092,6 @@
       }
     ]
   },
-
-
-  ///////////////////////////////////////////////////////////////////////////
-  // Common Icons //
-  ///////////////////////////////////////////////////////////////////////////
 
   "info_icon": {
     "type": "image",
@@ -7573,7 +7183,6 @@
     "$prev_page_button_event|default": "button.cast_subpage_left",
     "next_sub_page_button_name": "$next_page_button_event",
     "prev_sub_page_button_name": "$prev_page_button_event",
-
     "button_mappings": [
       {
         "from_button_id": "$prev_page_button_event",
@@ -7612,8 +7221,6 @@
     "text_labels": "$text_cycler_labels"
   },
 
-  // create square panel based off and constrained to parent's dimensions
-  //   - shrink x to max y, then shrink y to max x if needed
   "squaring_panel": {
     "type": "panel",
     "max_size": [ "100%y", "100%" ],
@@ -7629,5 +7236,4 @@
       }
     ]
   }
-
 }

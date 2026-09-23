@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "rating_prompt",
 
@@ -53,6 +48,7 @@
     "$pressed_button_name": "button.rating_yes_button",
     "$button_content": "rating_prompt.rating_prompt_yes_label"
   },
+
   "rating_prompt_no_button@common_buttons.light_content_button": {
     "$pressed_button_name": "button.rating_no_button",
     "$button_content": "rating_prompt.rating_prompt_no_label"
@@ -76,9 +72,7 @@
     "texture": "textures/ui/Grey",
     "size": [ "100%", "100%-4px" ],
     "controls": [
-      {
-        "dialog_image@rating_prompt.dialog_image": {}
-      }
+      { "dialog_image@rating_prompt.dialog_image": {} }
     ]
   },
 
@@ -87,9 +81,7 @@
     "orientation": "vertical",
     "size": [ "100%-77px", "100%" ],
     "controls": [
-      {
-        "padding_3@rating_prompt.padding_vertical": {}
-      },
+      { "padding_3@rating_prompt.padding_vertical": {} },
       {
         "yes_button@rating_prompt.rating_prompt_yes_button": {
           "size": [ "100%-2px", "50%-2px" ]
@@ -108,12 +100,8 @@
     "orientation": "vertical",
     "size": [ 73, "100%" ],
     "controls": [
-      {
-        "padding_2@rating_prompt.padding_vertical": {}
-      },
-      {
-        "dialog_image_with_border@rating_prompt.dialog_image_with_border": {}
-      }
+      { "padding_2@rating_prompt.padding_vertical": {} },
+      { "dialog_image_with_border@rating_prompt.dialog_image_with_border": {} }
     ]
   },
 
@@ -122,27 +110,13 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "padding_0@rating_prompt.padding_horizontal": {}
-      },
-      {
-
-        "image_panel@rating_prompt.image_panel": {}
-      },
-      {
-        "padding_1@rating_prompt.padding_horizontal": {}
-      },
-      {
-        "button_panel@rating_prompt.button_panel": {}
-      }
+      { "padding_0@rating_prompt.padding_horizontal": {} },
+      { "image_panel@rating_prompt.image_panel": {} },
+      { "padding_1@rating_prompt.padding_horizontal": {} },
+      { "button_panel@rating_prompt.button_panel": {} }
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
   "rating_prompt_screen@common.base_screen": {
     "$screen_content": "rating_prompt.rating_prompt_screen_content"
   },

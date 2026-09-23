@@ -1,10 +1,6 @@
 {
   "namespace": "horse_pocket",
 
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
   "horse_panel": {
     "type": "panel",
     "controls": [
@@ -34,16 +30,13 @@
                 "size": [ "100% - 29px", "100%" ]
               }
             },
-            {
-              "hold_icon@common.inventory_take_progress_icon_button": { }
-            },
+            { "hold_icon@common.inventory_take_progress_icon_button": {} },
             {
               "bg@common.common_panel": {
                 "size": [ "100% - 29px", "100%" ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "layer": 1,
-
                 "$dialog_background": "dialog_background_opaque",
                 "$show_close_button": false
               }
@@ -127,7 +120,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 10 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 10
+        }
+      }
     ]
   },
 
@@ -209,6 +206,7 @@
   },
 
   "inventory_grid@horse_pocket.base_grid": {},
+
   "chest_grid@horse_pocket.base_grid": {},
 
   "base_grid_panel": {
@@ -241,7 +239,6 @@
     ]
   },
 
-  // these are separated so that grid scrolling is unique to each panel (both would scroll the same panel otherwise)
   "inventory_panel@horse_pocket.base_grid_panel": {
     "$scrolling_content": "horse_pocket.inventory_grid"
   },
@@ -277,11 +274,9 @@
   "horse_renderer": {
     "$size|default": [ "40%", "40%" ],
     "$offset|default": [ "5%", "30%" ],
-
     "type": "panel",
     "size": "$size",
     "offset": "$offset",
-
     "controls": [
       {
         "horse_custom": {
@@ -321,7 +316,7 @@
       },
       {
         "horse_custom_panel@horse_pocket.horse_renderer": {
-            "$visible_binding": "(not #is_camel)"
+          "$visible_binding": "(not #is_camel)"
         }
       },
       {
@@ -334,7 +329,6 @@
     ]
   },
 
-  // insert spacing between grid items!
   "equip_item_panel": {
     "type": "panel",
     "size": [ 32, 32 ],
@@ -459,6 +453,7 @@
     "$radio_toggle_group": true,
     "focus_enabled": false
   },
+
   "interactive_tabs": {
     "type": "panel",
     "controls": [

@@ -1,10 +1,6 @@
 {
   "namespace": "win10_trial_conversion",
 
-  //---------------------------------------------------------------------------
-  // Padding
-  //---------------------------------------------------------------------------
-
   "padding_horizontal": {
     "type": "panel",
     "size": [ 2, 0 ]
@@ -34,10 +30,6 @@
     "texture": "$title_texture"
   },
 
-  //---------------------------------------------------------------------------
-  // Image section
-  //---------------------------------------------------------------------------
-
   "focus_border": {
     "type": "image",
     "texture": "textures/ui/square_image_border_white",
@@ -62,9 +54,7 @@
     "type": "panel",
     "size": [ 70, 41 ],
     "controls": [
-      {
-        "pack_image@win10_trial_conversion.pack_image_with_border": {}
-      }
+      { "pack_image@win10_trial_conversion.pack_image_with_border": {} }
     ]
   },
 
@@ -74,10 +64,7 @@
     "layer": 3,
     "texture": "textures/ui/Black",
     "controls": [
-      {
-        "image@win10_trial_conversion.title_image": {
-        }
-      }
+      { "image@win10_trial_conversion.title_image": {} }
     ]
   },
 
@@ -87,15 +74,9 @@
     "layer": 2,
     "texture": "textures/ui/Black",
     "controls": [
-      {
-        "image@pack_image": {}
-      }
+      { "image@pack_image": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // label
-  //---------------------------------------------------------------------------
 
   "label_panel": {
     "type": "label",
@@ -106,10 +87,6 @@
     "text": "$text",
     "color": "$main_header_text_color"
   },
-
-  //---------------------------------------------------------------------------
-  // Buy Button Panel
-  //---------------------------------------------------------------------------
 
   "button_panel": {
     "type": "stack_panel",
@@ -141,10 +118,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // focus border
-  //---------------------------------------------------------------------------
-
   "is_focused@focus_border": {
     "size": [ "100%", "100%" ],
     "layer": 3
@@ -166,31 +139,16 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Grid section
-  //---------------------------------------------------------------------------
-
   "grid_item": {
     "type": "stack_panel",
     "size": [ "100%", "100% - 2px" ],
     "orientation": "horizontal",
     "controls": [
-      {
-        "padding_1@win10_trial_conversion.padding_horizontal": {}
-      },
-      {
-        "pack_image_pane@win10_trial_conversion.pack_image_panel": {}
-      },
-      {
-        "padding_2@win10_trial_conversion.padding_horizontal": {
-        }
-      },
-      {
-        "pack_panel@win10_trial_conversion.pack_panel": {}
-      },
-      {
-        "padding_3@win10_trial_conversion.padding_horizontal": {}
-      }
+      { "padding_1@win10_trial_conversion.padding_horizontal": {} },
+      { "pack_image_pane@win10_trial_conversion.pack_image_panel": {} },
+      { "padding_2@win10_trial_conversion.padding_horizontal": {} },
+      { "pack_panel@win10_trial_conversion.pack_panel": {} },
+      { "padding_3@win10_trial_conversion.padding_horizontal": {} }
     ]
   },
 
@@ -198,9 +156,7 @@
     "type": "panel",
     "size": [ "100%", 44 ],
     "controls": [
-      {
-        "grid_item_horizontal@win10_trial_conversion.grid_item": {}
-      },
+      { "grid_item_horizontal@win10_trial_conversion.grid_item": {} },
       {
         "pack_grid@win10_trial_conversion.focus_border_button": {
           "size": [ "100%", "100% - 2px" ]
@@ -227,9 +183,7 @@
           ]
         }
       },
-      {
-        "padding_2@win10_trial_conversion.padding_vertical": {}
-      },
+      { "padding_2@win10_trial_conversion.padding_vertical": {} },
       {
         "packdesc@win10_trial_conversion.label_panel": {
           "text": "#description_text",
@@ -247,10 +201,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Collection Panels
-  //---------------------------------------------------------------------------
 
   "collection_main_panel": {
     "type": "stack_panel",
@@ -274,9 +224,7 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {
-              "border_image@win10_trial_conversion.title_image_border": {}
-            }
+            { "border_image@win10_trial_conversion.title_image_border": {} }
           ]
         }
       },
@@ -355,16 +303,9 @@
     "layer": 1,
     "texture": "textures/ui/Banners",
     "controls": [
-      {
-        "main_panel_no_buttons@win10_trial_conversion.collection_main_panel": {
-        }
-      }
+      { "main_panel_no_buttons@win10_trial_conversion.collection_main_panel": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Main Panels
-  //---------------------------------------------------------------------------
 
   "win10_trial_conversion_main_panel": {
     "type": "panel",
@@ -412,9 +353,7 @@
           "$offer_text": "trial.starter.offer"
         }
       },
-      {
-        "padding_2@win10_trial_conversion.padding_horizontal": {}
-      },
+      { "padding_2@win10_trial_conversion.padding_horizontal": {} },
       {
         "master_collection@win10_trial_conversion.background_image_with_border": {
           "$grid_dimension": "#master_grid_dimension",
@@ -428,10 +367,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
 
   "win10_trial_conversion_screen@common.base_screen": {
     "button_mappings": [
@@ -449,5 +384,4 @@
     "$button_text": "trial.tabbed_upsell.title",
     "$child_control": "win10_trial_conversion.win10_trial_conversion_main_panel"
   }
-
 }

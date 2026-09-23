@@ -1,22 +1,12 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
-// Used to control the layout of the Realm Settings screen. Player gets to this screen
-// by selecting the "configure" button in the Realms List screen.
-
 {
   "namespace": "realms_common",
 
-  // The "envelope" icon that shows in the header panel if you have a pending invite
   "pending_invites_icon": {
     "type": "image",
     "texture": "textures/ui/invite_base",
     "layer": 5,
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
-
     "bindings": [
       {
         "binding_name": "#pending_invites_visible",
@@ -39,7 +29,6 @@
     "texture": "textures/ui/MainBannersHover"
   },
 
-  // Legacy - do not use
   "legacy_banner": {
     "type": "image",
     "texture": "textures/ui/legacybanner",
@@ -71,9 +60,6 @@
     "texture": "textures/ui/dialog_background_opaque"
   },
 
-  //--------------------------------------------------------------------------------
-  // Play on Realm Dialog Popup
-  //--------------------------------------------------------------------------------
   "popup_dialog__play_on_realm@popup_dialog.modal_input_panel": {
     "size": [ "100%", "100%" ],
     "controls": [
@@ -180,9 +166,7 @@
           "layer": 1
         }
       },
-      {
-        "play_on_realm_panel@realms_common.play_on_realm_panel": {}
-      },
+      { "play_on_realm_panel@realms_common.play_on_realm_panel": {} },
       {
         "background_panel": {
           "type": "panel",
@@ -213,7 +197,7 @@
     "layer": 2,
     "size": [ "100%-12px", "100%" ],
     "controls": [
-      {        
+      {
         "play_on_realm_content_panel": {
           "type": "stack_panel",
           "orientation": "horizontal",
@@ -392,5 +376,4 @@
       }
     ]
   }
-
 }

@@ -1,8 +1,6 @@
 {
   "namespace": "mob_effect",
-  //---------------------------------------------------------------------------
-  // Controls
-  //---------------------------------------------------------------------------
+
   "effect_background": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -13,12 +11,12 @@
           "texture": "textures/ui/effect_background",
           "size": [ "100%", "100%" ],
           "bindings": [
-          {
-            "binding_type": "collection",
-            "binding_collection_name": "mob_effects_collection",
-            "binding_name": "(not #mob_effect_is_ambient)",
-            "binding_name_override": "#visible"
-          }
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "mob_effects_collection",
+              "binding_name": "(not #mob_effect_is_ambient)",
+              "binding_name_override": "#visible"
+            }
           ]
         }
       },
@@ -28,17 +26,18 @@
           "texture": "textures/ui/effect_background_ambient",
           "size": [ "100%", "100%" ],
           "bindings": [
-          {
-            "binding_type": "collection",
-            "binding_collection_name": "mob_effects_collection",
-            "binding_name": "#mob_effect_is_ambient",
-            "binding_name_override": "#visible"
-          }
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "mob_effects_collection",
+              "binding_name": "#mob_effect_is_ambient",
+              "binding_name_override": "#visible"
+            }
           ]
         }
       }
     ]
   },
+
   "main_background": {
     "type": "image",
     "size": "$mob_effect_screen_size",
@@ -47,6 +46,7 @@
     "offset": [ 4, 4 ],
     "texture": "textures/ui/mob_effect_background"
   },
+
   "button_background": {
     "type": "image",
     "anchor_from": "top_left",
@@ -55,6 +55,7 @@
     "offset": [ "90% + 2px", 4 ],
     "texture": "textures/ui/pocket_tab_right_side"
   },
+
   "effect_name": {
     "type": "label",
     "color": "$dark_button_default_text_color",
@@ -73,6 +74,7 @@
       }
     ]
   },
+
   "effect_timer": {
     "type": "label",
     "anchor_from": "bottom_left",
@@ -90,6 +92,7 @@
       }
     ]
   },
+
   "effect_icon": {
     "type": "image",
     "size": [ "60%", "60%" ],
@@ -104,15 +107,15 @@
       }
     ]
   },
+
   "mob_effect_grid_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "mob_effect_grid@mob_effect.mob_effect_grid": { }
-      }
+      { "mob_effect_grid@mob_effect.mob_effect_grid": {} }
     ]
   },
+
   "mob_effect_grid": {
     "type": "grid",
     "anchor_from": "top_left",
@@ -129,20 +132,29 @@
     ]
   },
 
-
-  //---------------------------------------------------------------------------
-  // CONTENT
-  //---------------------------------------------------------------------------
   "mob_effect_grid_item": {
     "type": "panel",
     "size": [ 240, 30 ],
     "controls": [
-      { "bg@mob_effect.effect_background": { } },
-      { "name@mob_effect.effect_name": { "layer": 1 } },
-      { "timer@mob_effect.effect_timer": { "layer": 1 } },
-      { "icon@mob_effect.effect_icon": { "layer": 1 } }
+      { "bg@mob_effect.effect_background": {} },
+      {
+        "name@mob_effect.effect_name": {
+          "layer": 1
+        }
+      },
+      {
+        "timer@mob_effect.effect_timer": {
+          "layer": 1
+        }
+      },
+      {
+        "icon@mob_effect.effect_icon": {
+          "layer": 1
+        }
+      }
     ]
   },
+
   "mob_effect_list_content_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -165,6 +177,7 @@
       }
     ]
   },
+
   "mob_effect_screen_close_button@common.legacy_pocket_close_button": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -172,31 +185,31 @@
     "offset": [ "90% + 4px", 7.5 ],
     "$pressed_button_name": "button.menu_continue"
   },
+
   "close_button_panel": {
     "type": "panel",
     "controls": [
-      { "bg@mob_effect.button_background": { } },
-      { "close_button@mob_effect.mob_effect_screen_close_button": { } }
-    ]
-  },
-  "mob_effect_content": {
-    "type": "panel",
-    "controls": [
-      { "bg@mob_effect.main_background": { } },
-      { "close_panel@mob_effect.close_button_panel": { } },
-      { "content_panel@mob_effect.mob_effect_list_content_panel": { } }
+      { "bg@mob_effect.button_background": {} },
+      { "close_button@mob_effect.mob_effect_screen_close_button": {} }
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
+  "mob_effect_content": {
+    "type": "panel",
+    "controls": [
+      { "bg@mob_effect.main_background": {} },
+      { "close_panel@mob_effect.close_button_panel": {} },
+      { "content_panel@mob_effect.mob_effect_list_content_panel": {} }
+    ]
+  },
+
   "main_screen": {
     "type": "panel",
     "controls": [
       { "main_screen@mob_effect.mob_effect_content": {} }
     ]
   },
+
   "mob_effect_screen@common.base_screen": {
     "button_mappings": [
       {
@@ -204,11 +217,11 @@
         "to_button_id": "button.menu_continue",
         "mapping_type": "global"
       },
-	    {
-		    "from_button_id": "button.mobeffects",
-		    "to_button_id": "button.menu_continue",
-		    "mapping_type": "global"
-	    }
+      {
+        "from_button_id": "button.mobeffects",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      }
     ],
     "close_on_player_hurt": true,
     "$screen_content": "mob_effect.main_screen",

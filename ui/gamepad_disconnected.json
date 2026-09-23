@@ -4,13 +4,10 @@
   "gamepad_disconnected_modal": {
     "type": "panel",
     "size": "$gamepad_disconnect_screen_size",
-
-
     "controls": [
       {
         "dialog_background_hollow_3@common.dialog_background_hollow_3": {
           "size": [ "100%", "110%" ],
-          
           "controls": [
             {
               "control": {

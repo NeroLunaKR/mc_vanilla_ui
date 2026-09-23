@@ -5,9 +5,7 @@
     "type": "panel",
     "size": [ 24, 25 ],
     "controls": [
-      {
-        "img@$tab_icon": {}
-      }
+      { "img@$tab_icon": {} }
     ]
   },
 
@@ -25,11 +23,10 @@
     "type": "panel",
     "$tab_content|default": "common_tabs.empty_tab_content",
     "$tab_image|default": "common_tabs.tab_image",
-
     "controls": [
       {
         "tab_image@$tab_image": {
-          "size": [ "100%", "100%" ], // We need to explicitly set the size here.
+          "size": [ "100%", "100%" ],
           "layer": 2
         }
       },
@@ -60,7 +57,6 @@
     "$checked_hover_text_color": "$tab_checked_hover_text_color",
     "$checked_locked_text_color": "$tab_checked_locked_text_color",
     "$checked_locked_hover_text_color": "$tab_checked_locked_hover_text_color",
-
     "$unchecked_secondary_text_color": "$tab_secondary_unchecked_text_color",
     "$unchecked_hover_secondary_text_color": "$tab_secondary_unchecked_hover_text_color",
     "$unchecked_locked_secondary_text_color": "$tab_secondary_unchecked_locked_text_color",
@@ -69,7 +65,6 @@
     "$checked_hover_secondary_text_color": "$tab_secondary_checked_hover_text_color",
     "$checked_locked_secondary_text_color": "$tab_secondary_checked_locked_text_color",
     "$checked_locked_hover_secondary_text_color": "$tab_secondary_checked_locked_hover_text_color",
-
     "$unchecked_glyph_color": "$tab_unchecked_glyph_color",
     "$unchecked_hover_glyph_color": "$tab_unchecked_hover_glyph_color",
     "$unchecked_locked_glyph_color": "$tab_unchecked_locked_glyph_color",
@@ -78,17 +73,13 @@
     "$checked_hover_glyph_color": "$tab_checked_hover_glyph_color",
     "$checked_locked_glyph_color": "$tab_checked_locked_glyph_color",
     "$checked_locked_hover_glyph_color": "$tab_checked_locked_hover_glyph_color",
-
     "$tab_view_binding_name|default": "tab",
     "$tab_panel|default": "common_tabs.tab_panel",
     "$is_checked_state|default": false,
     "$is_hover_state|default": false,
     "$tab_ignore_count|default": false,
-
     "$allow_controller_back_button_mapping|default": false,
-
     "$top_tab_tts_name|default": "accessibility.tab.tts.title",
-
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
@@ -98,7 +89,6 @@
           "$toggle_reset_on_focus_lost|default": true,
           "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
           "$allow_controller_back_button_mapping": "$allow_controller_back_button_mapping",
-
           "controls": [
             {
               "unchecked@$tab_panel": {
@@ -195,7 +185,6 @@
   "tab_top@common_tabs.base_tab": {
     "$is_left_most_tab|default": false,
     "$is_right_most_tab|default": false,
-
     "variables": [
       {
         "requires": "($is_left_most_tab and not $is_right_most_tab)",
@@ -203,7 +192,6 @@
         "$unchecked_hover_image": "textures/ui/TabTopBackLeftMostHover",
         "$unchecked_locked_image": "textures/ui/TabTopBackLeftMost",
         "$unchecked_locked_hover_image": "textures/ui/TabTopBackLeftMost",
-
         "$checked_default_image": "textures/ui/TabTopFrontLeftMost",
         "$checked_hover_image": "textures/ui/TabTopFrontLeftMostHover",
         "$checked_locked_image": "textures/ui/TabTopFrontLeftMost",
@@ -215,19 +203,16 @@
         "$unchecked_hover_image": "textures/ui/TabTopBackRightMostHover",
         "$unchecked_locked_image": "textures/ui/TabTopBackRightMost",
         "$unchecked_locked_hover_image": "textures/ui/TabTopBackRightMost",
-
         "$checked_default_image": "textures/ui/TabTopFrontRightMost",
         "$checked_hover_image": "textures/ui/TabTopFrontRightMostHover",
         "$checked_locked_image": "textures/ui/TabTopFrontRightMost",
         "$checked_locked_hover_image": "textures/ui/TabTopFrontRightMost"
       }
     ],
-
     "$unchecked_default_image": "textures/ui/TabTopBack",
     "$unchecked_hover_image": "textures/ui/TabTopBackHover",
     "$unchecked_locked_image": "textures/ui/TabTopBack",
     "$unchecked_locked_hover_image": "textures/ui/TabTopBack",
-
     "$checked_default_image|default": "textures/ui/TabTopFront",
     "$checked_hover_image|default": "textures/ui/TabTopFrontHover",
     "$checked_locked_image|default": "textures/ui/TabTopFront",
@@ -237,7 +222,6 @@
   "tab_left@common_tabs.base_tab": {
     "$is_bottom_most_tab|default": false,
     "$is_top_most_tab|default": false,
-
     "variables": [
       {
         "requires": "($is_bottom_most_tab and not $is_top_most_tab)",
@@ -245,7 +229,6 @@
         "$unchecked_hover_image": "textures/ui/TabLeftBackBottomMostHover",
         "$unchecked_locked_image": "textures/ui/TabLeftBackBottomMost",
         "$unchecked_locked_hover_image": "textures/ui/TabLeftBackBottomMost",
-
         "$checked_default_image": "textures/ui/TabLeftFrontBottomMost",
         "$checked_hover_image": "textures/ui/TabLeftFrontBottomMostHover",
         "$checked_locked_image": "textures/ui/TabLeftFrontBottomMost",
@@ -257,20 +240,16 @@
         "$unchecked_hover_image": "textures/ui/TabLeftBackTopMostHover",
         "$unchecked_locked_image": "textures/ui/TabLeftBackTopMost",
         "$unchecked_locked_hover_image": "textures/ui/TabLeftBackTopMost",
-
         "$checked_default_image": "textures/ui/TabLeftFrontTopMost",
         "$checked_hover_image": "textures/ui/TabLeftFrontTopMostHover",
         "$checked_locked_image": "textures/ui/TabLeftFrontTopMost",
         "$checked_locked_hover_image": "textures/ui/TabLeftFrontTopMost"
       }
     ],
-
-
     "$unchecked_default_image": "textures/ui/TabLeftBack",
     "$unchecked_hover_image": "textures/ui/TabLeftBackHover",
     "$unchecked_locked_image": "textures/ui/TabLeftBack",
     "$unchecked_locked_hover_image": "textures/ui/TabLeftBack",
-
     "$checked_default_image|default": "textures/ui/TabLeftFront",
     "$checked_hover_image|default": "textures/ui/TabLeftFrontHover",
     "$checked_locked_image|default": "textures/ui/TabLeftFront",
@@ -280,7 +259,6 @@
   "tab_right@common_tabs.base_tab": {
     "$is_bottom_most_tab|default": false,
     "$is_top_most_tab|default": false,
-
     "variables": [
       {
         "requires": "($is_bottom_most_tab and not $is_top_most_tab)",
@@ -288,7 +266,6 @@
         "$unchecked_hover_image": "textures/ui/TabRightBackBottomMostHover",
         "$unchecked_locked_image": "textures/ui/TabRightBackBottomMost",
         "$unchecked_locked_hover_image": "textures/ui/TabRightBackBottomMost",
-
         "$checked_default_image": "textures/ui/TabRightFrontBottomMost",
         "$checked_hover_image": "textures/ui/TabRightFrontBottomMostHover",
         "$checked_locked_image": "textures/ui/TabRightFrontBottomMost",
@@ -300,19 +277,16 @@
         "$unchecked_hover_image": "textures/ui/TabRightBackTopMostHover",
         "$unchecked_locked_image": "textures/ui/TabRightBackTopMost",
         "$unchecked_locked_hover_image": "textures/ui/TabRightBackTopMost",
-
         "$checked_default_image": "textures/ui/TabRightFrontTopMost",
         "$checked_hover_image": "textures/ui/TabRightFrontTopMostHover",
         "$checked_locked_image": "textures/ui/TabRightFrontTopMost",
         "$checked_locked_hover_image": "textures/ui/TabRightFrontTopMost"
       }
     ],
-
     "$unchecked_default_image": "textures/ui/TabRightBack",
     "$unchecked_hover_image": "textures/ui/TabRightBackHover",
     "$unchecked_locked_image": "textures/ui/TabRightBack",
     "$unchecked_locked_hover_image": "textures/ui/TabRightBack",
-
     "$checked_default_image|default": "textures/ui/TabRightFront",
     "$checked_hover_image|default": "textures/ui/TabRightFrontHover",
     "$checked_locked_image|default": "textures/ui/TabRightFront",
@@ -335,10 +309,6 @@
     "duration": 0.5
   },
 
-  //---------------------------------------------------------------------------
-  // Pocket Tabs
-  //---------------------------------------------------------------------------
-
   "pocket_empty_tab_panel": {
     "type": "panel",
     "size": [ 35, 33 ],
@@ -353,7 +323,7 @@
     "$toggle_name": "left_navigation_tab"
   },
 
-  "pocket_left_tab_v2@common_tabs.tab_left": { // used by furnace and crafting screens
+  "pocket_left_tab_v2@common_tabs.tab_left": {
     "anchor_from": "center",
     "anchor_to": "center",
     "alpha": 0.2,
@@ -372,7 +342,7 @@
     "$toggle_name": "right_navigation_tab"
   },
 
-  "pocket_right_tab_v2@common_tabs.tab_right": { // used by furnace and crafting screens
+  "pocket_right_tab_v2@common_tabs.tab_right": {
     "anchor_from": "right_middle",
     "anchor_to": "left_middle",
     "$toggle_focus_enabled": false,
@@ -385,7 +355,6 @@
     "type": "image",
     "size": [ "100%", 33 ],
     "texture": "textures/ui/TabRightBackTopMost",
-
     "controls": [
       {
         "close_button@common.light_close_button": {
@@ -401,7 +370,6 @@
     "type": "image",
     "size": [ "100%", 33 ],
     "texture": "textures/ui/TabRightBackTopMost",
-
     "controls": [
       {
         "help_button@common.help_button": {
@@ -417,7 +385,6 @@
     "type": "image",
     "size": [ "100%", 51 ],
     "texture": "textures/ui/TabRightBackTopMost",
-
     "controls": [
       {
         "close_button@common.light_close_button": {
@@ -440,7 +407,6 @@
     "type": "image",
     "size": [ "100%", "100%c + 7px" ],
     "texture": "textures/ui/TabRightBackTopMost",
-
     "controls": [
       {
         "close_button@common.light_close_button": {

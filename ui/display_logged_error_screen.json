@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "display_logged_error",
 
@@ -26,10 +21,7 @@
     ]
   },
 
-  // Error popup
-
   "display_logged_error_modal@common_dialogs.main_panel_two_buttons": {
-
     "layer": 5,
     "size": [ 200, 165 ],
     "$child_control": "display_logged_error.error_message_stack",
@@ -113,8 +105,6 @@
     "$focus_override_right": "FOCUS_OVERRIDE_STOP"
   },
 
-  // Error details screen
-
   "error_details_modal@common_dialogs.main_panel_two_buttons": {
     "layer": 5,
     "$child_control": "display_logged_error.error_stack_scrolling_panel",
@@ -186,9 +176,7 @@
     "type": "panel",
     "size": [ "100%", "100%cm" ],
     "controls": [
-      {
-        "error_message@display_logged_error.error_base": {}
-      },
+      { "error_message@display_logged_error.error_base": {} },
       {
         "controller_button@common.button": {
           "size": [ "100%", "100%sm" ],
@@ -217,12 +205,8 @@
             }
           ],
           "controls": [
-            {
-              "hover@common.focus_border_white": {}
-            },
-            {
-              "pressed@common.focus_border_white": {}
-            }
+            { "hover@common.focus_border_white": {} },
+            { "pressed@common.focus_border_white": {} }
           ],
           "bindings": [
             {

@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "confirm_delete_account",
 
@@ -20,7 +15,7 @@
 
   "image_panel": {
     "type": "panel",
-    "size": [ "133.4375%y" , 80 ],
+    "size": [ "133.4375%y", 80 ],
     "controls": [
       {
         "image": {
@@ -41,9 +36,7 @@
     "orientation": "horizontal",
     "size": [ "100% - 8px", "100%cm" ],
     "controls": [
-      {
-        "image_panel@confirm_delete_account.image_panel": {}
-      },
+      { "image_panel@confirm_delete_account.image_panel": {} },
       {
         "padding": {
           "type": "panel",
@@ -159,7 +152,6 @@
     "type": "stack_panel",
     "size": [ "100%", 25 ],
     "orientation": "horizontal",
-
     "controls": [
       {
         "check_box_wrapper": {
@@ -185,7 +177,6 @@
         "label_wrapper": {
           "type": "panel",
           "size": [ "fill", "100%" ],
-
           "controls": [
             {
               "label": {
@@ -232,9 +223,7 @@
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "divider_0@confirm_delete_account.horizontal_divider": {}
-      },
+      { "divider_0@confirm_delete_account.horizontal_divider": {} },
       {
         "confirm_0@confirm_delete_account.confirm_checkbox": {
           "$checkbox_text": "options.delete_account.confirm.checkbox1",
@@ -243,9 +232,7 @@
           "$toggle_enabled_binding_name": "#confirm_0_enabled"
         }
       },
-      {
-        "divider_1@confirm_delete_account.horizontal_divider": {}
-      },
+      { "divider_1@confirm_delete_account.horizontal_divider": {} },
       {
         "confirm_1@confirm_delete_account.confirm_checkbox": {
           "$checkbox_text": "options.delete_account.confirm.checkbox2",
@@ -268,9 +255,7 @@
           "$toggle_enabled_binding_name": "#confirm_2_enabled"
         }
       },
-      {
-        "divider_3@confirm_delete_account.horizontal_divider": {}
-      },
+      { "divider_3@confirm_delete_account.horizontal_divider": {} },
       {
         "confirm_3@confirm_delete_account.confirm_checkbox": {
           "$checkbox_text": "options.delete_account.confirm.checkbox4",
@@ -282,11 +267,6 @@
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
   "confirm_delete_account_screen@common.base_screen": {
     "button_mappings": [
       {
@@ -307,7 +287,11 @@
         "root_panel": {
           "type": "panel",
           "controls": [
-            { "dialog@confirm_delete_account.screen_dialog": { "layer": 1 } }
+            {
+              "dialog@confirm_delete_account.screen_dialog": {
+                "layer": 1
+              }
+            }
           ]
         }
       }
@@ -326,4 +310,3 @@
     "layer": 1
   }
 }
-

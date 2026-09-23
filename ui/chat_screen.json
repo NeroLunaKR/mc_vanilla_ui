@@ -1,40 +1,44 @@
 {
   "namespace": "chat",
 
-  // Button Images //
-
   "down_arrow_image": {
     "type": "image",
     "size": [ 12, 8 ],
     "texture": "textures/ui/chat_down_arrow",
     "color": "$text_color"
   },
+
   "keyboard_image": {
     "type": "image",
     "size": [ 9, 7 ],
     "$keyboard_image|default": "textures/ui/chat_keyboard",
     "texture": "$keyboard_image"
   },
+
   "copy_image": {
     "type": "image",
     "size": [ 12, 12 ],
     "texture": "textures/ui/copy"
   },
+
   "paste_image": {
     "type": "image",
     "size": [ 12, 12 ],
     "texture": "textures/ui/paste"
   },
+
   "gear_image": {
     "type": "image",
     "size": [ 14, 14 ],
     "texture": "textures/ui/gear"
   },
+
   "send_image": {
     "type": "image",
     "size": [ 21, 18 ],
     "texture": "textures/ui/chat_send"
   },
+
   "send_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -140,7 +144,7 @@
                 "size": [ "100%c", "100%cm" ],
                 "anchor_from": "center",
                 "anchor_to": "center",
-                "$content_color": [0, 1, 0, 1],
+                "$content_color": [ 0, 1, 0, 1 ],
                 "controls": [
                   {
                     "arrow_icon": {
@@ -172,8 +176,6 @@
       }
     ]
   },
-
-  // Buttons //
 
   "small_button@common_buttons.light_content_button": {
     "size": [ 27, 27 ],
@@ -220,7 +222,6 @@
     "focus_enabled": "$tts_enabled",
     "$focus_id": "send_button_focus_id",
     "$focus_override_up": "paste_button_focus_id",
-
     "$button_type_panel": "chat.send_panel",
     "$button_tts_header": "#send_button_accessibility_text",
     "bindings": [
@@ -271,8 +272,6 @@
     ]
   },
 
-  // Messages Panel //
-
   "messages_text": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
@@ -318,6 +317,7 @@
       }
     }
   },
+
   "messages_scrolling_panel@common.scrolling_panel": {
     "type": "panel",
     "size": [ "100%-2px", "100%-50px" ],
@@ -334,26 +334,18 @@
     "$always_handle_scrolling": true
   },
 
-  // Chat Text Edit //
-
   "text_edit_box@common.text_edit_box": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "fill", 27 ],
     "max_length": "$max_text_edit_length",
-
     "always_listening": true,
-
     "$text_box_name": "#message_text_box",
     "$text_edit_box_content_binding_name": "#message_text_box_content",
-
-    // This one thinks it's so important, it gets selected first
     "default_focus_precedence": 1,
     "$focus_id": "text_edit_box_focus_id",
     "$focus_override_left": "chat_settings_button_focus_id",
-    // focus override up and down are controlled with bindings
     "$text_box_tts_header": "accessibility.chat.tts.textboxTitle",
-
     "bindings": [
       {
         "binding_type": "$text_edit_box_enabled_binding_type",
@@ -370,9 +362,7 @@
         "binding_name_override": "#focus_change_down"
       }
     ],
-
     "button_mappings": [
-      // Original Mappings - defined in common.text_edit_box //
       {
         "from_button_id": "button.menu_select",
         "to_button_id": "$text_edit_box_selected_to_button_id",
@@ -386,7 +376,6 @@
         "handle_select": false,
         "handle_deselect": true,
         "mapping_type": "global",
-        // Deselect textbox and allow selection of another UI control with same mouse press
         "consume_event": false
       },
       {
@@ -421,8 +410,6 @@
         "handle_deselect": false,
         "mapping_type": "focused"
       },
-
-      // Extra Mappings //
       {
         "from_button_id": "button.menu_autocomplete",
         "to_button_id": "button.chat_autocomplete",
@@ -451,8 +438,6 @@
         "handle_deselect": false,
         "mapping_type": "focused"
       },
-
-      // Controller Mappings //
       {
         "from_button_id": "button.controller_select",
         "to_button_id": "button.send",
@@ -505,8 +490,6 @@
     ]
   },
 
-  // Commands Background //
-
   "commands_background": {
     "type": "image",
     "size": [ "100%", "100%c" ],
@@ -514,17 +497,16 @@
     "color": [ 0.0, 0.0, 0.0 ]
   },
 
-  // Auto Complete //
   "click_autocomplete_is_focused": {
     "type": "image",
     "texture": "textures/ui/square_image_border_white",
     "color": "$non_interact_border_color"
   },
+
   "auto_complete_panel_contents_with_item": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    // We have to manually put in the size because item renderer is weird.
     "size": [ "100%", 10 ],
     "controls": [
       {
@@ -568,7 +550,11 @@
           "$pressed_button_name": "button.click_autocomplete",
           "tts_inherit_siblings": true,
           "controls": [
-            { "default": { "type": "panel" } },
+            {
+              "default": {
+                "type": "panel"
+              }
+            },
             { "hover@chat.click_autocomplete_is_focused": {} },
             { "pressed@chat.click_autocomplete_is_focused": {} }
           ],
@@ -588,6 +574,7 @@
       }
     ]
   },
+
   "auto_complete_panel": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -600,7 +587,6 @@
           "size": [ "100%", "100%" ],
           "max_size": [ "100%", "100%" ],
           "min_size": [ 0, 0 ],
-
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "controls": [
@@ -628,8 +614,6 @@
     ]
   },
 
-  // Commands Stack Panel //
-
   "commands_panel": {
     "type": "panel",
     "anchor_from": "bottom_left",
@@ -645,8 +629,6 @@
       }
     ]
   },
-
-  // Chat Bottom Panel //
 
   "chat_bottom_panel": {
     "type": "stack_panel",
@@ -665,11 +647,13 @@
       },
       { "chat_settings@chat.chat_settings_button": {} },
       { "text_box@chat.text_edit_box": {} },
-      { "send_button@chat.send_button": { "offset": [ -20, 0 ] } }
+      {
+        "send_button@chat.send_button": {
+          "offset": [ -20, 0 ]
+        }
+      }
     ]
   },
-
-  // Title Bar //
 
   "title_text": {
     "type": "panel",
@@ -717,10 +701,8 @@
           "offset": [ -4, -1 ],
           "$gamepad_helper_icon_description_text_color": "$light_glyph_default_color",
           "$gamepad_helper_icon_description_shadow": false,
-
           "tts_name": "accessibility.button.tts.title",
           "tts_control_header": "#back_button_accessibility_text",
-
           "controls": [
             {
               "gamepad_helper_button@common.gamepad_helper_b": {
@@ -776,12 +758,8 @@
     "$dropdown_area": "chat_header_content_area",
     "$dropdown_name": "chat_coordinate_dropdown",
     "$options_dropdown_toggle_label_binding": "#chat_coordinate_dropdown_label",
-
-    // Dropdown toggle button //
     "$option_dropdown_size": [ "100%", 16 ],
     "$options_dropdown_toggle_button_state_content": [ "100%", "100%" ],
-
-    // Dropdown contents //
     "$dropdown_content": "chat.coordinate_dropdown_content"
   },
 
@@ -941,10 +919,6 @@
     ]
   },
 
-  ////////////////////////////
-  // Main Screen            //
-  ////////////////////////////
-
   "chat_screen@common.base_screen": {
     "close_on_player_hurt": true,
     "$screen_content": "chat.chat_screen_content",
@@ -967,11 +941,31 @@
     "type": "panel",
     "controls": [
       { "messages_panel@chat.messages_scrolling_panel": {} },
-      { "chat_bottom_panel@chat.chat_bottom_panel": { "layer": 2 } },
-      { "chat_top_panel@chat.chat_header": { "layer": 2 } },
-      { "new_messages_button@chat.new_messages_button": { "layer": 3 } },
-      { "autocomplete_commands_panel@chat.commands_panel": { "layer": 4 } },
-      { "host_main_panel@host_options.host_panel": { "layer": 5 } },
+      {
+        "chat_bottom_panel@chat.chat_bottom_panel": {
+          "layer": 2
+        }
+      },
+      {
+        "chat_top_panel@chat.chat_header": {
+          "layer": 2
+        }
+      },
+      {
+        "new_messages_button@chat.new_messages_button": {
+          "layer": 3
+        }
+      },
+      {
+        "autocomplete_commands_panel@chat.commands_panel": {
+          "layer": 4
+        }
+      },
+      {
+        "host_main_panel@host_options.host_panel": {
+          "layer": 5
+        }
+      },
       { "popup_factory@chat_settings.popup_factory": {} }
     ]
   },

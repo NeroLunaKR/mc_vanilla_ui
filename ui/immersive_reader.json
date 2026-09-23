@@ -23,7 +23,6 @@
       {
         "binding_type": "global",
         "binding_condition": "visible",
-        // Binding itself doesn't do anything, but the callback is used to fill the property bag
         "binding_name": "#webview_update"
       },
       {
@@ -65,7 +64,11 @@
           ]
         }
       },
-      { "bottom_padding@common.empty_panel": { "size": [ "100%", "fill" ] } },
+      {
+        "bottom_padding@common.empty_panel": {
+          "size": [ "100%", "fill" ]
+        }
+      },
       {
         "cancel_button@common_buttons.light_text_button": {
           "$border_visible": false,
@@ -108,7 +111,11 @@
           "size": [ "fill", "100%" ]
         }
       },
-      { "middle_padding@common.empty_panel": { "size": [ 2, "100%" ] } },
+      {
+        "middle_padding@common.empty_panel": {
+          "size": [ 2, "100%" ]
+        }
+      },
       {
         "cancel@common_buttons.light_text_button": {
           "$border_visible": false,

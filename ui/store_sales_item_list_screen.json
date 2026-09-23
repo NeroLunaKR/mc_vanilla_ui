@@ -113,9 +113,7 @@
           "orientation": "vertical",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "sales_banner_panel@store_sale_item_list.banner_header": {}
-            },
+            { "sales_banner_panel@store_sale_item_list.banner_header": {} },
             {
               "top_sales_grid_padding": {
                 "type": "panel",
@@ -154,9 +152,7 @@
     "size": [ "100%", "100%c" ],
     "visible": false,
     "controls": [
-      {
-        "store_offer_grid_panel@store_item_list.store_offer_grid": {}
-      }
+      { "store_offer_grid_panel@store_item_list.store_offer_grid": {} }
     ],
     "bindings": [
       {

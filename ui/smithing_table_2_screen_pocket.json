@@ -1,10 +1,6 @@
 {
   "namespace": "smithing_table_2_pocket",
 
-  //------------------------------------------------------------------------------------
-  // #region Backgrounds
-  //---------------------------------------------------------------------------
-
   "smithing_table_item_renderer": {
     "type": "custom",
     "renderer": "inventory_item_renderer",
@@ -125,12 +121,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Arrow
-  //---------------------------------------------------------------------------
-
   "arrow_icon": {
     "type": "image",
     "texture": "textures/ui/arrow_icon",
@@ -145,24 +135,12 @@
     "anchor_to": "bottom_left"
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region labels
-  //---------------------------------------------------------------------------
-
   "upgrade_label": {
     "type": "label",
     "color": "$title_text_color",
     "layer": 1,
     "text": "container.smithing_table.upgrade"
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Slots
-  //---------------------------------------------------------------------------
 
   "slot_grid_item": {
     "type": "panel",
@@ -282,9 +260,7 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
-      {
-        "cross_out@smithing_table_2_pocket.cross_out_icon": {}
-      }
+      { "cross_out@smithing_table_2_pocket.cross_out_icon": {} }
     ]
   },
 
@@ -295,12 +271,6 @@
       { "crafting_arrow@smithing_table_2_pocket.crafting_arrow": {} }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Result preview
-  //---------------------------------------------------------------------------
 
   "result_item_preview": {
     "type": "panel",
@@ -357,12 +327,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Smithing content
-  //---------------------------------------------------------------------------
-
   "smithing_table_contents_panel": {
     "type": "grid",
     "offset": [ 0, 0 ],
@@ -399,17 +363,11 @@
       {
         "result_item_preview@smithing_table_2_pocket.result_item_preview_grid_item": {
           "grid_position": [ 3, 1 ],
-          "size": [ "40%", "60%" ] // two cols wide, three rows 
+          "size": [ "40%", "60%" ]
         }
       }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Left panel
-  //---------------------------------------------------------------------------
 
   "chest_item_renderer": {
     "type": "custom",
@@ -424,9 +382,7 @@
 
   "left_tab_inventory@common_tabs.pocket_tab_left": {
     "$tab_view_binding_name": "inventory_tab_toggle",
-
     "$tab_content": "smithing_table_2_pocket.chest_item_renderer",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_inventory"
   },
@@ -504,15 +460,8 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Right panel
-  //---------------------------------------------------------------------------
-
   "right_tab_smithing_table@common_tabs.pocket_tab_right": {
     "$tab_content": "smithing_table_2_pocket.smithing_table_item_renderer",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_right_tab_smithing_table"
   },
@@ -544,7 +493,6 @@
     "type": "stack_panel",
     "size": [ "fill", "100%" ],
     "orientation": "horizontal",
-
     "controls": [
       {
         "content@common.root_panel": {
@@ -575,12 +523,6 @@
       }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Smithing table panel
-  //---------------------------------------------------------------------------
 
   "pocket_hotbar_and_content_panels@common.pocket_hotbar_and_content_panels": {
     "layer": 2,
@@ -614,10 +556,11 @@
       },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   }
-
-  // #endregion
-
 }

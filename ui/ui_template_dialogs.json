@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "common_dialogs",
 
@@ -59,12 +54,6 @@
     ]
   },
 
-  /////////////////////////////////
-  //
-  //  DIALOG WINDOWS
-  //
-  /////////////////////////////////
-
   "main_panel_three_buttons": {
     "type": "panel",
     "anchor_from": "center",
@@ -75,15 +64,14 @@
     "$bottom_button_panel|default": "common.empty_panel",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_6" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_6"
+        }
       },
-      {
-        "title_label@common_dialogs.title_label": {}
-      },
+      { "title_label@common_dialogs.title_label": {} },
       {
         "panel_indent": {
           "type": "panel",
-          // Fit to the hole in dialog_background_hollow_1 exactly
           "size": [ "100% - 16px", "100% - 131px" ],
           "offset": [ 0, 23 ],
           "anchor_from": "top_middle",
@@ -129,15 +117,14 @@
     "$bottom_button_panel|default": "common.empty_panel",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_1" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_1"
+        }
       },
-      {
-        "title_label@common_dialogs.title_label": {}
-      },
+      { "title_label@common_dialogs.title_label": {} },
       {
         "panel_indent": {
           "type": "panel",
-          // Fit to the hole in dialog_background_hollow_1 exactly
           "size": [ "100% - 16px", "100% - 99px" ],
           "offset": [ 0, 23 ],
           "anchor_from": "top_middle",
@@ -174,11 +161,11 @@
     "$button_panel|default": "common.empty_panel",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_2" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_2"
+        }
       },
-      {
-        "title_label@common_dialogs.title_label": {}
-      },
+      { "title_label@common_dialogs.title_label": {} },
       {
         "panel_indent": {
           "type": "panel",
@@ -211,11 +198,11 @@
     "$custom_background|default": "dialog_background_hollow_3",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "$custom_background" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "$custom_background"
+        }
       },
-      {
-        "title_label@common_dialogs.title_label": {}
-      },
+      { "title_label@common_dialogs.title_label": {} },
       {
         "panel_indent": {
           "type": "panel",
@@ -237,7 +224,9 @@
     "anchor_to": "center",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_4" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_4"
+        }
       },
       {
         "panel_indent": {
@@ -265,7 +254,9 @@
     "$main_panel_size|default": [ "100% - 16px", "100% - 59px" ],
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_5" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_5"
+        }
       },
       {
         "title_label@common_dialogs.title_label": {
@@ -300,7 +291,11 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
-      { "modal_background_image@modal.modal_background_image": { "layer": 1 } },
+      {
+        "modal_background_image@modal.modal_background_image": {
+          "layer": 1
+        }
+      },
       {
         "panel_indent": {
           "type": "panel",
@@ -313,14 +308,6 @@
     ]
   },
 
-
-  /////////////////////////////////
-  //
-  //  FORM FITTING DIALOG WINDOWS
-  //
-  /////////////////////////////////
-
-
   "form_fitting_main_panel_no_buttons": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
@@ -332,7 +319,11 @@
     "$close_button_offset|default": [ 0, 0 ],
     "$custom_background": "common_dialogs.dialog_background_hollow_3",
     "controls": [
-      { "common_panel@common_dialogs.common_panel": { "$dialog_background": "$custom_background" } }
+      {
+        "common_panel@common_dialogs.common_panel": {
+          "$dialog_background": "$custom_background"
+        }
+      }
     ]
   },
 
@@ -395,13 +386,8 @@
             }
           ],
           "controls": [
-            {
-              "inside_header_panel@$child_control": {
-              }
-            },
-            {
-              "close_button_holder@common_dialogs.common_close_button_holder": {}
-            },
+            { "inside_header_panel@$child_control": {} },
+            { "close_button_holder@common_dialogs.common_close_button_holder": {} },
             {
               "title_label@common_dialogs.title_label": {
                 "anchor_from": "top_middle",
@@ -446,10 +432,8 @@
   },
 
   "dialog_background_opaque_with_child@common_dialogs.dialog_background_hollow_common": {
-    // +31 same as hollow_3 to fit
     "size": [ "100%", "100%c + 31px" ],
     "texture": "textures/ui/dialog_background_opaque",
-    // This isn't a hollow panel so we don't want to fill the hollow hole with the background color, so make it invisible
     "$fill_alpha": 0.0
   },
 

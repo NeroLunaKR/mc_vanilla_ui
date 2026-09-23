@@ -24,9 +24,7 @@
     "type": "panel",
     "size": [ "100%c", "100%" ],
     "controls": [
-      {
-        "toast_icon@toast_screen.toast_image": {}
-      }
+      { "toast_icon@toast_screen.toast_image": {} }
     ]
   },
 
@@ -98,7 +96,6 @@
     "$icon_size": [ "177.78%y", 18 ]
   },
 
-
   "gamer_score_icon": {
     "type": "image",
     "texture": "textures/ui/gamerscore",
@@ -139,20 +136,14 @@
     "$button_font_size|default": "normal",
     "$button_font_scale_factor|default": 1.0,
     "$pressed_alpha|default": 1,
-
-    // For text bindings
     "$button_text_binding_type|default": "none",
     "$button_binding_condition|default": "none",
     "$button_text_grid_collection_name|default": "",
-
     "$button_type_panel": "common_buttons.new_ui_binding_button_label",
-
-    // These states are for passing the button state to the button content - do not set these in a parent!
     "$default_state|default": false,
     "$hover_state|default": false,
     "$pressed_state|default": false,
     "$locked_state|default": false,
-
     "controls": [
       {
         "default@static_button_state_panel": {
@@ -234,9 +225,7 @@
                     "key_art_image": "@toast_screen.key_art_image",
                     "persona_icon": "@toast_screen.persona_icon"
                   },
-                  "factory_variables": [
-                    "$hide_xbox_live_icon"
-                  ]
+                  "factory_variables": [ "$hide_xbox_live_icon" ]
                 },
                 "bindings": [
                   {
@@ -264,9 +253,7 @@
                 "type": "panel",
                 "size": [ "fill", "100%" ],
                 "controls": [
-                  {
-                    "text_stack_panel@toast_screen.text_stack_panel": {}
-                  }
+                  { "text_stack_panel@toast_screen.text_stack_panel": {} }
                 ]
               }
             },
@@ -312,10 +299,6 @@
     "size": [ 22, 22 ]
   },
 
-  //---------------------------------------------------------------------------
-  // recipe popup
-  //---------------------------------------------------------------------------
-
   "game_tip_label": {
     "type": "label",
     "layer": 3,
@@ -341,6 +324,7 @@
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
+    "$progress_bar_offset|default": [ 0, 0 ],
     "controls": [
       {
         "toast_duration_progress_bar": {
@@ -350,6 +334,7 @@
           "size": [ "100%", 3 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
+          "offset": "$progress_bar_offset",
           "primary_color": "$toast_message_progress_bar_empty",
           "secondary_color": "$toast_message_progress_bar_fill",
           "bindings": [
@@ -461,7 +446,7 @@
                     }
                   },
                   {
-                    "panel" : {
+                    "panel": {
                       "type": "panel",
                       "size": [ "100%cm", "100%cm" ],
                       "anchor_from": "top_left",
@@ -476,7 +461,7 @@
                             "min_size": [ "default", "default" ],
                             "max_size": [ 200, 10 ],
                             "alpha": 0,
-                            "$debug_text_color|default": [ 1.0, 0.0, 0.0],
+                            "$debug_text_color|default": [ 1.0, 0.0, 0.0 ],
                             "color": "$debug_text_color",
                             "$longest_text|default": "#longest_text",
                             "text": "$longest_text",
@@ -514,7 +499,7 @@
                                   "type": "label",
                                   "layer": 3,
                                   "text_alignment": "left",
-                                  "$title_color|default": [ 0.77, 0.77, 0.77],
+                                  "$title_color|default": [ 0.77, 0.77, 0.77 ],
                                   "color": "$title_color",
                                   "size": [ "default", "default" ],
                                   "min_size": [ "default", "default" ],
@@ -555,7 +540,6 @@
     ]
   },
 
-  // used when pocket-ui is enabled and is inside the inventory screen
   "recipe_unlocked_pocket_popup": {
     "type": "image",
     "texture": "textures/ui/greyBorder",
@@ -597,9 +581,7 @@
                       "size": [ 9, 0 ]
                     }
                   },
-                  {
-                    "recipe_unlocked_icon@toast_screen.recipe_unlocked_icon": {}
-                  },
+                  { "recipe_unlocked_icon@toast_screen.recipe_unlocked_icon": {} },
                   {
                     "horizontal_padding_2": {
                       "type": "panel",
@@ -642,7 +624,6 @@
       }
     ]
   },
-  // end of pocket pocket recipe popup
 
   "text_stack_panel": {
     "type": "stack_panel",
@@ -751,9 +732,7 @@
     "size": [ "100%c", 26 ],
     "offset": [ 0, "55%" ],
     "controls": [
-      {
-        "join_button_icon@toast_screen.join_button_icon": {}
-      },
+      { "join_button_icon@toast_screen.join_button_icon": {} },
       {
         "join_prompt_text_panel": {
           "type": "panel",
@@ -797,7 +776,6 @@
     "$alpha_anims": [
       "@toast_screen.fade_anim_wait"
     ],
-
     "controls": [
       {
         "bg": {
@@ -805,7 +783,7 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [ 0, 10 ],
-          "size": [ "100%c + 6px", "100%c + 13px" ], // form fitting
+          "size": [ "100%c + 6px", "100%c + 13px" ],
           "texture": "textures/ui/greyBorder",
           "anims": "$alpha_anims",
           "controls": [
@@ -847,7 +825,6 @@
     "duration": "$transition_time"
   },
 
-  // JSON UI implementation of the Ore UI snackbar
   "snackbar": {
     "type": "panel",
     "anchor_from": "bottom_middle",
@@ -944,7 +921,7 @@
                         {
                           "right_padding": {
                             "type": "panel",
-                            "size": [ "3px", "12px" ] // seems necessary to add 1px in comparison to left padding to visually center the text
+                            "size": [ "3px", "12px" ]
                           }
                         }
                       ]
@@ -977,7 +954,7 @@
     "size": [ "100%c", "100%c" ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
-    "layer": 10, // To appear above popup button
+    "layer": 10,
     "$visibility_binding_name|default": "#button_visible",
     "bindings": [
       {
@@ -988,7 +965,7 @@
     "controls": [
       {
         "gamepad_icon_glyph@toast_screen.game_tip_label": {
-          "size": [ 25, 22 ], // To fit largest glyphs (RB/LB: 25px, D-Pad/LT/RT: 22px)
+          "size": [ 25, 22 ],
           "text_alignment": "center",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_middle",
@@ -1101,6 +1078,171 @@
     }
   },
 
+  "matchmaking_input_hint": {
+    "type": "panel",
+    "size": [ 28, "100%" ],
+    "bindings": [
+      {
+        "binding_name": "(not #gesture_control_enabled)",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "gamepad_icon_glyph@toast_screen.game_tip_label": {
+          "size": [ 25, 22 ],
+          "text_alignment": "center",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 5 ],
+          "bindings": [
+            {
+              "binding_name": "#button_glyph",
+              "binding_name_override": "$label_text"
+            },
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "keyboard_icon_glyph@common.keyboard_helper_keys": {
+          "size": [ 28, 17 ],
+          "$icon_size": [ "100%c + 10px", 17 ],
+          "$icon_size_panel": [ "100%c + 10px", 17 ],
+          "$hide_description": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$text_color": "$generic_button_text_color",
+          "$keyboard_character": "F4",
+          "$keyboard_character_bindings": [
+            {
+              "binding_name": "(not #is_using_gamepad)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "matchmaking_popup@toast_screen.party_popup_base": {
+    "$toast_anchor_from": "top_right",
+    "$toast_anchor_to": "top_right",
+    "size": [ 190, 36 ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/greyBorder",
+          "anims": "$alpha_anims"
+        }
+      },
+      {
+        "matchmaking_content": {
+          "type": "panel",
+          "size": [ "100% - 14px", "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 7, 0 ],
+          "layer": 1,
+          "controls": [
+            {
+              "input_hint@toast_screen.matchmaking_input_hint": {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            },
+            {
+              "divider": {
+                "type": "image",
+                "texture": "textures/ui/toast_divider",
+                "size": [ 4, 22 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 30, 0 ],
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "(not #gesture_control_enabled)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "queue_content_wrapper": {
+                "type": "panel",
+                "size": [ "100% - 38px", "100%" ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 38, 0 ],
+                "controls": [
+                  {
+                    "queue_content": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "size": [ "100%", 22 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "title_text_label@toast_screen.game_tip_label": {
+                            "size": [ "100%", 11 ],
+                            "$max_label_size": [ "100%", 11 ]
+                          }
+                        },
+                        {
+                          "timer_row": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "size": [ "100%", 11 ],
+                            "controls": [
+                              {
+                                "timer_icon": {
+                                  "type": "image",
+                                  "size": [ 8, 8 ],
+                                  "offset": [ 0, 1 ],
+                                  "texture": "textures/ui/time",
+                                  "color": "$7_color_format"
+                                }
+                              },
+                              {
+                                "timer_padding": {
+                                  "type": "panel",
+                                  "size": [ 3, 11 ]
+                                }
+                              },
+                              {
+                                "timer_text@toast_screen.toast_label": {
+                                  "size": [ "fill", 11 ],
+                                  "$toast_label_offset": [ 0, 0 ],
+                                  "text": "#toast_subtitle",
+                                  "color": "$7_color_format",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#toast_subtitle"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "party_progress@toast_screen.party_popup_base": {
     "controls": [
       {
@@ -1164,6 +1306,12 @@
                 "size": [ "fill", "100%" ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ],
                 "controls": [
                   {
                     "start_progress_padding": {
@@ -1228,9 +1376,70 @@
               }
             },
             {
+              "actionless_content_vertical_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "fill", 22 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "(not #button_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "title_text_label@toast_screen.game_tip_label": {
+                      "size": [ "100%", 11 ],
+                      "$max_label_size": [ "100%", 11 ]
+                    }
+                  },
+                  {
+                    "subtext@toast_screen.toast_label": {
+                      "size": [ "100%", 11 ],
+                      "text": "#toast_subtitle",
+                      "color": "$7_color_format",
+                      "bindings": [
+                        {
+                          "binding_name": "#toast_subtitle"
+                        },
+                        {
+                          "binding_name": "#toast_font_type",
+                          "binding_name_override": "#font_type"
+                        },
+                        {
+                          "binding_name": "(not #is_progress_bar_visible)",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "stacked_progress_bar@toast_screen.toast_progress_bar": {
+                      "size": [ "100%", 11 ],
+                      "$progress_bar_offset": [ 0, -4 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#is_progress_bar_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
               "divider_padding": {
                 "type": "panel",
-                "size": [ 10, "100%" ]
+                "size": [ 10, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -1240,13 +1449,25 @@
                 "size": [ 4, 22 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "layer": 2
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
               }
             },
             {
               "button_padding": {
                 "type": "panel",
-                "size": [ 1, "100%" ]
+                "size": [ 1, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -1295,9 +1516,7 @@
           ]
         }
       },
-      {
-        "party_progress_button_input_hint@toast_screen.popup_button_input_hint": {}
-      }
+      { "party_progress_button_input_hint@toast_screen.popup_button_input_hint": {} }
     ]
   },
 
@@ -1463,9 +1682,7 @@
           ]
         }
       },
-      {
-        "party_travel_opt_out_button_input_hint@toast_screen.popup_button_input_hint": {}
-      }
+      { "party_travel_opt_out_button_input_hint@toast_screen.popup_button_input_hint": {} }
     ]
   },
 
@@ -1603,9 +1820,7 @@
           ]
         }
       },
-      {
-        "party_travel_opt_in_button_input_hint@toast_screen.popup_button_input_hint": {}
-      }
+      { "party_travel_opt_in_button_input_hint@toast_screen.popup_button_input_hint": {} }
     ]
   },
 
@@ -1762,9 +1977,7 @@
           ]
         }
       },
-      {
-        "party_invite_button_input_hint@toast_screen.popup_button_input_hint": {}
-      }
+      { "party_invite_button_input_hint@toast_screen.popup_button_input_hint": {} }
     ],
     "property_bag": {
       "#context": "toast"
@@ -1800,6 +2013,7 @@
         "splitscreen_join_popup": "splitscreen_join_popup@toast_screen.splitscreen_join_popup",
         "formfitting_alpha_toast": "toast_screen.formfitting_alpha_toast",
         "progress_popup": "progress_popup@toast_screen.party_progress",
+        "matchmaking_popup": "matchmaking_popup@toast_screen.matchmaking_popup",
         "party_invite_popup": "party_invite_popup@toast_screen.party_invite_popup",
         "party_travel_popup_opt_in": "party_travel_popup@toast_screen.party_travel_opt_in",
         "party_travel_popup_opt_out": "party_travel_popup@toast_screen.party_travel_opt_out",

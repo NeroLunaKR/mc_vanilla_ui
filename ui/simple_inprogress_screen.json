@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "simple_inprogress",
 
@@ -68,12 +63,6 @@
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
-
   "simple_inprogress_screen@common.base_screen": {
     "$dialog_size": [ 200, 100 ],
     "$screen_content": "simple_inprogress.simple_inprogress_screen_content",
@@ -87,7 +76,11 @@
         "root_panel": {
           "type": "panel",
           "controls": [
-            { "main_panel@simple_inprogress.main_panel": { "layer": 1 } }
+            {
+              "main_panel@simple_inprogress.main_panel": {
+                "layer": 1
+              }
+            }
           ]
         }
       }

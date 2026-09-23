@@ -19,9 +19,7 @@
     "anchor_to": "bottom_middle",
     "size": [ "default", 13 ],
     "controls": [
-      {
-        "coin@common_store.coin_icon": {}
-      },
+      { "coin@common_store.coin_icon": {} },
       {
         "coin_padding": {
           "type": "panel",
@@ -74,9 +72,7 @@
     "anchor_to": "bottom_middle",
     "size": [ "default", 13 ],
     "controls": [
-      {
-        "coin@common_store.coin_icon": {}
-      },
+      { "coin@common_store.coin_icon": {} },
       {
         "coin_padding": {
           "type": "panel",
@@ -94,7 +90,7 @@
                 "layer": 3,
                 "offset": [ 0, 1 ],
                 "text": "#coins_without_bonus",
-                "color": "$store_white_text_color", // Sadly the unit test doesn't detect bindings so we have to put this here even through we will overwrite it or we won't pass the builds :'(
+                "color": "$store_white_text_color",
                 "tts_override_control_value": "#accessibility_coins_without_bonus",
                 "bindings": [
                   {
@@ -134,9 +130,7 @@
     "anchor_to": "top_middle",
     "size": [ "100% + 2px", "100%" ],
     "controls": [
-      {
-        "bonus_coins_stack@coin_purchase.bonus_coins_stack": {}
-      },
+      { "bonus_coins_stack@coin_purchase.bonus_coins_stack": {} },
       {
         "call_out_background": {
           "type": "image",
@@ -169,12 +163,8 @@
     "anchor_to": "top_middle",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "call_out_header@coin_purchase.call_out_header": {}
-      },
-      {
-        "call_out_bonus_coins_stack@coin_purchase.call_out_bonus_coins_stack": {}
-      },
+      { "call_out_header@coin_purchase.call_out_header": {} },
+      { "call_out_bonus_coins_stack@coin_purchase.call_out_bonus_coins_stack": {} },
       {
         "call_out_background": {
           "type": "image",
@@ -351,7 +341,6 @@
               "coins_stack_panel@coin_purchase.coins_stack_panel": {
                 "$coin_text_binding": "#coins_without_bonus",
                 "$accesibility_binding": "#accessibility_coins_without_bonus",
-
                 "layer": 3
               }
             }
@@ -525,7 +514,7 @@
                 "type": "image",
                 "size": [ "85.711%y", "100% + 7px" ],
                 "max_size": [ "100%", "100% + 7px" ],
-                "layer": 1, //-2,
+                "layer": 1,
                 "bilinear": true,
                 "bindings": [
                   {
@@ -657,7 +646,7 @@
                 "size": [ "default", "100%" ],
                 "text": "store.coin.bonus",
                 "layer": 2,
-                "color": "$store_white_text_color", // Sadly the unit test doesn't detect bindings so we have to put this here even through we will overwrite it or we won't pass the builds :'(
+                "color": "$store_white_text_color",
                 "bindings": [
                   {
                     "binding_type": "$store_factory_collection_details",
@@ -713,10 +702,7 @@
                 "type": "panel",
                 "size": [ "100%c", "100%" ],
                 "controls": [
-                  {
-                    "coin@common_store.coin_icon": {
-                    }
-                  }
+                  { "coin@common_store.coin_icon": {} }
                 ]
               }
             },
@@ -737,7 +723,7 @@
                       "layer": 1,
                       "text": "#bonus_coins",
                       "size": [ "default", 10 ],
-                      "color": "$store_white_text_color", // Sadly the unit test doesn't detect bindings so we have to put this here even through we will overwrite it or we won't pass the builds :'(
+                      "color": "$store_white_text_color",
                       "tts_override_control_value": "#accessibility_bonus_coins",
                       "bindings": [
                         {
@@ -1019,9 +1005,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
-      {
-        "price_disclaimer@coin_purchase.price_disclaimer": {}
-      },
+      { "price_disclaimer@coin_purchase.price_disclaimer": {} },
       {
         "padding_0": {
           "type": "panel",
@@ -1091,12 +1075,8 @@
           ]
         }
       },
-      {
-        "divider_panel@coin_purchase.divider_panel": {}
-      },
-      {
-        "faq_button@coin_purchase.faq_button": {}
-      }
+      { "divider_panel@coin_purchase.divider_panel": {} },
+      { "faq_button@coin_purchase.faq_button": {} }
     ]
   },
 
@@ -1115,9 +1095,7 @@
       }
     ],
     "controls": [
-      {
-        "coin_purchase_panel@coin_purchase.coin_purchase_panel": {}
-      },
+      { "coin_purchase_panel@coin_purchase.coin_purchase_panel": {} },
       {
         "loading_background": {
           "type": "image",
@@ -1139,7 +1117,7 @@
       },
       {
         "progress_loading_spinner@common_store.progress_loading_spinner": {
-          "layer": 100, // Make this on top
+          "layer": 100,
           "bindings": [
             {
               "binding_name": "#coin_loading_visible",
@@ -1190,7 +1168,6 @@
     "$text_style_font_type": "#coin_bundle_description_font_type",
     "$text_style_font_size": "#coin_bundle_description_font_size",
     "$text_style_font_color": "#coin_bundle_description_font_color",
-
     "$text_style_label_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -1239,7 +1216,6 @@
     ]
   },
 
-  // Maybe bind this instead?
   "bundle_description_left@coin_purchase.bundle_description": {
     "$text_style_alignment": "left"
   },
@@ -1319,17 +1295,7 @@
                           "bundle_description_center": "@coin_purchase.bundle_description_center",
                           "bundle_description_right": "@coin_purchase.bundle_description_right"
                         },
-                        "factory_variables": [
-                          "$offer_collection_details",
-                          "$offer_binding_type",
-                          "$offer_collection_name",
-                          "$offer_collection_prefix",
-                          "$store_factory_collection_details",
-                          "$store_factory_collection_prefix",
-                          "$store_factory_collection_name",
-                          "$bundle_description_size",
-                          "$section_name"
-                        ]
+                        "factory_variables": [ "$offer_collection_details", "$offer_binding_type", "$offer_collection_name", "$offer_collection_prefix", "$store_factory_collection_details", "$store_factory_collection_prefix", "$store_factory_collection_name", "$bundle_description_size", "$section_name" ]
                       },
                       "bindings": [
                         {
@@ -1360,7 +1326,7 @@
                 "size": [ "100%c", "100%" ],
                 "controls": [
                   {
-                    "thumbnail": { //just one thumbnail for now
+                    "thumbnail": {
                       "type": "image",
                       "size": [ "177.78%y", "100% - 6px" ],
                       "layer": 2,
@@ -1495,7 +1461,7 @@
       },
       {
         "debug_price@coin_purchase.price": {
-          "$price_color": "$c_color_format", // Red
+          "$price_color": "$c_color_format",
           "$price_visible": "#debug_price_visible"
         }
       }
@@ -1552,12 +1518,8 @@
       }
     ],
     "controls": [
-      {
-        "bundle_coins_stack@coin_purchase.bundle_coins_stack": {}
-      },
-      {
-        "callout_background@$bundle_callout_background": {}
-      }
+      { "bundle_coins_stack@coin_purchase.bundle_coins_stack": {} },
+      { "callout_background@$bundle_callout_background": {} }
     ]
   },
 
@@ -1585,16 +1547,13 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "size": [ "100% - 4px", "100% - 6px" ],
-
     "$store_factory_collection_details|default": "none",
     "$store_factory_collection_prefix|default": "",
     "$store_factory_collection_name|default": "",
-
     "$offer_collection_details|default": "collection_details",
     "$offer_binding_type|default": "collection",
     "$offer_collection_prefix|default": "offer",
     "$offer_collection_name|default": "offer_collection",
-
     "$store_offer_grid_item_bindings|default": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -1608,7 +1567,6 @@
         "binding_name_override": "#visible"
       }
     ],
-
     "controls": [
       {
         "offer_panel@coin_purchase.bundle_offer_panel": {
@@ -1650,19 +1608,10 @@
     "factory": {
       "name": "bundle_factory",
       "control_ids": {
-        //left and center tiles will have extra padding, the tile on the right will have no extra padding
-        "bundle_padded_tile": "@coin_purchase.bundle_offer_grid_item", //TODO PADDING
+        "bundle_padded_tile": "@coin_purchase.bundle_offer_grid_item",
         "bundle_rhs_tile": "@coin_purchase.bundle_offer_grid_item"
-        //"single_tile": //TODO
       },
-      "factory_variables": [
-        "$offer_collection_details",
-        "$offer_binding_type",
-        "$store_factory_collection_details",
-        "$store_factory_collection_prefix",
-        "$store_factory_collection_name",
-        "$section_name"
-      ]
+      "factory_variables": [ "$offer_collection_details", "$offer_binding_type", "$store_factory_collection_details", "$store_factory_collection_prefix", "$store_factory_collection_name", "$section_name" ]
     },
     "bindings": [
       {
@@ -1683,9 +1632,7 @@
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "bundle_stack_factory@coin_purchase.bundle_stack_factory": {}
-      }
+      { "bundle_stack_factory@coin_purchase.bundle_stack_factory": {} }
     ]
   },
 

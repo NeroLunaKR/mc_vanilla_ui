@@ -73,7 +73,6 @@
     ]
   },
 
-  // Wrap input panel to catch input so user must press modal button (or esc) to dismiss
   "content_wrapper": {
     "type": "input_panel",
     "controls": [
@@ -134,15 +133,27 @@
   "welcome_text_panel@library_modal.text_panel": {
     "size": [ "100%-12px", "100%c" ],
     "controls": [
-      { "padding_1@common.empty_panel": { "size": [ "100%", 10 ] } },
+      {
+        "padding_1@common.empty_panel": {
+          "size": [ "100%", 10 ]
+        }
+      },
       {
         "paragraph_1_wrapper": {
           "size": [ "100%", 40 ],
           "type": "stack_panel",
           "orientation": "horizontal",
           "controls": [
-            { "edu_icon@library_modal.edu_icon": { "size": [ 40, "100%" ] } },
-            { "stack_buffer1@common.empty_panel": { "size": [ "2%", "100%" ] } },
+            {
+              "edu_icon@library_modal.edu_icon": {
+                "size": [ 40, "100%" ]
+              }
+            },
+            {
+              "stack_buffer1@common.empty_panel": {
+                "size": [ "2%", "100%" ]
+              }
+            },
             {
               "paragraph_1_panel": {
                 "type": "panel",
@@ -161,13 +172,24 @@
           ]
         }
       },
-      { "padding_2@common.empty_panel": { "size": [ "100%", 10 ] } },
-      { "paragraph_two@library_modal.paragraph": { "$welcome_text": "library.welcome.2" } },
-      { "padding_3@common.empty_panel": { "size": [ "100%", 10 ] } },
+      {
+        "padding_2@common.empty_panel": {
+          "size": [ "100%", 10 ]
+        }
+      },
+      {
+        "paragraph_two@library_modal.paragraph": {
+          "$welcome_text": "library.welcome.2"
+        }
+      },
+      {
+        "padding_3@common.empty_panel": {
+          "size": [ "100%", 10 ]
+        }
+      },
       {
         "paragraph_three@library_modal.paragraph": {
-          // This part mentions "beta" and "in progress" wording that is not allowed by ios certification
-          "ignored":"$is_ios",
+          "ignored": "$is_ios",
           "$welcome_text": "library.welcome.3"
         }
       }
@@ -201,7 +223,6 @@
       },
       {
         "welcome_scrolling_panel@library_modal.welcome_scrolling_panel": {
-          // SizeY: -15 for offset, -30 for button size, -15 to look nice and be safe
           "size": [ "100%-16px", "100% - 15px - 30px - 15px" ],
           "offset": [ 0, 15 ],
           "layer": 2
@@ -221,7 +242,6 @@
   "welcome_panel@common.input_panel": {
     "layer": 15,
     "size": [ "100%", "100%" ],
-    // Stop mouse scroll from controlling scrollbar underneath
     "modal": true,
     "bindings": [
       {

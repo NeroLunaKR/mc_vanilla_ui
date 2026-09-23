@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                     *
-+*   (c) Microsoft. All rights reserved.                 *
-+*********************************************************/
-
 {
   "namespace": "command_block",
 
@@ -49,7 +44,6 @@
 
   "icon_dropdown_toggle_button_state_content": {
     "type": "stack_panel",
-    // new_button_state has a layer of 2
     "layer": 3,
     "orientation": "horizontal",
     "size": [ "100% - 16px", "100% - 8px" ],
@@ -108,7 +102,7 @@
                   {
                     "binding_name": "$options_dropdown_label_color_binding",
                     "binding_type": "$options_dropdown_label_color_binding_type",
-                    "binding_name_override":  "#color"
+                    "binding_name_override": "#color"
                   }
                 ]
               }
@@ -122,9 +116,7 @@
           "layer": 1,
           "size": [ "100%c", "100%" ],
           "controls": [
-            {
-              "arrow@settings_common.arrow_image": { }
-            }
+            { "arrow@settings_common.arrow_image": {} }
           ]
         }
       }
@@ -148,7 +140,6 @@
         "handle_select": false,
         "handle_deselect": true,
         "mapping_type": "global",
-        // Deselect textbox and allow selection of another UI control with same mouse press
         "consume_event": false
       },
       {
@@ -193,14 +184,12 @@
   },
 
   "command_block_helper_stack": {
-    "anchor_from": "top_left", // the parent
-    "anchor_to": "top_left", // this control
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%", 10 ],
-
     "$text_override|default": "",
-
     "controls": [
       {
         "offset": {
@@ -219,17 +208,15 @@
   },
 
   "previous_command_block_info_stack": {
-    "anchor_from": "top_left", // the parent
-    "anchor_to": "top_left", // this control
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%", 10 ],
-
     "$start_text|default": "",
     "$text_binding_name|default": "",
     "$text_color_binding_name|default": "",
     "$bind_type|default": "none",
-
     "controls": [
       {
         "offset": {
@@ -281,10 +268,6 @@
       }
     ]
   },
-
-  /////////////////////////////////////////////////////////////////////////////////////////
-  ////        Left Divider Content                                                /////////
-  /////////////////////////////////////////////////////////////////////////////////////////
 
   "blocktype_dropdown_content@settings_common.option_radio_dropdown_group": {
     "$show_option_label": false,
@@ -343,7 +326,7 @@
   },
 
   "condition_mode_panel@settings_common.option_dropdown": {
-    "$focus_override_right":  "show_output_toggle",
+    "$focus_override_right": "show_output_toggle",
     "$option_label": "commandBlockScreen.condition",
     "$dropdown_content": "command_block.condition_dropdown_content",
     "$dropdown_area": "left_scrolling_panel",
@@ -372,7 +355,7 @@
   },
 
   "redstone_mode_panel@settings_common.option_dropdown": {
-    "$focus_override_right":  "show_output_toggle",
+    "$focus_override_right": "show_output_toggle",
     "$option_label": "commandBlockScreen.redstone",
     "$dropdown_content": "command_block.redstone_dropdown_content",
     "$dropdown_area": "left_scrolling_panel",
@@ -438,27 +421,21 @@
                 "size": [ "100%", 5 ]
               }
             },
-            {
-              "block_type_mode_panel@command_block.block_type_panel": {}
-            },
+            { "block_type_mode_panel@command_block.block_type_panel": {} },
             {
               "offset4": {
                 "type": "panel",
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "condition_mode_panel@command_block.condition_mode_panel": {}
-            },
+            { "condition_mode_panel@command_block.condition_mode_panel": {} },
             {
               "offset5": {
                 "type": "panel",
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "redstone_mode_panel@command_block.redstone_mode_panel": {}
-            },
+            { "redstone_mode_panel@command_block.redstone_mode_panel": {} },
             {
               "offset_execute_on_first_tick": {
                 "type": "panel",
@@ -543,15 +520,9 @@
   "left_divider_content": {
     "type": "panel",
     "controls": [
-      {
-        "left_scrolling_panel@command_block.left_scrolling_panel": { }
-      }
+      { "left_scrolling_panel@command_block.left_scrolling_panel": {} }
     ]
   },
-
-  //////////////////////////////////////////////////////////////////////////////////////////
-  ////        Right Divider Content                                                /////////
-  ///////////////////////////////////////////////////////////////////////////////////////////
 
   "right_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
@@ -652,13 +623,11 @@
                         },
                         {
                           "paste_button@command_block.paste_button": {
-                            //This layer needs to be inconsistent with the text box which is default to 1 for selection
                             "layer": 2
                           }
                         },
                         {
                           "plus_button@command_block.plus_button": {
-                            //This layer needs to be inconsistent with the text box which is default to 1 for selection
                             "layer": 2
                           }
                         }
@@ -817,7 +786,6 @@
                 "size": [ 0, 1 ]
               }
             },
-            //command output text
             {
               "command_output_text_centering_panel": {
                 "type": "panel",
@@ -827,14 +795,12 @@
                     "command_output_text@command_block.command_block_multiline_text_edit_box": {
                       "anchor_from": "center",
                       "anchor_to": "center",
-                      //26 to imitate spacing for plus image above - 4px for side spacing
                       "size": [ "85% + 26px", 60 ],
                       "focus_enabled": false,
                       "$text_box_name": "command_block.output_text",
                       "max_length": 32500,
                       "$text_edit_box_content_binding_name": "#command_output_text",
                       "$place_holder_text": "",
-                      //we dont want selection on the output window
                       "button_mappings": [
                         {
                           "from_button_id": "button.menu_select",
@@ -910,7 +876,6 @@
           "offset": [ 8, 23 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
-
         }
       },
       {
@@ -919,7 +884,6 @@
           "offset": [ "40% + 5px", 23 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
-
         }
       }
     ]
@@ -972,7 +936,6 @@
                 "controls": [
                   {
                     "paste_button@command_block.paste_button": {
-                      //This layer needs to be inconsistent with the text box which is default to 1 for selection
                       "layer": 2,
                       "anchor_from": "top_right",
                       "anchor_to": "top_right",
@@ -1077,7 +1040,6 @@
         }
       },
       {
-        //this controls name is important as its referenced directly in the controller for focus
         "maximized_command_block_text@command_block.command_block_text_edit_box": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
@@ -1103,15 +1065,9 @@
   "right_divider_content": {
     "type": "panel",
     "controls": [
-      {
-        "right_scrolling_panel@command_block.right_scrolling_panel": { }
-      }
+      { "right_scrolling_panel@command_block.right_scrolling_panel": {} }
     ]
   },
-
-  //////////////////////////////////////////////////////////////////////////////////////////
-  ////        Base Screen                                                           /////////
-  ///////////////////////////////////////////////////////////////////////////////////////////
 
   "command_block_screen@common.base_screen": {
     "$screen_content": "command_block.command_block_screen_content",

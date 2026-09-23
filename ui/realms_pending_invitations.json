@@ -1,14 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "realms_pending_invitations",
-
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
 
   "panel_text": {
     "type": "label",
@@ -38,7 +29,9 @@
           "anchor_to": "top_left",
           "size": [ "100% - 8px", "100% - 5px" ],
           "offset": [ 4, 3 ],
-          "controls": [ { "content@$child_control": {} } ]
+          "controls": [
+            { "content@$child_control": {} }
+          ]
         }
       }
     ]
@@ -69,27 +62,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Gamertag Grid
-  //---------------------------------------------------------------------------
-
-  /*"realm_screenshot": {
-    "type": "panel",
-    "controls": [
-      { "legacy_banner@realms_common.legacy_banner": { } },
-      {
-        "realm_screenshot_texture": {
-          "type": "image",
-          "texture": "textures/ui/WorldDemoScreen",
-          "layer": 5,
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "size": [ "100% - 2px", "100% - 2px" ]
-        }
-      }
-    ]
-  },/**/
 
   "realm_name_label@realms_pending_invitations.panel_text": {
     "text": "#realm_name",
@@ -132,21 +104,6 @@
       }
     ],
     "controls": [
-      /*{
-        "ss@realms_pending_invitations.realm_screenshot": {
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "size": [ "160%y", "100%" ]
-        }
-      },
-      {
-        "text_area": {
-          "type": "panel",
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "size": [ "100% - 160%y", "100%" ],
-          "offset": [ "160%y", 0 ],
-          "controls": [/**/
       {
         "rnl@realms_pending_invitations.realm_name_label": {
           "anchor_from": "top_left",
@@ -163,9 +120,6 @@
           "offset": [ 2, 0.5 ]
         }
       }
-      /*]
-        }
-      }/**/
     ]
   },
 
@@ -174,7 +128,6 @@
     "texture": "textures/ui/realms_green_check",
     "anchor_to": "center",
     "anchor_from": "center",
-    //"layer": 6,
     "size": [ 15, 12 ]
   },
 
@@ -183,7 +136,6 @@
     "texture": "textures/ui/realms_red_x",
     "anchor_to": "center",
     "anchor_from": "center",
-    //"layer": 6,
     "size": [ 12, 12 ]
   },
 
@@ -280,13 +232,6 @@
       }
     ]
   },
-
-
-  // -----------------------------------------------
-  //
-  //    toggle
-  //
-  // -----------------------------------------------
 
   "show_friends_only_toggle_state_content": {
     "type": "stack_panel",
@@ -391,13 +336,6 @@
     "$checked_locked_control": "realms_pending_invitations.show_friends_only_toggle_on_locked_state",
     "$checked_locked_hover_control": "realms_pending_invitations.show_friends_only_toggle_on_locked_state"
   },
-
-
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
 
   "gamepad_helpers": {
     "type": "panel",

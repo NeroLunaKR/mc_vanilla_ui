@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "bundle_purchase_warning",
 
@@ -35,12 +30,8 @@
           ]
         }
       },
-      {
-        "content@bundle_purchase_warning.grid_item_content": {}
-      },
-      {
-        "game_pad_focus_border@bundle_purchase_warning.focus_border_button": {}
-      }
+      { "content@bundle_purchase_warning.grid_item_content": {} },
+      { "game_pad_focus_border@bundle_purchase_warning.focus_border_button": {} }
     ]
   },
 
@@ -196,7 +187,6 @@
     ]
   },
 
-  //FORWARD VARS FROM "dialog_content" TO TEMPLATE, ADD FACTORY
   "side_contents": {
     "type": "stack_panel",
     "size": [ "fill", "100%" ],
@@ -298,12 +288,6 @@
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$focus_override_up": "owned_list_0"
   },
-
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
 
   "screen_dialog@common_dialogs.main_panel_one_button": {
     "$text_name": "#bundle_purchase_warning_title",

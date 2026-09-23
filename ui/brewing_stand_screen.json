@@ -1,13 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "brewing_stand",
-  //-----------------------------------------------------------
-  // Images
-  //-----------------------------------------------------------
 
   "brewing_pipes": {
     "type": "image",
@@ -147,10 +139,6 @@
     ]
   },
 
-  //-----------------------------------------------------------
-  // Screen
-  //-----------------------------------------------------------
-
   "brewing_label": {
     "type": "label",
     "layer": 2,
@@ -184,7 +172,6 @@
             {
               "output_grid_item1@brewing_stand.brewingstand_output_item": {
                 "offset": [ -5, -7 ],
-
                 "$focus_override_left_binding_type": "none",
                 "$focus_override_left": "brewing_fuel"
               }
@@ -221,7 +208,6 @@
       {
         "input_grid_item@common.container_item": {
           "$item_collection_name": "brewing_input_item",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "brewing_fuel"
         }
@@ -238,10 +224,8 @@
         "fuel_grid_item@common.container_item": {
           "$cell_overlay_ref": "brewing_stand.fuel_empty_image",
           "$item_collection_name": "brewing_fuel_item",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "brewing_fuel",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "brewing_input_item0"
         }
@@ -256,8 +240,8 @@
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "controls": [
-      { "brewing_label@brewing_label": { } },
-      { "brewing_stand_pictogram@brewing_stand_pictogram": { } }
+      { "brewing_label@brewing_label": {} },
+      { "brewing_stand_pictogram@brewing_stand_pictogram": {} }
     ]
   },
 
@@ -265,17 +249,17 @@
     "type": "panel",
     "size": [ "40%", "80%" ],
     "controls": [
-      { "brewing_input_slot@brewing_stand.brewing_input_slot": { } },
-      { "brewing_output_slots@brewing_stand.brewing_output_slots": { } },
-      { "brewing_fuel_slot@brewing_stand.brewing_fuel_slot": { } },
-      { "brewing_arrow_empty_image@brewing_stand.brewing_arrow_empty_image": { } },
-      { "brewing_arrow_full_image@brewing_stand.brewing_arrow_full_image": { } },
-      { "brewing_fuel_bar_empty_image@brewing_stand.brewing_fuel_bar_empty_image": { } },
-      { "brewing_fuel_bar_full_image@brewing_stand.brewing_fuel_bar_full_image": { } },
-      { "bubbles_empty_image@brewing_stand.bubbles_empty_image": { } },
-      { "bubbles_full_image@brewing_stand.bubbles_full_image": { } },
-      { "brewing_fuel_pipes@brewing_stand.brewing_fuel_pipes": { } },
-      { "brewing_pipes@brewing_stand.brewing_pipes": { } }
+      { "brewing_input_slot@brewing_stand.brewing_input_slot": {} },
+      { "brewing_output_slots@brewing_stand.brewing_output_slots": {} },
+      { "brewing_fuel_slot@brewing_stand.brewing_fuel_slot": {} },
+      { "brewing_arrow_empty_image@brewing_stand.brewing_arrow_empty_image": {} },
+      { "brewing_arrow_full_image@brewing_stand.brewing_arrow_full_image": {} },
+      { "brewing_fuel_bar_empty_image@brewing_stand.brewing_fuel_bar_empty_image": {} },
+      { "brewing_fuel_bar_full_image@brewing_stand.brewing_fuel_bar_full_image": {} },
+      { "bubbles_empty_image@brewing_stand.bubbles_empty_image": {} },
+      { "bubbles_full_image@brewing_stand.bubbles_full_image": {} },
+      { "brewing_fuel_pipes@brewing_stand.brewing_fuel_pipes": {} },
+      { "brewing_pipes@brewing_stand.brewing_pipes": {} }
     ]
   },
 
@@ -307,9 +291,14 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   },
+
   "brewing_stand_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "close_on_player_hurt": "$close_on_player_hurt",

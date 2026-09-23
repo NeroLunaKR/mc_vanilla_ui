@@ -50,10 +50,7 @@
           "orientation": "vertical",
           "size": [ "100%", "100%" ],
           "controls": [
-            {
-              "world_label@ugc_viewer.world_label": {
-              }
-            },
+            { "world_label@ugc_viewer.world_label": {} },
             {
               "world_panel": {
                 "type": "panel",
@@ -81,7 +78,6 @@
               }
             }
           ]
-
         }
       }
     ]
@@ -122,7 +118,6 @@
         }
       },
       {
-
         "place_holder_text@common.text_edit_box_place_holder_label": {
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
@@ -151,7 +146,6 @@
     "grid_item_template": "ugc_viewer.grid_item",
     "grid_rescaling_type": "horizontal",
     "collection_name": "ugc_items",
-
     "bindings": [
       {
         "binding_name": "#ugc_max_grid_items",
@@ -166,8 +160,7 @@
     "$scrolling_content_anchor_from": "top_middle",
     "$scrolling_content_anchor_to": "top_middle",
     "controls": [
-
-      { "grid_content@ugc_viewer.grid_content": { } }
+      { "grid_content@ugc_viewer.grid_content": {} }
     ]
   },
 
@@ -178,17 +171,21 @@
     "anchor_to": "top_middle",
     "orientation": "vertical",
     "controls": [
-      { "padding_0@ugc_viewer.padding": { } },
+      { "padding_0@ugc_viewer.padding": {} },
       {
         "centerer_panel_0": {
           "type": "panel",
           "size": [ "100%", 20 ],
           "controls": [
-            { "search_box@ugc_viewer.search_box": { } }
+            { "search_box@ugc_viewer.search_box": {} }
           ]
         }
       },
-      { "padding_1@ugc_viewer.padding": { "$padding_size": [ 0, 1 ] } },
+      {
+        "padding_1@ugc_viewer.padding": {
+          "$padding_size": [ 0, 1 ]
+        }
+      },
       {
         "centerer_panel_1": {
           "type": "panel",
@@ -211,13 +208,13 @@
           ]
         }
       },
-      { "padding_2@ugc_viewer.padding": { "$padding_size": [ 0, 1 ] } }
+      {
+        "padding_2@ugc_viewer.padding": {
+          "$padding_size": [ 0, 1 ]
+        }
+      }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
 
   "ugc_viewer_screen@common.base_screen": {
     "button_mappings": [

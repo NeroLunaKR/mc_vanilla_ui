@@ -1,7 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
 {
   "namespace": "grindstone",
 
@@ -119,13 +115,10 @@
           "anchor_to": "top_middle",
           "offset": [ 0, 1 ],
           "$item_collection_name": "grindstone_input_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "grindstone_input",
-
           "$focus_override_down_binding_type": "none",
           "$focus_override_down": "grindstone_additional",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "grindstone_result"
         }
@@ -136,13 +129,10 @@
           "anchor_to": "bottom_middle",
           "offset": [ 0, -1 ],
           "$item_collection_name": "grindstone_additional_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "grindstone_additional",
-
           "$focus_override_up_binding_type": "none",
           "$focus_override_up": "grindstone_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "grindstone_result"
         }
@@ -182,10 +172,8 @@
           "anchor_to": "right_middle",
           "$item_collection_name": "grindstone_result_items",
           "$button_ref": "grindstone.grindstone_output_slot_button",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "grindstone_result",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "grindstone_additional"
         }
@@ -241,7 +229,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   },
 

@@ -1,11 +1,6 @@
 {
   "namespace": "trade_pocket",
 
-  //---------------------------------------------------------------------------
-  // Common Controls
-  //---------------------------------------------------------------------------
-
-  // Backgrounds //
   "background_image": {
     "type": "image",
     "size": [ "100%", "100%" ],
@@ -166,12 +161,6 @@
     "$button_ref": "trade_pocket.trade_item_slot_result_button"
   },
 
-  //---------------------------------------------------------------------------
-  // Panels
-  //---------------------------------------------------------------------------
-
-  // Merchant Grid and Panel's //
-
   "purchase_grid": {
     "type": "grid",
     "size": [ 120, 60 ],
@@ -248,8 +237,6 @@
     ]
   },
 
-  // Inventory Grids and Panel //
-
   "inventory_grid": {
     "type": "grid",
     "grid_rescaling_type": "horizontal",
@@ -282,11 +269,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
-  // Half Screens //
   "half_screen": {
     "type": "panel",
     "size": [ "50%", "100%-31px" ],
@@ -314,7 +296,6 @@
     ]
   },
 
-  // Header //
   "header": {
     "type": "panel",
     "layer": 2,
@@ -342,22 +323,40 @@
     ]
   },
 
-  // Trade Screen //
   "trade_panel@common.inventory_screen_common": {
     "size": [ "100%", "100%" ],
     "controls": [
-      { "bg@background_image": { "layer": 1 } },
+      {
+        "bg@background_image": {
+          "layer": 1
+        }
+      },
       { "root_panel@common.root_panel": {} },
-      { "header@trade_pocket.header": { "layer": 2 } },
+      {
+        "header@trade_pocket.header": {
+          "layer": 2
+        }
+      },
       {
         "inventory@trade_pocket.inventory_half_screen": {
           "layer": 1
         }
       },
-      { "merchant_half_screen@trade_pocket.merchant_half_screen": { "layer": 8 } },
-
-      { "gamepad_helpers@common.container_gamepad_helpers": { "layer": 1 } },
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { "layer": 2 } },
+      {
+        "merchant_half_screen@trade_pocket.merchant_half_screen": {
+          "layer": 8
+        }
+      },
+      {
+        "gamepad_helpers@common.container_gamepad_helpers": {
+          "layer": 1
+        }
+      },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {
+          "layer": 2
+        }
+      },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       {
@@ -365,7 +364,11 @@
           "$offset": [ 0, "85%" ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 21
+        }
+      }
     ],
     "button_mappings": [
       {

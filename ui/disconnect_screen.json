@@ -178,8 +178,6 @@
     "size": [ 5, 0 ]
   },
 
-  // Realms Disconnect Screen
-
   "realms_disconnect_screen@disconnect.disconnect_screen": {
     "button_mappings": [
       {
@@ -230,9 +228,7 @@
                 "orientation": "horizontal",
                 "controls": [
                   { "check_store_button@disconnect.check_store_button": {} },
-                  {
-                    "spacing_gap@disconnect.spacing_gap": {}
-                  },
+                  { "spacing_gap@disconnect.spacing_gap": {} },
                   { "exit_button@disconnect.exit_button": {} }
                 ]
               }
@@ -277,9 +273,7 @@
                 "orientation": "horizontal",
                 "controls": [
                   { "check_store_button@disconnect.check_store_button": {} },
-                  {
-                    "spacing_gap@disconnect.spacing_gap": {}
-                  },
+                  { "spacing_gap@disconnect.spacing_gap": {} },
                   { "continue_button@disconnect.continue_button": {} }
                 ]
               }
@@ -305,10 +299,10 @@
     ]
   },
 
-    "open_account_setting_button@common_buttons.hyperlink_button": {
-        "$button_text": "permissions.open.account.help.button",
-        "property_bag": {
-            "#hyperlink": "https://aka.ms/MCMultiplayerHelp"
-        }
+  "open_account_setting_button@common_buttons.hyperlink_button": {
+    "$button_text": "permissions.open.account.help.button",
+    "property_bag": {
+      "#hyperlink": "https://aka.ms/MCMultiplayerHelp"
     }
+  }
 }

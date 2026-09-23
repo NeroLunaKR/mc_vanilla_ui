@@ -50,7 +50,6 @@
           "layer": 2,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // background_hollow_3 has a (6, 21, 6, 6) nineslice offset, so we need to modify the size and offsets
           "size": [ "100%-12px", "100%-27px" ],
           "offset": [ 6, 21 ],
           "$local_world_edit_button_visible": false,

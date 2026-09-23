@@ -50,7 +50,6 @@
   "skip_panel": {
     "type": "panel",
     "layer": 2,
-
     "controls": [
       {
         "skip_button@common_buttons.light_text_form_fitting_button": {
@@ -110,7 +109,11 @@
   "credits_screen_content": {
     "type": "panel",
     "controls": [
-      { "credits_renderer@credits.credits_renderer": { "layer": 2 } },
+      {
+        "credits_renderer@credits.credits_renderer": {
+          "layer": 2
+        }
+      },
       {
         "vignette_renderer": {
           "type": "custom",
@@ -121,7 +124,11 @@
           }
         }
       },
-      { "fade_in_image@credits.fade_in_image": { "layer": 1 } },
+      {
+        "fade_in_image@credits.fade_in_image": {
+          "layer": 1
+        }
+      },
       {
         "credits_factory": {
           "type": "factory",
@@ -158,7 +165,6 @@
   },
 
   "background@common.dirt_background": {
-    // Background scroll
     "$background_scroll_duration|default": 503,
     "size": [ "100%", "2000%" ],
     "tiled_scale": [ 2, 2 ],

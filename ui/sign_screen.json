@@ -1,10 +1,6 @@
 {
   "namespace": "sign",
 
-  //---------------------------------------------------------------------------
-  // CONTROLS
-  //---------------------------------------------------------------------------
-
   "sign_background": {
     "type": "image",
     "texture": "$sign_texture",
@@ -33,7 +29,6 @@
     "max_length": 32500,
     "$text_color_binding_type": "global",
     "$text_edit_box_content_binding_name": "#sign_text",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -61,13 +56,8 @@
         "mapping_type": "pressed"
       }
     ],
-
     "$enable_profanity_filter": true
   },
-
-  //---------------------------------------------------------------------------
-  // CONTENT
-  //---------------------------------------------------------------------------
 
   "regular_sign_text_multiline@sign.base_sign_text_multiline": {
     "size": [ 185, 90 ],
@@ -90,7 +80,6 @@
           "layer": 2,
           "size": [ "100%c", "100%c" ],
           "focus_enabled": false,
-          // Ensure the entire text edit box is visible over the virtual keyboard
           "$virtual_keyboard_buffer_control": "text_edit",
           "controls": [
             { "text_edit@$sign_text_multiline": {} }
@@ -122,10 +111,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // SCREEN
-  //---------------------------------------------------------------------------
 
   "sign_screen@common.base_screen": {
     "$screen_content": "sign.sign_screen_content",

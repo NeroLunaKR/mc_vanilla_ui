@@ -1,10 +1,6 @@
 {
   "namespace": "screenshot",
 
-  //--------------------------------------------------------------------------------
-  // Animations
-  //--------------------------------------------------------------------------------
-
   "anim_screenshot_flash": {
     "anim_type": "alpha",
     "easing": "in_expo",
@@ -12,10 +8,6 @@
     "from": 1.0,
     "to": 0
   },
-
-  //--------------------------------------------------------------------------------
-  // Common Controls
-  //--------------------------------------------------------------------------------
 
   "screenshot_flash_image": {
     "type": "image",
@@ -33,9 +25,7 @@
   "screenshot_screen_content@common.common_panel": {
     "type": "panel",
     "controls": [
-      {
-        "transparent_background@feed_common.transparent_background": {}
-      },
+      { "transparent_background@feed_common.transparent_background": {} },
       { "screenshot_flash@screenshot.screenshot_flash_image": {} }
     ]
   }

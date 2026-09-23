@@ -1,7 +1,6 @@
 {
   "namespace": "world_conversion_complete",
 
-  // Common controls
   "background@common.screen_background": {
     "alpha": 0.65,
     "layer": 1
@@ -191,7 +190,6 @@
     ]
   },
 
-  // Main screen content
   "main_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -221,9 +219,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
-                  {
-                    "world_entry@world_conversion_complete.converted_world_preview_panel": {}
-                  }
+                  { "world_entry@world_conversion_complete.converted_world_preview_panel": {} }
                 ]
               }
             }
@@ -288,7 +284,6 @@
     ]
   },
 
-  // Main screen
   "world_conversion_complete_screen@common.base_screen": {
     "button_mappings": [
       {

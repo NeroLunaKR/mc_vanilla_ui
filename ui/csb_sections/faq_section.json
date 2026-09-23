@@ -43,9 +43,7 @@
 
   "faq_text_section@csb_faq.faq_text_section_body": {
     "controls": [
-      {
-        "faq_text_question@csb_faq.faq_text_question": {}
-      },
+      { "faq_text_question@csb_faq.faq_text_question": {} },
       {
         "faq_text_answer": {
           "type": "label",
@@ -61,9 +59,7 @@
 
   "faq_price_bound_text_section@csb_faq.faq_text_section_body": {
     "controls": [
-      {
-        "faq_text_question@csb_faq.faq_text_question": {}
-      },
+      { "faq_text_question@csb_faq.faq_text_question": {} },
       {
         "faq_text_answer": {
           "type": "label",
@@ -102,21 +98,11 @@
     "$text_control_size": [ "100%", "100%cm" ],
     "$tts_section_header": "store.csb.faq.header",
     "$question_body_controls": [
-      {
-        "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_image_section@csb_faq.faq_image_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_text_section@csb_faq.faq_text_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {}
-      }
+      { "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_image_section@csb_faq.faq_image_section": {} },
+      { "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_text_section@csb_faq.faq_text_section": {} },
+      { "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {} }
     ]
   },
 
@@ -125,21 +111,11 @@
     "$text_control_size": [ "100%", "100%cm" ],
     "$tts_section_header": "store.csb.faq.header",
     "$question_body_controls": [
-      {
-        "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_text_section@csb_faq.faq_text_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_image_section@csb_faq.faq_image_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {}
-      }
+      { "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_text_section@csb_faq.faq_text_section": {} },
+      { "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_image_section@csb_faq.faq_image_section": {} },
+      { "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {} }
     ]
   },
 
@@ -148,21 +124,11 @@
     "$text_control_size": [ "100%", "100%cm" ],
     "$tts_section_header": "store.csb.faq.header",
     "$question_body_controls": [
-      {
-        "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_image_section@csb_faq.faq_image_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_text_section@csb_faq.faq_price_bound_text_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {}
-      }
+      { "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_image_section@csb_faq.faq_image_section": {} },
+      { "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_text_section@csb_faq.faq_price_bound_text_section": {} },
+      { "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {} }
     ]
   },
 
@@ -171,21 +137,11 @@
     "$text_control_size": [ "100%", "100%cm" ],
     "$tts_section_header": "store.csb.faq.header",
     "$question_body_controls": [
-      {
-        "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_text_section@csb_faq.faq_price_bound_text_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {}
-      },
-      {
-        "faq_image_section@csb_faq.faq_image_section": {}
-      },
-      {
-        "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {}
-      }
+      { "faq_question_body_horz_padding_1@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_text_section@csb_faq.faq_price_bound_text_section": {} },
+      { "faq_question_body_horz_padding_2@csb_faq.faq_question_body_horz_padding": {} },
+      { "faq_image_section@csb_faq.faq_image_section": {} },
+      { "faq_question_body_horz_padding_3@csb_faq.faq_question_body_horz_padding": {} }
     ]
   },
 
@@ -201,9 +157,7 @@
 
   "faq_content_section@csb.section_base": {
     "controls": [
-      {
-        "faq_section_vertical_padding_1@csb.vertical_padding_4px": {}
-      },
+      { "faq_section_vertical_padding_1@csb.vertical_padding_4px": {} },
       {
         "faq_header": {
           "type": "label",
@@ -215,9 +169,7 @@
           "layer": 1
         }
       },
-      {
-        "faq_section_vertical_padding_2@csb_faq.faq_section_header_space": {}
-      },
+      { "faq_section_vertical_padding_2@csb_faq.faq_section_header_space": {} },
       {
         "faq_question_1@csb_faq.image_right_faq_price_bound": {
           "$faq_question": "store.csb.faq.question1",
@@ -225,9 +177,7 @@
           "$image_texture": "textures/ui/csb_faq_bee"
         }
       },
-      {
-        "faq_question_1_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_1_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_2@csb_faq.image_left_faq_question_body": {
           "$faq_question": "store.csb.faq.question2",
@@ -236,9 +186,7 @@
           "$image_texture": "textures/ui/csb_welcome_3x6"
         }
       },
-      {
-        "faq_question_2_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_2_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_3@csb_faq.image_right_faq_question_body": {
           "$faq_question": "store.csb.faq.question3",
@@ -247,9 +195,7 @@
           "$image_texture": "textures/ui/csb_faq_horse"
         }
       },
-      {
-        "faq_question_3_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_3_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_4@csb_faq.image_left_faq_question_body": {
           "$faq_question": "store.csb.faq.question4",
@@ -258,9 +204,7 @@
           "$image_texture": "textures/ui/csb_faq_pig"
         }
       },
-      {
-        "faq_question_4_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_4_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_5@csb_faq.image_right_faq_question_body": {
           "$faq_question": "store.csb.faq.question5",
@@ -269,9 +213,7 @@
           "$image_texture": "textures/ui/csb_faq_fox"
         }
       },
-      {
-        "faq_question_5_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_5_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_6@csb_faq.image_left_faq_question_body": {
           "$faq_question": "store.csb.faq.question6",
@@ -280,9 +222,7 @@
           "$image_texture": "textures/ui/promo_creeper"
         }
       },
-      {
-        "faq_question_6_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_6_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_7@csb_faq.image_right_faq_question_body": {
           "$faq_question": "store.csb.faq.question7",
@@ -291,9 +231,7 @@
           "$image_texture": "textures/ui/csb_faq_bee"
         }
       },
-      {
-        "faq_question_7_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_7_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_8@csb_faq.image_left_faq_question_body": {
           "$faq_question": "store.csb.faq.question8",
@@ -302,9 +240,7 @@
           "$image_texture": "textures/ui/csb_faq_parrot"
         }
       },
-      {
-        "faq_question_8_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_8_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_9@csb_faq.image_right_faq_question_body": {
           "$faq_question": "store.csb.faq.question9",
@@ -313,9 +249,7 @@
           "$image_texture": "textures/ui/promo_chicken"
         }
       },
-      {
-        "faq_question_9_divider@csb_faq.faq_section_divider": {}  
-      },
+      { "faq_question_9_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_question_10@csb_faq.image_left_faq_question_body": {
           "$faq_question": "store.csb.faq.question10",
@@ -324,9 +258,7 @@
           "$image_texture": "textures/ui/promo_axolotl"
         }
       },
-      {
-        "faq_question_10_divider@csb_faq.faq_section_divider": {}
-      },
+      { "faq_question_10_divider@csb_faq.faq_section_divider": {} },
       {
         "faq_button@csb_faq.faq_bottom_button": {
           "size": [ "100%", "20px" ]

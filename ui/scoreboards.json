@@ -164,7 +164,6 @@
     ]
   },
 
-  /////////////////////////  list ui
   "scoreboard_player_list": {
     "type": "stack_panel",
     "anchor_from": "top_left",
@@ -179,9 +178,7 @@
           "size": [ 0, 8 ]
         }
       },
-      {
-        "social_buttons_panel@pause.social_buttons_panel": {}
-      },
+      { "social_buttons_panel@pause.social_buttons_panel": {} },
       {
         "vertical_padding_1@pause.vertical_padding": {
           "size": [ "100%", 4 ]
@@ -258,9 +255,6 @@
       }
     ]
   },
-
-
-
 
   "player_rank_panel": {
     "type": "panel",
@@ -421,18 +415,14 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "icon@scoreboard.player_icon_panel": {}
-      },
+      { "icon@scoreboard.player_icon_panel": {} },
       {
         "padding": {
           "type": "panel",
           "size": [ 4, "100%" ]
         }
       },
-      {
-        "details@scoreboard.player_details": {}
-      }
+      { "details@scoreboard.player_details": {} }
     ]
   },
 
@@ -472,9 +462,7 @@
           "size": [ "100%y", "100% + 1px" ],
           "ignored": "(not $has_score)",
           "controls": [
-            {
-              "player_rank@scoreboard.player_rank_panel": {}
-            } 
+            { "player_rank@scoreboard.player_rank_panel": {} }
           ]
         }
       },

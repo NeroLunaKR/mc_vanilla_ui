@@ -75,7 +75,7 @@
     "size": [ 90, 54 ],
     "layer": 2,
     "controls": [
-      { "cell_image@common.cell_image": { } }
+      { "cell_image@common.cell_image": {} }
     ]
   },
 
@@ -84,7 +84,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
-      { "equip_grid@horse.equip_grid": { } },
+      { "equip_grid@horse.equip_grid": {} },
       {
         "saddle@horse.saddle_image": {
           "anchor_from": "top_left",
@@ -199,8 +199,8 @@
     "anchor_to": "top_left",
     "offset": [ 79, 18 ],
     "controls": [
-      { "inv_bg_panel@horse.inv_bg_panel": { } },
-      { "inv_grid@horse.inv_grid": { } }
+      { "inv_bg_panel@horse.inv_bg_panel": {} },
+      { "inv_grid@horse.inv_grid": {} }
     ],
     "bindings": [
       {
@@ -226,7 +226,6 @@
           "type": "panel",
           "size": [ "30%", "30%" ],
           "offset": [ 0, "30%" ],
-
           "controls": [
             {
               "horse_custom": {
@@ -255,10 +254,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
   "horse_panel": {
     "type": "panel",
     "controls": [
@@ -274,10 +269,8 @@
                 "$use_compact_close_button": true
               }
             },
-
             { "horse_section_label@horse.horse_label": {} },
             { "inv_panel@horse.inv_panel": {} },
-
             {
               "equipment@horse.equip_panel": {
                 "offset": [ 7, 18 ]
@@ -288,7 +281,6 @@
                 "offset": [ 25, 18 ]
               }
             },
-
             { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
             { "hotbar_grid_template@common.hotbar_grid_template": {} },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
@@ -296,7 +288,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 10 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 10
+        }
+      }
     ]
   },
 

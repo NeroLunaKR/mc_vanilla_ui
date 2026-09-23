@@ -1,5 +1,4 @@
 {
-
   "namespace": "custom_templates",
 
   "lock_icon": {
@@ -48,9 +47,7 @@
           "orientation": "vertical",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "templates_item_grid@custom_templates.templates_item_grid": {}
-            }
+            { "templates_item_grid@custom_templates.templates_item_grid": {} }
           ]
         }
       }
@@ -128,9 +125,7 @@
       }
     ],
     "controls": [
-      {
-        "template_screenshot@custom_templates.template_screenshot": {}
-      },
+      { "template_screenshot@custom_templates.template_screenshot": {} },
       {
         "template_text_panel@custom_templates.template_text_panel": {
           "size": [ "fill", "100%" ]
@@ -328,9 +323,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
-      {
-        "templates_scroll_content@custom_templates.templates_scroll_content": {}
-      }
+      { "templates_scroll_content@custom_templates.templates_scroll_content": {} }
     ]
   },
 

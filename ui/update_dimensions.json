@@ -1,8 +1,6 @@
 {
   "namespace": "update_dimensions",
 
-  //--------------------------------------------------------------------------------
-
   "update_dimensions_update_and_play_button@popup_dialog.popup_dialog_button": {
     "size": "$button_size",
     "$pressed_button_name": "button.update_and_play",
@@ -36,11 +34,9 @@
     "$toggle_name": "update_dimensions_make_backup",
     "$toggle_state_binding_name": "#update_dimensions_make_backup",
     "$toggle_label_text|default": "options.makeBackup",
-
     "tts_control_type_order_priority": 100,
     "tts_value_order_priority": 101,
     "$toggle_enabled_binding_type": "global",
-
     "controls": [
       {
         "header_description_stack_panel": {
@@ -49,7 +45,6 @@
           "size": [ "100%", "100%" ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-
           "controls": [
             {
               "checkbox_visuals@common.toggle_visuals": {
@@ -115,23 +110,21 @@
   "update_dimensions_dialog@common_dialogs.main_panel_three_buttons": {
     "size": [ 300, 230 ],
     "$fill_alpha": 1,
-
     "layer": 101,
     "$text_name": "options.updateWorldHeight",
     "$description_text": "options.updateWorldHeight.message",
     "$button_size": [ "100%", 30 ],
-
     "$show_close_button": true,
     "$child_control": "update_dimensions.update_dimensions_label_panel",
     "$top_button_panel": "update_dimensions.make_backup_checkbox",
     "$bottom_button_panel": "update_dimensions.update_dimensions_update_and_play_button",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_1" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_1"
+        }
       },
-      {
-        "title_label@common_dialogs.title_label": {}
-      },
+      { "title_label@common_dialogs.title_label": {} },
       {
         "panel_indent": {
           "type": "panel",
@@ -160,13 +153,9 @@
           "anchor_to": "bottom_middle"
         }
       },
-      {
-        "world_upgrade_image@update_dimensions.world_upgrade": {}
-      }
+      { "world_upgrade_image@update_dimensions.world_upgrade": {} }
     ]
   },
-
-  //--------------------------------------------------------------------------------
 
   "gamepad_helpers": {
     "type": "panel",
@@ -182,16 +171,12 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
   "update_dimensions_screen@common.base_screen": {
     "force_render_below": false,
     "$screen_animations": [
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade"
     ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -199,7 +184,6 @@
         "mapping_type": "global"
       }
     ],
-
     "$screen_content": "update_dimensions.update_dimensions_screen_content"
   },
 

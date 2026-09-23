@@ -6,10 +6,6 @@
     "size": [ 2, "100%" ]
   },
 
-  //---------------------------------------------------------------------------
-  // Images
-  //---------------------------------------------------------------------------
-
   "world_icon": {
     "type": "image",
     "texture": "textures/ui/worldsIcon",
@@ -36,10 +32,6 @@
     "$offer_icon_texture_path": "textures/ui/realmportal_small",
     "size": [ 6, 8 ]
   },
-
-  //---------------------------------------------------------------------------
-  // TOGGLES
-  //---------------------------------------------------------------------------
 
   "new_world_toggle@common_toggles.dark_image_toggle": {
     "size": [ "100%", "100%" ],
@@ -113,10 +105,6 @@
     "anchor_to": "left_middle",
     "layer": 1
   },
-
-  //---------------------------------------------------------------------------
-  // BUTTONS
-  //---------------------------------------------------------------------------
 
   "common_button_template@common_buttons.light_glyph_button": {},
 
@@ -251,10 +239,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // LOCAL WORLD GRID
-  //---------------------------------------------------------------------------
 
   "world_list_text": {
     "type": "label",
@@ -474,9 +458,7 @@
       }
     ],
     "$banner_content": [
-      {
-        "csb_icon@common_store.csb_banner_icon": {}
-      },
+      { "csb_icon@common_store.csb_banner_icon": {} },
       {
         "pad": {
           "type": "panel",
@@ -538,9 +520,7 @@
       }
     ],
     "controls": [
-      {
-        "world_template_screenshot@world_templates.world_template_screenshot": {}
-      },
+      { "world_template_screenshot@world_templates.world_template_screenshot": {} },
       {
         "world_template_text_panel@world_templates.world_template_text_panel": {
           "size": [ "fill", "100%" ]
@@ -702,7 +682,6 @@
     "$screenshot_texture_name": "#offer_texture_name",
     "$screenshot_file_system": "#offer_texture_file_system",
     "ttsSectionContainer": true,
-
     "bindings": [
       {
         "binding_name": "$world_template_section_visible_binding",
@@ -714,23 +693,10 @@
         "binding_name_override": "#collection_length"
       }
     ],
-
     "factory": {
       "name": "$world_template_section_name",
       "control_ids": "$world_template_section_control_ids",
-      "$world_template_section_factory_variables|default": [
-        "$collection_name",
-        "$collection_prefix",
-        "$pressed_button_name",
-        "$world_template_description_binding_name",
-        "$world_template_name_binding_name",
-        "$screenshot_texture_name",
-        "$screenshot_file_system",
-        "$section_header",
-        "$world_template_section_name",
-        "$world_template_section_visible_binding",
-        "$world_template_collection_binding"
-      ],
+      "$world_template_section_factory_variables|default": [ "$collection_name", "$collection_prefix", "$pressed_button_name", "$world_template_description_binding_name", "$world_template_name_binding_name", "$screenshot_texture_name", "$screenshot_file_system", "$section_header", "$world_template_section_name", "$world_template_section_visible_binding", "$world_template_collection_binding" ],
       "factory_variables": "$world_template_section_factory_variables"
     }
   },
@@ -739,11 +705,9 @@
     "$collection_name": "suggested_offers_collection",
     "$collection_prefix": "offer",
     "$pressed_button_name": "button.select_offer",
-
     "$world_template_section_name": "suggested_template_factory",
     "$world_template_section_visible_binding": "(not #realms_info_visible)",
     "$world_template_collection_binding": "#suggested_template_factory_collection",
-
     "$world_template_section_control_ids": {
       "defaultTemplateItem": "world_templates.world_template_item",
       "viewMoreButton": "world_templates.suggested_see_more_button"
@@ -753,11 +717,9 @@
   "realms_plus_template_section_factory@world_templates.world_template_section_factory": {
     "$collection_name": "realms_plus_templates",
     "$pressed_button_name": "button.menu_realms_plus_template_clicked",
-
     "$world_template_section_name": "realms_plus_factory",
     "$world_template_section_visible_binding": "#realms_plus_list_visible",
     "$world_template_collection_binding": "#realms_plus_template_factory_collection",
-
     "$world_template_section_control_ids": {
       "defaultTemplateItem": "world_templates.realms_plus_template_item",
       "viewMoreButton": "world_templates.realms_plus_see_more_button"
@@ -768,11 +730,9 @@
     "$collection_name": "world_templates",
     "$collection_prefix": "",
     "$pressed_button_name": "button.menu_world_template_clicked",
-
     "$world_template_section_name": "world_template_inventory_factory",
     "$world_template_section_visible_binding": "#template_list_visible",
     "$world_template_collection_binding": "#world_template_inventory_factory_collection",
-
     "$world_template_section_control_ids": {
       "defaultTemplateItem": "world_templates.world_template_item",
       "viewMoreButton": "world_templates.world_template_inventory_see_more_button"
@@ -783,11 +743,9 @@
     "$collection_name": "custom_world_templates",
     "$collection_prefix": "",
     "$pressed_button_name": "button.menu_custom_world_template_clicked",
-
     "$world_template_section_name": "custom_world_template_factory",
     "$world_template_section_visible_binding": "#custom_template_list_visible",
     "$world_template_collection_binding": "#custom_world_template_factory_collection",
-
     "$world_template_section_control_ids": {
       "defaultTemplateItem": "world_templates.world_template_item",
       "viewMoreButton": "world_templates.custom_world_template_see_more_button"
@@ -819,10 +777,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // NO OWNED ITEMS TEXT
-  //---------------------------------------------------------------------------
-
   "no_owned_templates_text_label": {
     "type": "label",
     "color": "$dark_button_secondary_default_text_color",
@@ -850,10 +804,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // SCROLL
-  //---------------------------------------------------------------------------
 
   "common_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
@@ -911,10 +861,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // SCREEN CONTENT
-  //---------------------------------------------------------------------------
-
   "world_list_grids_stack": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -937,9 +883,7 @@
                 ]
               }
             },
-            {
-              "world_template_inventory_section_factory@world_templates.world_template_inventory_section_factory": {}
-            },
+            { "world_template_inventory_section_factory@world_templates.world_template_inventory_section_factory": {} },
             {
               "template_bottom_padding": {
                 "type": "panel",
@@ -949,7 +893,6 @@
           ]
         }
       },
-      ////
       {
         "store_panel": {
           "type": "panel",
@@ -1042,9 +985,7 @@
                             ]
                           }
                         },
-                        {
-                          "suggested_template_section_factory@world_templates.suggested_template_section_factory": {}
-                        },
+                        { "suggested_template_section_factory@world_templates.suggested_template_section_factory": {} },
                         {
                           "suggested_template_bottom_padding": {
                             "type": "panel",
@@ -1077,9 +1018,7 @@
                 ]
               }
             },
-            {
-              "custom_world_template_section_factory@world_templates.custom_world_template_section_factory": {}
-            },
+            { "custom_world_template_section_factory@world_templates.custom_world_template_section_factory": {} },
             {
               "custom_template_list_bottom_padding": {
                 "type": "panel",
@@ -1125,9 +1064,7 @@
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "world_list_grids_stack@world_templates.world_list_grids_stack": {}
-      }
+      { "world_list_grids_stack@world_templates.world_list_grids_stack": {} }
     ]
   },
 
@@ -1194,10 +1131,6 @@
       "#hyperlink": "https://aka.ms/MCMultiplayerHelp"
     }
   },
-
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
 
   "world_templates_screen@common.base_screen": {
     "$screen_header_title_visible": false,

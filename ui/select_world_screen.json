@@ -1,16 +1,9 @@
 {
   "namespace": "select_world",
 
-  //--------------------------------------------------------------------------------
-  // Add-Ons Popup Flow
-  //--------------------------------------------------------------------------------
-
-  // Pop ups
-
   "popup_dialog__add_on_common@popup_dialog.popup_dialog": {
     "$message_text|default": "",
     "$popup_content|default": "common.empty_panel",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -46,9 +39,21 @@
 
   "popup_dialog__add_on_common_no_buttons@select_world.popup_dialog__add_on_common": {
     "controls": [
-      { "popup_dialog_bg@common.dialog_background_hollow_3": { "$fill_alpha": 1.0 } },
-      { "popup_dialog_message@popup_dialog.popup_dialog_message": { "offset": [ 0, "8px" ] } },
-      { "close_button@common.close_button": { "$close_button_to_button_id": "button.close_popup" } },
+      {
+        "popup_dialog_bg@common.dialog_background_hollow_3": {
+          "$fill_alpha": 1.0
+        }
+      },
+      {
+        "popup_dialog_message@popup_dialog.popup_dialog_message": {
+          "offset": [ 0, "8px" ]
+        }
+      },
+      {
+        "close_button@common.close_button": {
+          "$close_button_to_button_id": "button.close_popup"
+        }
+      },
       { "add_on_popup_content_panel@select_world.add_on_popup_content_panel": {} }
     ]
   },
@@ -60,9 +65,21 @@
     "$continue_button_name|default": "button.none",
     "$continue_button_text|default": "",
     "controls": [
-      { "popup_dialog_bg@common.dialog_background_hollow_1": { "$fill_alpha": 1.0 } },
-      { "popup_dialog_message@popup_dialog.popup_dialog_message": { "offset": [ 0, "8px" ] } },
-      { "close_button@common.close_button": { "$close_button_to_button_id": "button.close_popup" } },
+      {
+        "popup_dialog_bg@common.dialog_background_hollow_1": {
+          "$fill_alpha": 1.0
+        }
+      },
+      {
+        "popup_dialog_message@popup_dialog.popup_dialog_message": {
+          "offset": [ 0, "8px" ]
+        }
+      },
+      {
+        "close_button@common.close_button": {
+          "$close_button_to_button_id": "button.close_popup"
+        }
+      },
       { "add_on_popup_content_panel@select_world.add_on_popup_content_panel": {} },
       { "button_copy@select_world.add_on_button_copy": {} },
       { "button_continue@select_world.add_on_button_continue": {} }
@@ -89,7 +106,7 @@
 
   "add_on_popup_content_panel": {
     "type": "panel",
-    "size": [ "100% - 16px", "100% - 31px" ], // size and offset to align inside dialog_background_hollow_3 frame
+    "size": [ "100% - 16px", "100% - 31px" ],
     "offset": [ 0, "-8px" ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
@@ -132,7 +149,11 @@
   "copy_local_world_panel@common.vertical_stack_panel": {
     "size": [ "100% - 4px", "100%" ],
     "controls": [
-      { "padding_top@common.empty_panel": { "size": [ "100%", "2px" ] } },
+      {
+        "padding_top@common.empty_panel": {
+          "size": [ "100%", "2px" ]
+        }
+      },
       {
         "text_box": {
           "type": "label",
@@ -148,7 +169,11 @@
   "copy_realms_world_panel@common.vertical_stack_panel": {
     "size": [ "100% - 4px", "100%" ],
     "controls": [
-      { "padding_top@common.empty_panel": { "size": [ "100%", "2px" ] } },
+      {
+        "padding_top@common.empty_panel": {
+          "size": [ "100%", "2px" ]
+        }
+      },
       {
         "text_box": {
           "type": "label",
@@ -161,12 +186,14 @@
     ]
   },
 
-  // New or Existing World Pop Up Components
-
   "new_or_existing_world_panel@common.horizontal_stack_panel": {
     "size": [ "100%", "100%" ],
     "controls": [
-      { "padding_left@common.empty_panel": { "size": [ "2px", "100%" ] } },
+      {
+        "padding_left@common.empty_panel": {
+          "size": [ "2px", "100%" ]
+        }
+      },
       {
         "world_icon_existing@select_world.world_icon_with_button": {
           "$button_text": "store.addon.choseExistingWorld",
@@ -175,7 +202,11 @@
           "$world_button_enabled": "#existing_world_button_enabled"
         }
       },
-      { "padding_middle@common.empty_panel": { "size": [ "2px", "100%" ] } },
+      {
+        "padding_middle@common.empty_panel": {
+          "size": [ "2px", "100%" ]
+        }
+      },
       {
         "world_icon_new@select_world.world_icon_with_button": {
           "$button_text": "store.addon.choseNewWorld",
@@ -183,7 +214,11 @@
           "$vert_stack_centering_content": "select_world.world_icon_new"
         }
       },
-      { "padding_right@common.empty_panel": { "size": [ "2px", "100%" ] } }
+      {
+        "padding_right@common.empty_panel": {
+          "size": [ "2px", "100%" ]
+        }
+      }
     ]
   },
 
@@ -192,7 +227,11 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
-      { "padding_top@common.empty_panel": { "size": [ "100%", "16px" ] } },
+      {
+        "padding_top@common.empty_panel": {
+          "size": [ "100%", "16px" ]
+        }
+      },
       { "world_icon@common.vert_stack_centering_panel": {} },
       {
         "button@common_buttons.light_text_button": {
@@ -209,7 +248,11 @@
           ]
         }
       },
-      { "padding_bottom@common.empty_panel": { "size": [ "100%", "16px" ] } }
+      {
+        "padding_bottom@common.empty_panel": {
+          "size": [ "100%", "16px" ]
+        }
+      }
     ]
   },
 
@@ -220,7 +263,7 @@
     "anchor_to": "top_middle",
     "texture": "textures/ui/white_background",
     "color": "$light_button_default_text_color",
-    "clip_direction": "left", // clipping variables needed for square image to fill rectangular space
+    "clip_direction": "left",
     "clip_pixelperfect": true,
     "clip_ratio": 0.4376,
     "controls": [
@@ -236,7 +279,7 @@
 
   "world_icon_existing": {
     "type": "image",
-    "size": [ "100% - 2px", "57.7%x" ], // Original texture size [ 260, 150 ]
+    "size": [ "100% - 2px", "57.7%x" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "texture": "#existing_world_icon",
@@ -253,8 +296,6 @@
       }
     ]
   },
-
-  // World List Pop Up Components
 
   "select_world_panel@common.scrolling_panel": {
     "size": [ "100%", "100%" ],
@@ -287,7 +328,11 @@
           "$local_world_edit_button_visible": false
         }
       },
-      { "padding_middle@common.empty_panel": { "size": [ "100%", "2px" ] } },
+      {
+        "padding_middle@common.empty_panel": {
+          "size": [ "100%", "2px" ]
+        }
+      },
       {
         "local_world_label@common_dialogs.standard_title_label": {
           "$text_name": "#local_worlds_title_with_count",
@@ -302,7 +347,11 @@
           "$local_world_edit_button_visible": false
         }
       },
-      { "padding_end@common.empty_panel": { "size": [ "100%", "2px" ] } }
+      {
+        "padding_end@common.empty_panel": {
+          "size": [ "100%", "2px" ]
+        }
+      }
     ]
   },
 
@@ -356,18 +405,10 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
-
   "select_world_screen_content": {
     "type": "panel",
     "size": [ "100%", "100%" ],
-
     "controls": [
-      //{
-      //  "popup@select_world.popup_dialog__activate_add_on": {}
-      //},
       {
         "popup_dialog_factory": {
           "type": "factory",
@@ -386,7 +427,6 @@
     "$safezone_screen_matrix_layer": 20,
     "$ignore_inventory_button": true,
     "force_render_below": true,
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -394,7 +434,6 @@
         "mapping_type": "global"
       }
     ],
-
     "$screen_content": "select_world.select_world_screen_content",
     "$is_full_screen_layout": false
   }

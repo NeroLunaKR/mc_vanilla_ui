@@ -3,9 +3,7 @@
 
   "csb_content_section@csb.section_base": {
     "controls": [
-      {
-        "content_section_vertical_padding_1@csb.vertical_padding_4px": {}
-      },
+      { "content_section_vertical_padding_1@csb.vertical_padding_4px": {} },
       {
         "popular_packs_label_panel": {
           "type": "panel",
@@ -26,18 +24,10 @@
           ]
         }
       },
-      {
-        "content_section_vertical_padding_2@csb.vertical_padding_4px": {}
-      },
-      {
-        "content_packs_included@csb_content.content_packs_included_section": {}
-      },
-      {
-        "content_pack_types@csb_content.content_pack_types_section": {}
-      },
-      {
-        "content_section_vertical_padding_3@csb.vertical_padding_4px": {}
-      }
+      { "content_section_vertical_padding_2@csb.vertical_padding_4px": {} },
+      { "content_packs_included@csb_content.content_packs_included_section": {} },
+      { "content_pack_types@csb_content.content_pack_types_section": {} },
+      { "content_section_vertical_padding_3@csb.vertical_padding_4px": {} }
     ]
   },
 
@@ -45,9 +35,7 @@
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "pack_types@csb_content.pack_types": {}
-      },
+      { "pack_types@csb_content.pack_types": {} },
       {
         "padding@common.empty_panel": {
           "size": [ "100%", 4 ]
@@ -60,12 +48,8 @@
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "popular_packs@csb_content.popular_packs": {}
-      },
-      {
-        "section_divider@csb.full_width_section_divider": {}
-      }
+      { "popular_packs@csb_content.popular_packs": {} },
+      { "section_divider@csb.full_width_section_divider": {} }
     ]
   },
 
@@ -80,18 +64,14 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "pack_types_1@csb_content.pack_types_1": {}
-      },
+      { "pack_types_1@csb_content.pack_types_1": {} },
       {
         "padding_02": {
           "type": "panel",
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "pack_types_2@csb_content.pack_types_2": {}
-      },
+      { "pack_types_2@csb_content.pack_types_2": {} },
       {
         "padding_03": {
           "type": "panel",
@@ -287,9 +267,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "pack_grid@csb_content.packs_collection": {}
-      },
+      { "pack_grid@csb_content.packs_collection": {} },
       {
         "padding_1@common.empty_panel": {
           "size": [ "100%", 2 ]
@@ -451,12 +429,8 @@
                 "color": [ 0, 0, 0 ]
               }
             },
-            {
-              "hover@common.square_image_border_white": {}
-            },
-            {
-              "pressed@common.square_image_border_white": {}
-            }
+            { "hover@common.square_image_border_white": {} },
+            { "pressed@common.square_image_border_white": {} }
           ]
         }
       }

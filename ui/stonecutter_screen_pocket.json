@@ -1,14 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "stonecutter_pocket",
-
-  //---------------------------------------------------------------------------
-  // #region Images
-  //---------------------------------------------------------------------------
 
   "vertical_arrow_icon": {
     "type": "image",
@@ -38,12 +29,6 @@
     }
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Item Slots
-  //---------------------------------------------------------------------------
-
   "input_item_slot@common.pocket_ui_container_item": {
     "anchor_from": "center",
     "anchor_to": "center",
@@ -57,17 +42,10 @@
     "$button_ref": "stonecutter.result_slot_button"
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Right Panel
-  //---------------------------------------------------------------------------
-
   "right_panel": {
     "type": "stack_panel",
     "size": [ "fill", "100%" ],
     "orientation": "horizontal",
-
     "controls": [
       {
         "content@common.root_panel": {
@@ -99,17 +77,9 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Right Navigation Tabs
-  //---------------------------------------------------------------------------
-
   "right_tab_stonecutter@common_tabs.pocket_tab_right": {
     "$tab_view_binding_name": "stonecutter_tab_toggle",
-
     "$tab_content": "stonecutter_pocket.stonecutter_item_renderer",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_right_tab_stonecutter"
   },
@@ -127,7 +97,6 @@
           "type": "image",
           "texture": "textures/ui/TabRightBackTopMost",
           "size": [ "100%", 29 ],
-
           "controls": [
             {
               "nodrop_zone@common.root_panel": {
@@ -167,12 +136,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region stonecutter Content
-  //---------------------------------------------------------------------------
-
   "input_slots_stack_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -181,12 +144,6 @@
       { "input_item_slot@stonecutter_pocket.input_item_slot": {} }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region stonecutter Content Stack Panel
-  //---------------------------------------------------------------------------
 
   "stonecutter_content_stack_panel": {
     "type": "stack_panel",
@@ -272,12 +229,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Left Panel
-  //---------------------------------------------------------------------------
-
   "inventory_scroll_panel@common.container_scroll_panel": {
     "$scrolling_content": "common.pocket_container_grid"
   },
@@ -296,7 +247,6 @@
     "type": "stack_panel",
     "size": [ "fill", "100%" ],
     "orientation": "horizontal",
-
     "controls": [
       {
         "gamepad_helpers_and_tabs_holder": {
@@ -381,12 +331,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Left Navigation Tabs
-  //---------------------------------------------------------------------------
-
   "left_tab_stones@common_tabs.pocket_tab_left": {
     "$is_top_most_tab": true,
     "$tab_view_binding_name": "stones_tab_toggle",
@@ -424,12 +368,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region Base Panels
-  //---------------------------------------------------------------------------
-
   "pocket_hotbar_and_content_panels@common.pocket_hotbar_and_content_panels": {
     "layer": 2,
     "$left_panel_control": "stonecutter_pocket.left_panel",
@@ -440,7 +378,6 @@
     "type": "panel",
     "controls": [
       { "pocket_hotbar_and_content_panels@stonecutter_pocket.pocket_hotbar_and_content_panels": {} },
-
       {
         "container_gamepad_helpers@common.container_gamepad_helpers": {
           "size": [ "100%", 40 ],
@@ -459,9 +396,11 @@
       },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   }
 }
-
-// #endregion

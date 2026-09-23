@@ -1,10 +1,6 @@
 {
   "namespace": "expanded_skin_pack",
 
-  //--------------------------------------------------------------------------------
-  // Common Controls
-  //--------------------------------------------------------------------------------
-
   "banner_fill": {
     "type": "image",
     "texture": "textures/ui/Banners"
@@ -39,7 +35,6 @@
 
   "skin_button": {
     "type": "button",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -51,7 +46,6 @@
     "focus_change_left": "$focus_override_left",
     "focus_change_right": "$focus_override_right",
     "focus_enabled": true,
-
     "layer": 3,
     "hover_control": "hover",
     "pressed_control": "pressed",
@@ -70,10 +64,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Preview Skin
-  //--------------------------------------------------------------------------------
-
   "skin_rotation_arrows": {
     "type": "image",
     "layer": 6,
@@ -88,7 +78,6 @@
     "anchor_to": "top_left",
     "gesture_tracking_button": "button.turn_doll",
     "always_handle_controller_direction": true,
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -105,7 +94,6 @@
           "offset": [ 0, -38 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-
           "controls": [
             {
               "skin_model": {
@@ -114,7 +102,6 @@
                 "layer": 5,
                 "use_selected_skin": false,
                 "rotation": "gesture_x",
-
                 "animation_reset_name": "screen_animation_reset",
                 "anims": [
                   "@expanded_skin_pack.screen_exit_size_animation_push",
@@ -296,10 +283,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Change Skins Panel
-  //--------------------------------------------------------------------------------
-
   "skin_model": {
     "type": "custom",
     "renderer": "paper_doll_renderer",
@@ -323,7 +306,6 @@
         ]
       }
     ],
-
     "anims": "$skin_model_animations",
     "bindings": [
       {
@@ -358,10 +340,6 @@
     "reset_event": "screen_animation_reset"
   },
 
-  //--------------------------------------------------------------------------------
-  // Scrolling Skins Panel
-  //--------------------------------------------------------------------------------
-
   "scrolling_content": {
     "type": "stack_panel",
     "anchor_from": "top_left",
@@ -377,9 +355,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "pack_info_panel@expanded_skin_pack.pack_info_panel": {}
-            }
+            { "pack_info_panel@expanded_skin_pack.pack_info_panel": {} }
           ]
         }
       },
@@ -388,9 +364,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "skins_grid@expanded_skin_pack.skins_grid": {}
-            }
+            { "skins_grid@expanded_skin_pack.skins_grid": {} }
           ]
         }
       }
@@ -499,9 +473,7 @@
           ]
         }
       },
-      {
-        "button@expanded_skin_pack.select_skin_button": {}
-      }
+      { "button@expanded_skin_pack.select_skin_button": {} }
     ]
   },
 
@@ -523,15 +495,9 @@
 
   "select_skin_button@common.button": {
     "controls": [
-      {
-        "default@common.empty_panel": {}
-      },
-      {
-        "hover@common.focus_border_white": {}
-      },
-      {
-        "pressed@common.focus_border_white": {}
-      }
+      { "default@common.empty_panel": {} },
+      { "hover@common.focus_border_white": {} },
+      { "pressed@common.focus_border_white": {} }
     ],
     "bindings": [
       {
@@ -607,10 +573,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Title bar
-  //--------------------------------------------------------------------------------
-
   "title_bar": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -633,9 +595,6 @@
             {
               "title_holder": {
                 "type": "panel",
-                // This lets the main title start overlapping the padding
-                // between it and the skin name once it can't move any farther
-                // to the left as the skin name approaches its max size.
                 "size": [ "100%", "100%" ],
                 "min_size": [ "100%c", "100%" ],
                 "anchor_from": "top_middle",
@@ -671,21 +630,6 @@
               "preview_skin_name@expanded_skin_pack.title_label": {
                 "ignored": "$education_edition",
                 "text": "#skin_name",
-                // In the edge case where the skin name is too long to fit,
-                // even with the main title pushed as far to the left as it can
-                // go, then the skin name should truncate.  Since the label's
-                // parent control has a width of "100%c", this truncation must
-                // be due to a hard pixel limit for the label width.  This limit
-                // should be the pixels available at the smallest possible
-                // screen width (320 on pocket) with the largest possible main
-                // title (es_ES, "Seleccionar aspecto").
-                // 320 - 4 (padding around dialog) - 10 (padding around content)
-                //     - 3 (padding to the left of main title)
-                //     - 15 (close button) - 103 (texels for es_ES main title)
-                //     - 4 (space between title and skin name)
-                // = 181 pixels, or about 30 characters, plus a bit more if
-                //     enough of those characters are narrow ones.
-                // Marketing should avoid skin names longer than this.
                 "size": [ "default", 10 ],
                 "max_size": [ 181, 10 ],
                 "bindings": [
@@ -711,10 +655,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Root Controls
-  //--------------------------------------------------------------------------------
 
   "content": {
     "type": "panel",
@@ -773,10 +713,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Controller Focus
-  //--------------------------------------------------------------------------------
-
   "scrollable_selector_area_content": {
     "type": "panel",
     "offset": [ "2px", "2px" ],
@@ -786,7 +722,6 @@
     ]
   },
 
-  // left side
   "selector_area@common.modal_area_panel_base": {
     "offset": [ "0px", "23px" ],
     "size": [ "60%", "100% - 21px" ],
@@ -797,9 +732,7 @@
     "default_focus_precedence": 5,
     "layer": 2,
     "controls": [
-      {
-        "all_skins@expanded_skin_pack.all_skins_frame": {}
-      },
+      { "all_skins@expanded_skin_pack.all_skins_frame": {} },
       {
         "inactive_modal_pane_fade@common.inactive_modal_pane_fade": {
           "bindings": [
@@ -813,7 +746,6 @@
     ]
   },
 
-  // right side
   "content_area@common.modal_area_panel_base": {
     "offset": [ -2, 23 ],
     "size": [ "40% - 4px", "100% - 21px" ],
@@ -841,7 +773,6 @@
     ]
   },
 
-  // divider between two sides
   "section_divider": {
     "type": "image",
     "offset": [ "60%", "22px" ],

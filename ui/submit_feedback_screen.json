@@ -12,10 +12,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Controls
-  //--------------------------------------------------------------------------------
-
   "write_feedback_panel": {
     "type": "stack_panel",
     "size": [ "100% - 12px", "100%" ],
@@ -79,9 +75,7 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "write_feedback_panel@submit_feedback.write_feedback_panel": {}
-      }
+      { "write_feedback_panel@submit_feedback.write_feedback_panel": {} }
     ]
   },
 
@@ -100,10 +94,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
 
   "submit_feedback_screen@common.base_screen": {
     "button_mappings": [

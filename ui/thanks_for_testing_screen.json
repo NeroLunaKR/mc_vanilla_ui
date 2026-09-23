@@ -1,10 +1,6 @@
 {
   "namespace": "thanks_for_testing",
 
-  //---------------------------------------------------------------------------
-  // Padding panels
-  //---------------------------------------------------------------------------
-
   "padding_horizontal": {
     "type": "panel",
     "size": [ 2, "100%" ]
@@ -19,10 +15,6 @@
     "type": "panel",
     "size": [ 5, "100%" ]
   },
-
-  //---------------------------------------------------------------------------
-  // Button panels content
-  //---------------------------------------------------------------------------
 
   "tabbed_upsell_buy_now_button@common_buttons.light_content_button": {
     "$pressed_button_name": "button.tabbed_buy_now_button",
@@ -42,10 +34,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Text Panel
-  //---------------------------------------------------------------------------
 
   "label_panel": {
     "type": "panel",
@@ -95,10 +83,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Image Panel
-  //---------------------------------------------------------------------------
-
   "dialog_image": {
     "type": "image",
     "layer": 2,
@@ -112,9 +96,7 @@
     "$background_texture|default": "textures/ui/Grey",
     "texture": "$background_texture",
     "controls": [
-      {
-        "dialog_image@thanks_for_testing.dialog_image": {}
-      }
+      { "dialog_image@thanks_for_testing.dialog_image": {} }
     ]
   },
 
@@ -128,9 +110,7 @@
           "size": [ "40%", "100%" ]
         }
       },
-      {
-        "horizontal_padding_01@thanks_for_testing.text_horizontal_padding": {}
-      },
+      { "horizontal_padding_01@thanks_for_testing.text_horizontal_padding": {} },
       {
         "scrolling_panel@common.scrolling_panel": {
           "size": [ "60% - 5px", "100%" ],
@@ -167,15 +147,9 @@
           "size": [ "100%", "100%" ]
         }
       },
-      {
-        "focus_image@$focus_texture": {}
-      }
+      { "focus_image@$focus_texture": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Main navigation tabs
-  //---------------------------------------------------------------------------
 
   "top_tab@common_tabs.tab_top": {
     "$toggle_focus_enabled": false,
@@ -183,10 +157,6 @@
     "$toggle_group_default_selected": "$default_tab",
     "$background_texture": "textures/ui/Black"
   },
-
-  //---------------------------------------------------------------------------
-  // Tabs layout panels
-  //---------------------------------------------------------------------------
 
   "tab_navigation_panel_layout": {
     "type": "stack_panel",
@@ -200,10 +170,7 @@
           "type": "panel",
           "size": [ "100%", "100%" ],
           "controls": [
-            {
-              "content@$navigation_tab": {
-              }
-            }
+            { "content@$navigation_tab": {} }
           ]
         }
       }
@@ -228,9 +195,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_01@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_01@thanks_for_testing.padding_horizontal": {} },
       {
         "xbl_navigation_tab@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -241,9 +206,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_02@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_02@thanks_for_testing.padding_horizontal": {} },
       {
         "achievements_navigation_tab3@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -254,9 +217,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_03@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_03@thanks_for_testing.padding_horizontal": {} },
       {
         "multiplayer_navigation_tab4@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -267,9 +228,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_04@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_04@thanks_for_testing.padding_horizontal": {} },
       {
         "server_navigation_tab@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -280,9 +239,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_05@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_05@thanks_for_testing.padding_horizontal": {} },
       {
         "store_navigation_tab@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -293,9 +250,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_06@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_06@thanks_for_testing.padding_horizontal": {} },
       {
         "creative_navigation_tab@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -306,9 +261,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_07@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_07@thanks_for_testing.padding_horizontal": {} },
       {
         "packs_navigation_tab@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -319,9 +272,7 @@
           "$tab_panel": "thanks_for_testing.image_panel"
         }
       },
-      {
-        "nav_padding_08@thanks_for_testing.padding_horizontal": {}
-      },
+      { "nav_padding_08@thanks_for_testing.padding_horizontal": {} },
       {
         "seeds_navigation_tab@thanks_for_testing.top_tab": {
           "size": [ "fill", "100%" ],
@@ -335,10 +286,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Content layout panels
-  //---------------------------------------------------------------------------
-
   "tabbed_tab_content_panel_layout": {
     "type": "panel",
     "anchor_to": "bottom_middle",
@@ -346,39 +293,17 @@
     "size": [ "100%", "fill" ],
     "$multiline_description": false,
     "controls": [
-      {
-        "minecraft_tab_content@thanks_for_testing.minecraft_tab_content_panel": {}
-      },
-      {
-        "xbl_tab_content2@thanks_for_testing.xbl_tab_content_panel": {}
-      },
-      {
-        "achievements_tab_content3@thanks_for_testing.achievements_tab_content_panel": {}
-      },
-      {
-        "multiplayer_tab_content4@thanks_for_testing.multiplayer_tab_content_panel": {}
-      },
-      {
-        "server_tab_content5@thanks_for_testing.server_tab_content_panel": {}
-      },
-      {
-        "store_tab_content6@thanks_for_testing.store_tab_content_panel": {}
-      },
-      {
-        "creative_tab_content7@thanks_for_testing.creative_tab_content_panel": {}
-      },
-      {
-        "packs_tab_content8@thanks_for_testing.packs_tab_content_panel": {}
-      },
-      {
-        "seeds_tab_content9@thanks_for_testing.seeds_tab_content_panel": {}
-      }
+      { "minecraft_tab_content@thanks_for_testing.minecraft_tab_content_panel": {} },
+      { "xbl_tab_content2@thanks_for_testing.xbl_tab_content_panel": {} },
+      { "achievements_tab_content3@thanks_for_testing.achievements_tab_content_panel": {} },
+      { "multiplayer_tab_content4@thanks_for_testing.multiplayer_tab_content_panel": {} },
+      { "server_tab_content5@thanks_for_testing.server_tab_content_panel": {} },
+      { "store_tab_content6@thanks_for_testing.store_tab_content_panel": {} },
+      { "creative_tab_content7@thanks_for_testing.creative_tab_content_panel": {} },
+      { "packs_tab_content8@thanks_for_testing.packs_tab_content_panel": {} },
+      { "seeds_tab_content9@thanks_for_testing.seeds_tab_content_panel": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Content tabs panel
-  //---------------------------------------------------------------------------
 
   "common_tab_content_panel": {
     "type": "panel",
@@ -476,24 +401,14 @@
     "$description_text": "trial.thanks_for_testing.seeds.description"
   },
 
-  //---------------------------------------------------------------------------
-  // Tab Panel
-  //---------------------------------------------------------------------------
-
   "common_tab_screen_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100% - 4px", "100%" ],
     "controls": [
-      {
-        "tab_navigation_panel@thanks_for_testing.tab_navigation_panel_layout": {}
-      },
-      {
-        "padding_01@thanks_for_testing.padding_vertical": {}
-      },
-      {
-        "tab_content_panel@$tab_content_panel": {}
-      }
+      { "tab_navigation_panel@thanks_for_testing.tab_navigation_panel_layout": {} },
+      { "padding_01@thanks_for_testing.padding_vertical": {} },
+      { "tab_content_panel@$tab_content_panel": {} }
     ]
   },
 
@@ -502,48 +417,30 @@
     "$tab_content_panel": "thanks_for_testing.tabbed_tab_content_panel_layout"
   },
 
-  //---------------------------------------------------------------------------
-  // Button main Panel
-  //---------------------------------------------------------------------------
-
   "button_panel": {
     "type": "stack_panel",
     "size": [ "100%", 29 ],
     "orientation": "horizontal",
     "controls": [
-      {
-        "padding_5@thanks_for_testing.padding_horizontal": {}
-      },
+      { "padding_5@thanks_for_testing.padding_horizontal": {} },
       {
         "buy_now_button@thanks_for_testing.tabbed_upsell_buy_now_button": {
           "size": [ "100% - 4px", "100%" ],
           "$focus_override_up": "text_container"
         }
       },
-      {
-        "padding_6@thanks_for_testing.padding_horizontal": {}
-      }
+      { "padding_6@thanks_for_testing.padding_horizontal": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Tab main Panel
-  //---------------------------------------------------------------------------
 
   "tab_panel": {
     "type": "stack_panel",
     "size": [ "100%", "fill" ],
     "orientation": "horizontal",
     "controls": [
-      {
-        "padding_3@thanks_for_testing.padding_horizontal": {}
-      },
-      {
-        "main_control@thanks_for_testing.tabbed_screen_panel": {}
-      },
-      {
-        "padding_4@thanks_for_testing.padding_horizontal": {}
-      }
+      { "padding_3@thanks_for_testing.padding_horizontal": {} },
+      { "main_control@thanks_for_testing.tabbed_screen_panel": {} },
+      { "padding_4@thanks_for_testing.padding_horizontal": {} }
     ]
   },
 
@@ -552,27 +449,13 @@
     "size": [ "100%", "100%" ],
     "orientation": "vertical",
     "controls": [
-      {
-        "padding_0@thanks_for_testing.padding_vertical": {}
-      },
-      {
-        "tab_panel@thanks_for_testing.tab_panel": {}
-      },
-      {
-        "padding_1@thanks_for_testing.padding_vertical": {}
-      },
-      {
-        "button_panel@thanks_for_testing.button_panel": {}
-      },
-      {
-        "padding_2@thanks_for_testing.padding_vertical": {}
-      }
+      { "padding_0@thanks_for_testing.padding_vertical": {} },
+      { "tab_panel@thanks_for_testing.tab_panel": {} },
+      { "padding_1@thanks_for_testing.padding_vertical": {} },
+      { "button_panel@thanks_for_testing.button_panel": {} },
+      { "padding_2@thanks_for_testing.padding_vertical": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
 
   "thanks_for_testing_screen@common.base_screen": {
     "button_mappings": [
@@ -631,5 +514,4 @@
       }
     ]
   }
-
 }

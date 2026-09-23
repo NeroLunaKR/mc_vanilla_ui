@@ -1,10 +1,6 @@
 {
   "namespace": "smithing_table_2",
 
-  //------------------------------------------------------------------------------------
-  // #region Icon and text area (top quarter of screen)
-  //------------------------------------------------------------------------------------
-
   "smithing_icon": {
     "type": "image",
     "anchor_from": "top_left",
@@ -25,7 +21,6 @@
     "text": "container.smithing_table.upgrade"
   },
 
-  // Panel to position the top quarter of screen
   "icon_and_text_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -38,7 +33,6 @@
     ]
   },
 
-  // Panel to position the icon
   "smithing_icon_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -47,12 +41,6 @@
       { "smithing_icon@smithing_table_2.smithing_icon": {} }
     ]
   },
-
-  // #endregion
-
-  //------------------------------------------------------------------------------------
-  // #region Recipe (template, input, material and results) area (2nd quarter of screen)
-  //------------------------------------------------------------------------------------
 
   "smithing_image": {
     "type": "image",
@@ -109,36 +97,36 @@
     "anim_type": "flip_book",
     "initial_uv": [ 0, 0 ],
     "frame_count": 2,
-    "frame_step": 0, // Unused
+    "frame_step": 0,
     "fps": 1.0,
-    "easing": "linear" // Unused
+    "easing": "linear"
   },
 
   "armors_animation": {
     "anim_type": "flip_book",
     "initial_uv": [ 0, 0 ],
     "frame_count": 4,
-    "frame_step": 0, // Unused
+    "frame_step": 0,
     "fps": 1.0,
-    "easing": "linear" // Unused
+    "easing": "linear"
   },
 
   "armors_and_tools_animation": {
     "anim_type": "flip_book",
     "initial_uv": [ 0, 0 ],
     "frame_count": 12,
-    "frame_step": 0, // Unused
+    "frame_step": 0,
     "fps": 1.0,
-    "easing": "linear" // Unused
+    "easing": "linear"
   },
 
   "all_materials_animation": {
     "anim_type": "flip_book",
     "initial_uv": [ 0, 0 ],
     "frame_count": 7,
-    "frame_step": 0, // Unused
+    "frame_step": 0,
     "fps": 1.0,
-    "easing": "linear" // Unused
+    "easing": "linear"
   },
 
   "smithing_input_image_templates@smithing_table_2.smithing_image": {
@@ -233,8 +221,6 @@
     ]
   },
 
-  // #endregion
-
   "smithing_table_output_slot_button@common.container_slot_button_prototype": {
     "button_mappings": [
       {
@@ -325,10 +311,8 @@
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "smithing_table_template_items",
           "$cell_overlay_ref": "smithing_table_2.template_overlay_image",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_template",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "smithing_table_input"
         }
@@ -338,13 +322,10 @@
           "grid_position": [ 1, 0 ],
           "$item_collection_name": "smithing_table_input_items",
           "$cell_overlay_ref": "smithing_table_2.input_overlay_image",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "smithing_table_material",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "smithing_table_template"
         }
@@ -354,13 +335,10 @@
           "grid_position": [ 2, 0 ],
           "$item_collection_name": "smithing_table_material_items",
           "$cell_overlay_ref": "smithing_table_2.material_overlay_image",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_material",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "smithing_table_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "smithing_table_result"
         }
@@ -369,7 +347,7 @@
         "yields": {
           "type": "panel",
           "grid_position": [ 3, 0 ],
-          "size": [ "22.2%", "100%" ], // Center across two grid columns
+          "size": [ "22.2%", "100%" ],
           "controls": [
             { "arrow_icon@smithing_table_2.arrow_icon": {} },
             {
@@ -385,10 +363,8 @@
           "grid_position": [ 5, 0 ],
           "$item_collection_name": "smithing_table_result_items",
           "$button_ref": "smithing_table_2.smithing_table_output_slot_button",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_result",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "smithing_table_material"
         }
@@ -412,16 +388,10 @@
     ]
   },
 
-  //------------------------------------------------------------------------------------
-  // #region Result item preview
-  //------------------------------------------------------------------------------------
-
   "result_item_preview": {
     "type": "panel",
     "controls": [
-      {
-        "inner@smithing_table_2.result_item_preview_inner": {}
-      }
+      { "inner@smithing_table_2.result_item_preview_inner": {} }
     ]
   },
 
@@ -471,12 +441,6 @@
     ]
   },
 
-  // #endregion
-
-  //------------------------------------------------------------------------------------
-  // #region Toolbar
-  //------------------------------------------------------------------------------------
-
   "toolbar_background": {
     "type": "image",
     "texture": "textures/ui/toolbar_background"
@@ -497,18 +461,15 @@
           "offset": [ 0, -5 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-
           "controls": [
             {
               "toolbar_stack_panel": {
                 "type": "stack_panel",
                 "orientation": "horizontal",
-
                 "size": [ "default", "100% - 8px" ],
                 "offset": [ 0, 3 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
-
                 "controls": [
                   {
                     "padding_1": {
@@ -576,12 +537,6 @@
     ]
   },
 
-  // #endregion
-
-  //------------------------------------------------------------------------------------
-  // #region Screen
-  //------------------------------------------------------------------------------------
-
   "top_half_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -627,10 +582,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   }
-
-  // #endregion
-
 }

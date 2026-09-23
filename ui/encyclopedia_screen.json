@@ -21,69 +21,286 @@
         "how_to_play_selector_pane": {
           "type": "stack_panel",
           "controls": [
-            // Place in display order
-            // Make sure the $toggle_group_forced_index values match the respective enum values in EncyclopediaScreenController.h
-            { "overworld_category@how_to_play_common.topic_category": { "$category": "overworld" } },
-            { "armor_button@encyclopedia.armor_button": { "$toggle_group_forced_index": 0 } },
-            { "armor_stand_button@encyclopedia.armor_stand_button": { "$toggle_group_forced_index": 1 } },
-            { "banners_button@encyclopedia.banners_button": { "$toggle_group_forced_index": 2 } },
-            { "beacons_button@encyclopedia.beacons_button": { "$toggle_group_forced_index": 3 } },
-            { "beds_button@encyclopedia.beds_button": { "$toggle_group_forced_index": 4 } },
-            { "blocks_button@encyclopedia.blocks_button": { "$toggle_group_forced_index": 5 } },
-            { "book_and_quill_button@encyclopedia.book_and_quill_button": { "$toggle_group_forced_index": 6 } },
-            { "chests_button@encyclopedia.chests_button": { "$toggle_group_forced_index": 7 } },
-            { "conduits_button@encyclopedia.conduits_button": { "$toggle_group_forced_index": 8 } },
-            { "dyes_button@encyclopedia.dyes_button": { "$toggle_group_forced_index": 9 } },
-            { "farming_button@encyclopedia.farming_button": { "$toggle_group_forced_index": 10 } },
-            { "fireworks_button@encyclopedia.fireworks_button": { "$toggle_group_forced_index": 11 } },
-            { "fishing_button@encyclopedia.fishing_button": { "$toggle_group_forced_index": 12 } },
-            { "jigsaw_blocks_button@encyclopedia.jigsaw_blocks_button": { "$toggle_group_forced_index": 13 } },
-            { "mounts_button@encyclopedia.mounts_button": { "$toggle_group_forced_index": 14 } },
-            { "navigation_button@encyclopedia.navigation_button": { "$toggle_group_forced_index": 15 } },
-            { "nether_portals_button@encyclopedia.nether_portals_button": { "$toggle_group_forced_index": 16 } },
-            { "pets_button@encyclopedia.pets_button": { "$toggle_group_forced_index": 17 } },
-            { "raids_button@encyclopedia.raids_button": { "$toggle_group_forced_index": 18 } },
-            { "ranching_button@encyclopedia.ranching_button": { "$toggle_group_forced_index": 19 } },
-            { "scaffolding_button@encyclopedia.scaffolding_button": { "$toggle_group_forced_index": 20 } },
-            { "structure_blocks_button@encyclopedia.structure_blocks_button": { "$toggle_group_forced_index": 21 } },
-            { "tools_button@encyclopedia.tools_button": { "$toggle_group_forced_index": 22 } },
-            { "transportation_button@encyclopedia.transportation_button": { "$toggle_group_forced_index": 23 } },
-            { "trading_button@encyclopedia.trading_button": { "$toggle_group_forced_index": 24 } },
-            { "weapons_button@encyclopedia.weapons_button": { "$toggle_group_forced_index": 25 } },
-
-            { "stands_and_tables_category@how_to_play_common.topic_category": { "$category": "standsAndTables" } },
-            { "anvil_button@encyclopedia.anvil_button": { "$toggle_group_forced_index": 26 } },
-            { "brewing_stand_button@encyclopedia.brewing_stand_button": { "$toggle_group_forced_index": 27 } },
-            { "cauldron_button@encyclopedia.cauldron_button": { "$toggle_group_forced_index": 28 } },
-            { "crafting_table_button@encyclopedia.crafting_table_button": { "$toggle_group_forced_index": 29 } },
-            { "enchanting_table_button@encyclopedia.enchanting_table_button": { "$toggle_group_forced_index": 30 } },
-            { "furnace_button@encyclopedia.furnace_button": { "$toggle_group_forced_index": 31 } },
-            { "loom_button@encyclopedia.loom_button": { "$toggle_group_forced_index": 32 } },
-            { "smithing_table_button@encyclopedia.smithing_table_button": { "$toggle_group_forced_index": 33 } },
-
-            { "redstone_engineering_category@how_to_play_common.topic_category": { "$category": "redstoneEngineering" } },
-            { "droppers_button@encyclopedia.droppers_button": { "$toggle_group_forced_index": 34 } },
-            { "dispensers_button@encyclopedia.dispensers_button": { "$toggle_group_forced_index": 35 } },
-            { "hoppers_button@encyclopedia.hoppers_button": { "$toggle_group_forced_index": 36 } },
-            { "jukebox_button@encyclopedia.jukebox_button": { "$toggle_group_forced_index": 37 } },
-            { "redstone_button@encyclopedia.redstone_button": { "$toggle_group_forced_index": 38 } },
-
-            { "the_end_dimension_category@how_to_play_common.topic_category": { "$category": "theEndDimension" } },
-            { "the_end_button@encyclopedia.the_end_button": { "$toggle_group_forced_index": 39 } },
-            { "eye_of_ender_button@encyclopedia.eye_of_ender_button": { "$toggle_group_forced_index": 40 } },
-            { "end_cities_button@encyclopedia.end_cities_button": { "$toggle_group_forced_index": 41 } },
-            { "elytra_button@encyclopedia.elytra_button": { "$toggle_group_forced_index": 42 } },
-            { "shulker_boxes_button@encyclopedia.shulker_boxes_button": { "$toggle_group_forced_index": 43 } },
-
-            { "options_and_cheats_category@how_to_play_common.topic_category": { "$category": "optionsAndCheats" } },
-            { "game_settings_button@encyclopedia.game_settings_button": { "$toggle_group_forced_index": 44 } },
-            { "difficulty_button@encyclopedia.difficulty_button": { "$toggle_group_forced_index": 45 } },
-            { "adventure_mode_button@encyclopedia.adventure_mode_button": { "$toggle_group_forced_index": 46 } },
-            { "creative_mode_button@encyclopedia.creative_mode_button": { "$toggle_group_forced_index": 47 } },
-            { "commands_button@encyclopedia.commands_button": { "$toggle_group_forced_index": 48 } },
-            { "host_and_player_options_button@encyclopedia.host_and_player_options_button": { "$toggle_group_forced_index": 49 } },
-            { "command_blocks_button@encyclopedia.command_blocks_button": { "$toggle_group_forced_index": 50 } },
-
+            {
+              "overworld_category@how_to_play_common.topic_category": {
+                "$category": "overworld"
+              }
+            },
+            {
+              "armor_button@encyclopedia.armor_button": {
+                "$toggle_group_forced_index": 0
+              }
+            },
+            {
+              "armor_stand_button@encyclopedia.armor_stand_button": {
+                "$toggle_group_forced_index": 1
+              }
+            },
+            {
+              "banners_button@encyclopedia.banners_button": {
+                "$toggle_group_forced_index": 2
+              }
+            },
+            {
+              "beacons_button@encyclopedia.beacons_button": {
+                "$toggle_group_forced_index": 3
+              }
+            },
+            {
+              "beds_button@encyclopedia.beds_button": {
+                "$toggle_group_forced_index": 4
+              }
+            },
+            {
+              "blocks_button@encyclopedia.blocks_button": {
+                "$toggle_group_forced_index": 5
+              }
+            },
+            {
+              "book_and_quill_button@encyclopedia.book_and_quill_button": {
+                "$toggle_group_forced_index": 6
+              }
+            },
+            {
+              "chests_button@encyclopedia.chests_button": {
+                "$toggle_group_forced_index": 7
+              }
+            },
+            {
+              "conduits_button@encyclopedia.conduits_button": {
+                "$toggle_group_forced_index": 8
+              }
+            },
+            {
+              "dyes_button@encyclopedia.dyes_button": {
+                "$toggle_group_forced_index": 9
+              }
+            },
+            {
+              "farming_button@encyclopedia.farming_button": {
+                "$toggle_group_forced_index": 10
+              }
+            },
+            {
+              "fireworks_button@encyclopedia.fireworks_button": {
+                "$toggle_group_forced_index": 11
+              }
+            },
+            {
+              "fishing_button@encyclopedia.fishing_button": {
+                "$toggle_group_forced_index": 12
+              }
+            },
+            {
+              "jigsaw_blocks_button@encyclopedia.jigsaw_blocks_button": {
+                "$toggle_group_forced_index": 13
+              }
+            },
+            {
+              "mounts_button@encyclopedia.mounts_button": {
+                "$toggle_group_forced_index": 14
+              }
+            },
+            {
+              "navigation_button@encyclopedia.navigation_button": {
+                "$toggle_group_forced_index": 15
+              }
+            },
+            {
+              "nether_portals_button@encyclopedia.nether_portals_button": {
+                "$toggle_group_forced_index": 16
+              }
+            },
+            {
+              "pets_button@encyclopedia.pets_button": {
+                "$toggle_group_forced_index": 17
+              }
+            },
+            {
+              "raids_button@encyclopedia.raids_button": {
+                "$toggle_group_forced_index": 18
+              }
+            },
+            {
+              "ranching_button@encyclopedia.ranching_button": {
+                "$toggle_group_forced_index": 19
+              }
+            },
+            {
+              "scaffolding_button@encyclopedia.scaffolding_button": {
+                "$toggle_group_forced_index": 20
+              }
+            },
+            {
+              "structure_blocks_button@encyclopedia.structure_blocks_button": {
+                "$toggle_group_forced_index": 21
+              }
+            },
+            {
+              "tools_button@encyclopedia.tools_button": {
+                "$toggle_group_forced_index": 22
+              }
+            },
+            {
+              "transportation_button@encyclopedia.transportation_button": {
+                "$toggle_group_forced_index": 23
+              }
+            },
+            {
+              "trading_button@encyclopedia.trading_button": {
+                "$toggle_group_forced_index": 24
+              }
+            },
+            {
+              "weapons_button@encyclopedia.weapons_button": {
+                "$toggle_group_forced_index": 25
+              }
+            },
+            {
+              "stands_and_tables_category@how_to_play_common.topic_category": {
+                "$category": "standsAndTables"
+              }
+            },
+            {
+              "anvil_button@encyclopedia.anvil_button": {
+                "$toggle_group_forced_index": 26
+              }
+            },
+            {
+              "brewing_stand_button@encyclopedia.brewing_stand_button": {
+                "$toggle_group_forced_index": 27
+              }
+            },
+            {
+              "cauldron_button@encyclopedia.cauldron_button": {
+                "$toggle_group_forced_index": 28
+              }
+            },
+            {
+              "crafting_table_button@encyclopedia.crafting_table_button": {
+                "$toggle_group_forced_index": 29
+              }
+            },
+            {
+              "enchanting_table_button@encyclopedia.enchanting_table_button": {
+                "$toggle_group_forced_index": 30
+              }
+            },
+            {
+              "furnace_button@encyclopedia.furnace_button": {
+                "$toggle_group_forced_index": 31
+              }
+            },
+            {
+              "loom_button@encyclopedia.loom_button": {
+                "$toggle_group_forced_index": 32
+              }
+            },
+            {
+              "smithing_table_button@encyclopedia.smithing_table_button": {
+                "$toggle_group_forced_index": 33
+              }
+            },
+            {
+              "redstone_engineering_category@how_to_play_common.topic_category": {
+                "$category": "redstoneEngineering"
+              }
+            },
+            {
+              "droppers_button@encyclopedia.droppers_button": {
+                "$toggle_group_forced_index": 34
+              }
+            },
+            {
+              "dispensers_button@encyclopedia.dispensers_button": {
+                "$toggle_group_forced_index": 35
+              }
+            },
+            {
+              "hoppers_button@encyclopedia.hoppers_button": {
+                "$toggle_group_forced_index": 36
+              }
+            },
+            {
+              "jukebox_button@encyclopedia.jukebox_button": {
+                "$toggle_group_forced_index": 37
+              }
+            },
+            {
+              "redstone_button@encyclopedia.redstone_button": {
+                "$toggle_group_forced_index": 38
+              }
+            },
+            {
+              "the_end_dimension_category@how_to_play_common.topic_category": {
+                "$category": "theEndDimension"
+              }
+            },
+            {
+              "the_end_button@encyclopedia.the_end_button": {
+                "$toggle_group_forced_index": 39
+              }
+            },
+            {
+              "eye_of_ender_button@encyclopedia.eye_of_ender_button": {
+                "$toggle_group_forced_index": 40
+              }
+            },
+            {
+              "end_cities_button@encyclopedia.end_cities_button": {
+                "$toggle_group_forced_index": 41
+              }
+            },
+            {
+              "elytra_button@encyclopedia.elytra_button": {
+                "$toggle_group_forced_index": 42
+              }
+            },
+            {
+              "shulker_boxes_button@encyclopedia.shulker_boxes_button": {
+                "$toggle_group_forced_index": 43
+              }
+            },
+            {
+              "options_and_cheats_category@how_to_play_common.topic_category": {
+                "$category": "optionsAndCheats"
+              }
+            },
+            {
+              "game_settings_button@encyclopedia.game_settings_button": {
+                "$toggle_group_forced_index": 44
+              }
+            },
+            {
+              "difficulty_button@encyclopedia.difficulty_button": {
+                "$toggle_group_forced_index": 45
+              }
+            },
+            {
+              "adventure_mode_button@encyclopedia.adventure_mode_button": {
+                "$toggle_group_forced_index": 46
+              }
+            },
+            {
+              "creative_mode_button@encyclopedia.creative_mode_button": {
+                "$toggle_group_forced_index": 47
+              }
+            },
+            {
+              "commands_button@encyclopedia.commands_button": {
+                "$toggle_group_forced_index": 48
+              }
+            },
+            {
+              "host_and_player_options_button@encyclopedia.host_and_player_options_button": {
+                "$toggle_group_forced_index": 49
+              }
+            },
+            {
+              "command_blocks_button@encyclopedia.command_blocks_button": {
+                "$toggle_group_forced_index": 50
+              }
+            },
             {
               "realms_category@how_to_play_common.topic_category": {
                 "$category": "realms",
@@ -96,7 +313,6 @@
                 "ignored": "$education_edition"
               }
             },
-
             {
               "marketplace_category@how_to_play_common.topic_category": {
                 "$category": "marketplace",
@@ -156,10 +372,7 @@
         "general_tips_sections": {
           "type": "stack_panel",
           "controls": [
-            {
-              "section_contents_header@how_to_play_common.section_contents_header": {}
-            },
-            // Placed in display order
+            { "section_contents_header@how_to_play_common.section_contents_header": {} },
             { "armor_section@encyclopedia.armor_section": {} },
             { "armor_stand_section@encyclopedia.armor_stand_section": {} },
             { "banners_section@encyclopedia.banners_section": {} },
@@ -186,7 +399,6 @@
             { "transportation_section@encyclopedia.transportation_section": {} },
             { "trading_section@encyclopedia.trading_section": {} },
             { "weapons_section@encyclopedia.weapons_section": {} },
-
             { "anvil_section@encyclopedia.anvil_section": {} },
             { "brewing_stand_section@encyclopedia.brewing_stand_section": {} },
             { "cauldron_section@encyclopedia.cauldron_section": {} },
@@ -195,19 +407,16 @@
             { "furnace_section@encyclopedia.furnace_section": {} },
             { "loom_section@encyclopedia.loom_section": {} },
             { "smithing_table_section@encyclopedia.smithing_table_section": {} },
-
             { "droppers_section@encyclopedia.droppers_section": {} },
             { "dispensers_section@encyclopedia.dispensers_section": {} },
             { "hoppers_section@encyclopedia.hoppers_section": {} },
             { "jukebox_section@encyclopedia.jukebox_section": {} },
             { "redstone_section@encyclopedia.redstone_section": {} },
-
             { "the_end_section@encyclopedia.the_end_section": {} },
             { "eye_of_ender_section@encyclopedia.eye_of_ender_section": {} },
             { "end_cities_section@encyclopedia.end_cities_section": {} },
             { "elytra_section@encyclopedia.elytra_section": {} },
             { "shulker_boxes_section@encyclopedia.shulker_boxes_section": {} },
-
             { "game_settings_section@encyclopedia.game_settings_section": {} },
             { "difficulty_section@encyclopedia.difficulty_section": {} },
             { "adventure_mode_section@encyclopedia.adventure_mode_section": {} },
@@ -215,19 +424,42 @@
             { "commands_section@encyclopedia.commands_section": {} },
             { "host_and_player_options_section@encyclopedia.host_and_player_options_section": {} },
             { "command_blocks_section@encyclopedia.command_blocks_section": {} },
-
-            { "realms_stories_section@encyclopedia.realms_stories_section": { "ignored": "$education_edition" } },
-
-            { "minecoins_section@encyclopedia.minecoins_section": { "ignored": "$education_edition" } },
-            { "addons_section@encyclopedia.addons_section": { "ignored": "$education_edition" } },
-            { "worlds_section@encyclopedia.worlds_section": { "ignored": "$education_edition" } },
-            { "textures_section@encyclopedia.textures_section": { "ignored": "$education_edition" } },
-            { "skins_section@encyclopedia.skins_section": { "ignored": "$education_edition" } },
-            { "mashups_section@encyclopedia.mashups_section": { "ignored": "$education_edition" } },
-
             {
-              "section_contents_footer@how_to_play_common.section_contents_footer": {}
-            }
+              "realms_stories_section@encyclopedia.realms_stories_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            {
+              "minecoins_section@encyclopedia.minecoins_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            {
+              "addons_section@encyclopedia.addons_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            {
+              "worlds_section@encyclopedia.worlds_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            {
+              "textures_section@encyclopedia.textures_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            {
+              "skins_section@encyclopedia.skins_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            {
+              "mashups_section@encyclopedia.mashups_section": {
+                "ignored": "$education_edition"
+              }
+            },
+            { "section_contents_footer@how_to_play_common.section_contents_footer": {} }
           ]
         }
       }
@@ -2466,7 +2698,6 @@
       }
     ]
   },
-
 
   "realms_stories_button@how_to_play_common.section_toggle_button": {
     "$section_topic": "realms_stories"

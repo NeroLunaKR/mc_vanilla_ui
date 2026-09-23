@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "how_to_play_common",
 
@@ -151,18 +146,15 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [ "100%", "30px" ],
-
           "$button_type_panel|default": "how_to_play_common.toggle_button_control",
           "$checked_control": "common_toggles.toggle_checked",
           "$radio_toggle_group": true,
           "$toggle_name": "navigation_tab",
           "$toggle_group_default_selected": "$default_selector_toggle_index",
-
           "$toggle_tab_focus_binding_type": "global",
           "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
           "$toggle_on_hover_binding_type": "global",
           "$toggle_on_hover_binding_name": "#toggle_on_hover",
-
           "$toggle_view_binding_name": "($section_topic + '_button_toggle')",
           "$toggle_property_bag": {
             "#panel_title": "('howtoplay.' + $section_topic)"
@@ -276,9 +268,7 @@
           "text_tts": "$text"
         }
       },
-      {
-        "focus_border@how_to_play_common.header_tts_focus_border": {}
-      }
+      { "focus_border@how_to_play_common.header_tts_focus_border": {} }
     ]
   },
 
@@ -334,9 +324,7 @@
           "$text_binding_type": "$label_text_binding_type"
         }
       },
-      {
-        "focus_border@how_to_play_common.paragraph_tts_focus_border": {}
-      }
+      { "focus_border@how_to_play_common.paragraph_tts_focus_border": {} }
     ]
   },
 
@@ -353,9 +341,7 @@
           ]
         }
       },
-      {
-        "focus_border@how_to_play_common.paragraph_tts_focus_border": {}
-      }
+      { "focus_border@how_to_play_common.paragraph_tts_focus_border": {} }
     ]
   },
 
@@ -450,7 +436,7 @@
             },
             {
               "how_to_play_title@common.screen_header_title_panel": {
-                "size": [ "70% - 22px", "100%" ], // Gamepad helpers have max size of 30% and the back button is 20px
+                "size": [ "70% - 22px", "100%" ],
                 "offset": [ 20, -1 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
@@ -508,7 +494,6 @@
     ]
   },
 
-  // left side
   "selector_area": {
     "type": "panel",
     "offset": [ "-2px", "21px" ],
@@ -538,7 +523,6 @@
     ]
   },
 
-  // divider between two sides
   "section_divider": {
     "type": "image",
     "offset": [ "30%", "20px" ],
@@ -549,7 +533,6 @@
     "texture": "textures/ui/HowToPlayDivider"
   },
 
-  // contains right side
   "content_area_wrapper": {
     "type": "panel",
     "offset": [ "2px", "21px" ],
@@ -564,7 +547,6 @@
     ]
   },
 
-  // right side
   "content_area": {
     "type": "panel",
     "size": [ "100% - 6px", "100%" ],
@@ -602,7 +584,6 @@
     "max_size": [ "100%c", "10px" ]
   },
 
-  // gamepad helpers
   "gamepad_bumper_helpers": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -630,5 +611,4 @@
       }
     ]
   }
-
 }

@@ -6,7 +6,6 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "orientation": "vertical",
-    
     "$is_non_scrollable_sdl_screen|default": false,
     "$store_sdl_factory_size": [ "100%", "100%c" ],
     "variables": [
@@ -17,7 +16,6 @@
     ],
     "size": "$store_sdl_factory_size",
     "$store_factory_clipping_event": "factory_section_shown",
-
     "$store_factory_collection_prefix": "navigation",
     "$is_subscription_screen|default": false,
     "$factory_binding_name": "#content_navigation_tabs",
@@ -41,12 +39,7 @@
     ],
     "factory": {
       "name": "$factory_name",
-      "factory_variables": [
-        "$store_factory_collection_details",
-        "$store_factory_collection_prefix",
-        "$store_factory_collection_name",
-        "$section_name"
-      ],
+      "factory_variables": [ "$store_factory_collection_details", "$store_factory_collection_prefix", "$store_factory_collection_name", "$section_name" ],
       "control_ids": {
         "InventoryNavItem": "@sdl_content_navigation.inventory_nav_item_panel",
         "SDLButtonNoClick": "@sdl_content_navigation.sdl_button_no_click_panel",
@@ -54,8 +47,8 @@
       }
     }
   },
-  
-  "inventory_nav_item_panel":{
+
+  "inventory_nav_item_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
@@ -84,9 +77,7 @@
                       "size": [ "100%", 4 ]
                     }
                   },
-                  {
-                    "nav_button@sdl_content_navigation.category_panel_button": {}
-                  },
+                  { "nav_button@sdl_content_navigation.category_panel_button": {} },
                   {
                     "divider@sdl_content_navigation.divider_panel": {
                       "layer": 2
@@ -124,21 +115,19 @@
       }
     ],
     "controls": [
-        {
-            "default@sdl_content_navigation.category_stack_panel": {}
-        },
-        {
-            "hover@sdl_content_navigation.category_stack_panel": {
-              "$color": "$csub_text_color",
-              "$section_header": "section_header_no_color_binding"
-            }
-        },
-        {
-            "pressed@sdl_content_navigation.category_stack_panel": {
-              "$color": "$csub_text_color",
-              "$section_header": "section_header_no_color_binding"
-            }
+      { "default@sdl_content_navigation.category_stack_panel": {} },
+      {
+        "hover@sdl_content_navigation.category_stack_panel": {
+          "$color": "$csub_text_color",
+          "$section_header": "section_header_no_color_binding"
         }
+      },
+      {
+        "pressed@sdl_content_navigation.category_stack_panel": {
+          "$color": "$csub_text_color",
+          "$section_header": "section_header_no_color_binding"
+        }
+      }
     ]
   },
 
@@ -153,9 +142,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "divider@common.horizontal_divider": {}
-      }
+      { "divider@common.horizontal_divider": {} }
     ]
   },
 
@@ -178,12 +165,12 @@
         "pad_1": {
           "type": "panel",
           "size": [ 1, "100%" ]
-          }
+        }
       },
       {
         "text@$section_header": {
           "anchor_from": "left_middle",
-          "anchor_to": "left_middle", 
+          "anchor_to": "left_middle",
           "size": [ "default", "100%" ],
           "max_size": [ "50%", "100%" ],
           "$store_section_header_visible_binding": "#has_navigation"
@@ -245,30 +232,30 @@
     ]
   },
 
-  "light_redirect_button_panel":{
+  "light_redirect_button_panel": {
     "type": "panel",
     "size": [ "100%", "100%c + 4px" ],
     "controls": [
-    {
-      "light_redirect_button@common_buttons.light_content_button": {
-        "size": [ "100% - 1px", 20 ],
-        "offset": [ "1px", "4px" ],
-        "$pressed_button_name": "button.redirect_button",
-        "$store_section_header_visible_binding": "#has_navigation",
-        "$button_content": "common_store.store_section_header_label",
-        "bindings": [
-          {
+      {
+        "light_redirect_button@common_buttons.light_content_button": {
+          "size": [ "100% - 1px", 20 ],
+          "offset": [ "1px", "4px" ],
+          "$pressed_button_name": "button.redirect_button",
+          "$store_section_header_visible_binding": "#has_navigation",
+          "$button_content": "common_store.store_section_header_label",
+          "bindings": [
+            {
               "binding_type": "$store_factory_collection_details",
               "binding_collection_name": "$store_factory_collection_name",
               "binding_collection_prefix": "$store_factory_collection_prefix"
-          }
-        ]
+            }
+          ]
+        }
       }
-    }
     ]
   },
-  
-  "sdl_button_no_click_panel":{
+
+  "sdl_button_no_click_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
@@ -281,16 +268,16 @@
           "$button_content": "sdl_content_navigation.no_click_button",
           "bindings": [
             {
-                "binding_type": "$store_factory_collection_details",
-                "binding_collection_name": "$store_factory_collection_name",
-                "binding_collection_prefix": "$store_factory_collection_prefix"
+              "binding_type": "$store_factory_collection_details",
+              "binding_collection_name": "$store_factory_collection_name",
+              "binding_collection_prefix": "$store_factory_collection_prefix"
             }
           ]
         }
       }
     ]
   },
-  
+
   "no_click_button": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -309,12 +296,12 @@
         "pad_1": {
           "type": "panel",
           "size": [ 1, "100%" ]
-          }
+        }
       },
       {
         "text@$section_header": {
           "anchor_from": "left_middle",
-          "anchor_to": "left_middle", 
+          "anchor_to": "left_middle",
           "size": [ "default", "100%" ],
           "max_size": [ "50%", "100%" ],
           "$store_section_header_visible_binding": "#has_navigation"
@@ -345,7 +332,7 @@
         "pad_2": {
           "type": "panel",
           "size": [ 2, "100%" ]
-          }
+        }
       }
     ]
   },
@@ -359,7 +346,7 @@
   "section_header_no_color_binding@common_store.store_section_header_label": {
     "color": "$color",
     "$store_section_header_label_bindings": [
-      { // Copied from the base minus the color binding.
+      {
         "binding_type": "$store_factory_collection_details",
         "binding_collection_name": "$store_factory_collection_name",
         "binding_collection_prefix": "$store_factory_collection_prefix"
@@ -399,6 +386,4 @@
       }
     ]
   }
-
-
 }

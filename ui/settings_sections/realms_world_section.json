@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "realms_world_section",
 
@@ -53,10 +48,9 @@
     ]
   },
 
-  // This used to be based on the club, not the realm
   "realm_description_edit@settings_common.option_text_edit": {
     "ignored": "$is_realm_slot",
-    "$option_label": "feed.clubdescription", // this localization string was not updated, for simplicity
+    "$option_label": "feed.clubdescription",
     "$option_binding_name": "#realm_description",
     "$option_enabled_binding_name": "#realm_name_enabled",
     "$option_place_holder_text": "realmsSettingsScreen.realmDescriptionEditPlaceholder",
@@ -70,21 +64,6 @@
       },
       {
         "binding_name": "#realm_description_visible",
-        "binding_name_override": "#visible"
-      }
-    ]
-  },
-
-
-  "download_world_button@settings_common.action_button": {
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "$button_text": "realmsSettingsScreen.downloadWorldButton",
-    "$pressed_button_name": "menu_download_world",
-    "ignored": "($realm_no_world_edit or not $is_pregame)",
-    "bindings": [
-      {
-        "binding_name": "#download_button_visible",
         "binding_name_override": "#visible"
       }
     ]
@@ -133,7 +112,6 @@
       }
     ]
   },
-
 
   "difficulty_dropdown@settings_common.option_dropdown": {
     "ignored": "$realm_no_world_edit",
@@ -504,13 +482,6 @@
           "$text_box_name": "random_tick_speed_text_box",
           "$button_text": "createWorldScreen.randomtickspeed.reset",
           "$pressed_button_name": "reset_random_tick_speed"
-        }
-      },
-      { "download_world_button@realms_world_section.download_world_button": {} },
-      {
-        "padding_0": {
-          "type": "panel",
-          "size": [ "100%", 4 ]
         }
       },
       { "upload_world_button@realms_world_section.upload_world_button": {} },

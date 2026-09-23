@@ -1,8 +1,6 @@
 {
   "namespace": "death",
 
-  // Base button //
-
   "a_button_panel": {
     "type": "panel",
     "anchor_from": "bottom_middle",
@@ -73,18 +71,14 @@
           "size": [ "100%", "fill" ]
         }
       },
-      {
-        "you_died@death.you_died_panel": {}
-      },
+      { "you_died@death.you_died_panel": {} },
       {
         "padd_1": {
           "type": "panel",
           "size": [ "100%", 12 ]
         }
       },
-      {
-        "death_reason@death.death_reason_panel": {}
-      },
+      { "death_reason@death.death_reason_panel": {} },
       {
         "padd_2": {
           "type": "panel",
@@ -159,12 +153,9 @@
           "size": [ "100%", "fill" ]
         }
       },
-      {
-        "select_button@death.a_button_panel": {}
-      }
+      { "select_button@death.a_button_panel": {} }
     ]
   },
-
 
   "death_screen_content": {
     "type": "panel",
@@ -173,12 +164,8 @@
         "death_screen_buttons_and_stuff": {
           "type": "panel",
           "controls": [
-            {
-              "labels_panel@death.labels_panel": {}
-            },
-            {
-              "buttons_panel@death.buttons_panel": {}
-            }
+            { "labels_panel@death.labels_panel": {} },
+            { "buttons_panel@death.buttons_panel": {} }
           ],
           "bindings": [
             {
@@ -205,10 +192,8 @@
           ]
         }
       }
-
     ]
   },
-
 
   "background_gradient": {
     "type": "custom",
@@ -217,13 +202,9 @@
     "color2": [ 0.5, 0.188, 0.188, 0.627 ]
   },
 
-
-  // Main Screen //
-
   "death_screen@common.base_screen": {
     "$screen_content": "death.death_screen_content",
     "$screen_bg_content": "death.background_gradient",
     "load_screen_immediately": true
   }
-
 }

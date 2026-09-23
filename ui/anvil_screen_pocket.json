@@ -8,23 +8,17 @@
     "anchor_to": "center"
   },
 
-  // Backgrounds //
-
   "background_image": {
     "type": "image",
     "size": [ "85%", "85%" ],
     "texture": "textures/ui/background_panel"
   },
 
-  // Arrow //
-
   "arrow_icon": {
     "type": "image",
     "texture": "textures/ui/arrow_icon",
     "size": [ 24, 16 ]
   },
-
-  // Labels //
 
   "cost_label@anvil_pocket.generic_label": {
     "shadow": true,
@@ -42,25 +36,24 @@
       }
     ]
   },
+
   "title_label@anvil_pocket.generic_label": {
-    "anchor_from": "left_middle", // the parent
-    "anchor_to": "left_middle", // this control
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
     "text": "container.repair"
   },
 
-  // Text Edit //
-
   "text_edit_control@common.text_edit_box": {
-    "anchor_from": "left_middle", // the parent
-    "anchor_to": "left_middle", // this control
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
     "size": [ 142, 16 ],
-
     "property_bag": {
       "#property_field": "#item_name"
     },
     "max_length": 30,
     "$text_edit_binding_name": "#text_box_item_name"
   },
+
   "anvil_title_and_text_panel": {
     "type": "panel",
     "anchor_from": "left_middle",
@@ -79,8 +72,6 @@
       }
     ]
   },
-
-  // Slots //
 
   "slots_panel": {
     "type": "panel",
@@ -149,8 +140,6 @@
     ]
   },
 
-  // Anvil Panel //
-
   "anvil_contents_panel": {
     "type": "panel",
     "size": [ 144, 100 ],
@@ -203,8 +192,6 @@
     ]
   },
 
-  // Inventory Grids //
-
   "inventory_grid": {
     "type": "grid",
     "grid_rescaling_type": "horizontal",
@@ -236,9 +223,6 @@
     ]
   },
 
-  
-  // Layout Content Panels //
-
   "inventory_and_anvil_panel": {
     "type": "panel",
     "controls": [
@@ -248,7 +232,6 @@
           "size": [ "50%", "100%" ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-
           "controls": [
             { "inventory_content@anvil_pocket.inventory_content": {} }
           ]
@@ -260,7 +243,6 @@
           "size": [ "50%", "100%" ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-
           "controls": [
             { "anvil_contents_panel@anvil_pocket.anvil_contents_panel": {} }
           ]
@@ -268,8 +250,6 @@
       }
     ]
   },
-
-  // Header //
 
   "header": {
     "type": "panel",
@@ -283,7 +263,11 @@
           "texture": "textures/ui/header_bar_2"
         }
       },
-      { "legacy_pocket_close_button@common.legacy_pocket_close_button": { "offset": [ -3, 3 ] } },
+      {
+        "legacy_pocket_close_button@common.legacy_pocket_close_button": {
+          "offset": [ -3, 3 ]
+        }
+      },
       {
         "panel": {
           "type": "panel",
@@ -302,13 +286,16 @@
     ]
   },
 
-
   "header_and_content_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "85%", "85%" ],
     "controls": [
-      { "header@anvil_pocket.header": { "layer": 2 } },
+      {
+        "header@anvil_pocket.header": {
+          "layer": 2
+        }
+      },
       {
         "inventory_and_anvil_panel@anvil_pocket.inventory_and_anvil_panel": {
           "size": [ "100%", "fill" ]
@@ -317,16 +304,22 @@
     ]
   },
 
-  // Anvil Screen //
-
   "anvil_panel": {
     "type": "panel",
     "controls": [
       { "bg@anvil_pocket.background_image": {} },
-      { "root_panel@common.root_panel": { "size": [ "85%", "85%" ], "layer": 1  } },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ "85%", "85%" ],
+          "layer": 1
+        }
+      },
       { "header_and_content_stack_panel@anvil_pocket.header_and_content_stack_panel": {} },
-
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { "layer": 2 } },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {
+          "layer": 2
+        }
+      },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "hold_icon@common.inventory_take_progress_icon_button": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
@@ -335,7 +328,11 @@
           "$offset": [ 0, "85%" ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 12
+        }
+      }
     ]
   }
 }

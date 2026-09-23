@@ -1,7 +1,6 @@
 {
   "namespace": "filter_menu",
 
-
   "filter_clear_button_panel": {
     "type": "panel",
     "size": "$filter_button_panel_size",
@@ -38,13 +37,11 @@
 
   "filter_variables_panel": {
     "type": "panel",
-
     "$filter_type_label|default": "('store.search.filter.' + $filter_sort_prefix)",
     "$filter_selected_text|default": "('#filter_selected_' + $filter_sort_prefix)",
     "$filter_selected_label_visible_binding_name|default": "('#filter_' + $filter_sort_prefix + '_selected_visible')",
     "$filter_clear_button_text|default": "('store.search.filter.clear.' + $filter_sort_prefix)",
     "$filter_clear_button_pressed_name|default": "('button.clear_' + $filter_sort_prefix)",
-
     "$pressed_button_name|default": "('button.filter_' + $filter_sort_prefix)"
   },
 
@@ -206,7 +203,7 @@
         "centered_x": {
           "type": "panel",
           "size": [ 15, "100%" ],
-          "layer": 2, // want to be above parent button (filter_title_bar)
+          "layer": 2,
           "controls": [
             {
               "close_x_image": {
@@ -231,10 +228,6 @@
     "$pressed_button_name": "button.exit_filter_menu"
   },
 
-
-  ///////////////////////////////////////////////////////////////////////////////////
-  // filter submenu items
-
   "filter_checkbox_toggle@common_store.filter_sort_toggle": {
     "size": "$filter_button_panel_size"
   },
@@ -244,15 +237,9 @@
     "size": "$filter_button_panel_size",
     "$ignore_content_toggle_image": true,
     "controls": [
-      {
-        "filter_checkbox_no_icon_toggle@filter_menu.filter_checkbox_toggle": {}
-      }
+      { "filter_checkbox_no_icon_toggle@filter_menu.filter_checkbox_toggle": {} }
     ]
   },
-
-
-  ///////////////////////////////////////////////////////////////////////////////////
-  // filter submenu sections
 
   "pack_type_sub_menu_panel": {
     "type": "panel",
@@ -265,14 +252,12 @@
           "size": [ "100% - 16px", "100%c" ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-
           "$is_collection": true,
           "$filter_item_toggle_icon": "textures/ui/chevron_grey_right",
           "$toggle_grid_collection_name": "($filter_sort_prefix + '_collection')",
           "collection_name": "($filter_sort_prefix + '_collection')",
           "$content_toggle_image_size": [ 12, 12 ],
           "$content_toggle_image_panel_size": [ 24, "100%" ],
-
           "controls": [
             {
               "addon_packs_filter@filter_menu.filter_checkbox_toggle": {
@@ -330,7 +315,6 @@
                   {
                     "world_template_type_filters@common_store.filter_sort_grid_panel": {
                       "visible": false,
-
                       "$filter_sort_grid_size": [ "100% - 16px", "default" ],
                       "bindings": [
                         {
@@ -368,19 +352,16 @@
     "easing": "linear"
   },
 
-
   "offer_type_sub_menu_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
-
     "$is_collection": true,
     "$filter_item_toggle_icon": "textures/ui/chevron_grey_right",
     "$toggle_grid_collection_name": "($filter_sort_prefix + '_collection')",
     "collection_name": "($filter_sort_prefix + '_collection')",
-
     "controls": [
       {
         "bundles_filter@filter_menu.filter_checkbox_toggle": {
@@ -410,9 +391,7 @@
         "realms_plus_filter@filter_menu.filter_checkbox_toggle": {
           "$content_toggle_image_uv": "@filter_menu.portal_animation",
           "$content_toggle_image_uv_size": [ 19, 19 ],
-
           "$button_content": "filter_menu.realms_plus_gradient_content_panel",
-
           "$content_toggle_image|default": "textures/ui/realms_plus_normal",
           "$content_toggle_variables": [
             {
@@ -461,9 +440,7 @@
           "offset": [ "35%", 0 ]
         }
       },
-      {
-        "content_panel@common_toggles.toggle_content_panel": {}
-      }
+      { "content_panel@common_toggles.toggle_content_panel": {} }
     ]
   },
 
@@ -496,17 +473,6 @@
     ]
   },
 
-  ///////////////////////////////////////////////////////////////////////////////////
-  //filter submenu data
-
-
-
-  //END of filter submenu buttons
-  ///////////////////////////////////////////////////////////////////////////////////
-
-  ///////////////////////////////////////////////////////////////////////////////////
-  // filter screen content
-
   "filter_section_content": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -520,22 +486,15 @@
           "$pressed_button_name": "button.close_filter_menu"
         }
       },
-      {
-        "clear_button@filter_menu.filter_clear_button_panel": {
-        }
-      },
-      {
-        "section_sub_menu@$filter_section_sub_menu_panel": {}
-      }
+      { "clear_button@filter_menu.filter_clear_button_panel": {} },
+      { "section_sub_menu@$filter_section_sub_menu_panel": {} }
     ]
   },
 
   "filter_section_content_dynamic@filter_menu.filter_variables_panel": {
     "$filter_sort_grid_size": [ "100%", "default" ],
     "controls": [
-      {
-        "filter_section_content@filter_menu.filter_section_content": {}
-      }
+      { "filter_section_content@filter_menu.filter_section_content": {} }
     ]
   },
 
@@ -546,9 +505,7 @@
     "anchor_to": "top_right",
     "anchor_from": "top_right",
     "controls": [
-      {
-        "filter_title_bar_panel@filter_menu.filter_title_bar": {}
-      },
+      { "filter_title_bar_panel@filter_menu.filter_title_bar": {} },
       {
         "offer_type_button@filter_menu.filter_main_menu_options_button_panel": {
           "$filter_sort_prefix": "offer_type",
@@ -636,9 +593,7 @@
     "anchor_to": "top_right",
     "anchor_from": "top_right",
     "controls": [
-      {
-        "filter_title_bar_panel@filter_menu.filter_title_bar": {}
-      },
+      { "filter_title_bar_panel@filter_menu.filter_title_bar": {} },
       {
         "persona_body_button@filter_menu.filter_main_menu_options_button_panel": {
           "ignored": "($is_inventory_screen or $is_on_3p_server)",
@@ -759,46 +714,40 @@
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-        {
-            "filter_main_menu_screen@filter_menu.filter_main_menu_section": {}
-        },
-        {
-            "filter_offer_type_screen@filter_menu.filter_offer_type_section": {}
-        },
-        {
-            "filter_pack_type_screen@filter_menu.filter_pack_type_section": {}
-        },
-        {
-            "filter_minecoin_section@filter_menu.filter_type_section": {
-                "$filter_sort_prefix": "minecoin",
-                "$filter_sections_content_panel_visible": "#minecoin_filter_section_visible"
-            }
-        },
-        {
-            "filter_rating_section@filter_menu.filter_type_section": {
-                "$filter_sort_prefix": "rating",
-                "$filter_sections_content_panel_visible": "#rating_filter_section_visible"
-            }
-        },
-        {
-            "filter_creator_section@filter_menu.filter_type_section": {
-                "$filter_sort_prefix": "creator",
-                "$filter_sections_content_panel_visible": "#creator_filter_section_visible"
-            }
-        },
-        {
-            "filter_graphics_section@filter_menu.filter_type_section": {
-                "$filter_sort_prefix": "graphics",
-                "$filter_sections_content_panel_visible": "#graphics_filter_section_visible"
-            }
-        },
-        {
-            "filter_installed_state_section@filter_menu.filter_type_section": {
-                "ignored": "(not $is_inventory_screen)",
-                "$filter_sort_prefix": "installed_state",
-                "$filter_sections_content_panel_visible": "#installed_state_filter_section_visible"
-            }
+      { "filter_main_menu_screen@filter_menu.filter_main_menu_section": {} },
+      { "filter_offer_type_screen@filter_menu.filter_offer_type_section": {} },
+      { "filter_pack_type_screen@filter_menu.filter_pack_type_section": {} },
+      {
+        "filter_minecoin_section@filter_menu.filter_type_section": {
+          "$filter_sort_prefix": "minecoin",
+          "$filter_sections_content_panel_visible": "#minecoin_filter_section_visible"
         }
+      },
+      {
+        "filter_rating_section@filter_menu.filter_type_section": {
+          "$filter_sort_prefix": "rating",
+          "$filter_sections_content_panel_visible": "#rating_filter_section_visible"
+        }
+      },
+      {
+        "filter_creator_section@filter_menu.filter_type_section": {
+          "$filter_sort_prefix": "creator",
+          "$filter_sections_content_panel_visible": "#creator_filter_section_visible"
+        }
+      },
+      {
+        "filter_graphics_section@filter_menu.filter_type_section": {
+          "$filter_sort_prefix": "graphics",
+          "$filter_sections_content_panel_visible": "#graphics_filter_section_visible"
+        }
+      },
+      {
+        "filter_installed_state_section@filter_menu.filter_type_section": {
+          "ignored": "(not $is_inventory_screen)",
+          "$filter_sort_prefix": "installed_state",
+          "$filter_sections_content_panel_visible": "#installed_state_filter_section_visible"
+        }
+      }
     ]
   },
 
@@ -806,9 +755,7 @@
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "filter_main_menu_screen@filter_menu.filter_main_menu_section_persona": {}
-      },
+      { "filter_main_menu_screen@filter_menu.filter_main_menu_section_persona": {} },
       {
         "filter_style_section@filter_menu.filter_type_section": {
           "$filter_sort_prefix": "dressingroomstyle",
@@ -839,7 +786,6 @@
     "$filter_button_size|default": [ "100% - 16px", "100%" ],
     "controls": [
       {
-        // added to align with search bar
         "top_padding@common.empty_panel": {
           "$filter_top_padding|default": [ "100%", 0 ],
           "size": "$filter_top_padding"
@@ -913,9 +859,7 @@
           ]
         }
       },
-      {
-        "filter_menu_close_background_button@common_store.close_bg_panel": {}
-      }
+      { "filter_menu_close_background_button@common_store.close_bg_panel": {} }
     ],
     "bindings": [
       {

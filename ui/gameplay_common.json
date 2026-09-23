@@ -1,10 +1,6 @@
 {
   "namespace": "gameplay",
 
-  //---------------------------------------------------------------------------
-  // Bundle controls
-  //---------------------------------------------------------------------------
-
   "bundle_selected_item_icon@common.item_renderer": {
     "size": "$item_renderer_size",
     "offset": "$item_renderer_offset",
@@ -529,7 +525,6 @@
                     "default@common.close_button_panel": {
                       "$close_button_texture": "textures/ui/close_button_default_light",
                       "$button_alpha": "$default_button_alpha"
-
                     }
                   },
                   {
@@ -634,7 +629,6 @@
                                   "color": "$bundle_info_description_color",
                                   "text": "item.bundle.empty.description",
                                   "size": "$info_message_size",
-
                                   "bindings": [
                                     {
                                       "binding_name": "#is_selected_bundle_empty",

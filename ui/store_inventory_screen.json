@@ -344,18 +344,10 @@
     "size": [ "100%", "100%c" ],
     "$button_focus_precedence": 10,
     "controls": [
-      {
-        "no_xbl_and_local_content_warning_panel@store_inventory.no_xbl_and_local_content_warning_panel": {}
-      },
-      {
-        "no_xbl_and_no_local_conent_warning_panel@store_inventory.no_xbl_and_no_local_conent_warning_panel": {}
-      }
+      { "no_xbl_and_local_content_warning_panel@store_inventory.no_xbl_and_local_content_warning_panel": {} },
+      { "no_xbl_and_no_local_conent_warning_panel@store_inventory.no_xbl_and_no_local_conent_warning_panel": {} }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Left Side
-  //--------------------------------------------------------------------------------
 
   "divider_panel": {
     "type": "stack_panel",
@@ -368,9 +360,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "divider@common.horizontal_divider": {}
-      },
+      { "divider@common.horizontal_divider": {} },
       {
         "bottom_pad": {
           "type": "panel",
@@ -396,10 +386,8 @@
     "size": [ "100%", 20 ],
     "$radio_toggle_group": true,
     "$toggle_name": "navigation_tab",
-
     "$hover_texture|default": "textures/ui/button_borderless_light",
     "$default_checked_text_color": "$light_toggle_default_text_color",
-
     "$toggle_state_binding_name": "#toggle_state",
     "$toggle_tab_focus_binding_type": "global",
     "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
@@ -453,9 +441,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "owned_toggle@store_inventory.owned_toggle": {}
-      },
+      { "owned_toggle@store_inventory.owned_toggle": {} },
       {
         "owned_dropdown_box_panel": {
           "type": "image",
@@ -496,9 +482,7 @@
             }
           ],
           "controls": [
-            {
-              "csub_stack_panel@store_inventory.csub_stack_panel": {}
-            }
+            { "csub_stack_panel@store_inventory.csub_stack_panel": {} }
           ]
         }
       },
@@ -550,9 +534,7 @@
                 "size": [ 3, "100%" ]
               }
             },
-            {
-              "testTitle@common_csb.csb_header": {}
-            }
+            { "testTitle@common_csb.csb_header": {} }
           ]
         }
       },
@@ -947,7 +929,7 @@
       {
         "all@store_inventory.category_panel_button": {
           "$category_label": "gui.all",
-          "$category_icon": "textures/ui/glyph_all_pack_small", // This is a blank texture file for now.
+          "$category_icon": "textures/ui/glyph_all_pack_small",
           "$category_count": "#collection_count",
           "$category_pressed_button_name": "button.all",
           "$icon_visible": "#collections_icon_visible"
@@ -1067,9 +1049,7 @@
       }
     ],
     "controls": [
-      {
-        "default@store_inventory.category_stack_panel": {}
-      },
+      { "default@store_inventory.category_stack_panel": {} },
       {
         "hover@store_inventory.category_stack_panel": {
           "$color": "$csub_text_color"
@@ -1145,11 +1125,6 @@
       }
     ]
   },
-
-
-  //--------------------------------------------------------------------------------
-  // Right Side
-  //--------------------------------------------------------------------------------
 
   "search_object@common_store.search_object": {
     "$has_section_above_search_panel": true,
@@ -1267,14 +1242,7 @@
         "items_collection_tab": "@store_inventory.items_content_section",
         "subscriptions_tab": "@store_inventory.subscriptions_content_section"
       },
-      "factory_variables": [
-        "$store_factory_clipping_event",
-        "$store_factory_collection_details",
-        "$store_factory_binding_type",
-        "$store_factory_collection_prefix",
-        "$store_factory_collection_name",
-        "$store_header_size"
-      ]
+      "factory_variables": [ "$store_factory_clipping_event", "$store_factory_collection_details", "$store_factory_binding_type", "$store_factory_collection_prefix", "$store_factory_collection_name", "$store_header_size" ]
     },
     "bindings": [
       {
@@ -1303,19 +1271,13 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "controls": [
-            {
-              "right_pane_factory@store_inventory.right_pane_factory": {}
-            }
+            { "right_pane_factory@store_inventory.right_pane_factory": {} }
           ]
         }
       }
     ]
   },
 
-
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
   "main_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -1386,9 +1348,7 @@
                 "layer": 1
               }
             },
-            {
-              "content_right_panel@store_inventory.content_area": {}
-            }
+            { "content_right_panel@store_inventory.content_area": {} }
           ]
         }
       }
@@ -1403,9 +1363,7 @@
           "$sidebar_main_view_content": "store_inventory.main_panel"
         }
       },
-      {
-        "sort_and_filter_modals@common_store.sort_and_filter_menu_modals": {}
-      }
+      { "sort_and_filter_modals@common_store.sort_and_filter_menu_modals": {} }
     ]
   },
 
@@ -1487,6 +1445,7 @@
     "$body_text|default": "",
     "$secondary_text|default": ""
   },
+
   "signin_text": {
     "type": "label",
     "text": "$body_text",
@@ -1494,6 +1453,7 @@
     "font_type": "smooth",
     "color": "$store_white_text_color"
   },
+
   "signin_text_02": {
     "type": "label",
     "text": "$secondary_text",
@@ -1504,29 +1464,22 @@
 
   "signin_text_section@store_inventory.signin_text_section_body": {
     "controls": [
-      {
-        "signin_text@store_inventory.signin_text": {}
-      },
+      { "signin_text@store_inventory.signin_text": {} },
       {
         "line_1_padding_line_2": {
           "type": "panel",
           "size": [ "100%", 8 ]
         }
       },
-      {
-        "signin_text_02@store_inventory.signin_text_02": {}
-      }
+      { "signin_text_02@store_inventory.signin_text_02": {} }
     ]
-   },
+  },
 
   "sign_in_panel_text_body@common_buttons.text_body_focus_border_for_controller_button": {
     "$text_control": "store_inventory.signin_text_section",
     "$text_control_size": [ "90%", "100%c" ],
     "$signin_body_controls": [
-      {
-        "signin_text_section@store_inventory.signin_text_section": {}
-      }
+      { "signin_text_section@store_inventory.signin_text_section": {} }
     ]
   }
-
 }

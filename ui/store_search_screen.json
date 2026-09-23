@@ -10,13 +10,10 @@
     "size": [ "100%", "100%c" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-
-    // row binding vars
     "$store_row_binding_type|default": "global",
     "$store_row_collection_details|default": "none",
     "$store_row_collection_prefix|default": "",
     "$store_row_collection_name|default": "",
-
     "controls": [
       {
         "trending_row_panel": {
@@ -59,27 +56,18 @@
             {
               "trending_offers_grid": {
                 "type": "grid",
-                //------------------------------------------------------------------------
-                // 14.0625% comes from store_item_list.store_offer_grid_item's size
-                //     25%x * 56.25%  = 14.0625%x
-                // The reason for not copying the item list screen is because if you
-                // do, it causes weird sizing issues with the row grids and their sizing
-                //------------------------------------------------------------------------
                 "size": [ "100%", "14.0625%x + 33px" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "grid_item_template": "store_search.store_offer_grid_item",
                 "grid_dimension_binding": "#trending_offers_dimensions",
-
                 "$offer_category_collection_details": "$store_row_collection_details",
                 "$offer_category_collection_prefix": "$store_row_collection_prefix",
                 "$offer_category_collection_name": "$store_row_collection_name",
-
                 "$offer_collection_details": "collection_details",
                 "$offer_binding_type": "collection",
                 "$offer_collection_prefix": "offer",
                 "$offer_collection_name": "offer_collection",
-
                 "collection_name": "$offer_collection_name",
                 "bindings": [
                   {
@@ -105,12 +93,10 @@
     "size": [ "100%", "default" ],
     "grid_item_template": "store_search.trending_row_content",
     "grid_dimension_binding": "#trending_rows_dimensions",
-
     "$store_row_binding_type": "collection",
     "$store_row_collection_details": "collection_details",
     "$store_row_collection_prefix": "category",
     "$store_row_collection_name": "category_collection",
-
     "collection_name": "$store_row_collection_name",
     "bindings": [
       {
@@ -133,17 +119,13 @@
       }
     ],
     "controls": [
-      {
-        "trending_grid@store_search.trending_rows_grid": {}
-      },
+      { "trending_grid@store_search.trending_rows_grid": {} },
       {
         "item_list_panel": {
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "item_list_grid@store_item_list.store_offer_grid": {}
-            }
+            { "item_list_grid@store_item_list.store_offer_grid": {} }
           ],
           "bindings": [
             {
@@ -156,10 +138,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
-
   "main_panel": {
     "type": "input_panel",
     "anchor_from": "top_left",
@@ -167,7 +145,7 @@
     "controls": [
       {
         "seach_object@common_store.search_object": {
-          "layer": 4, // Make this on top so the loading bar shows
+          "layer": 4,
           "$search_offer_content": "store_search.search_offer_content",
           "bindings": [
             {
@@ -242,5 +220,4 @@
     "$screen_background_control": "common_store.store_background",
     "$is_full_screen_layout": true
   }
-
 }

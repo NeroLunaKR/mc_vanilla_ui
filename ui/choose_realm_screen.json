@@ -1,5 +1,4 @@
 {
-
   "namespace": "choose_realm",
 
   "realm_screenshot": {
@@ -65,18 +64,14 @@
           "orientation": "vertical",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "realms_world_item_grid@choose_realm.realms_world_item_grid": {}
-            },
+            { "realms_world_item_grid@choose_realm.realms_world_item_grid": {} },
             {
               "padding_0": {
                 "type": "panel",
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "add_realm_button@choose_realm.add_realm_button": {}
-            }
+            { "add_realm_button@choose_realm.add_realm_button": {} }
           ]
         }
       }
@@ -133,6 +128,12 @@
     ]
   },
 
+  "plus": {
+    "type": "image",
+    "size": [ 22, 22 ],
+    "texture": "textures/ui/color_plus"
+  },
+
   "add_realm_button@settings_common.action_button_dark_text": {
     "size": [ "100%", 30 ],
     "$button_text_max_size": [ "100%", 20 ],
@@ -145,6 +146,7 @@
     "default_focus_precedence": 2,
     "$pressed_button_name": "button.add_realm"
   },
+
   "realms_world_content_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%" ],
@@ -168,10 +170,7 @@
       }
     ],
     "controls": [
-      {
-        "realm_screenshot@choose_realm.realm_screenshot": {
-        }
-      },
+      { "realm_screenshot@choose_realm.realm_screenshot": {} },
       {
         "padding": {
           "type": "panel",
@@ -378,9 +377,7 @@
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "slots_grid@choose_realm.slots_grid": {}
-            }
+            { "slots_grid@choose_realm.slots_grid": {} }
           ]
         }
       }
@@ -467,7 +464,7 @@
           "size": [ "100% + 4px", "70%" ],
           "controls": [
             {
-              "plus_image@realms_slots.plus": {
+              "plus_image@choose_realm.plus": {
                 "bindings": [
                   {
                     "binding_name": "(not #realm_slot_is_filled)",

@@ -9,15 +9,11 @@
     "shadow": true
   },
 
-  // Backgrounds //
-
   "background_image": {
     "type": "image",
     "size": [ "85%", "85%" ],
     "texture": "textures/ui/background_panel"
   },
-
-  // Inventory Grids //
 
   "inventory_grid": {
     "type": "grid",
@@ -49,8 +45,6 @@
       }
     ]
   },
-
-  // Enchanting Slots Panel //
 
   "lapis_image@enchanting.enchanting_image": {
     "anchor_to": "center",
@@ -85,8 +79,6 @@
       }
     ]
   },
-
-  // Enchant Buttton //
 
   "enchant_text_runes@enchanting.enchant_runes": {
     "size": [ "100% - 29px", "100% - 6px" ],
@@ -222,11 +214,13 @@
           "offset": [ 20, 2 ]
         }
       },
-      { "highlight@enchanting_pocket.show_highlighted_slot_control": { "layer": 3 } }
+      {
+        "highlight@enchanting_pocket.show_highlighted_slot_control": {
+          "layer": 3
+        }
+      }
     ]
   },
-
-  // Enchant Selection Panel //
 
   "enchant_selection_panel": {
     "type": "panel",
@@ -272,9 +266,6 @@
     ]
   },
 
-
-  // Enchanting Confirm Panel //
-
   "item_renderer": {
     "type": "custom",
     "renderer": "inventory_item_renderer",
@@ -292,7 +283,6 @@
     "size": [ "100%", 30 ],
     "focus_enabled": false,
     "$pressed_button_name": "button.enchant",
-
     "controls": [
       { "default@enchanting_pocket.confirm_default_control": {} },
       { "hover@enchanting_pocket.confirm_default_control": {} },
@@ -397,8 +387,6 @@
     ]
   },
 
-  // Enchanting Book Panel //
-
   "enchanting_book_contents_panel": {
     "type": "panel",
     "size": [ 40, 40 ],
@@ -430,7 +418,6 @@
         "player_level_label@enchanting_pocket.generic_label": {
           "offset": [ 0, -9 ],
           "font_type": "rune",
-          // This doesn't need loc because it is being converted to the rune font.
           "text": "Level",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -470,8 +457,6 @@
     ]
   },
 
-
-
   "enchanting_slots_and_selection": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -487,9 +472,6 @@
       { "enchant_selection_panel@enchanting_pocket.enchant_selection_panel": {} }
     ]
   },
-
-
-  // Enchanting Panel //
 
   "enchanting_contents_panel": {
     "type": "stack_panel",
@@ -528,10 +510,6 @@
     ]
   },
 
-
-
-  // Header //
-
   "header": {
     "type": "panel",
     "size": [ "100%", 28 ],
@@ -544,7 +522,11 @@
           "texture": "textures/ui/header_bar_2"
         }
       },
-      { "legacy_pocket_close_button@common.legacy_pocket_close_button": { "offset": [ -3, 3 ] } },
+      {
+        "legacy_pocket_close_button@common.legacy_pocket_close_button": {
+          "offset": [ -3, 3 ]
+        }
+      },
       {
         "panel": {
           "type": "panel",
@@ -567,8 +549,6 @@
     ]
   },
 
-  // Layout Content Panels //
-
   "inventory_and_enchanting_panel": {
     "type": "panel",
     "controls": [
@@ -578,7 +558,6 @@
           "size": [ "50%", "100%" ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-
           "controls": [
             { "inventory_content@enchanting_pocket.inventory_content": {} }
           ]
@@ -590,7 +569,6 @@
           "size": [ "50%", "100%" ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-
           "controls": [
             { "enchanting_content@enchanting_pocket.enchanting_contents_panel": {} }
           ]
@@ -604,7 +582,11 @@
     "orientation": "vertical",
     "size": [ "85%", "85%" ],
     "controls": [
-      { "header@enchanting_pocket.header": { "layer": 2 } },
+      {
+        "header@enchanting_pocket.header": {
+          "layer": 2
+        }
+      },
       {
         "inventory_and_enchanting_panel@enchanting_pocket.inventory_and_enchanting_panel": {
           "size": [ "100%", "fill" ]
@@ -612,8 +594,6 @@
       }
     ]
   },
-
-  // Output error label //
 
   "anim_error_text_alpha": {
     "anim_type": "alpha",
@@ -623,6 +603,7 @@
     "from": 1.0,
     "to": 0
   },
+
   "error_text_panel": {
     "type": "panel",
     "anchor_from": "bottom_middle",
@@ -638,16 +619,22 @@
     ]
   },
 
-  // Enchanting Screen //
-
   "enchanting_panel": {
     "type": "panel",
     "controls": [
       { "bg@enchanting_pocket.background_image": {} },
-      { "root_panel@common.root_panel": { "size": [ "85%", "85%" ], "layer": 1 } },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ "85%", "85%" ],
+          "layer": 1
+        }
+      },
       { "header_and_content_stack_panel@enchanting_pocket.header_and_content_stack_panel": {} },
-
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { "layer": 2 } },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {
+          "layer": 2
+        }
+      },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "hold_icon@common.inventory_take_progress_icon_button": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
@@ -656,7 +643,11 @@
           "$offset": [ 0, "85%" ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 12
+        }
+      }
     ]
   }
 }

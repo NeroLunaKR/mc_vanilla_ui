@@ -1,10 +1,6 @@
 {
   "namespace": "play",
 
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
-
   "label_background": {
     "type": "image",
     "texture": "textures/ui/mainbanners"
@@ -120,10 +116,6 @@
     "anchor_from": "top_left"
   },
 
-  //---------------------------------------------------------------------------
-  // Common Icons
-  //---------------------------------------------------------------------------
-
   "edit_icon": {
     "type": "image",
     "texture": "textures/ui/editIcon",
@@ -215,8 +207,6 @@
     "size": [ 15, 16 ]
   },
 
-  // To create the bouncing effect of alternating bounces for the notification icon
-  // the durations have to be alternated and then resynced with the wait time.
   "anim_icon_wait_A": {
     "anim_type": "wait",
     "duration": 0.14,
@@ -259,7 +249,6 @@
     "end_event": "friend_icon_bounce_start"
   },
 
-  // After three bounces the icon waits for three seconds.
   "anim_icon_wait_A_3": {
     "anim_type": "wait",
     "duration": 3.04,
@@ -281,17 +270,14 @@
     "end_event": "friend_icon_bounce_start"
   },
 
-  // The icon is always being offseted by a constant amount, going up by 4 then down by 4
-  // This is to get the text in the right position at the beginning.
   "anim_count_wait_offset": {
     "anim_type": "offset",
-    "duration": 1.00,
+    "duration": 1.0,
     "from": [ -5, 1 ],
     "to": [ -5, 1 ],
     "next": "@play.anim_count_wait_3"
   },
 
-  // Alternating between .185 and .225, and being resynced with waits.
   "anim_icon_A_bounce_in": {
     "anim_type": "offset",
     "easing": "linear",
@@ -605,10 +591,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // SIGN IN TO JOIN REALMS PROMPT
-  //---------------------------------------------------------------------------
-
   "sign_in_realms_image": {
     "type": "panel",
     "size": [ "100%cm", "100%cm" ],
@@ -626,7 +608,6 @@
         }
       }
     ],
-    // this is to counteract the image moving down when the button is pressed
     "variables": [
       {
         "requires": "$pressed_state",
@@ -658,9 +639,7 @@
     "type": "panel",
     "size": [ "fill", "100%sm" ],
     "controls": [
-      {
-        "realms_sign_in_prompt_label@play.realms_sign_in_prompt_label": {}
-      }
+      { "realms_sign_in_prompt_label@play.realms_sign_in_prompt_label": {} }
     ]
   },
 
@@ -685,12 +664,8 @@
     "orientation": "horizontal",
     "$prompt": "play.realms_sign_in_prompt",
     "controls": [
-      {
-        "sign_in_realms_image@play.sign_in_realms_image": {}
-      },
-      {
-        "realms_sign_in_prompt@$prompt": {}
-      }
+      { "sign_in_realms_image@play.sign_in_realms_image": {} },
+      { "realms_sign_in_prompt@$prompt": {} }
     ]
   },
 
@@ -713,10 +688,6 @@
   "sign_in_to_view_realms_button_friends@play.sign_in_to_view_realms_button": {
     "$button_content": "play.sign_in_to_view_realms_content_panel_friends"
   },
-
-  //---------------------------------------------------------------------------
-  // REALMS WORLD GRID
-  //---------------------------------------------------------------------------
 
   "realms_list_text": {
     "type": "label",
@@ -755,7 +726,6 @@
     "$text": "#realms_world_details",
     "$text_binding_type": "collection"
   },
-
 
   "realms_world_type@play.realms_list_text": {
     "size": [ "default", 10 ],
@@ -893,10 +863,7 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            {
-              "realms_world_player_count@play.realms_world_player_count": {
-              }
-            }
+            { "realms_world_player_count@play.realms_world_player_count": {} }
           ]
         }
       },
@@ -920,15 +887,11 @@
           "size": [ "100%sm", "100%c" ],
           "min_size": [ "100%c", "100%c" ],
           "controls": [
-            {
-              "realms_world_content_status_area_panel@play.realms_world_content_status_area_panel": {}
-            }
+            { "realms_world_content_status_area_panel@play.realms_world_content_status_area_panel": {} }
           ]
         }
       },
-      {
-        "realms_world_type@play.realms_world_type": {}
-      }
+      { "realms_world_type@play.realms_world_type": {} }
     ]
   },
 
@@ -991,9 +954,7 @@
           "anchor_to": "right_middle",
           "layer": 1,
           "controls": [
-            {
-              "realms_world_content_status_area_panel_container@play.realms_world_content_status_area_panel_container": {}
-            }
+            { "realms_world_content_status_area_panel_container@play.realms_world_content_status_area_panel_container": {} }
           ]
         }
       }
@@ -1258,7 +1219,6 @@
               }
             }
           ]
-
         }
       },
       {
@@ -1365,10 +1325,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // FRIENDS WORLD GRID
-  //---------------------------------------------------------------------------
 
   "network_world_header": {
     "type": "stack_panel",
@@ -1537,10 +1493,7 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            {
-              "network_world_player_count@play.network_world_player_count": {
-              }
-            }
+            { "network_world_player_count@play.network_world_player_count": {} }
           ]
         }
       },
@@ -1564,9 +1517,7 @@
           "size": [ "100%sm", "100%c" ],
           "min_size": [ "100%c", "100%c" ],
           "controls": [
-            {
-              "network_world_content_status_area_panel@play.network_world_content_status_area_panel": {}
-            }
+            { "network_world_content_status_area_panel@play.network_world_content_status_area_panel": {} }
           ]
         }
       },
@@ -1615,9 +1566,7 @@
           "size": [ "100%c", "100%" ],
           "layer": 1,
           "controls": [
-            {
-              "network_world_content_status_area_panel_container@play.network_world_content_status_area_panel_container": {}
-            }
+            { "network_world_content_status_area_panel_container@play.network_world_content_status_area_panel_container": {} }
           ]
         }
       },
@@ -1880,7 +1829,6 @@
                       "layer": 1,
                       "shadow": false,
                       "visible": false,
-
                       "text": "#privilegesBlockedText",
                       "bindings": [
                         {
@@ -1899,10 +1847,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // RECENT SERVER GRID
-  //---------------------------------------------------------------------------
 
   "more_servers_grid": {
     "type": "grid",
@@ -2149,9 +2093,7 @@
                 "size": [ 2, "100%" ]
               }
             },
-            {
-              "ping_rate_icon@play.ping_rate_icon": {}
-            }
+            { "ping_rate_icon@play.ping_rate_icon": {} }
           ],
           "bindings": [
             {
@@ -2214,10 +2156,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // FEATURED SERVER GRID
-  //---------------------------------------------------------------------------
 
   "third_party_featured_server_grid": {
     "type": "grid",
@@ -2407,9 +2345,7 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "ping_rate_panel@play.ping_rate_panel": {}
-      }
+      { "ping_rate_panel@play.ping_rate_panel": {} }
     ]
   },
 
@@ -2424,10 +2360,7 @@
           "type": "panel",
           "size": [ "100%", 12 ],
           "controls": [
-            {
-              "progress_loading_bars@common_store.progress_loading_bars": {
-              }
-            }
+            { "progress_loading_bars@common_store.progress_loading_bars": {} }
           ]
         }
       }
@@ -2756,9 +2689,7 @@
           ]
         }
       },
-      {
-        "$progress_panel@$progress_panel": {}
-      }
+      { "$progress_panel@$progress_panel": {} }
     ]
   },
 
@@ -2817,9 +2748,7 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "divider_0@common.horizontal_divider": {}
-      },
+      { "divider_0@common.horizontal_divider": {} },
       {
         "padding_0": {
           "type": "panel",
@@ -2970,9 +2899,7 @@
           "color": "$body_text_color",
           "font_type": "smooth",
           "text": "#description_label",
-          "notify_on_ellipses": [
-            "description_read_more_button_panel"
-          ],
+          "notify_on_ellipses": [ "description_read_more_button_panel" ],
           "bindings": [
             {
               "binding_name": "#description_label"
@@ -2988,9 +2915,7 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "divider_0@common.horizontal_divider": {}
-      },
+      { "divider_0@common.horizontal_divider": {} },
       {
         "padding_0": {
           "type": "panel",
@@ -3260,9 +3185,7 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "divider_0@common.horizontal_divider": {}
-      },
+      { "divider_0@common.horizontal_divider": {} },
       {
         "padding_0": {
           "type": "panel",
@@ -3326,9 +3249,7 @@
           "font_type": "smooth",
           "font_scale_factor": 0.8,
           "text": "#news_text",
-          "notify_on_ellipses": [
-            "news_read_more_button_panel"
-          ],
+          "notify_on_ellipses": [ "news_read_more_button_panel" ],
           "bindings": [
             {
               "binding_name": "#news_text"
@@ -3344,9 +3265,7 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "divider_0@common.horizontal_divider": {}
-      },
+      { "divider_0@common.horizontal_divider": {} },
       {
         "padding_0": {
           "type": "panel",
@@ -3404,9 +3323,7 @@
                       "size": [ "100%", 4 ],
                       "layer": 5,
                       "controls": [
-                        {
-                          "divider_0@common.horizontal_divider": {}
-                        }
+                        { "divider_0@common.horizontal_divider": {} }
                       ]
                     }
                   },
@@ -3489,10 +3406,6 @@
     ]
   },
 
-
-  //---------------------------------------------------------------------------
-  // LOCAL WORLD GRID
-  //---------------------------------------------------------------------------
   "divider": {
     "type": "image",
     "texture": "textures/ui/White"
@@ -3652,8 +3565,6 @@
     ]
   },
 
-
-  // local world copy protection indicator
   "world_lock": {
     "type": "image",
     "layer": 6,
@@ -3810,9 +3721,7 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$banner_content": [
-      {
-        "realms_icon@common_store.realms_banner_icon": {}
-      },
+      { "realms_icon@common_store.realms_banner_icon": {} },
       {
         "pad_0": {
           "type": "panel",
@@ -3851,9 +3760,7 @@
                       "layer": 1
                     }
                   },
-                  {
-                    "lock_1@play.local_world_lock_panel": {}
-                  },
+                  { "lock_1@play.local_world_lock_panel": {} },
                   {
                     "local_world_date@play.local_world_date": {
                       "size": [ "default", 10 ],
@@ -4101,7 +4008,11 @@
     "orientation": "vertical",
     "size": [ "100%", "100%" ],
     "controls": [
-      { "top_padding@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "top_padding@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       {
         "loading_bar_panel": {
           "type": "panel",
@@ -4119,7 +4030,11 @@
           ]
         }
       },
-      { "mid_padding@common.empty_panel": { "size": [ "100%", 2 ] } },
+      {
+        "mid_padding@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      },
       {
         "loading_label": {
           "type": "label",
@@ -4134,7 +4049,11 @@
           ]
         }
       },
-      { "bottom_padding@common.empty_panel": { "size": [ "100%", 2 ] } }
+      {
+        "bottom_padding@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      }
     ]
   },
 
@@ -4415,10 +4334,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Buttons
-  //---------------------------------------------------------------------------
-
   "common_button_template@common_buttons.light_glyph_button": {},
 
   "common_button_text": {
@@ -4544,7 +4459,6 @@
         "binding_name_override": "#enabled"
       }
     ]
-
   },
 
   "add_server_toggle_button@common_toggles.light_text_toggle": {
@@ -4554,7 +4468,6 @@
     "anchor_to": "top_left",
     "layer": 2,
     "$button_text": "networkWorld.add_server",
-
     "$radio_toggle_group": true,
     "$toggle_name": "server_navigation_toggle",
     "$toggle_view_binding_name": "add_server_toggle_button",
@@ -4585,7 +4498,6 @@
     "$toggle_on_hover_binding_type": "global",
     "$toggle_on_hover_binding_name": "#toggle_on_hover",
     "$focus_override_right": "right_side",
-
     "$button_content": "play.server_button_content_panel",
     "bindings": [
       {
@@ -4700,7 +4612,6 @@
     "$pressed_button_name": "button.menu_sync_legacy_worlds",
     "$button_text": "#sync_legacy_button_text",
     "$button_text_binding_type": "global",
-
     "bindings": [
       {
         "binding_name": "#sync_legacy_worlds_button_visible",
@@ -4748,7 +4659,6 @@
     "type": "panel",
     "size": [ "70%", "100%" ],
     "offset": "$button_offset",
-
     "controls": [
       {
         "notification_button_label": {
@@ -4913,10 +4823,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Scroll panes
-  //---------------------------------------------------------------------------
-
   "common_scroll_pane": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -4927,11 +4833,10 @@
 
   "worlds_scroll_panel@play.common_scroll_pane": {
     "controls": [
-      {
-        "worlds_list_stack_panel@play.worlds_stack_panel": {}
-      }
+      { "worlds_list_stack_panel@play.worlds_stack_panel": {} }
     ]
   },
+
   "game_tip_item_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -4981,7 +4886,6 @@
                     "binding_type": "$label_text_binding_type"
                   }
                 ]
-
               }
             },
             {
@@ -5091,12 +4995,9 @@
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "play_screen_warning@play.realm_warning_tip": {}
-      },
+      { "play_screen_warning@play.realm_warning_tip": {} },
       {
         "header_button": {
-          // we don't support importing or creating a new world for realm upload yet
           "ignored": "$local_world_upload",
           "type": "stack_panel",
           "orientation": "vertical",
@@ -5107,7 +5008,6 @@
               "quick_play@play.quick_play_button": {
                 "ignored": "(not $education_edition)",
                 "layer": 1,
-                // 0.5 to line up with the button panel below
                 "size": [ "100% + 0.5px", 30 ],
                 "$focus_override_up": "close_button"
               }
@@ -5176,9 +5076,7 @@
                 ]
               }
             },
-            {
-              "sign_in_to_view_realms_button@play.sign_in_to_view_realms_button": {}
-            },
+            { "sign_in_to_view_realms_button@play.sign_in_to_view_realms_button": {} },
             {
               "realms_previews_panel": {
                 "type": "panel",
@@ -5220,9 +5118,7 @@
                 ]
               }
             },
-            {
-              "create_on_realms_button_panel@play.create_on_realms_button_panel": {}
-            },
+            { "create_on_realms_button_panel@play.create_on_realms_button_panel": {} },
             {
               "personal_realms@play.realms_world_item_grid": {
                 "ignored": "$world_picker_screen",
@@ -5234,7 +5130,7 @@
             {
               "placeholder_personal_realms_panel@play.label_background": {
                 "size": [ "100%", "100%c - 12px" ],
-                "min_size": [ "100%", 39 ], // Grid item size is 29 + 10 for label, grid items overdraw by 1px
+                "min_size": [ "100%", 39 ],
                 "ignored": "$world_picker_screen",
                 "controls": [
                   {
@@ -5265,9 +5161,7 @@
                       "size": [ "100%", 4 ]
                     }
                   },
-                  {
-                    "progress_loading_bars@play.progress_loading_bars": {}
-                  }
+                  { "progress_loading_bars@play.progress_loading_bars": {} }
                 ],
                 "bindings": [
                   {
@@ -5277,7 +5171,6 @@
                 ]
               }
             },
-            // This is to emulate the sizing behavior of the Realms grid which overdraws by 1 pixel to create a single stroke border
             {
               "realms_trial_panel": {
                 "type": "panel",
@@ -5369,12 +5262,8 @@
                 "$information_panel_label_text_binding_condition": "always_when_visible"
               }
             },
-            {
-              "open_uri_button@play.open_account_setting_button": {}
-            },
-            {
-              "open_account_setting_button_gamecore@play.open_account_setting_button_gamecore": {}
-            }
+            { "open_uri_button@play.open_account_setting_button": {} },
+            { "open_account_setting_button_gamecore@play.open_account_setting_button_gamecore": {} }
           ]
         }
       },
@@ -5425,9 +5314,7 @@
           ]
         }
       },
-      {
-        "no_local_worlds_switch_setting@play.no_local_worlds_switch_setting": {}
-      },
+      { "no_local_worlds_switch_setting@play.no_local_worlds_switch_setting": {} },
       {
         "beta_retail_local_padding": {
           "type": "panel",
@@ -5510,7 +5397,7 @@
       {
         "loading_legacy_worlds_panel@play.label_background": {
           "size": [ "100%", "100%c - 12px" ],
-          "min_size": [ "100%", 39 ], // Grid item size is 29 + 10 for label, grid items overdraw by 1px
+          "min_size": [ "100%", 39 ],
           "controls": [
             {
               "loading_legacy_worlds_label@play.loading_label": {
@@ -5628,10 +5515,6 @@
       },
       {
         "pad_hack_panel": {
-          // Grid items are actually rendering 1 pixel more than their size
-          // this is to avoid double-borders
-          // however, this means we now need an extra pixel for the last grid item
-          // also add 2 pixels to make it look nice
           "type": "panel",
           "size": [ "100%", 3 ]
         }
@@ -5710,10 +5593,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "storage_location_dropdown@play.storage_location_dropdown": {
-        }
-      }
+      { "storage_location_dropdown@play.storage_location_dropdown": {} }
     ]
   },
 
@@ -5929,9 +5809,7 @@
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "friends_screen_warning@play.realm_warning_tip": {}
-            },
+            { "friends_screen_warning@play.realm_warning_tip": {} },
             {
               "header_button": {
                 "type": "stack_panel",
@@ -5983,9 +5861,7 @@
                       ]
                     }
                   },
-                  {
-                    "sign_in_to_view_realms_button_friends@play.sign_in_to_view_realms_button_friends": {}
-                  },
+                  { "sign_in_to_view_realms_button_friends@play.sign_in_to_view_realms_button_friends": {} },
                   {
                     "friends_realms@play.realms_world_item_grid": {
                       "$grid_name": "#friend_realms_grid_dimension",
@@ -6039,9 +5915,7 @@
                             "size": [ "100%", 4 ]
                           }
                         },
-                        {
-                          "progress_loading_bars@play.progress_loading_bars": {}
-                        }
+                        { "progress_loading_bars@play.progress_loading_bars": {} }
                       ],
                       "bindings": [
                         {
@@ -6105,12 +5979,8 @@
                             "$pressed_button_name": "button.get_offline_authcode",
                             "tts_inherit_siblings": true,
                             "controls": [
-                              {
-                                "hover@common.focus_border_white": {}
-                              },
-                              {
-                                "pressed@common.focus_border_white": {}
-                              }
+                              { "hover@common.focus_border_white": {} },
+                              { "pressed@common.focus_border_white": {} }
                             ]
                           }
                         }
@@ -6145,7 +6015,6 @@
                 ]
               }
             },
-            // Original Friends Grid
             {
               "friends_grid@play.label_content_template": {
                 "$label_content_label": "networkWorld.joinable_friends_label",
@@ -6177,10 +6046,6 @@
             },
             {
               "pad_hack_panel": {
-                // Grid items are actually rendering 1 pixel more than their size
-                // this is to avoid double-borders
-                // however, this means we now need an extra pixel for the last grid item
-                // also add 2 pixels to make it look nice
                 "type": "panel",
                 "size": [ "100%", 3 ],
                 "bindings": [
@@ -6221,7 +6086,6 @@
                 ]
               }
             },
-            // Find Cross-Platform Friends button, only on Switch platform for now
             {
               "switch_find_cross_platform_friend_button@play.add_friend_button": {
                 "ignored": "(not $nx_os and not $is_ps4)",
@@ -6247,7 +6111,6 @@
                 "size": [ 0, 2 ]
               }
             },
-            // Cross Platform Friends Grid
             {
               "cross_platform_friends_grid@play.label_content_template": {
                 "$label_content_label": "networkWorld.joinable_cross_platform_friends_label",
@@ -6307,12 +6170,8 @@
                 ]
               }
             },
-            {
-              "lan_grid@play.lan_servers_scroll_content": {}
-            },
-            {
-              "open_account_setting_button_gamecore@play.open_account_setting_button_gamecore": {}
-            }
+            { "lan_grid@play.lan_servers_scroll_content": {} },
+            { "open_account_setting_button_gamecore@play.open_account_setting_button_gamecore": {} }
           ]
         }
       }
@@ -6356,9 +6215,7 @@
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "more_servers_grid@play.more_servers_grid": {}
-      },
+      { "more_servers_grid@play.more_servers_grid": {} },
       {
         "padding_3": {
           "type": "panel",
@@ -6380,11 +6237,8 @@
     "size": [ "100%", "100%c" ],
     "$focus_id": "left_panel",
     "controls": [
+      { "new_ui_servers_switch_button_options_panel@play.new_ui_servers_switch_button_options_panel": {} },
       {
-        "new_ui_servers_switch_button_options_panel@play.new_ui_servers_switch_button_options_panel": {}
-      },
-      {
-
         "featured_servers_panel": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
@@ -6401,11 +6255,7 @@
                       "$label_text": "thirdPartyWorld.loadingFeaturedServers"
                     }
                   },
-                  {
-                    "loading_featured_servers_panel@play.loading_featured_servers_panel": {}
-                  }
-
-
+                  { "loading_featured_servers_panel@play.loading_featured_servers_panel": {} }
                 ],
                 "bindings": [
                   {
@@ -6438,7 +6288,6 @@
               "third_party_featured_grid@play.third_party_featured_server_grid": {
                 "$tts_section_header": "$third_party_featured_servers"
               }
-
             },
             {
               "padding_3": {
@@ -6455,12 +6304,8 @@
           ]
         }
       },
-      {
-        "more_servers_divider@common.horizontal_divider": {}
-      },
-      {
-        "more_servers_panel@play.manually_added_servers_scrolling_content": {}
-      }
+      { "more_servers_divider@common.horizontal_divider": {} },
+      { "more_servers_panel@play.manually_added_servers_scrolling_content": {} }
     ]
   },
 
@@ -6524,9 +6369,7 @@
                       "ignored": "($ignore_add_servers or $ignore_3rd_party_servers)"
                     }
                   },
-                  {
-                    "open_uri_button@play.open_account_setting_button": {}
-                  }
+                  { "open_uri_button@play.open_account_setting_button": {} }
                 ]
               }
             },
@@ -6536,21 +6379,13 @@
                 "size": [ "100%", 3 ]
               }
             },
-            {
-              "server_content@$server_scroll_panel_content": {}
-            },
-            {
-              "add_server_button@play.add_server_toggle_button": {}
-            }
+            { "server_content@$server_scroll_panel_content": {} },
+            { "add_server_button@play.add_server_toggle_button": {} }
           ]
         }
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Cross Platform panels
-  //---------------------------------------------------------------------------
 
   "crossplatform_disabled_panel@play.information_panel": {
     "$information_label_font": "smooth",
@@ -6574,10 +6409,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Scroll panels
-  //---------------------------------------------------------------------------
-
   "common_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
     "$scrolling_pane_size": [ "100% - 1px", "100%" ],
@@ -6587,10 +6418,6 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
-
-  //---------------------------------------------------------------------------
-  // Scroll content
-  //---------------------------------------------------------------------------
 
   "common_content": {
     "type": "input_panel",
@@ -6647,7 +6474,6 @@
                   }
                 ]
               }
-
             }
           ]
         }
@@ -6710,12 +6536,9 @@
           ]
         }
       },
-      {
-        "right_panel@play.server_content_area": {}
-      }
+      { "right_panel@play.server_content_area": {} }
     ]
   },
-
 
   "server_scroll_content@play.common_content": {
     "size": [ "100% - 4px", "100% - 4px" ],
@@ -6746,9 +6569,7 @@
                 ]
               }
             },
-            {
-              "show_servers_panel@play.show_servers_panel": {}
-            }
+            { "show_servers_panel@play.show_servers_panel": {} }
           ]
         }
       },
@@ -6812,9 +6633,7 @@
                 ]
               }
             },
-            {
-              "open_account_setting_button_gamecore@play.open_account_setting_button_gamecore": {}
-            }
+            { "open_account_setting_button_gamecore@play.open_account_setting_button_gamecore": {} }
           ]
         }
       }
@@ -6873,10 +6692,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Toggle tab buttons
-  //---------------------------------------------------------------------------
 
   "tab_front": {
     "type": "image",
@@ -6979,7 +6794,6 @@
     "type": "stack_panel",
     "size": [ "100%-3px", "100% - 4px" ],
     "orientation": "horizontal",
-
     "controls": [
       {
         "padding_0": {
@@ -7006,9 +6820,7 @@
           "size": [ 2, "100%" ]
         }
       },
-      {
-        "count_text@play.tab_text_stack_panel": {}
-      }
+      { "count_text@play.tab_text_stack_panel": {} }
     ]
   },
 
@@ -7016,7 +6828,6 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%-3px", "100% - 4px" ],
-
     "controls": [
       {
         "padding": {
@@ -7142,15 +6953,9 @@
           ]
         }
       },
-      {
-        "count_text@play.tab_text_stack_panel": {}
-      }
+      { "count_text@play.tab_text_stack_panel": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Main navigation tabs
-  //---------------------------------------------------------------------------
 
   "top_tab@common_tabs.tab_top": {
     "$toggle_tts_enabled_binding_type": "global",
@@ -7208,9 +7013,7 @@
   "close_navigation_tab": {
     "type": "panel",
     "controls": [
-      {
-        "background@play.X_tab_back": {}
-      },
+      { "background@play.X_tab_back": {} },
       {
         "x_image@common.light_close_button": {
           "layer": 1,
@@ -7232,10 +7035,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Content tabs panel
-  //---------------------------------------------------------------------------
-
   "common_tab_content_panel": {
     "type": "panel",
     "controls": [
@@ -7250,7 +7049,6 @@
           "layer": 2,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-12px" ],
           "offset": [ 6, 6 ],
           "ttsSectionContainer": true
@@ -7282,10 +7080,6 @@
     "$scroll_tab_content": "play.server_scroll_content"
   },
 
-  //---------------------------------------------------------------------------
-  // Content layout panels
-  //---------------------------------------------------------------------------
-
   "common_tab_content_panel_type": {
     "type": "input_panel",
     "anchor_to": "bottom_middle",
@@ -7315,10 +7109,6 @@
       { "server_tab_content_panel@play.server_tab_content_panel": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Tabs layout panels
-  //---------------------------------------------------------------------------
 
   "tab_navigation_panel_layout": {
     "type": "stack_panel",
@@ -7417,17 +7207,12 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Trial, EDU and Default
-  //---------------------------------------------------------------------------
-
   "common_play_screen_panel": {
     "type": "panel",
     "size": "$play_screen_size"
   },
 
   "play_screen_panel@play.common_play_screen_panel": {
-    // If in edu quickplay is above create new so adjust focus override accordingly
     "variables": [
       {
         "requires": "$education_edition",
@@ -7509,10 +7294,6 @@
     "$tab_content_panel": "play.edu_tab_content_panel_layout"
   },
 
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
-
   "play_screen@common.base_screen": {
     "button_mappings": [
       {
@@ -7554,9 +7335,7 @@
       }
     ],
     "controls": [
-      {
-        "main_control@$main_panel": {}
-      },
+      { "main_control@$main_panel": {} },
       {
         "editor_text_panel@play.editor_text_panel": {
           "visible": "$is_editor_mode_enabled"
@@ -7574,9 +7353,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Join By Code Dialog Popup
-  //--------------------------------------------------------------------------------
   "popup_dialog_join_by_code@popup_dialog.modal_input_panel": {
     "size": [ "100%", "100%" ],
     "controls": [
@@ -7638,7 +7414,6 @@
             { "join_by_code_popup_dialog_lower_body@play.join_by_code_popup_dialog_lower_body": {} }
           ]
         }
-
       }
     ]
   },
@@ -7747,7 +7522,6 @@
         "mapping_type": "focused"
       }
     ]
-
   },
 
   "join_by_code_popup_help_text": {
@@ -7767,10 +7541,7 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
-      {
-        "info_text@play.join_by_code_popup_help_text": {
-        }
-      }
+      { "info_text@play.join_by_code_popup_help_text": {} }
     ]
   },
 
@@ -7781,11 +7552,10 @@
     "anchor_to": "top_left",
     "layer": 1,
     "controls": [
-      {
-        "default@play.lower_body_default_content": {}
-      }
+      { "default@play.lower_body_default_content": {} }
     ]
   },
+
   "open_account_setting_button@common_buttons.hyperlink_button": {
     "$button_text": "permissions.open.account.help.button",
     "property_bag": {
@@ -7800,10 +7570,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // High Ping Warning Dialog Popup
-  //---------------------------------------------------------------------------
 
   "popup_dialog_high_ping@popup_dialog.modal_input_panel": {
     "size": [ "100%", "100%" ],
@@ -7838,15 +7604,14 @@
     "$child_control": "play.high_ping_popup_content_stack_panel",
     "controls": [
       {
-        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_2" }
+        "common_panel@common.common_panel": {
+          "$dialog_background": "dialog_background_hollow_2"
+        }
       },
-      {
-        "title_label@common_dialogs.title_label": {}
-      },
+      { "title_label@common_dialogs.title_label": {} },
       {
         "panel_indent": {
           "type": "panel",
-          // Fit to the hole in dialog_background_hollow_1 exactly
           "size": [ "100% - 16px", "100% - 99px" ],
           "offset": [ 0, 35 ],
           "anchor_from": "top_middle",
@@ -8009,10 +7774,6 @@
     "$button_text": "gui.cancel"
   },
 
-  //---------------------------------------------------------------------------
-  // Editor Mode
-  //---------------------------------------------------------------------------
-
   "copyright": {
     "type": "label",
     "color": "$main_header_text_color",
@@ -8063,17 +7824,13 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "controls": [
-      {
-        "copyright@play.copyright": {}
-      },
+      { "copyright@play.copyright": {} },
       {
         "development_version@play.development_version": {
           "ignored": "$is_publish"
         }
       },
-      {
-        "version@play.version": {}
-      }
+      { "version@play.version": {} }
     ]
   },
 
@@ -8105,9 +7862,7 @@
     "size": [ "100%", "100%c" ],
     "$focus_id": "left_panel",
     "controls": [
-      {
-        "more_servers_panel@play.manually_added_servers_scrolling_content": {}
-      }
+      { "more_servers_panel@play.manually_added_servers_scrolling_content": {} }
     ]
   },
 

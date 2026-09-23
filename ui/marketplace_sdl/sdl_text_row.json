@@ -13,7 +13,6 @@
     "$sdl_label_max_size": [ "100%", "default" ],
     "$sdl_label_alignment": "#text_alignment",
     "$sdl_label_binding_type": "collection",
-
     "$sdl_factory_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -26,7 +25,6 @@
         "binding_name_override": "#collection_length"
       }
     ],
-
     "$sdl_label_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -76,7 +74,6 @@
     "$sdl_label_font_type": "#header_label_font_type",
     "$sdl_label_font_scalar": "#header_label_font_scale",
     "$sdl_label_alignment": "#header_label_alignment",
-
     "$sdl_factory_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -90,8 +87,6 @@
         "binding_name_override": "#collection_length"
       }
     ],
-
-    // If we don't define this here it can be overwritten from above us in the visual tree
     "$sdl_label_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -317,9 +312,7 @@
                 ]
               }
             },
-            {
-              "text_row_text_panel@sdl_text_row.sdl_text_row_component_panel": {}
-            }
+            { "text_row_text_panel@sdl_text_row.sdl_text_row_component_panel": {} }
           ]
         }
       },

@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                     *
-+*   (c) Microsoft. All rights reserved.                 *
-+*********************************************************/
-
 {
   "namespace": "structure_editor",
 
@@ -501,9 +496,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "remove_blocks@structure_editor.remove_blocks_panel": {}
-      }
+      { "remove_blocks@structure_editor.remove_blocks_panel": {} }
     ]
   },
 
@@ -518,9 +511,7 @@
       }
     ],
     "controls": [
-      {
-        "structure_name@structure_editor.structure_name_wrapper": {}
-      },
+      { "structure_name@structure_editor.structure_name_wrapper": {} },
       {
         "size_offset_panel": {
           "type": "stack_panel",
@@ -557,36 +548,28 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "detect@structure_editor.detect_button_wrapper": {}
-      },
+      { "detect@structure_editor.detect_button_wrapper": {} },
       {
         "include_entities_offset": {
           "type": "panel",
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "include_entities@structure_editor.include_entities_panel": {}
-      },
+      { "include_entities@structure_editor.include_entities_panel": {} },
       {
         "remove_blocks_offset": {
           "type": "panel",
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "remove_blocks@structure_editor.remove_blocks_panel": {}
-      },
+      { "remove_blocks@structure_editor.remove_blocks_panel": {} },
       {
         "redstone_save_offset": {
           "type": "panel",
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "redstone_save_mode@structure_editor.redstone_save_mode_panel": {}
-      },
+      { "redstone_save_mode@structure_editor.redstone_save_mode_panel": {} },
       {
         "trailing_offset": {
           "type": "panel",
@@ -600,7 +583,6 @@
     "type": "stack_panel",
     "size": [ "100%c", 10 ],
     "orientation": "horizontal",
-
     "controls": [
       {
         "label": {
@@ -666,9 +648,7 @@
       }
     ],
     "controls": [
-      {
-        "structure_name@structure_editor.structure_name_wrapper": {}
-      },
+      { "structure_name@structure_editor.structure_name_wrapper": {} },
       {
         "offset_panel@structure_editor.grid_axis_selection_panel": {
           "size": [ "100%", "100%c" ],
@@ -686,27 +666,21 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "include_entities@structure_editor.include_entities_panel": {}
-      },
+      { "include_entities@structure_editor.include_entities_panel": {} },
       {
         "remove_blocks_offset": {
           "type": "panel",
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "waterlog_blocks@structure_editor.waterlogging_panel": {}
-      },
+      { "waterlog_blocks@structure_editor.waterlogging_panel": {} },
       {
         "waterlog_blocks_offset": {
           "type": "panel",
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "remove_blocks@structure_editor.remove_blocks_panel": {}
-      },
+      { "remove_blocks@structure_editor.remove_blocks_panel": {} },
       {
         "integrity_offset": {
           "type": "panel",
@@ -805,9 +779,7 @@
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "animation_mode@structure_editor.animation_mode_dropdown": {}
-      },
+      { "animation_mode@structure_editor.animation_mode_dropdown": {} },
       {
         "animation_time_label": {
           "type": "label",
@@ -889,9 +861,7 @@
       }
     ],
     "controls": [
-      {
-        "structure_name@structure_editor.structure_name_wrapper": {}
-      }
+      { "structure_name@structure_editor.structure_name_wrapper": {} }
     ]
   },
 
@@ -1181,7 +1151,6 @@
     ]
   },
 
-
   "data_button_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -1451,7 +1420,6 @@
         }
       },
       {
-
         "structure_corner_mode@settings_common.radio_with_label": {
           "$toggle_state_binding_name": "#structure_corner_mode",
           "$radio_label_text": "structure_block.mode.corner"
@@ -1516,9 +1484,7 @@
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "mode_panel@structure_editor.mode_panel": {}
-            },
+            { "mode_panel@structure_editor.mode_panel": {} },
             {
               "mode_panel_offset": {
                 "type": "panel",
@@ -1530,32 +1496,21 @@
                 "ignored": "(not $3DExport_support)"
               }
             },
-            {
-              "save_mode_panel@structure_editor.save_mode_panel": {
-              }
-            },
-            {
-              "load_mode_panel@structure_editor.load_mode_panel": {
-              }
-            },
+            { "save_mode_panel@structure_editor.save_mode_panel": {} },
+            { "load_mode_panel@structure_editor.load_mode_panel": {} },
             {
               "data_mode_panel@structure_editor.data_mode_panel": {
                 "ignored": "(not $data_support)"
               }
             },
-            {
-              "corner_mode_panel@structure_editor.corner_mode_panel": {
-              }
-            },
+            { "corner_mode_panel@structure_editor.corner_mode_panel": {} },
             {
               "base_mode_offset": {
                 "type": "panel",
                 "size": [ "100%", 2 ]
               }
             },
-            {
-              "show_bounding_box@structure_editor.show_bounding_box_panel": {}
-            },
+            { "show_bounding_box@structure_editor.show_bounding_box_panel": {} },
             {
               "show_bounding_box_offset": {
                 "type": "panel",
@@ -1577,9 +1532,7 @@
   "left_divider_content": {
     "type": "panel",
     "controls": [
-      {
-        "scrolling_panel@structure_editor.scrolling_panel_wrapper": {}
-      }
+      { "scrolling_panel@structure_editor.scrolling_panel_wrapper": {} }
     ]
   },
 
@@ -1711,7 +1664,6 @@
         "export_disabled@structure_editor.export_disabled_label": {
           "size": [ "100% - 20px", 30 ],
           "offset": [ 10, -10 ]
-
         }
       }
     ]
@@ -2005,11 +1957,8 @@
           "type": "panel",
           "size": [ "100% - 6px", "46px" ],
           "controls": [
-            {
-              "buttons@structure_editor.button_panel_wrapper": {}
-            }
+            { "buttons@structure_editor.button_panel_wrapper": {} }
           ]
-
         }
       }
     ]
@@ -2024,7 +1973,6 @@
           "offset": [ 8, 23 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
-
         }
       },
       {
@@ -2033,7 +1981,6 @@
           "offset": [ "170px", 23 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
-
         }
       }
     ]

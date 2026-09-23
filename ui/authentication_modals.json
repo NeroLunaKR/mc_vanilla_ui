@@ -72,7 +72,6 @@
     "$fill_alpha": 1,
     "anchor_to": "center",
     "anchor_from": "center",
-    // Size to account for centering offset to fit content. 8 is border size, 22 is header size
     "size": [ "100%cm + 8px + 8px", "100%cm + 22px + 8px" ],
     "controls": [
       {
@@ -107,7 +106,6 @@
           "alpha": 0.85,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // Offset to fit content withing hollow_3 borders
           "offset": [ 8, 22 ],
           "$dialog_content|default": "common.empty_panel",
           "controls": [
@@ -129,7 +127,6 @@
     "$dialog_title_text_binding_condition": "once",
     "$dialog_title_text_binding_type": "global",
     "$dialog_content": "authentication_modals.modal_dialog_content",
-    // Mappings from base plus cancel
     "button_mappings": [
       {
         "from_button_id": "button.menu_up",

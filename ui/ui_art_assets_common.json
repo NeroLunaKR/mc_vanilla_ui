@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "common_art",
 
@@ -97,7 +92,7 @@
       {
         "banner_control": {
           "type": "panel",
-          "ignored": true, // commit 9038293a5d684e150321d46fee14e6beb0043c42 to bring it back
+          "ignored": true,
           "controls": [
             {
               "banner": {
@@ -191,9 +186,7 @@
       }
     ],
     "controls": [
-      {
-        "$title_panel@$title_panel": {}
-      }
+      { "$title_panel@$title_panel": {} }
     ]
   },
 
@@ -225,9 +218,7 @@
       }
     ],
     "controls": [
-      {
-        "$title_panel@$title_panel": {}
-      }
+      { "$title_panel@$title_panel": {} }
     ]
   },
 
@@ -270,5 +261,4 @@
       }
     ]
   }
-
 }

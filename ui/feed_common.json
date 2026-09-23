@@ -1,10 +1,6 @@
 {
   "namespace": "feed_common",
 
-  //--------------------------------------------------------------------------------
-  // Renderers
-  //--------------------------------------------------------------------------------
-
   "top_bar_gradient": {
     "type": "custom",
     "renderer": "gradient_renderer",
@@ -12,9 +8,6 @@
     "color2": "$transparent_dark_gradient_end_color"
   },
 
-  //--------------------------------------------------------------------------------
-  // Common labels
-  //--------------------------------------------------------------------------------
   "label": {
     "type": "label",
     "color": "$feed_text_color"
@@ -25,7 +18,6 @@
     "font_type": "smooth",
     "text_alignment": "center"
   },
-
 
   "share_label@feed_common.smooth_label": {
     "text": "feed.share",
@@ -43,7 +35,6 @@
     "alpha": 0.5,
     "offset": [ 0, 10 ]
   },
-
 
   "feed_label@feed_common.label": {
     "size": [ "80%", "default" ],
@@ -134,10 +125,6 @@
     "anchor_from": "center",
     "anchor_to": "center"
   },
-
-  //--------------------------------------------------------------------------------
-  // Common Buttons
-  //--------------------------------------------------------------------------------
 
   "feed_button@common_buttons.light_content_button": {
     "anchor_from": "bottom_right",
@@ -232,9 +219,7 @@
                 "size": [ 0, 4 ]
               }
             },
-            {
-              "prevlab@feed_common.prev_label": {}
-            }
+            { "prevlab@feed_common.prev_label": {} }
           ]
         }
       }
@@ -250,10 +235,8 @@
     "$button_content": "feed_common.next_label",
     "$default_content_alpha": 1,
     "$default_button_alpha": 0.3,
-
     "$hover_button_texture": "textures/ui/imagetaggedcornergreenhover",
     "$pressed_button_texture": "textures/ui/imagetaggedcornergreenpressed",
-
     "$is_next_visible|default": "#visible",
     "bindings": [
       {
@@ -285,9 +268,7 @@
                 "size": [ 0, 4 ]
               }
             },
-            {
-              "nextlab@feed_common.next_label": {}
-            }
+            { "nextlab@feed_common.next_label": {} }
           ]
         }
       },
@@ -396,10 +377,6 @@
     "$hover_button_texture": "textures/ui/imagetaggedcornergreenhover",
     "$pressed_button_texture": "textures/ui/imagetaggedcornergreenpressed"
   },
-
-  //--------------------------------------------------------------------------------
-  // Common Controls
-  //--------------------------------------------------------------------------------
 
   "spacing_gap": {
     "type": "panel",
@@ -537,19 +514,9 @@
     "$next_button_name|default": "",
     "$prev_button_name|default": "",
     "controls": [
-      {
-        "prev_button@feed_common.prev_button": {
-        }
-      },
-      {
-        "page_text@feed_common.page_text": {
-
-        }
-      },
-      {
-        "next_button@feed_common.next_button": {
-        }
-      }
+      { "prev_button@feed_common.prev_button": {} },
+      { "page_text@feed_common.page_text": {} },
+      { "next_button@feed_common.next_button": {} }
     ]
   },
 
@@ -559,18 +526,9 @@
     "anchor_to": "top_left",
     "size": [ "100%", 30 ],
     "controls": [
-      {
-        "prev_panel@feed_common.prev_panel": {
-        }
-      },
-      {
-        "page_text@feed_common.page_text": {
-        }
-      },
-      {
-        "next_panel@feed_common.next_panel": {
-        }
-      }
+      { "prev_panel@feed_common.prev_panel": {} },
+      { "page_text@feed_common.page_text": {} },
+      { "next_panel@feed_common.next_panel": {} }
     ]
   },
 
@@ -674,7 +632,7 @@
     "type": "image",
     "texture": "textures/ui/control",
     "size": [ "100%", "100%" ],
-    "alpha": 0.80
+    "alpha": 0.8
   },
 
   "black_arrow": {

@@ -1,10 +1,6 @@
 {
   "namespace": "create_world_upsell",
 
-  //---------------------------------------------------------------------------
-  // Images
-  //---------------------------------------------------------------------------
-
   "world_icon": {
     "type": "image",
     "texture": "textures/ui/worldsIcon",
@@ -46,10 +42,6 @@
     "texture": "textures/ui/realms_art_icon",
     "size": [ 647, 760 ]
   },
-
-  //---------------------------------------------------------------------------
-  // Buttons
-  //---------------------------------------------------------------------------
 
   "new_world_button@common_buttons.light_content_button": {
     "size": [ "100% - 4px", 28 ],
@@ -93,7 +85,7 @@
           "type": "panel",
           "size": [ "100%c", "100%" ],
           "controls": [
-            { "$button_icon@$button_icon": { } }
+            { "$button_icon@$button_icon": {} }
           ]
         }
       },
@@ -108,7 +100,7 @@
           "type": "panel",
           "size": [ "fill", "100%" ],
           "controls": [
-            { "$button_label_panel@$button_label_panel": { } }
+            { "$button_label_panel@$button_label_panel": {} }
           ]
         }
       }
@@ -127,16 +119,12 @@
 
   "realms_button_text_panel": {
     "type": "stack_panel",
-    "size": [ "100%", "100%c" ],    
+    "size": [ "100%", "100%c" ],
     "controls": [
-      { "new_realm_label@create_world_upsell.new_realm_label": { } },
-      { "new_realm_trial_label@create_world_upsell.new_realm_trial_label": { } }
+      { "new_realm_label@create_world_upsell.new_realm_label": {} },
+      { "new_realm_trial_label@create_world_upsell.new_realm_trial_label": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Labels
-  //---------------------------------------------------------------------------
 
   "price_label": {
     "type": "label",
@@ -192,10 +180,6 @@
     "color": "$text_color"
   },
 
-  //---------------------------------------------------------------------------
-  // Panels
-  //---------------------------------------------------------------------------
-
   "button_and_price_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%c + 2px" ],
@@ -222,19 +206,16 @@
           ]
         }
       },
-      {
-        "$button_control@$button_control": { }
-      }
+      { "$button_control@$button_control": {} }
     ]
   },
-
 
   "border_shell@common.focus_border_white": {
     "size": [ "100%", "100%" ],
     "color": [ 0, 0, 0 ],
     "$panel_content|default": "common.empty_panel",
     "controls": [
-      { "$panel_content@$panel_content": { } }
+      { "$panel_content@$panel_content": {} }
     ]
   },
 
@@ -452,12 +433,10 @@
       {
         "padding": {
           "type": "panel",
-          "size": [ 2, 0 ] // Y size not specified so as to not affect parent sizing based on children
+          "size": [ 2, 0 ]
         }
       },
-      {
-        "realm_content@create_world_upsell.realm_content": { }
-      }
+      { "realm_content@create_world_upsell.realm_content": {} }
     ]
   },
 
@@ -494,10 +473,6 @@
           ]
         }
       },
-      // The image is overdrawing it's size by a pixel
-      // Believe this to be from some kind of floating point rounding problem, this padding is a hack to workaround
-      // the shortened space between controls
-      // Bug# 40571 tracking this issue
       {
         "padding_hack": {
           "type": "panel",
@@ -565,10 +540,6 @@
     "$panel_content": "create_world_upsell.create_new_realm_content"
   },
 
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
-
   "create_world_upsell@common.base_screen": {
     "button_mappings": [
       {
@@ -629,5 +600,4 @@
     "$text_name": "createWorldUpsell.title.realm",
     "$child_control": "create_world_upsell.new_realm_content_panel"
   }
-
 }

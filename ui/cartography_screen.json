@@ -1,7 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
 {
   "namespace": "cartography",
 
@@ -24,13 +20,12 @@
   },
 
   "text_edit_control@common.text_edit_box": {
-    "anchor_from": "top_left", // the parent
-    "anchor_to": "top_left", // this control
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "size": [ "default", 20 ],
     "max_length": 30,
     "$place_holder_text": "#text_box_placeholder_name",
     "$text_edit_box_placeholder_content_binding_name": "#text_box_placeholder_name",
-
     "$text_edit_box_label_size": [ "default", 10 ]
   },
 
@@ -172,10 +167,7 @@
           "color": "$title_text_color"
         }
       },
-      {
-        "text_edit_control@cartography.text_edit_control": {
-        }
-      }
+      { "text_edit_control@cartography.text_edit_control": {} }
     ]
   },
 
@@ -189,13 +181,10 @@
           "anchor_to": "top_middle",
           "offset": [ 0, 1 ],
           "$item_collection_name": "cartography_input_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "cartography_input",
-
           "$focus_override_down_binding_type": "none",
           "$focus_override_down": "cartography_additional",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "cartography_result"
         }
@@ -205,9 +194,7 @@
           "type": "panel",
           "size": [ "100%", "100%c + 8px" ],
           "controls": [
-            {
-              "plus_sign_icon@cartography.plus_sign_icon": {}
-            }
+            { "plus_sign_icon@cartography.plus_sign_icon": {} }
           ]
         }
       },
@@ -217,13 +204,10 @@
           "anchor_to": "bottom_middle",
           "offset": [ 0, -1 ],
           "$item_collection_name": "cartography_additional_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "cartography_additional",
-
           "$focus_override_up_binding_type": "none",
           "$focus_override_up": "cartography_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "cartography_result"
         }
@@ -239,7 +223,6 @@
     "size": [ "100%", 10 ],
     "text_alignment": "center",
     "color": "$title_text_color",
-
     "bindings": [
       {
         "binding_name": "#output_description",
@@ -286,13 +269,10 @@
           "anchor_to": "right_middle",
           "$item_collection_name": "cartography_result_items",
           "$button_ref": "cartography.cartography_output_slot_button",
-
           "size": [ 26, 26 ],
           "$cell_image_size": [ 26, 26 ],
-
           "$focus_id_binding_type": "none",
           "$focus_id": "cartography_result",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "cartography_additional"
         }
@@ -317,10 +297,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "title_label@cartography.title_label": {
-              }
-            }
+            { "title_label@cartography.title_label": {} }
           ]
         }
       },
@@ -330,10 +307,7 @@
           "size": [ "100%", 4 ]
         }
       },
-      {
-        "text_box_panel@cartography.text_box_panel": {
-        }
-      },
+      { "text_box_panel@cartography.text_box_panel": {} },
       {
         "padding3": {
           "type": "panel",
@@ -351,9 +325,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "main_panel@cartography.main_panel": {}
-            }
+            { "main_panel@cartography.main_panel": {} }
           ]
         }
       },
@@ -406,7 +378,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   },
 

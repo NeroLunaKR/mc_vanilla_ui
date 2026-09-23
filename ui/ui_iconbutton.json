@@ -10,7 +10,7 @@
   "button@common_buttons.light_content_button": {
     "size": [ "100%", "100%c" ],
     "$button_state_panel|default": "common_buttons.new_ui_height_fitting_button_panel",
-    "$anchor": "top_left", // Cannot override this or will cause unsolvable layout!
+    "$anchor": "top_left",
     "$button_offset|default": [ 3, 1 ],
     "$button_pressed_offset|default": [ 3, 2 ],
     "$button_type_panel": "common_buttons.height_fitting_button_content_panel",
@@ -33,9 +33,7 @@
                 "size": [ 18, 18 ],
                 "offset": [ -3, -2 ],
                 "controls": [
-                  {
-                    "iconbutton_animated_icon@iconbutton.iconbutton_animated_icon": {}
-                  },
+                  { "iconbutton_animated_icon@iconbutton.iconbutton_animated_icon": {} },
                   {
                     "border_black@common.focus_border_black": {
                       "layer": 3,
@@ -80,5 +78,4 @@
       }
     ]
   }
-
 }

@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "xbl_console_qr_signin",
 
@@ -17,9 +12,7 @@
     "size": [ "100% - 4px", "50%x - 4px" ],
     "orientation": "horizontal",
     "controls": [
-      {
-        "left_panel@xbl_console_qr_signin.left_panel": {}
-      },
+      { "left_panel@xbl_console_qr_signin.left_panel": {} },
       {
         "divider@common.vertical_divider": {
           "size": [ 8, "100%" ],
@@ -32,16 +25,13 @@
           "type": "stack_panel",
           "size": [ "50% - 6px", "100%" ],
           "orientation": "vertical",
-
           "controls": [
             {
               "scrolling_panel_sizer": {
                 "type": "panel",
                 "size": [ "100%", "fill" ],
                 "controls": [
-                  {
-                    "right_scroll_panel@xbl_console_qr_signin.scroll_content_focus_border": {}
-                  }
+                  { "right_scroll_panel@xbl_console_qr_signin.scroll_content_focus_border": {} }
                 ]
               }
             }
@@ -75,11 +65,6 @@
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
   "xbl_console_qr_signin@common.base_screen": {
     "button_mappings": [
       {
@@ -116,11 +101,6 @@
     "size": [ "100%", "100%" ]
   },
 
-  // -----------------------------------------------
-  //
-  //    panels
-  //
-  // -----------------------------------------------
   "left_panel": {
     "type": "stack_panel",
     "size": [ "50% - 6px", "100%" ],
@@ -213,9 +193,7 @@
     "focus_enabled": true,
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "r_scroll_panel@xbl_console_qr_signin.right_scroll_panel": {}
-      }
+      { "r_scroll_panel@xbl_console_qr_signin.right_scroll_panel": {} }
     ]
   },
 
@@ -388,9 +366,7 @@
           "size": [ "100%", 18 ]
         }
       },
-      {
-        "warning_messages@xbl_console_qr_signin.ps4_warning_message_panel": {}
-      }
+      { "warning_messages@xbl_console_qr_signin.ps4_warning_message_panel": {} }
     ]
   },
 

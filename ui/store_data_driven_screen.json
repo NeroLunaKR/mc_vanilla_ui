@@ -1,10 +1,6 @@
 {
   "namespace": "store_layout",
 
-  //--------------------------------------------------------------------------------
-  // Content
-  //--------------------------------------------------------------------------------
-
   "sdl_scrolling_content_panel": {
     "type": "panel",
     "$is_non_scrollable_sdl_screen|default": false,
@@ -17,16 +13,13 @@
     ],
     "size": "$sdl_scrolling_content_panel_size",
     "controls": [
-      {
-        "sdl_scrolling_content_stack@store_layout.sdl_scrolling_content_stack": {}
-      }
+      { "sdl_scrolling_content_stack@store_layout.sdl_scrolling_content_stack": {} }
     ]
   },
 
   "sdl_scrolling_content_stack@common.vertical_stack_panel": {
     "focus_container": true,
     "use_last_focus": true,
-
     "$is_non_scrollable_sdl_screen|default": false,
     "$sdl_scrolling_content_stack_size": [ "100%", "100%c" ],
     "$sdl_scrolling_content_max_size": [ "100%", "100%c" ],
@@ -42,12 +35,10 @@
         "$sdl_scrolling_content_anchor_to": "top_middle"
       }
     ],
-
     "size": "$sdl_scrolling_content_stack_size",
     "max_size": "$sdl_scrolling_content_max_size",
     "anchor_from": "$sdl_scrolling_content_anchor_from",
     "anchor_to": "$sdl_scrolling_content_anchor_to",
-
     "offset": [ 0, 0 ],
     "controls": [
       {
@@ -61,7 +52,6 @@
     ]
   },
 
-
   "sdl_scrolling_section_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%" ],
@@ -74,7 +64,7 @@
       },
       {
         "top_static_sdl_section@common_store.store_static_section_factory": {
-            "$store_static_factory_collection_bind": "#sdl_top_static_section_content"
+          "$store_static_factory_collection_bind": "#sdl_top_static_section_content"
         }
       },
       {
@@ -84,7 +74,9 @@
         }
       },
       {
-        "sdl_scrolling_section@store_layout.sdl_scrolling_section": { "size": [ "100%", "fill" ] }
+        "sdl_scrolling_section@store_layout.sdl_scrolling_section": {
+          "size": [ "100%", "fill" ]
+        }
       }
     ]
   },
@@ -128,7 +120,9 @@
     "$section_name": "rows",
     "controls": [
       {
-        "sdl_section@persona_sdl.dialog_background_object": { "size": [ "100%", "100% - 4px" ] }
+        "sdl_section@persona_sdl.dialog_background_object": {
+          "size": [ "100%", "100% - 4px" ]
+        }
       }
     ],
     "focus_container": true,
@@ -163,22 +157,20 @@
     "size": [ "100%", "100%" ],
     "$allows_sdl_section_focus_container": false,
     "$left_focus_container_override": "character_creator_sdl_portion",
-
     "$skin_model_anims": [
       "@common.screen_exit_size_animation_push",
       "@common.screen_exit_size_animation_pop",
       "@persona_sdl.enter_screen_appearance_size_animation"
     ],
-
     "$character_creator_right_side_content|default": "#sdl_right_section_content",
-
     "controls": [
       { "left_main_panel_padding@persona_sdl.horizontal_2_padding": {} },
       { "character_creator_sdl_portion@store_layout.character_creator_sdl_section": {} },
       { "middle_main_panel_padding@persona_sdl.horizontal_1_padding": {} },
-      { "right_main_panel@common_store.store_static_section_factory": {
-            "size": [ "fill", "100%" ],
-            "$store_static_factory_collection_bind": "$character_creator_right_side_content"
+      {
+        "right_main_panel@common_store.store_static_section_factory": {
+          "size": [ "fill", "100%" ],
+          "$store_static_factory_collection_bind": "$character_creator_right_side_content"
         }
       },
       { "right_main_panel_padding@persona_sdl.horizontal_2_padding": {} }
@@ -229,24 +221,22 @@
           ],
           "controls": [
             {
-              "nav_panel":
-              {
+              "nav_panel": {
                 "type": "panel",
-                "size": [ "30%", "100%" ], // Copying the inventory page layout
+                "size": [ "30%", "100%" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "controls": [
                   {
-                    "sdl_screen_content@$sdl_nav_content":
-                    {
+                    "sdl_screen_content@$sdl_nav_content": {
                       "$factory_type": "sdl_content_navigation.content_navigation_factory"
                     }
                   }
                 ],
                 "property_bag": {
-                  "#section_name": "navigation" // Needed for the has_navigation binding.
+                  "#section_name": "navigation"
                 },
-               "bindings": [
+                "bindings": [
                   {
                     "binding_name": "#has_navigation",
                     "binding_name_override": "#visible",
@@ -256,16 +246,13 @@
               }
             },
             {
-              "main_panel_because_screen_content_is_a_whiny_baby_and_cant_use_fill":
-              {
+              "main_panel_because_screen_content_is_a_whiny_baby_and_cant_use_fill": {
                 "type": "panel",
                 "size": [ "fill", "100%" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "controls": [
-                  {
-                    "sdl_screen_content@$sdl_screen_content": {}
-                  }
+                  { "sdl_screen_content@$sdl_screen_content": {} }
                 ]
               }
             }
@@ -274,7 +261,7 @@
       },
       {
         "progress_loading@common_store.progress_loading": {
-          "layer": 100, // Make this on top
+          "layer": 100,
           "$store_failure_text": "#store_failure_text",
           "$store_failure_text_binding_type": "global",
           "bindings": [
@@ -293,25 +280,18 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%", "100%" ],
-
     "$nav_button_binding_type|default": "global",
     "$nav_button_collection_name|default": "",
     "$nav_button_label_type|default": "store_layout.default_nav_label_panel",
-
     "controls": [
+      { "image_panel@store_layout.nav_image_panel": {} },
       {
-        "image_panel@store_layout.nav_image_panel": {}
-      },
-      {
-        "small_padding":
-        {
+        "small_padding": {
           "type": "panel",
           "size": [ "2px", "100%" ]
         }
       },
-      {
-        "label_panel@$nav_button_label_type": {}
-      }
+      { "label_panel@$nav_button_label_type": {} }
     ]
   },
 
@@ -347,9 +327,7 @@
     "type": "panel",
     "size": [ "fill", "100%" ],
     "controls": [
-      {
-        "button_text_label@store_layout.default_styled_button_text_label": {}
-      }
+      { "button_text_label@store_layout.default_styled_button_text_label": {} }
     ]
   },
 
@@ -359,14 +337,13 @@
     "controls": [
       {
         "button_text_label@store_layout.default_styled_button_text_label": {
-          //For handling of MinecraftTen font for less powerful devices. see minecraftTenLabel as reference.
-          "font_type": "MinecraftTen", //directly assigned here, not more font_type binding
+          "font_type": "MinecraftTen",
           "backup_font_type": "UIFont",
           "variables": [
             {
-              "requires": "(not $is_low_memory_device)", // We don't load MinecraftTen in these cases so we need to revert to Mojangles.
+              "requires": "(not $is_low_memory_device)",
               "$button_font_scale_factor": 1.39,
-              "$new_ui_label_offset": [ 0, -2 ] // Because of how the font is rendered it looks like it is offset down from the center of the render area
+              "$new_ui_label_offset": [ 0, -2 ]
             }
           ]
         }
@@ -427,7 +404,7 @@
             {
               "binding_type": "$nav_button_binding_type",
               "binding_collection_name": "$nav_button_collection_name",
-              "binding_name": "(#nav_button_animation = '')", // static image is visible if no animation is available
+              "binding_name": "(#nav_button_animation = '')",
               "binding_name_override": "#visible"
             }
           ]
@@ -446,7 +423,7 @@
             {
               "binding_type": "$nav_button_binding_type",
               "binding_collection_name": "$nav_button_collection_name",
-              "binding_name": "(not (#nav_button_animation = ''))", // animation is visibile if service response contains animation field
+              "binding_name": "(not (#nav_button_animation = ''))",
               "binding_name_override": "#visible"
             }
           ]
@@ -579,16 +556,12 @@
           "orientation": "horizontal",
           "$nav_button_grid_size|default": [ "100% - 6px", 30 ],
           "size": "$nav_button_grid_size",
-
           "clip_state_change_event": "$store_factory_clipping_event",
           "$nav_button_event_name|default": "button.nav_button",
-
           "$nav_button_binding_type": "collection",
           "$nav_button_collection_name|default": "nav_button_collection",
           "collection_name": "$nav_button_collection_name",
-
           "$section_content|default": "#nav_section_content",
-
           "factory": {
             "name": "nav_button_factory",
             "control_ids": {
@@ -599,15 +572,7 @@
               "nav_button_fill_styled": "@store_layout.nav_button_fill_styled",
               "nav_button_fill_styled_mc10": "@store_layout.nav_button_fill_styled_mc10"
             },
-            "factory_variables": [
-              "$nav_button_collection_name",
-              "$nav_button_binding_type",
-              "$store_factory_collection_details",
-              "$store_factory_collection_prefix",
-              "$store_factory_collection_name",
-              "$nav_button_event_name",
-              "$section_name"
-            ]
+            "factory_variables": [ "$nav_button_collection_name", "$nav_button_binding_type", "$store_factory_collection_details", "$store_factory_collection_prefix", "$store_factory_collection_name", "$nav_button_event_name", "$section_name" ]
           },
           "bindings": [
             {
@@ -627,13 +592,9 @@
 
   "store_layout_ribbon_search_button@common_buttons.light_content_button": {
     "size": [ 30, "100%" ],
-
-    // focus vars
     "$focus_id": "skin_pack_category_button",
     "$focus_override_up": "feature_key_art_id",
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-
-    // button
     "$button_content": "store_layout.store_layout_ribbon_search_button_content",
     "$image_texture_path": "textures/ui/spyglass_flat",
     "$is_search_screen|default": false,
@@ -676,10 +637,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
-
   "screen_entrance_pop_animation_no_offset": {
     "anim_type": "offset",
     "easing": "out_cubic",
@@ -713,8 +670,7 @@
     "variables": [
       {
         "requires": "(not $use_animation)",
-        "$screen_animations": [
-        ],
+        "$screen_animations": [],
         "$background_animations": []
       },
       {
@@ -779,9 +735,7 @@
           "$scroll_size": [ 5, "100% - 8px" ]
         }
       },
-      {
-        "sort_and_filter_modals@common_store.sort_and_filter_menu_modals": {}
-      }
+      { "sort_and_filter_modals@common_store.sort_and_filter_menu_modals": {} }
     ]
   },
 
@@ -791,21 +745,17 @@
     "propagate_alpha": true,
     "disable_anim_fast_forward": true,
     "$ignore_inventory_button": "$is_sidebar_navigation_enabled",
-
     "$is_inventory_screen|default": false,
     "$ignore_home_button|default": false,
     "$ignore_inventory_button|default": false,
     "$ignore_search|default": false,
     "$store_header_size|default": [ "100%", 23 ],
-    
     "$store_factory_collection_details": "collection_details",
     "$store_factory_binding_type": "collection",
     "$store_factory_collection_prefix": "rows",
     "$store_factory_collection_name": "factory_collection",
-
     "controls": [
       {
-        // This control serves as a focus panel for TTS when entering any SDL page(input mouse only)
         "mouse_input_focus_panel": {
           "type": "input_panel",
           "size": [ "100% - 50px", "100%" ],
@@ -814,7 +764,6 @@
           "tts_skip_message": true,
           "bindings": [
             {
-              // Focus will only be enabled before the SDL page loads and only on mouse input
               "binding_name": "(#is_top_row_button_focus_enabled and #page_loading_visible)",
               "binding_name_override": "#focus_enabled"
             }
@@ -826,18 +775,18 @@
           "type": "stack_panel",
           "size": [ "100%", "100%" ],
           "controls": [
-            { 
+            {
               "top_bar_section@common_store.store_static_section_factory": {
                 "$store_static_factory_collection_bind": "#sdl_top_minecoin_content"
               }
             },
-            { 
+            {
               "main_panel": {
                 "type": "panel",
                 "size": [ "100%", "fill" ],
                 "layer": 2,
                 "controls": [
-                    { "main_panel_content@store_layout.store_screen_main_panel": {} }
+                  { "main_panel_content@store_layout.store_screen_main_panel": {} }
                 ]
               }
             }
@@ -857,15 +806,7 @@
             "restore_failed": "@common_store.popup_dialog__restore_failed",
             "realms_plus_extra_info": "@persona_popups.popup_dialog__realms_plus_extra_info"
           },
-          "factory_variables": [
-            "$store_factory_clipping_event",
-            "$store_factory_collection_details",
-            "$store_factory_binding_type",
-            "$store_factory_collection_prefix",
-            "$store_factory_collection_name",
-            "$store_header_size",
-            "$section_name"
-          ]
+          "factory_variables": [ "$store_factory_clipping_event", "$store_factory_collection_details", "$store_factory_binding_type", "$store_factory_collection_prefix", "$store_factory_collection_name", "$store_header_size", "$section_name" ]
         }
       },
       {
@@ -924,9 +865,6 @@
     ]
   },
 
-  //////////////////////////////////////////////////////
-  //  SDL Screens
-  //////////////////////////////////////////////////////
   "store_data_driven_screen@store_layout.sdl_base_screen": {},
 
   "character_creator_screen@store_layout.character_creator_base_screen": {
@@ -984,5 +922,4 @@
     "force_render_below": true,
     "$requires_restore_button": false
   }
-
 }

@@ -1,10 +1,6 @@
 {
   "namespace": "popup_dialog",
 
-  //--------------------------------------------------------------------------------
-  // Popup Dialog
-  //--------------------------------------------------------------------------------
-
   "popup_dialog_bg": {
     "type": "image",
     "texture": "textures/ui/NormalButtonThin"
@@ -68,10 +64,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Modal Dialog Popup
-  //--------------------------------------------------------------------------------
 
   "modal_background_image": {
     "type": "image",
@@ -168,11 +160,9 @@
     "$toggle_name": "$popup_dialog_checkbox_button_name",
     "$toggle_state_binding_name": "#modal_checkbox_state",
     "$toggle_label_text|default": "#modal_rightcancel_button_text",
-
     "tts_control_type_order_priority": 100,
     "tts_value_order_priority": 101,
     "$toggle_enabled_binding_type": "global",
-
     "controls": [
       {
         "header_description_stack_panel": {
@@ -181,7 +171,6 @@
           "size": [ "100%", "100%" ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-
           "controls": [
             {
               "checkbox_visuals@common.toggle_visuals": {
@@ -356,10 +345,7 @@
     "offset": [ 0, -7 ],
     "controls": [
       { "left@popup_dialog.modal_left_button": {} },
-      {
-        "right@popup_dialog.modal_rightcancel_button": {
-        }
-      }
+      { "right@popup_dialog.modal_rightcancel_button": {} }
     ]
   },
 
@@ -370,14 +356,8 @@
     "size": [ "100%-14px", 64 ],
     "offset": [ 0, -7 ],
     "controls": [
-      {
-        "left@popup_dialog.modal_left_button": {
-        }
-      },
-      {
-        "right@popup_dialog.modal_rightcancel_button": {
-        }
-      }
+      { "left@popup_dialog.modal_left_button": {} },
+      { "right@popup_dialog.modal_rightcancel_button": {} }
     ]
   },
 
@@ -388,7 +368,11 @@
     "size": [ "100%-14px", 30 ],
     "offset": [ 0, -7 ],
     "controls": [
-      { "left@popup_dialog.modal_middle_button": { "size": [ "100%", "100%" ] } }
+      {
+        "left@popup_dialog.modal_middle_button": {
+          "size": [ "100%", "100%" ]
+        }
+      }
     ]
   },
 
@@ -404,8 +388,7 @@
     ]
   },
 
-  "modal_dialog_base": {
-  },
+  "modal_dialog_base": {},
 
   "modal_dialog_with_buttons": {
     "type": "panel",
@@ -420,9 +403,6 @@
         }
       },
       { "title@popup_dialog.modal_title_text": {} },
-      // Replacing dialog_text_wrapper with modal_label_panel until the
-      // dialog text wrapper works with tts on focus
-      // the follow up work item is ADO: 690427
       {
         "text@popup_dialog.modal_label_panel": {
           "anchor_from": "top_middle",
@@ -431,14 +411,7 @@
           "size": "$modal_panel_label_size"
         }
       },
-      /*{
-        "text_with_buttons@popup_dialog.dialog_text_wrapper": {
-          "size": "$modal_panel_label_size"
-        }
-      },*/
-      {
-        "button_panel@$button_panel": {}
-      }
+      { "button_panel@$button_panel": {} }
     ]
   },
 
@@ -614,11 +587,8 @@
   "form_fit_screen_with_title_and_close_and_bottom_buttons@popup_dialog.form_fit_screen_with_title_and_close": {
     "$window_type": "common.dialog_background_hollow_2",
     "$panel_size": [ "100%cm + 16px", "100%c + 23px" ],
-
     "$title_offset": [ 0, 13 ],
-
     "$content_offset": [ 0, 23 ],
-
     "$lower_size": [ "100%sm", 42 ],
     "$lower_contents": "popup_dialog.hollow_2_bottom_button_panel"
   },
@@ -626,11 +596,8 @@
   "form_fit_screen_with_title_and_close_and_two_bottom_buttons@popup_dialog.form_fit_screen_with_title_and_close": {
     "$window_type": "common.dialog_background_hollow_1",
     "$panel_size": [ "100%cm + 16px", "100%c + 40px" ],
-
     "$title_offset": [ 0, 13 ],
-
     "$content_offset": [ 0, 23 ],
-
     "$lower_size": [ "100%sm", 84 ],
     "$lower_contents": "popup_dialog.hollow_1_bottom_buttons_panel"
   },
@@ -640,17 +607,12 @@
     "size": [ "100%cm", "100%cm" ],
     "layer": 1,
     "$no_close_button|default": false,
-
     "$window_type|default": "common.dialog_background_hollow_3",
     "$panel_size|default": [ "100%cm + 16px", "100%c + 31px" ],
-
     "$title_offset|default": [ 0, 13 ],
-
     "$content_offset|default": [ 0, 23 ],
-
     "$lower_size|default": [ "100%sm", 0 ],
     "$lower_contents|default": "common.empty_panel",
-
     "controls": [
       {
         "panel_background@$window_type": {
@@ -748,29 +710,6 @@
     ]
   },
 
-  // form_fit_modal_dialog_popup Variables //
-  //
-  // Required:
-  // $modal_title: The title text
-  // $modal_contents: The contents displayed in the hollow part of the dialog and
-  //                  the control that will determine the size of the popup
-  //
-  // Optional Types:
-  //   Used to define new looks for the popup
-  // $popup_type (default: popup_dialog.form_fit_screen_with_title_and_close)
-  // 1) popup_dialog.form_fit_screen_with_title_and_close
-  //     Only has a title and the contents
-  // 2) popup_dialog.form_fit_screen_with_title_and_close_and_bottom_buttons
-  //     Similar to the default but has space at the bottom for buttons
-  //   Required:
-  //   $lower_button_control: Control containing lower buttons (parent size: [ "100%", 28 ])
-  //
-  // Optional:
-  // $popup_dialog_escape_button_name: The mapping for button.menu_cancel and the close button (default: popup_dialog.escape)
-  // $modal_contents_padding: The padding around the contents
-  // $fill_alpha: The hollow content background alpha
-  // $modal_background: The fullscreen background
-  // $no_close_button: Disable the close button (will need to change $popup_dialog_escape_button_name to prevent closing)
   "form_fit_modal_dialog_popup@popup_dialog.modal_input_panel": {
     "size": [ "100%", "100%" ],
     "$modal_background|default": "common.screen_background",
@@ -780,11 +719,6 @@
       { "content@$popup_type": {} }
     ]
   },
-
-
-  //--------------------------------------------------------------------------------
-  // Progress Dialog Popup
-  //--------------------------------------------------------------------------------
 
   "progress_dialog_popup@popup_dialog.modal_dialog_popup": {
     "type": "input_panel",
@@ -800,13 +734,11 @@
         }
       },
       { "title@popup_dialog.modal_title_text": {} },
-      {
-        "progress_content@popup_dialog.progress_content": {}
-      },
+      { "progress_content@popup_dialog.progress_content": {} },
       {
         "button@popup_dialog.single_button_panel": {
           "$visibility_source_control_name|default": "modal_bg_no_buttons",
-          "bindings": [] //Get rid of default view binding
+          "bindings": []
         }
       }
     ]
@@ -820,14 +752,12 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "orientation": "vertical",
-
     "controls": [
       {
         "progress_titles": {
           "type": "panel",
           "layer": 1,
           "size": [ "100%", 10 ],
-
           "controls": [
             { "current_progress_label@popup_dialog.current_progress_label": {} },
             { "total_progress_label@popup_dialog.total_progress_label": {} }

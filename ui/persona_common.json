@@ -124,17 +124,16 @@
     "$title_binding_type|default": "global",
     "bindings": [
       {
-         "binding_type": "$title_binding_type",
-         "binding_name": "$title_binding"
+        "binding_type": "$title_binding_type",
+        "binding_name": "$title_binding"
       },
       {
-         "binding_type": "$store_factory_collection_details",
-         "binding_collection_name": "$store_factory_collection_name",
-         "binding_collection_prefix": "$store_factory_collection_prefix"
+        "binding_type": "$store_factory_collection_details",
+        "binding_collection_name": "$store_factory_collection_name",
+        "binding_collection_prefix": "$store_factory_collection_prefix"
       }
     ]
   },
-
 
   "generic_title_panel": {
     "type": "image",
@@ -152,21 +151,6 @@
     ]
   },
 
-  /* ============================================================
-  RARITY BAR 
-
-  Requires:
-    - #rarity_bar_texture
-    - #rarity_bar_visible
-    - $persona_piece_binding_type
-    - $persona_piece_collection_name
-
-  Bindings:
-    - #rarity_bar_texture
-        Texture to use for the rarity bar.
-    - #rarity_bar_visible
-        If the bar is visible or not
-  */
   "rarity_bar": {
     "type": "image",
     "size": [ "100%", 3 ],
@@ -194,32 +178,12 @@
     ]
   },
 
-  /* ============================================================
-  RARITY BACKGROUND
-
-  Requires:
-    - #rarity_color
-
-  Variables:
-    - $rarity_color_background_texture
-        Optional override for texture. Defaults to white texture.
-    - $rarity_binding_type
-        The binding type for the `#rarity_color` binding. Defaults to `global`
-    - $rarity_collection_name
-        Optional collection name for the `#rarity_color` binding. Defaults to `none`
-
-  Bindings:
-    - #rarity_color
-        The color to tint the texture with.
-
-  */
   "item_rarity_color_background": {
     "type": "image",
     "$rarity_color_background_texture|default": "textures/ui/White",
     "texture": "$rarity_color_background_texture",
     "$rarity_background_alpha|default": 1,
     "alpha": "$rarity_background_alpha",
-
     "property_bag": {
       "#common": "$rarity_common_bg_color",
       "#uncommon": "$rarity_uncommon_bg_color",
@@ -227,11 +191,9 @@
       "#epic": "$rarity_epic_bg_color",
       "#legendary": "$rarity_legendary_bg_color"
     },
-
     "$rarity_section_collection_details|default": "none",
     "$rarity_section_collection_prefix|default": "",
     "$rarity_section_collection_name|default": "",
-
     "$rarity_binding_type|default": "global",
     "$rarity_collection_name|default": "none",
     "$rarity_background_bindings|default": [
@@ -250,42 +212,6 @@
     "bindings": "$rarity_background_bindings"
   },
 
-
-  /* ============================================================
-  PERSONA ITEM DISPLAY
-
-  Requires:
-    - #rarity_color
-    - #rarity_bar_texture
-    - #rarity_bar_visible
-    - $persona_piece_binding_type
-    - $persona_piece_collection_name
-    
-  Variables:
-    - $item_display_size
-        The size of the control. Default is `[ "100%", "100%" ]`
-    - $is_loading
-        If the item is still loading or not (doesn't have image). Default is `false`
-    - $item_content_control
-        Child control to be placed over the image. (Extra icons, status symbols,
-        ...). Default is empty panel.
-    - $item_texture_file_system_binding_name
-        Binding name for the file system binding. Default is `#thumbnail_texture_file_system`
-    - $item_texture_path_binding_name
-        Binding name for the texture path binding. Default is `#thumbnail_texture_path`
-    - $ignore_background
-        If you want the background or not. Default is `false`
-    - $ignore_rarity_bar
-        If you want the rarity bar or not. Default is `false`
-  
-  Bindings:
-    - #rarity_color
-        The color to tint the texture with.
-    - #rarity_bar_texture
-        Texture to use for the rarity bar.
-    - #rarity_bar_visible
-        If the bar is visible or not
-  */
   "piece_item_display@common.empty_panel": {
     "$item_display_size|default": [ "100%", "100%" ],
     "size": "$item_display_size",
@@ -293,14 +219,11 @@
     "$item_content_control|default": "common.empty_panel",
     "$ignore_background|default": false,
     "$ignore_rarity_bar|default": false,
-
     "$piece_section_collection_details|default": "none",
     "$piece_section_collection_prefix|default": "",
     "$piece_section_collection_name|default": "",
-
     "$item_texture_path_binding_name|default": "#thumbnail_texture_path",
     "$item_texture_file_system_binding_name|default": "#thumbnail_texture_file_system",
-
     "controls": [
       {
         "item_renderer@common.empty_panel": {
@@ -312,7 +235,6 @@
                 "$rarity_color_background_texture": "textures/ui/button_borderless_light",
                 "$rarity_binding_type": "$persona_piece_binding_type",
                 "$rarity_collection_name": "$persona_piece_collection_name",
-
                 "$rarity_section_collection_details": "$piece_section_collection_details",
                 "$rarity_section_collection_prefix": "$piece_section_collection_prefix",
                 "$rarity_section_collection_name": "$piece_section_collection_name"
@@ -381,9 +303,6 @@
     ]
   },
 
-  /*
-  Emote Wheel definitions
-  */
   "wheel_state": {
     "type": "image",
     "layer": 1,
@@ -556,7 +475,6 @@
   "gamepad_hotkey_helpers": {
     "type": "panel",
     "size": [ "100%", "100%" ],
-
     "controls": [
       {
         "quick_select_gamepad_helpers": {
@@ -569,7 +487,6 @@
               "binding_name_override": "#visible"
             }
           ],
-
           "controls": [
             {
               "gamepad_y@common.gamepad_helper_face_up": {
@@ -607,7 +524,11 @@
             }
           ],
           "controls": [
-            { "analog_select_gamepad_helper@common.gamepad_helper_a": { "$icon_description_bind": "emote_wheel.gamepad_helper.select" } }
+            {
+              "analog_select_gamepad_helper@common.gamepad_helper_a": {
+                "$icon_description_bind": "emote_wheel.gamepad_helper.select"
+              }
+            }
           ]
         }
       }
@@ -620,23 +541,10 @@
     ]
   },
 
-  /////////////////////////////////////////////////////////////
-  //
-  // requires:
-  //   - $emote_slot_index : int
-  //   - $emote_slot_name : string
-  //   - $wheel_state_texture : string : texture path
-  //   - $emote_image_offset : vec2
-  //   - $emote_touch_label_offset : vec2
-  //   - $emote_touch_label_ignore : bool
-  //
-  /////////////////////////////////////////////////////////////
   "emote_wheel_slot_content": {
     "type": "panel",
     "controls": [
-      {
-        "$emote_slot_name@persona_common.wheel_state": {}
-      },
+      { "$emote_slot_name@persona_common.wheel_state": {} },
       {
         "image_0@persona_common.emote_image": {
           "size": [ "30%", "30%" ],
@@ -662,18 +570,14 @@
   "selection_wheel": {
     "type": "selection_wheel",
     "size": [ "100%", "100%" ],
-
     "always_handle_controller_direction": true,
-
     "$slice_count|default": 1,
     "$inner_radius|default": 0.0,
     "$outer_radius|default": 1.0,
-
     "$gamepad_bottom_button_name|default": "('button.select_' + $gamepad_bottom_emote_name)",
     "$gamepad_top_button_name|default": "('button.select_' + $gamepad_top_emote_name)",
     "$gamepad_left_button_name|default": "('button.select_' + $gamepad_left_emote_name)",
     "$gamepad_right_button_name|default": "('button.select_' + $gamepad_right_emote_name)",
-
     "$select_button_name|default": "",
     "$hover_button_name|default": "",
     "$analog_button_name|default": "",
@@ -682,30 +586,24 @@
     "slice_count": "$slice_count",
     "inner_radius": "$inner_radius",
     "outer_radius": "$outer_radius",
-
     "focus_enabled": true,
-
     "select_button_name": "$select_button_name",
     "hover_button_name": "$hover_button_name",
     "analog_button_name": "$analog_button_name",
-
     "iterate_left_button_name": "$iterate_left_button_name",
     "iterate_right_button_name": "$iterate_right_button_name",
     "initial_button_slice": 0,
     "$button_focus_precedence|default": 0,
     "default_focus_precedence": "$button_focus_precedence",
-
     "$button_tts_name|default": "",
     "$button_tts_header|default": "",
     "$tts_section_header|default": "",
     "$button_tts_control_type_order_priority|default": 100,
-
     "tts_name": "$button_tts_name",
     "tts_control_header": "$button_tts_header",
     "tts_section_header": "$tts_section_header",
     "tts_control_type_order_priority": "$button_tts_control_type_order_priority",
     "tts_skip_message": true,
-
     "layer": 1,
     "sound_name": "random.click",
     "sound_volume": 1.0,
@@ -771,7 +669,6 @@
     "property_bag": {
       "#hover_slice": 0
     },
-
     "bindings": [
       {
         "binding_name": "#init_selection_wheel_input_mode",
@@ -780,10 +677,6 @@
     ]
   },
 
-  /* ============================================================
-  Emote Wheel Panel
-
-  */
   "emote_selection_wheel@persona_common.selection_wheel": {
     "inner_radius": 0.35,
     "outer_radius": 1.0,
@@ -797,7 +690,6 @@
     "focus_change_left": "FOCUS_OVERRIDE_STOP",
     "focus_change_right": "FOCUS_OVERRIDE_STOP",
     "focus_change_up": "FOCUS_OVERRIDE_STOP",
-
     "controls": [
       {
         "default_state@persona_common.wheel_state": {
@@ -870,12 +762,10 @@
 
   "emote_wheel_panel@common_dialogs.main_panel": {
     "size": [ "100%", "100%" ],
-
     "$gamepad_top_emote_name": "emote_slot_0",
     "$gamepad_right_emote_name": "emote_slot_1",
     "$gamepad_bottom_emote_name": "emote_slot_2",
     "$gamepad_left_emote_name": "emote_slot_3",
-
     "controls": [
       {
         "emote_name@persona_common.emote_label": {
@@ -897,7 +787,6 @@
         "emote_wheel_content_panel": {
           "type": "panel",
           "size": [ "75%", "75%" ],
-
           "controls": [
             { "gamepad_helpers@persona_common.gamepad_hotkey_helpers": {} },
             { "keyboard_helpers@persona_common.keyboard_hotkey_helpers": {} },

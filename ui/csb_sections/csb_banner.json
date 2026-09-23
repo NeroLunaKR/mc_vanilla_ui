@@ -9,7 +9,6 @@
         "static_button@csb_banner.promo_banner_csb_button": {
           "offset": [ "4px", 0 ],
           "ignored": "$is_animated_banner"
-
         }
       },
       {
@@ -176,7 +175,7 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "$logo_panel|default": "csb_banner.slim_logo_panel",
-    "$banner_sdl_label_max_size|default": ["100%", 36],
+    "$banner_sdl_label_max_size|default": [ "100%", 36 ],
     "controls": [
       {
         "text": {
@@ -185,9 +184,7 @@
           "size": [ "100%", "100%" ],
           "layer": 1,
           "controls": [
-            {
-              "logo_panel@$logo_panel": {}
-            },
+            { "logo_panel@$logo_panel": {} },
             {
               "offer_panel": {
                 "type": "panel",
@@ -201,9 +198,7 @@
                 ]
               }
             },
-            {
-              "pixel_art@csb_banner.image_component_factory": {}
-            }
+            { "pixel_art@csb_banner.image_component_factory": {} }
           ]
         }
       }
@@ -221,7 +216,6 @@
     "$sdl_label_font_type": "#maintext_label_font_type",
     "$sdl_label_font_scalar": "#maintext_label_font_scale",
     "$sdl_label_alignment": "#maintext_label_alignment",
-
     "$sdl_factory_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -565,7 +559,6 @@
   "image_component_factory@csb_banner.image_asset_factory": {
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-
     "$image_asset_factory_bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -586,21 +579,14 @@
     "orientation": "horizontal",
     "$image_asset_factory_size|default": [ "100%", "100%" ],
     "size": "$image_asset_factory_size",
-
     "$image_asset_factory_bindings|default": [],
-
     "factory": {
       "name": "image_asset_factory",
       "control_ids": {
         "animated_asset": "@csb_banner.animated_pixel_art_panel",
         "still_asset": "@csb_banner.still_pixel_art_panel"
       },
-      "factory_variables": [
-        "$store_factory_collection_details",
-        "$store_factory_collection_prefix",
-        "$store_factory_collection_name",
-        "$image_asset_factory_size"
-      ]
+      "factory_variables": [ "$store_factory_collection_details", "$store_factory_collection_prefix", "$store_factory_collection_name", "$image_asset_factory_size" ]
     },
     "bindings": "$image_asset_factory_bindings"
   }

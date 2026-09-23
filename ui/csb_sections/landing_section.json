@@ -3,29 +3,17 @@
 
   "landing_content_section@csb.section_base": {
     "controls": [
-      {
-        "free_weekend_panel@csb_landing.free_weekend_panel": {}
-      },
-      {
-        "landing_section_vertical_padding@csb.vertical_padding_4px": {}
-      },
+      { "free_weekend_panel@csb_landing.free_weekend_panel": {} },
+      { "landing_section_vertical_padding@csb.vertical_padding_4px": {} },
       {
         "landing_content": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "title_stack@csb_landing.title_stack": {}
-            },
-            {
-              "vertical_small_spacer_0@csb_landing.vertical_small_spacer": {}
-            },
-            {
-              "vertical_small_spacer_1@csb_landing.vertical_small_spacer": {}
-            },
-            {
-              "info_stack@csb_landing.info_stack": {}
-            },
+            { "title_stack@csb_landing.title_stack": {} },
+            { "vertical_small_spacer_0@csb_landing.vertical_small_spacer": {} },
+            { "vertical_small_spacer_1@csb_landing.vertical_small_spacer": {} },
+            { "info_stack@csb_landing.info_stack": {} },
             {
               "vertical_small_spacer_2@csb_landing.vertical_small_spacer": {
                 "size": [ "100%", 4 ]
@@ -66,12 +54,8 @@
     "size": [ "100%", "100%c" ],
     "orientation": "vertical",
     "controls": [
-      {
-        "free_weekend_label_title@csb_landing.free_weekend_label_title": {}
-      },
-      {
-        "free_weekend_label_body@csb_landing.free_weekend_label_body": {}
-      }
+      { "free_weekend_label_title@csb_landing.free_weekend_label_title": {} },
+      { "free_weekend_label_body@csb_landing.free_weekend_label_body": {} }
     ]
   },
 
@@ -86,9 +70,7 @@
           "size": [ 4, 0 ]
         }
       },
-      {
-        "free_weekend_labels@csb_landing.free_weekend_labels": {}
-      }
+      { "free_weekend_labels@csb_landing.free_weekend_labels": {} }
     ]
   },
 
@@ -112,9 +94,7 @@
           ]
         }
       },
-      {
-        "free_weekend_label_padded@csb_landing.free_weekend_label_padded": {}
-      }
+      { "free_weekend_label_padded@csb_landing.free_weekend_label_padded": {} }
     ],
     "bindings": [
       {
@@ -133,12 +113,8 @@
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "title_image_panel@csb_landing.title_image_panel": {}
-      },
-      {
-        "title_space@csb_landing.title_space": {}
-      },
+      { "title_image_panel@csb_landing.title_image_panel": {} },
+      { "title_space@csb_landing.title_space": {} },
       {
         "action_button@csb_buy.buy_button_panel": {
           "ignored": "$pre_release",
@@ -166,13 +142,10 @@
               "binding_name_override": "#visible"
             }
           ],
-          "$buy_now_bindings": [
-          ]
+          "$buy_now_bindings": []
         }
       },
-      {
-        "vertical_space2@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_space2@csb_landing.vertical_small_spacer": {} },
       {
         "gradient_panel": {
           "ignored": "$pre_release",
@@ -274,7 +247,7 @@
                 "size": [ "100%", "15%x" ],
                 "texture": "textures/ui/csb_title"
               }
-            } // Do we want this to have TTS?  It is text, just in an image.
+            }
           ]
         }
       },
@@ -291,9 +264,7 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%cm" ],
     "controls": [
-      {
-        "info_section_image@csb_landing.info_section_image_with_border": {}
-      },
+      { "info_section_image@csb_landing.info_section_image_with_border": {} },
       {
         "info_description_stack_retail@csb_landing.info_description_stack_retail": {
           "size": [ "fill", "100%c" ]
@@ -308,12 +279,8 @@
       {
         "info_section_stack_1@csb_landing.info_section_stack": {
           "controls": [
-            {
-              "horizontal_small_spacer@csb_landing.horizontal_small_spacer": {}
-            },
-            {
-              "info_section_text_1@csb_landing.info_section_text_1": {}
-            }
+            { "horizontal_small_spacer@csb_landing.horizontal_small_spacer": {} },
+            { "info_section_text_1@csb_landing.info_section_text_1": {} }
           ]
         }
       }
@@ -346,43 +313,32 @@
             }
           ]
         }
-
       },
-      {
-        "vertical_small_spacer_0@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_0@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_1@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info.line1"
         }
       },
-      {
-        "vertical_small_spacer_1@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_1@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_2@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info.line2"
         }
       },
-      {
-        "vertical_small_spacer_2@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_2@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_3@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info.line3"
         }
       },
-      {
-        "vertical_small_spacer_3@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_3@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_4@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info.line4"
         }
       },
-      {
-        "vertical_small_spacer_4@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_4@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_5@csb_landing.info_text_bullet": {
           "$info_text_line": "#landing_info_text_bullet_5",
@@ -393,17 +349,13 @@
           ]
         }
       },
-      {
-        "vertical_small_spacer_5@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_5@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_6@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info.line6"
         }
       },
-      {
-        "vertical_large_spacer_6@csb_landing.vertical_large_spacer": {}
-      }
+      { "vertical_large_spacer_6@csb_landing.vertical_large_spacer": {} }
     ]
   },
 
@@ -414,17 +366,13 @@
           "$info_text_line": "store.csb.landing.info2.line1"
         }
       },
-      {
-        "vertical_small_spacer_0@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_0@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_2@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info2.line2"
         }
       },
-      {
-        "vertical_small_spacer_1@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_1@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_4@csb_landing.info_text_bullet": {
           "$info_text_line": "store.csb.landing.info2.line3",
@@ -436,9 +384,7 @@
           ]
         }
       },
-      {
-        "vertical_small_spacer_3@csb_landing.vertical_small_spacer": {}
-      },
+      { "vertical_small_spacer_3@csb_landing.vertical_small_spacer": {} },
       {
         "info_text_bullet_5@csb_landing.info_text_bullet": {
           "$info_text_line": "#landing_info_line_4",
@@ -484,9 +430,7 @@
           "size": [ 4, "100%c" ]
         }
       },
-      {
-        "info_text_bullet_body@csb_landing.info_text_body": {}
-      },
+      { "info_text_bullet_body@csb_landing.info_text_body": {} },
       {
         "bullet_spacer_end": {
           "type": "panel",
@@ -532,6 +476,5 @@
         }
       }
     ]
-
   }
 }

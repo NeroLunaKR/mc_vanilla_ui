@@ -1,25 +1,19 @@
 {
   "namespace": "test",
 
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
-
   "button": {
     "type": "button",
-
-    "$focus_id|default": "", 
-    "$focus_override_down|default": "", 
-    "$focus_override_up|default": "", 
-    "$focus_override_left|default": "", 
-    "$focus_override_right|default": "", 
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
     "focus_identifier": "$focus_id",
     "focus_change_down": "$focus_override_down",
     "focus_change_up": "$focus_override_up",
     "focus_change_left": "$focus_override_left",
     "focus_change_right": "$focus_override_right",
     "focus_enabled": true,
-
     "layer": 1,
     "size": [ 100, 20 ],
     "sound_name": "random.click",
@@ -44,10 +38,7 @@
     "texture": "textures/ui/NormalButtonStroke",
     "layer": 2,
     "controls": [
-      {
-        "button_text@button_text": {
-        }
-      }
+      { "button_text@button_text": {} }
     ]
   },
 
@@ -63,24 +54,11 @@
       }
     ],
     "controls": [
-      {
-        "default@button_image": {
-        }
-      },
-      {
-        "hover@button_image": {
-        }
-      },
-      {
-        "pressed@button_image": {
-        }
-      }
+      { "default@button_image": {} },
+      { "hover@button_image": {} },
+      { "pressed@button_image": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Animations
-  //---------------------------------------------------------------------------
 
   "anim_guy_walk": {
     "anim_type": "flip_book",
@@ -242,10 +220,6 @@
     "next": "@anim_portal_scale_big"
   },
 
-  //---------------------------------------------------------------------------
-  // Pieces
-  //---------------------------------------------------------------------------
-
   "arrow_image": {
     "type": "image",
     "texture": "textures/ui/arrow",
@@ -297,15 +271,9 @@
     "color": "@anim_color_cycle",
     "offset": "@anim_move_along_top",
     "controls": [
-      {
-        "sub_square_thing@sub_square_thing": { }
-      }
+      { "sub_square_thing@sub_square_thing": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
 
   "root_panel": {
     "type": "panel",
@@ -324,9 +292,7 @@
     "size": [ "100%", "25%" ],
     "offset": [ 0, 0 ],
     "controls": [
-      {
-        "go_button@go_button": { }
-      },
+      { "go_button@go_button": {} },
       {
         "square_thing@square_thing": {
           "color": "@anim_color_flash",
@@ -342,9 +308,7 @@
     "size": [ "100%", "25%" ],
     "offset": [ 0, "25%" ],
     "controls": [
-      {
-        "square_thing@square_thing": { }
-      }
+      { "square_thing@square_thing": {} }
     ]
   },
 
@@ -352,9 +316,7 @@
     "size": [ "100%", "25%" ],
     "offset": [ 0, "50%" ],
     "controls": [
-      {
-        "portal@portal_image": { }
-      },
+      { "portal@portal_image": {} },
       {
         "go_button@go_button": {
           "button_mappings": [
@@ -373,12 +335,8 @@
     "size": [ "100%", "25%" ],
     "offset": [ 0, "75%" ],
     "controls": [
-      {
-        "walking_image@walking_image": { }
-      },
-      {
-        "arrow_image@arrow_image": { }
-      }
+      { "walking_image@walking_image": {} },
+      { "arrow_image@arrow_image": {} }
     ]
   },
 
@@ -400,18 +358,10 @@
       {
         "root_panel@root_panel": {
           "controls": [
-            {
-              "panel_1@panel_1": { }
-            },
-            {
-              "panel_2@panel_2": { }
-            },
-            {
-              "panel_3@panel_3": { }
-            },
-            {
-              "panel_4@panel_4": { }
-            }
+            { "panel_1@panel_1": {} },
+            { "panel_2@panel_2": {} },
+            { "panel_3@panel_3": {} },
+            { "panel_4@panel_4": {} }
           ]
         }
       }

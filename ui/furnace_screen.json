@@ -1,13 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved             *
-+*   (c) Microsoft. All rights reserved.           *
-+*********************************************************/
-
 {
   "namespace": "furnace",
-  //---------------------------------------------------------------------------
-  // #region gamepad helpers
-  //---------------------------------------------------------------------------
 
   "inventory_x_gamepad_helper@common.gamepad_helper_x_14": {
     "bindings": [
@@ -113,23 +105,13 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region common images
-  //---------------------------------------------------------------------------
-
   "flame_panel": {
     "type": "panel",
     "size": [ 13, 13 ],
     "offset": [ -21, 0 ],
     "controls": [
-      {
-        "flame_empty_image@furnace.flame_empty_image": {}
-      },
-      {
-        "flame_full_image@furnace.flame_full_image": {}
-      }
+      { "flame_empty_image@furnace.flame_empty_image": {} },
+      { "flame_full_image@furnace.flame_full_image": {} }
     ]
   },
 
@@ -191,19 +173,11 @@
     "texture": "textures/ui/category_icon_items"
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region tabs
-  //---------------------------------------------------------------------------
-
   "empty_tab_panel": {
     "type": "panel",
     "size": [ 24, 25 ],
     "controls": [
-      {
-        "img@$tab_icon": {}
-      }
+      { "img@$tab_icon": {} }
     ]
   },
 
@@ -231,7 +205,7 @@
     "offset": "$offset",
     "$toggle_focus_enabled": false,
     "$toggle_name": "navigation_tab",
-    "$toggle_group_default_selected": "$search_index", // Search tab
+    "$toggle_group_default_selected": "$search_index",
     "$tab_content": "common_tabs.empty_tab_panel",
     "$allow_controller_back_button_mapping": "$is_ps4"
   },
@@ -240,11 +214,9 @@
     "$tab_view_binding_name": "food_tab_toggle",
     "$tab_icon": "furnace.food_icon",
     "$toggle_group_forced_index": "$food_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_food",
     "$toggle_tts_header": "furnaceScreen.tab.food",
-
     "$focus_id": "food_tab",
     "$focus_override_left": "help_button",
     "$focus_override_right": "blocks_tab",
@@ -255,11 +227,9 @@
     "$tab_view_binding_name": "blocks_tab_toggle",
     "$tab_icon": "furnace.blocks_icon",
     "$toggle_group_forced_index": "$blocks_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_blocks",
     "$toggle_tts_header": "furnaceScreen.tab.blocks",
-
     "$focus_id": "blocks_tab",
     "$focus_override_left": "food_tab",
     "$focus_override_right": "items_tab",
@@ -270,11 +240,9 @@
     "$tab_view_binding_name": "items_tab_toggle",
     "$tab_icon": "furnace.items_icon",
     "$toggle_group_forced_index": "$items_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_items",
     "$toggle_tts_header": "furnaceScreen.tab.items",
-
     "$focus_id": "items_tab",
     "$focus_override_left": "blocks_tab",
     "$focus_override_right": "search_tab",
@@ -286,11 +254,9 @@
     "$tab_view_binding_name": "search_tab_toggle",
     "$tab_icon": "common.search_icon",
     "$toggle_group_forced_index": "$search_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_search",
     "$toggle_tts_header": "furnaceScreen.tab.search",
-
     "$focus_id": "search_tab",
     "$focus_override_left": "items_tab",
     "$focus_override_right": "default_layout_toggle",
@@ -302,7 +268,6 @@
     "orientation": "horizontal",
     "size": [ "100%", 27 ],
     "ttsSectionContainer": true,
-
     "controls": [
       {
         "navigation_tabs": {
@@ -450,13 +415,11 @@
     "$pressed_no_hover_texture": "textures/ui/furnace_toggle_on_hover",
     "$unchecked_locked_texture": "textures/ui/furnace_toggle_off",
     "$checked_locked_texture": "textures/ui/furnace_toggle_on",
-
     "$toggle_name": "toggle.enable_filtering",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#filtering_enabled",
     "$toggle_tts_header": "accessibility.tts.toggle.filter",
     "$tts_skip_enumeration": true,
-
     "$button_mappings": [
       {
         "to_button_id": "button.filter_toggle_hovered",
@@ -505,7 +468,6 @@
           "offset": "$toggle_offset",
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-
           "$focus_id": "smeltable_toggle",
           "$focus_override_left": "recipe_search_bar",
           "$default_border_visible": false,
@@ -535,7 +497,6 @@
     "text_alignment": "$text_alignment",
     "color": "$title_text_color",
     "layer": 2,
-
     "text": "#tab_label_text",
     "bindings": [
       {
@@ -555,7 +516,6 @@
           "type": "stack_panel",
           "size": [ "100% - 12px", "100% - 12px" ],
           "orientation": "vertical",
-
           "controls": [
             {
               "vertical_padding_1@furnace.tab_content_padding": {
@@ -574,7 +534,6 @@
                 "type": "stack_panel",
                 "size": [ "100% + 1px", 10 ],
                 "orientation": "horizontal",
-
                 "bindings": [
                   {
                     "binding_name": "(not #is_left_tab_inventory or $is_pocket_mode)",
@@ -654,7 +613,6 @@
                 "orientation": "horizontal",
                 "size": [ "100% + 1px", 16 ],
                 "layer": 11,
-
                 "bindings": [
                   {
                     "binding_name": "#is_left_tab_search",
@@ -822,12 +780,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region cell images
-  //---------------------------------------------------------------------------
-
   "cell_image": {
     "type": "image",
     "texture": "textures/ui/cell_image"
@@ -922,12 +874,6 @@
       }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region recipe book
-  //---------------------------------------------------------------------------
 
   "inventory_container_slot_button@common.container_slot_button_prototype": {
     "$button_take_half_place_one|default": "button.container_take_half_place_one",
@@ -1126,7 +1072,6 @@
     ]
   },
 
-
   "container_cell_images": {
     "type": "panel",
     "$cell_images_binding_condition|default": "visible",
@@ -1151,7 +1096,6 @@
   "inventory_container_item@common.container_item": {
     "$button_ref|default": "furnace.inventory_container_slot_button",
     "$background_images|default": "furnace.container_cell_images",
-
     "controls": [
       {
         "item_cell": {
@@ -1243,9 +1187,7 @@
     "$item_renderer_binding_condition": "visible",
     "$button_ref": "furnace.creative_no_coalesce_container_slot_button",
     "$background_images": "furnace.recipe_container_cell_images",
-
     "$slot_selected_binding_name": "#is_recipe_selected_slot",
-
     "$item_collection_name": "recipe_book",
     "$scrolling_grid_item_size|default": [ 18, 18 ],
     "$hover_text_binding_name": "#recipe_hover_text",
@@ -1257,11 +1199,9 @@
     "size": [ "100%", "default" ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-
     "$binding_condition|default": "visible",
     "$grid_item_precache_count|default": 0,
     "$grid_item_template|default": "furnace.grid_item_for_recipe_book",
-
     "collection_name": "$collection_name",
     "grid_rescaling_type": "horizontal",
     "grid_item_template": "$grid_item_template",
@@ -1286,10 +1226,8 @@
 
   "scroll_panel@common.container_scroll_panel": {
     "size": [ "100% - 12px", "100% - 12px" ],
-
     "$scrolling_content": "furnace.scroll_grid_panel",
     "$collection_name": "recipe_book",
-
     "$scrolling_panel_base_button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -1360,12 +1298,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region right panel (inventory and furnace crafting)
-  //---------------------------------------------------------------------------
-
   "furnace_label": {
     "type": "label",
     "layer": 2,
@@ -1411,9 +1343,7 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "$item_collection_name": "furnace_ingredient_items",
-
           "$background_images|default": "furnace.container_cell_images",
-
           "$focus_id": "furnace_ingredient_item",
           "$focus_override_up": "FOCUS_OVERRIDE_STOP",
           "$focus_override_up_binding_type": "none",
@@ -1436,7 +1366,6 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "$item_collection_name": "furnace_fuel_items",
-
           "$focus_id": "furnace_fuel_item",
           "$focus_override_right": "furnace_output_item",
           "$focus_override_right_binding_type": "none",
@@ -1461,9 +1390,7 @@
           "$cell_image_size": [ 26, 26 ],
           "offset": [ 20, 0 ],
           "$item_collection_name": "furnace_output_items",
-
           "$background_images": "crafting.crafting_container_cell_images",
-
           "$focus_id": "furnace_output_item",
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "FOCUS_OVERRIDE_STOP",
@@ -1526,12 +1453,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------
-  // #region toolbar panel
-  //---------------------------
-
   "recipe_book_layout_toggle@common.recipe_book_layout_toggle": {
     "$focus_override_left": "search_tab",
     "$toggle_tts_header": "accessibility.tts.toggle.recipebook.layout"
@@ -1543,7 +1464,6 @@
 
   "toolbar_panel@common.crafting_root_input_panel": {
     "size": [ "100%c", 20 ],
-
     "controls": [
       {
         "toolbar_background@common.toolbar_background_image": {
@@ -1551,7 +1471,6 @@
           "offset": [ 0, -3 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-
           "controls": [
             {
               "toolbar_stack_panel": {
@@ -1563,7 +1482,6 @@
                 "offset": [ 0, 3 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
-
                 "controls": [
                   {
                     "left_trigger_anchor": {
@@ -1709,12 +1627,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region screen layout
-  //---------------------------------------------------------------------------
-
   "screen_stack_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -1751,7 +1663,6 @@
     "type": "panel",
     "controls": [
       { "screen_stack_panel@furnace.screen_stack_panel": {} },
-
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       {
         "controller_gamepad_helpers_stack_panel": {
@@ -1779,18 +1690,19 @@
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   },
-
-  // #endregion
 
   "furnace_screen@common.inventory_screen_common": {
     "close_on_player_hurt": true,
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.4,
     "button_mappings": "$screen_button_mappings",
-
     "variables": [
       {
         "requires": "$desktop_screen",

@@ -1,11 +1,6 @@
 {
   "namespace": "safe_zone",
 
-
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
-
   "corner_image_common": {
     "type": "image",
     "size": [ 19, 19 ],
@@ -189,22 +184,14 @@
         "instruction_text_button@safe_zone.label_button": {
           "offset": [ 0, 3 ],
           "controls": [
-            {
-              "default@safe_zone.instructions_text": {}
-            },
-            {
-              "pressed@safe_zone.label_button_hover": {}
-            },
-            {
-              "hover@safe_zone.label_button_hover": {}
-            }
+            { "default@safe_zone.instructions_text": {} },
+            { "pressed@safe_zone.label_button_hover": {} },
+            { "hover@safe_zone.label_button_hover": {} }
           ]
         }
       }
     ]
   },
-
-  // Screen //
 
   "safe_zone_screen@common.base_screen": {
     "should_be_skipped_during_automation": true,

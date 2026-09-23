@@ -125,7 +125,6 @@
     "offset": [ -0.5, -0.5 ],
     "size": [ 16, 16 ],
     "layer": 3,
-
     "$feedback_texture": "textures/ui/feedback",
     "variables": [
       {
@@ -161,7 +160,7 @@
   },
 
   "new_offers_icon@common_store.new_offer_icon": {
-    "layer": 11, // This is the lowest layer where the button border won't show through this icon while being pressed
+    "layer": 11,
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
@@ -170,7 +169,6 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%c", "100%" ],
-
     "controls": [
       {
         "padded_label@common.empty_panel": {
@@ -210,7 +208,7 @@
   "new_tag": {
     "type": "image",
     "size": [ "100%c + 4px", 15 ],
-    "layer": 11, // This is the lowest layer where the button border won't show through this icon while being pressed
+    "layer": 11,
     "texture": "textures/ui/previewIcon",
     "bindings": [
       {
@@ -237,7 +235,7 @@
   "update_prompt_icon": {
     "type": "image",
     "texture": "textures/ui/update",
-    "layer": 12, // This is the lowest layer where the button border won't show through this icon while being pressed
+    "layer": 12,
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "size": [ 11, 21 ]
@@ -252,7 +250,7 @@
   "sale_ribbon_icon": {
     "type": "image",
     "texture": "textures/ui/saleribbon",
-    "layer": 12 // This is the lowest layer where the button border won't show through this icon while being pressed
+    "layer": 12
   },
 
   "alex_icon": {
@@ -307,7 +305,6 @@
         }
       }
     ]
-
   },
 
   "development_version": {
@@ -417,17 +414,13 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "controls": [
-      {
-        "copyright@start.copyright": {}
-      },
+      { "copyright@start.copyright": {} },
       {
         "development_version@start.development_version": {
           "ignored": "$is_publish"
         }
       },
-      {
-        "version@start.version": {}
-      }
+      { "version@start.version": {} }
     ]
   },
 
@@ -449,10 +442,6 @@
     "play_event": "anim_new_player_buttons_panel_alpha_play_event",
     "end_event": "anim_new_player_buttons_panel_finish_event"
   },
-
-  //---------------------------------------------------------------------------
-  // Skins Panel
-  //---------------------------------------------------------------------------
 
   "skin_or_profile_panel": {
     "type": "stack_panel",
@@ -682,7 +671,6 @@
         "paper_doll_panel": {
           "type": "panel",
           "size": [ "100%", "100% - 10px" ],
-
           "controls": [
             {
               "paper_doll": {
@@ -761,8 +749,12 @@
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "controls": [
-      { "viewer_panel@start.skin_viewer_panel": { "size": [ "100%", "fill" ] } },
-      { 
+      {
+        "viewer_panel@start.skin_viewer_panel": {
+          "size": [ "100%", "fill" ]
+        }
+      },
+      {
         "centering_panel": {
           "type": "panel",
           "size": [ "100%", 24 ],
@@ -773,10 +765,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------
-  // Friends drawer button panel
-  //--------------------------------------------------------------------------
 
   "friendsdrawer_button_panel": {
     "type": "panel",
@@ -794,10 +782,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------
-  // Gathering
-  //--------------------------------------------------------------------------
 
   "gathering_button@common_buttons.light_text_button": {
     "size": [ 100, 25 ],
@@ -872,9 +856,7 @@
                 "size": [ 12, 1 ]
               }
             },
-            {
-              "caption@start.gathering_caption": {}
-            }
+            { "caption@start.gathering_caption": {} }
           ]
         }
       },
@@ -978,19 +960,14 @@
                 "anchor_from": "bottom_left",
                 "size": [ "100% - 5px", "100%c" ],
                 "controls": [
-                  {
-                    "badge_and_caption@start.badge_and_caption": {}
-                  },
-                  {
-                    "gathering_button@start.gathering_button": {}
-                  }
+                  { "badge_and_caption@start.badge_and_caption": {} },
+                  { "gathering_button@start.gathering_button": {} }
                 ]
               }
             }
           ]
         }
       },
-      // The gathering panel is stacked on top of either the upper or lower online buttons. This padding is only needed when the upper online buttons are visible.
       {
         "bottom_pad": {
           "type": "panel",
@@ -1011,10 +988,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // EDU External Links Popup
-  //---------------------------------------------------------------------------
 
   "edu_external_link_popup_factory": {
     "type": "factory",
@@ -1042,7 +1015,6 @@
           "size": [ "100% - 8px", "100%c" ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-
           "controls": [
             {
               "header_pad@common.empty_panel": {
@@ -1115,7 +1087,11 @@
           "focus_identifier": "$pressed_button_name"
         }
       },
-      { "button_padding@common.empty_panel": { "size": [ "100%", 2 ] } },
+      {
+        "button_padding@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      },
       {
         "back_button_enabled@common_buttons.light_text_button": {
           "size": [ "100%", "50% - 1px" ],
@@ -1132,7 +1108,6 @@
     "$popup_label_text|default": "",
     "$top_button_text|default": "",
     "$bottom_button_text|default": "",
-
     "$popup_type|default": "popup_dialog.form_fit_screen_with_title_and_close_and_two_bottom_buttons",
     "$modal_title": "$popup_title_text",
     "$popup_dialog_escape_button_name": "button.external_browser_popup_close",
@@ -1140,17 +1115,12 @@
     "$lower_button_control": "start.external_link_popup_buttons"
   },
 
-  //---------------------------------------------------------------------------
-  // Online Buttons Panel (and the lang button)
-  //---------------------------------------------------------------------------
-
   "edu_feedback_button@common_buttons.light_content_button": {
     "size": [ 25, 25 ],
     "$button_pressed_offset": [ 0, 0 ],
     "$button_content": "start.feedback_icon_edu",
     "$pressed_button_name": "button.edu_feedback"
   },
-
 
   "release_feedback_button@common_buttons.light_content_button": {
     "size": [ 24, 24 ],
@@ -1170,9 +1140,21 @@
     "type": "panel",
     "$button_tts_header": "accessibility.start.feedback",
     "controls": [
-      { "edu_feedback_button@start.edu_feedback_button": { "ignored": "$edu_feedback_ignored" } },
-      { "release_feedback_button@start.release_feedback_button": { "ignored": "($pre_release or $education_edition)" } },
-      { "pre_release_feedback_button@start.pre_release_feedback_button": { "ignored": "(not $pre_release or $education_edition)" } }
+      {
+        "edu_feedback_button@start.edu_feedback_button": {
+          "ignored": "$edu_feedback_ignored"
+        }
+      },
+      {
+        "release_feedback_button@start.release_feedback_button": {
+          "ignored": "($pre_release or $education_edition)"
+        }
+      },
+      {
+        "pre_release_feedback_button@start.pre_release_feedback_button": {
+          "ignored": "(not $pre_release or $education_edition)"
+        }
+      }
     ]
   },
 
@@ -1187,7 +1169,11 @@
     "type": "panel",
     "$button_tts_header": "menu.achievements",
     "controls": [
-      { "achievements_button@start.achievements_button": { "ignored": "$education_edition" } }
+      {
+        "achievements_button@start.achievements_button": {
+          "ignored": "$education_edition"
+        }
+      }
     ]
   },
 
@@ -1240,13 +1226,12 @@
     ]
   },
 
-  // Button will resize itself to length of the text
   "xbl_signin_button@common_buttons.light_text_form_fitting_button": {
     "size": [ "100%c", 25 ],
     "$pressed_button_name": "button.signin",
     "$button_state_panel": "common_buttons.new_ui_width_fitting_button_panel",
     "$button_text_size": [ "default", 10 ],
-    "$button_text_max_size": [ 80, 10 ], // longest localized string length will fit in this
+    "$button_text_max_size": [ 80, 10 ],
     "$button_text": "xbox.signin",
     "$focus_id": "menu_xbox_signin_button",
     "anchor_from": "left_middle",
@@ -1330,9 +1315,7 @@
                 "ignored": "(not $nx_os and not $is_ps4)",
                 "size": [ "90% - 6px", 32 ],
                 "controls": [
-                  {
-                    "platform_signin_button@start.platform_signin_button": {}
-                  }
+                  { "platform_signin_button@start.platform_signin_button": {} }
                 ],
                 "bindings": [
                   {
@@ -1354,9 +1337,7 @@
                       "type": "panel",
                       "size": [ "100%c", "100%" ],
                       "controls": [
-                        {
-                          "gamerpic@start.gamerpic": {}
-                        },
+                        { "gamerpic@start.gamerpic": {} },
                         {
                           "border_white@common.focus_border_white": {
                             "layer": 3,
@@ -1581,10 +1562,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Main Buttons Panel
-  //---------------------------------------------------------------------------
-
   "main_button@common_buttons.light_text_button": {
     "size": [ "100% - 2px", "100% - 2px" ]
   },
@@ -1600,7 +1577,7 @@
   "main_button_gif": {
     "type": "custom",
     "renderer": "animated_gif_renderer",
-    "size": [ "100% + 30px", "100% + 2px" ], // covers button safe area (180x34)
+    "size": [ "100% + 30px", "100% + 2px" ],
     "$gif_path_binding_name|default": "",
     "$gif_alpha_binding_name|default": "",
     "bindings": [
@@ -1668,7 +1645,7 @@
           "layer": 1,
           "text": "#text",
           "tts_name": "accessibility.store.tag",
-          "tts_control_type_order_priority": 1004, // To be read after the button control type
+          "tts_control_type_order_priority": 1004,
           "tts_value_order_priority": 1003,
           "bindings": [
             {
@@ -1764,9 +1741,7 @@
 
   "play_button_stack@start.stacked_row": {
     "controls": [
-      {
-        "play_button@start.play_button": {}
-      },
+      { "play_button@start.play_button": {} },
       {
         "play_button_art@start.play_button_art": {
           "layer": 12,
@@ -1808,7 +1783,6 @@
     ],
     "$font_type": "smooth",
     "$focus_label_color": [ 0.215, 0.839, 0.118 ],
-    // "hover" is also the focus state; underline shows on hover/focus/pressed, not in "default".
     "controls": [
       {
         "default": {
@@ -1952,7 +1926,7 @@
   },
 
   "store_button_sale_banner@start.sale_ribbon_icon": {
-    "size": [ "100%c", 16 ], // For some reason doing 100%c + X doesn't work on an image?
+    "size": [ "100%c", 16 ],
     "controls": [
       {
         "banner_label_padding": {
@@ -1968,7 +1942,7 @@
                 "color": "$title_text_color",
                 "layer": 1,
                 "tts_name": "accessibility.store.tag",
-                "tts_control_type_order_priority": 1004, // To be read after the button control type
+                "tts_control_type_order_priority": 1004,
                 "tts_value_order_priority": 1003
               }
             }
@@ -1991,7 +1965,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ -6, -8 ],
-          "visible": false // leaving this here in case we override with a treatment pack during a sale
+          "visible": false
         }
       }
     ]
@@ -2167,9 +2141,7 @@
           "size": "$title_offset_padding"
         }
       },
-      {
-        "title_panel_content@common_art.start_title_panel_content": {}
-      },
+      { "title_panel_content@common_art.start_title_panel_content": {} },
       {
         "padding_fill_1": {
           "type": "panel",
@@ -2199,9 +2171,7 @@
           "alpha": "$anim_type",
           "propagate_alpha": true,
           "controls": [
-            {
-              "main_buttons_panel@start.main_buttons_panel": {}
-            }
+            { "main_buttons_panel@start.main_buttons_panel": {} }
           ]
         }
       },
@@ -2218,9 +2188,7 @@
           "alpha": "@start.anim_new_player_buttons_panel_alpha",
           "propagate_alpha": true,
           "controls": [
-            {
-              "main_buttons_panel_new_player_flow@start.main_buttons_panel_new_player_flow": {}
-            }
+            { "main_buttons_panel_new_player_flow@start.main_buttons_panel_new_player_flow": {} }
           ]
         }
       },
@@ -2229,16 +2197,14 @@
           "type": "panel",
           "size": [ "100%", "fill" ],
           "controls": [
-            {
-              "gamepad_helpers@start.gamepad_helpers": {}
-            }
+            { "gamepad_helpers@start.gamepad_helpers": {} }
           ]
         }
       },
       {
         "padding_3": {
           "type": "panel",
-          "size": [ "100%", 10 ] // size of text at the bottom of the screen
+          "size": [ "100%", 10 ]
         }
       }
     ]
@@ -2259,9 +2225,7 @@
               "test_label_row@start.stacked_row": {
                 "ignored": "(not $trial)",
                 "controls": [
-                  {
-                    "trial_info@start.trial_info": {}
-                  }
+                  { "trial_info@start.trial_info": {} }
                 ]
               }
             },
@@ -2275,18 +2239,14 @@
             {
               "get_started_row@start.stacked_row": {
                 "controls": [
-                  {
-                    "get_started_button@start.get_started_button": {}
-                  }
+                  { "get_started_button@start.get_started_button": {} }
                 ]
               }
             },
             {
               "main_menu_row@start.stacked_row": {
                 "controls": [
-                  {
-                    "main_menu_button@start.main_menu_button": {}
-                  }
+                  { "main_menu_button@start.main_menu_button": {} }
                 ]
               }
             }
@@ -2394,11 +2354,8 @@
                     "binding_name_override": "#visible"
                   }
                 ],
-
                 "controls": [
-                  {
-                    "ai_lesson_crafter_button@start.ai_lesson_crafter_button": {}
-                  },
+                  { "ai_lesson_crafter_button@start.ai_lesson_crafter_button": {} },
                   {
                     "new_tag_content@common.empty_panel": {
                       "size": [ "100%", "100%" ],
@@ -2426,9 +2383,7 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "new_and_featured_button@edu_featured.featured_button": {}
-                  }
+                  { "new_and_featured_button@edu_featured.featured_button": {} }
                 ]
               }
             },
@@ -2469,9 +2424,7 @@
                             "type": "panel",
                             "size": [ "fill", "100%" ],
                             "controls": [
-                              {
-                                "launch_editions_button@start.launch_editions_button": {}
-                              }
+                              { "launch_editions_button@start.launch_editions_button": {} }
                             ]
                           }
                         }
@@ -2565,9 +2518,7 @@
               "launch_editions@start.stacked_row": {
                 "ignored": "($trial or not $supports_launching_legacy_version)",
                 "controls": [
-                  {
-                    "launch_editions_button@start.launch_editions_button": {}
-                  }
+                  { "launch_editions_button@start.launch_editions_button": {} }
                 ],
                 "bindings": [
                   {
@@ -2651,10 +2602,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Realms Invite Panel
-  //---------------------------------------------------------------------------
-
   "invite_notification_icon": {
     "type": "image",
     "texture": "textures/ui/invite_base",
@@ -2705,19 +2652,13 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
   "start_screen@common.base_screen": {
-
     "$screen_animations": [
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade",
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-
     "button_mappings": [
       {
         "ignored": "(not $can_quit)",
@@ -2767,9 +2708,7 @@
       }
     ],
     "controls": [
-      {
-        "main_buttons_and_title_panel@start.main_buttons_stack_panel": {}
-      },
+      { "main_buttons_and_title_panel@start.main_buttons_stack_panel": {} },
       {
         "online_button_stack": {
           "type": "stack_panel",
@@ -2790,15 +2729,9 @@
           ],
           "alpha": "$anim_type",
           "controls": [
-            {
-              "gathering_panel@start.gathering_panel": {}
-            },
-            {
-              "upper_online_buttons_panel@start.upper_online_buttons_panel": {}
-            },
-            {
-              "lower_online_buttons_panel@start.lower_online_buttons_panel": {}
-            }
+            { "gathering_panel@start.gathering_panel": {} },
+            { "upper_online_buttons_panel@start.upper_online_buttons_panel": {} },
+            { "lower_online_buttons_panel@start.lower_online_buttons_panel": {} }
           ],
           "bindings": [
             {
@@ -2809,11 +2742,11 @@
         }
       },
       {
-        "skin_panel@start.skin_panel": { "layer": 1 }
+        "skin_panel@start.skin_panel": {
+          "layer": 1
+        }
       },
-      {
-        "text_panel@start.text_panel": {}
-      },
+      { "text_panel@start.text_panel": {} },
       {
         "friendsdrawer_button_panel@start.friendsdrawer_button_panel": {
           "$focus_id": "friendsdrawer_button",

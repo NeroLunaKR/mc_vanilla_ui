@@ -36,7 +36,6 @@
     ]
   },
 
-  //The first button on the filter menu that has the X to close the menu
   "sort_menu_first_button_content_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -53,9 +52,7 @@
           "type": "panel",
           "size": [ 21, "100%" ],
           "controls": [
-            {
-              "sort_logo_icon@common_store.sort_button_content_panel": {}
-            }
+            { "sort_logo_icon@common_store.sort_button_content_panel": {} }
           ]
         }
       },
@@ -180,9 +177,8 @@
     ]
   },
 
-  //Menu that pops up when you click on the sort menu...
   "sort_menu_show": {
-    "type": "stack_panel", //stacks panels together
+    "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "fill", "100%" ],
     "layer": 2,
@@ -206,7 +202,6 @@
           ]
         }
       },
-      //Sorting options radio button instances
       {
         "sort_scrolling_content_panel@common_store.filter_sort_submenu_scrolling_panel_section": {
           "$filter_sort_scrolling_panel_size": [ "100%", "100%" ],
@@ -224,7 +219,6 @@
     "layer": 2,
     "controls": [
       {
-        // added to align with search bar
         "top_padding@common.empty_panel": {
           "$sort_top_padding|default": [ "100%", 0 ],
           "size": "$sort_top_padding"
@@ -240,9 +234,7 @@
                 "size": "$sort_left_padding"
               }
             },
-            {
-              "sort_menu_show@sort_menu.sort_menu_show": {}
-            },
+            { "sort_menu_show@sort_menu.sort_menu_show": {} },
             {
               "right_padding@common.empty_panel": {
                 "$sort_right_padding|default": [ 0, "100%" ],
@@ -255,7 +247,6 @@
     ]
   },
 
-  //main panel holding the background and the sort menu itself
   "sort_menu_screen_content@common.modal_area_panel_base": {
     "layer": 100,
     "$menu_cancel_button_id": "button.close_sort_menu",
@@ -287,9 +278,7 @@
           ]
         }
       },
-      {
-        "sort_menu_background@common_store.close_bg_panel": {}
-      }
+      { "sort_menu_background@common_store.close_bg_panel": {} }
     ],
     "bindings": [
       {

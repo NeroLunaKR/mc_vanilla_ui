@@ -1,10 +1,6 @@
 {
   "namespace": "manifest_validation",
 
-  //---------------------------------------------------------------------------
-  // ICONS
-  //---------------------------------------------------------------------------
-
   "clipboard_icon": {
     "layer": 1,
     "type": "image",
@@ -16,11 +12,7 @@
     "type": "panel",
     "size": [ "100% - 2px", "100% - 2px" ],
     "controls": [
-      {
-        "icon@manifest_validation.clipboard_icon": {
-
-        }
-      }
+      { "icon@manifest_validation.clipboard_icon": {} }
     ]
   },
 
@@ -95,10 +87,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // CONTROLS
-  //---------------------------------------------------------------------------
 
   "section_divider": {
     "type": "panel",
@@ -364,9 +352,7 @@
                       "anchor_from": "bottom_middle",
                       "anchor_to": "bottom_middle",
                       "controls": [
-                        {
-                          "padding_0@manifest_validation.section_divider": {}
-                        },
+                        { "padding_0@manifest_validation.section_divider": {} },
                         {
                           "title_panel": {
                             "type": "stack_panel",
@@ -413,9 +399,7 @@
                             "size": [ "100%", 2 ]
                           }
                         },
-                        {
-                          "padding_1@manifest_validation.section_divider": {}
-                        },
+                        { "padding_1@manifest_validation.section_divider": {} },
                         {
                           "version_panel": {
                             "type": "stack_panel",
@@ -462,9 +446,7 @@
                             "size": [ "100%", 2 ]
                           }
                         },
-                        {
-                          "padding_2@manifest_validation.section_divider": {}
-                        },
+                        { "padding_2@manifest_validation.section_divider": {} },
                         {
                           "path_panel": {
                             "type": "stack_panel",
@@ -589,75 +571,6 @@
                       ]
                     }
                   },
-                  //TODO: integrate backend to have separate section for file name [Bug 249941]
-                  //{
-                  //  "file_text_panel": {
-                  //    "type": "stack_panel",
-                  //    "orientation": "horizontal",
-                  //    "size": [ "100%", "100%cm" ],
-                  //    "controls": [
-                  //      {
-                  //        "file_text": {
-                  //          "type": "label",
-                  //          "size": [ "default", "default" ],
-                  //          "text": "manifestvalidation.file",
-                  //          "font_type": "MinecraftTen",
-                  //          "color": "$main_header_text_color"
-                  //        }
-                  //      },
-                  //      {
-                  //        "space": {
-                  //          "type": "panel",
-                  //          "size": [ 2, 2 ]
-                  //        }
-                  //      },
-                  //      {
-                  //        "offset": {
-                  //          "type": "panel",
-                  //          "size": [ "fill", "100%c" ],
-                  //          "controls": [
-                  //            {
-                  //              "file_label": {
-                  //                "type": "label",
-                  //                "color": "$main_header_text_color",
-                  //                "size": [ "100% - 8px", "default" ],
-                  //                "font_type": "smooth",
-                  //                "offset": [ 4, 4 ],
-                  //                "anchor_from": "top_left",
-                  //                "anchor_to": "top_left",
-                  //                "layer": 1,
-                  //                "shadow": false,
-                  //                "text": "#file_label",
-                  //                "bindings": [
-                  //                  {
-                  //                    "binding_name": "#file_label",
-                  //                    "binding_condition": "visible"
-                  //                  }
-                  //                ]
-                  //              }
-                  //            }
-                  //          ]
-                  //        }
-                  //      }
-                  //    ],
-                  //    "bindings": [
-                  //      {
-                  //        "binding_name": "#file_error",
-                  //        "binding_name_override": "#visible"
-                  //      }
-                  //    ]
-                  //  }
-                  //},
-                  //{
-                  //  "padding_1@manifest_validation.section_divider": {
-                  //    "bindings": [
-                  //      {
-                  //        "binding_name": "#file_error",
-                  //        "binding_name_override": "#visible"
-                  //      }
-                  //    ]
-                  //  }
-                  //},
                   {
                     "error_text_panel": {
                       "type": "stack_panel",
@@ -722,10 +635,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // BUTTONS
-  //---------------------------------------------------------------------------
-
   "delete_button@common_buttons.light_content_button": {
     "size": [ 30, 30 ],
     "$pressed_button_name": "button.delete_manifest",
@@ -786,10 +695,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // PACK SECONDARY INFO
-  //---------------------------------------------------------------------------
-
   "pack_secondary_info": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
@@ -803,10 +708,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // ERROR CONTENT ITEM
-  //---------------------------------------------------------------------------
 
   "error_content_grid": {
     "type": "stack_panel",
@@ -827,10 +728,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // PACK ERROR ITEM
-  //---------------------------------------------------------------------------
-
   "pack_error_item": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -838,9 +735,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
-      {
-        "secondary@manifest_validation.pack_secondary_info": {}
-      },
+      { "secondary@manifest_validation.pack_secondary_info": {} },
       {
         "error_header": {
           "type": "panel",
@@ -859,15 +754,9 @@
           ]
         }
       },
-      {
-        "error@manifest_validation.error_content_grid": {}
-      }
+      { "error@manifest_validation.error_content_grid": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // PACK ERROR GROUP
-  //---------------------------------------------------------------------------
 
   "pack_error_group": {
     "type": "stack_panel",
@@ -880,9 +769,7 @@
           "size": [ "100%", 10 ]
         }
       },
-      {
-        "errors@manifest_validation.pack_error_item": {}
-      },
+      { "errors@manifest_validation.pack_error_item": {} },
       {
         "padding": {
           "type": "panel",
@@ -891,10 +778,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // SCROLL REGION
-  //---------------------------------------------------------------------------
 
   "common_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
@@ -950,10 +833,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // SCREEN
-  //---------------------------------------------------------------------------
 
   "manifest_validation_screen@common.base_screen": {
     "force_render_below": true,

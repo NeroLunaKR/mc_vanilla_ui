@@ -1,14 +1,6 @@
- /********************************************************
-+*   (c) Mojang. All rights reserved                      *
-+*   (c) Microsoft. All rights reserved.                  *
-+*********************************************************/
-
 {
   "namespace": "npc_interact",
 
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
   "multiline_text_edit_control@common.multiline_text_edit_box": {
     "anchor_from": "center",
     "anchor_to": "center",
@@ -30,7 +22,6 @@
     "size": [ "100%", 1 ]
   },
 
-  // Stack panel under title bar that fills the frame
   "main_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -40,12 +31,8 @@
     "size": [ "100% - 8px", "100%c" ]
   },
 
-  //---------------------------------------------------------------------------
-  // Skin picker
-  //---------------------------------------------------------------------------
   "skin_button": {
     "type": "button",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -57,7 +44,6 @@
     "focus_change_left": "$focus_override_left",
     "focus_change_right": "$focus_override_right",
     "focus_enabled": true,
-
     "bindings": [
       {
         "binding_type": "collection_details",
@@ -129,15 +115,12 @@
       {
         "clip@npc_interact.skin_model_clipper": {
           "controls": [
-            {
-              "model@npc_interact.skin_model": {}
-            }
+            { "model@npc_interact.skin_model": {} }
           ]
         }
       },
       { "button@npc_interact.skin_button": {} },
       {
-        // Frame that appears around this item if it is the selected one
         "selectFrame@common.focus_border_white": {
           "size": [ "100% - 1px", "100% - 2px" ],
           "bindings": [
@@ -217,10 +200,7 @@
           ]
         }
       },
-      {
-        "sg@npc_interact.skins_grid": {
-        }
-      },
+      { "sg@npc_interact.skins_grid": {} },
       {
         "right@npc_interact.cycle_pack_right_button": {
           "size": [ 30, "100%" ],
@@ -235,9 +215,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Basic Panel
-  //---------------------------------------------------------------------------
   "name_edit@npc_interact.text_edit_control": {
     "max_length": 128,
     "size": [ "100%", 14 ],
@@ -248,7 +225,6 @@
   },
 
   "advanced_button": {
-    // This button is small, and we want it to be centered, so wrap in in a panel and center relative to that
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
@@ -284,7 +260,11 @@
 
   "basic_stack_panel@npc_interact.main_stack_panel": {
     "controls": [
-      { "top_pad@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "top_pad@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       {
         "name_label@edu_common.light_label": {
           "text": "npcscreen.name"
@@ -314,7 +294,6 @@
   },
 
   "basic_content": {
-    // Arbitrary type, just want to group all basic controls together
     "type": "panel",
     "controls": [
       { "basic@npc_interact.basic_stack_panel": {} }
@@ -328,17 +307,26 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Advanced Panel
-  //---------------------------------------------------------------------------
   "advanced_stack_panel@npc_interact.main_stack_panel": {
     "controls": [
-      { "top_pad@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "top_pad@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       { "add_help_text@npc_interact.add_help_text": {} },
-      { "middle_pad@common.empty_panel": { "size": [ "100%", 12 ] } },
+      {
+        "middle_pad@common.empty_panel": {
+          "size": [ "100%", 12 ]
+        }
+      },
       { "actions@npc_interact.action_panel": {} },
       { "add_buttons@npc_interact.add_buttons": {} },
-      { "bottom_pad@common.empty_panel": { "size": [ "100%", 4 ] } }
+      {
+        "bottom_pad@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      }
     ]
   },
 
@@ -448,7 +436,6 @@
     "$text_edit_box_content_binding_name": "#button_name_text",
     "$text_box_name": "button_name_edit",
     "$text_edit_box_binding_condition": "once",
-    // Shouldn't be needed, but for some reason this control doesn't pad the label properly
     "$text_edit_box_label_anchor_point": "left_middle",
     "bindings": [
       {
@@ -526,7 +513,6 @@
         }
       },
       {
-        // Can't use $option_label because the text has to be dark
         "toggle_label@edu_common.dark_label": {
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
@@ -567,7 +553,6 @@
     ],
     "bindings": [
       {
-        // Actions on close are not allowed for url actions, so hide this toggle in that case
         "binding_type": "collection",
         "binding_name": "(not #is_url_action)",
         "binding_name_override": "#visible",
@@ -580,7 +565,6 @@
     "text": "npcscreen.action.buttonname",
     "bindings": [
       {
-        // Actions on close are not allowed for url actions, so show this label instead
         "binding_type": "collection",
         "binding_name": "#is_url_action",
         "binding_name_override": "#visible",
@@ -592,7 +576,7 @@
   "url_notifications": {
     "type": "stack_panel",
     "orientation": "vertical",
-    "size": ["100%", "100%c"],
+    "size": [ "100%", "100%c" ],
     "controls": [
       {
         "empty_uri_warning@edu_common.inline_notification": {
@@ -634,13 +618,29 @@
           "text": "$action_title"
         }
       },
-      { "label_pad@common.empty_panel": { "size": [ "100%", 2 ] } },
+      {
+        "label_pad@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      },
       { "edit@npc_interact.action_edit": {} },
-      { "edit_pad@common.empty_panel": { "size": [ "100%", 1 ] } },
+      {
+        "edit_pad@common.empty_panel": {
+          "size": [ "100%", 1 ]
+        }
+      },
       { "url_warning@npc_interact.url_notifications": {} },
-      { "url_pad@common.empty_panel": { "size": [ "100%", 3 ] } },
+      {
+        "url_pad@common.empty_panel": {
+          "size": [ "100%", 3 ]
+        }
+      },
       { "action_mode@npc_interact.action_mode": {} },
-      { "mode_pad@common.empty_panel": { "size": [ "100%", 3 ] } },
+      {
+        "mode_pad@common.empty_panel": {
+          "size": [ "100%", 3 ]
+        }
+      },
       { "button_name_label@npc_interact.button_name_label": {} },
       { "button_name@npc_interact.button_name_edit": {} }
     ]
@@ -651,7 +651,6 @@
     "$action_edit_placeholder": "npcscreen.action.command.placeholder",
     "bindings": [
       {
-        // All action types are in the control, but only one is visible through bindings
         "binding_type": "collection",
         "binding_name": "#is_command_action",
         "binding_name_override": "#visible",
@@ -669,7 +668,6 @@
     "$action_edit_placeholder": "npcscreen.action.url.placeholder",
     "bindings": [
       {
-        // All action types are in the control, but only one is visible through bindings
         "binding_type": "collection",
         "binding_name": "#is_url_action",
         "binding_name_override": "#visible",
@@ -729,7 +727,6 @@
     ]
   },
 
-  // Collection of "actions", meaning url or command buttons
   "action_panel": {
     "type": "stack_panel",
     "anchor_from": "top_left",
@@ -768,7 +765,6 @@
     ]
   },
 
-  // Help text that is visible when no actions have been added
   "add_help_section": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -948,7 +944,6 @@
   },
 
   "advanced_scrolling_content": {
-    // Arbitrary type, just want to group all advanced controls together
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
@@ -963,13 +958,8 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Student Panel
-  //---------------------------------------------------------------------------
   "message_model": {
     "type": "panel",
-    // This window has a zoomed in top portion of the paper doll, so offset down and oversize a bit to zoom in
-    // Do this on a parent element since the async ui transition grabs parent size
     "size": [ "100%", "150%" ],
     "controls": [
       {
@@ -978,7 +968,6 @@
           "bindings": [
             {
               "binding_type": "global",
-              // Binding itself doesn't do anything, but the callback is used to fill the property bag
               "binding_name": "#student_model_update"
             }
           ]
@@ -996,7 +985,6 @@
   "message_model_window@npc_interact.banner_fill": {
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
-    // Take up the rest of the space that the text doesn't take, with a gap
     "size": [ "100% - 222px - 2px", "100%" ],
     "controls": [
       { "model@npc_interact.clipped_message_model": {} },
@@ -1043,15 +1031,12 @@
     "$locked_color": "$color",
     "variables": [
       {
-        // Clear placeholder text for non-worldbuilders so they don't see "add text here" when they don't have permission to add text
         "requires": "(not $is_worldbuilder)",
         "$place_holder_text": "",
         "$enabled": false
       }
     ],
-    // Clear enabled binding, we're using a variable
-    "bindings": [
-    ],
+    "bindings": [],
     "locked_control": "background",
     "default_control": "background",
     "hover_control": "background",
@@ -1083,7 +1068,6 @@
               }
             }
           ],
-
           "bindings": [
             {
               "binding_type": "view",
@@ -1095,7 +1079,11 @@
           ]
         }
       },
-      { "background@common.empty_panel": { "size": [ "100%", "100%sm" ] } }
+      {
+        "background@common.empty_panel": {
+          "size": [ "100%", "100%sm" ]
+        }
+      }
     ]
   },
 
@@ -1113,7 +1101,6 @@
     "offset": [ 0, -1 ],
     "variables": [
       {
-        // Always jump to the bottom when it's in worldbuilder
         "requires": "($is_worldbuilder)",
         "$jump_to_bottom_on_update": true
       }
@@ -1140,7 +1127,6 @@
     ]
   },
 
-  // Point on the speach bubble, positioned right at the edge of the bubble pointing into the paper doll window
   "bubble_point": {
     "type": "image",
     "texture": "textures/ui/dialog_bubble_point",
@@ -1148,7 +1134,6 @@
     "layer": 6,
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-    // Offset to be on just to the left of the text
     "offset": [ "-222px + 1px", 0 ]
   },
 
@@ -1157,15 +1142,9 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
-      {
-        "model@npc_interact.message_model_window": {}
-      },
-      {
-        "point@npc_interact.bubble_point": {}
-      },
-      {
-        "message@npc_interact.student_message_bubble": {}
-      }
+      { "model@npc_interact.message_model_window": {} },
+      { "point@npc_interact.bubble_point": {} },
+      { "message@npc_interact.student_message_bubble": {} }
     ]
   },
 
@@ -1211,9 +1190,7 @@
     ]
   },
 
-  // Wrap in panel so we can make the buttons a bit smaller for padding
   "student_button@common.empty_panel": {
-    // Grid has 3 columns, so 1/3 size
     "size": [ "33.3333%", 20 ],
     "controls": [
       {
@@ -1249,7 +1226,6 @@
         "buttons": {
           "type": "stack_panel",
           "orientation": "horizontal",
-          // A bit bigger than 100% so edges line up with other ui, as the buttons are -2px smaller for padding
           "size": [ "100% + 2px", "100%cm" ],
           "controls": [
             {
@@ -1275,15 +1251,22 @@
   "student_stack_panel@npc_interact.main_stack_panel": {
     "size": [ "100%", "100%c" ],
     "controls": [
-      { "top_pad@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "top_pad@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       { "message@npc_interact.student_message_section": {} },
-      { "message_pad@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "message_pad@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       { "buttons@npc_interact.student_buttons": {} }
     ]
   },
 
   "student_view_content": {
-    // Arbitrary type, just want to group all advanced controls together
     "type": "panel",
     "size": [ "100%", "100%cm" ],
     "controls": [
@@ -1303,9 +1286,6 @@
     ]
   },
 
-  // -----------------------------------------------
-  // Base window
-  // -----------------------------------------------
   "close_button_base@common.back_button": {
     "type": "button",
     "size": [ 21, 21 ],
@@ -1318,7 +1298,6 @@
     "$close_button_panel_size": [ 15, 15 ],
     "$close_button_to_button_id": "button.menu_exit",
     "$button_text": "",
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -1331,7 +1310,6 @@
         "mapping_type": "focused"
       },
       {
-        // Catch ESC here too
         "from_button_id": "button.menu_cancel",
         "to_button_id": "$close_button_to_button_id",
         "mapping_type": "global"
@@ -1375,7 +1353,6 @@
         "mapping_type": "focused"
       },
       {
-        // Catch ESC here too
         "from_button_id": "button.menu_cancel",
         "to_button_id": "$close_button_to_button_id",
         "mapping_type": "global"
@@ -1389,7 +1366,6 @@
     ]
   },
 
-  // Visibility binding overtakes ignore condition, so wrap in parent that can ignore, then child can bind visibility
   "ignorable_x_close_button": {
     "type": "panel",
     "size": [ "100%c", "100%c" ],
@@ -1401,13 +1377,9 @@
   "close_button_holder": {
     "type": "panel",
     "size": [ "100%c", "100%c" ],
-    // Weird anchoring since this needs to be above the top right corner, outside the panel indent
     "anchor_from": "top_right",
     "anchor_to": "bottom_right",
     "offset": [ 8, -3 ],
-    // Since there's a close button on every screen, the close button on a given screen handles the button mapping
-    // for back/esc. This means for any screen the first back press will first deselect a text box if one is selected,
-    // then the next press maps to one of these "close_button_to_button_id" values
     "controls": [
       {
         "close_basic@npc_interact.x_close_button": {
@@ -1417,7 +1389,6 @@
       },
       {
         "close_student_edit@npc_interact.ignorable_x_close_button": {
-          // Only show this when editing the student view as a worldbuilder
           "ignored": "(not $is_worldbuilder)",
           "$close_button_to_button_id": "button.exit_student_edit",
           "$visibility_binding_name": "#student_view_visible"
@@ -1425,7 +1396,6 @@
       },
       {
         "close_student@npc_interact.ignorable_x_close_button": {
-          // Only show this when viewing the student view as a non-worldbuilder
           "ignored": "$is_worldbuilder",
           "$close_button_to_button_id": "button.exit_student",
           "$visibility_binding_name": "#student_view_visible"
@@ -1469,7 +1439,6 @@
     "$title_panel": "common_dialogs.standard_title_label",
     "$text_name": "#title_text",
     "$title_text_binding_type": "global",
-    // Can't use default button because we need to change the icon to indicate if it's going to go back or close the window
     "$show_close_button": false
   },
 
@@ -1487,7 +1456,6 @@
     "type": "panel",
     "controls": [
       {
-        // Teacher window containing basic and advanced editing screens
         "teacher@npc_interact.root_panel": {
           "$child_control": "npc_interact.main_content",
           "bindings": [
@@ -1500,7 +1468,6 @@
         }
       },
       {
-        // Student view is form fitting because there could be any amount of student buttons and we don't want dead space
         "student@common_dialogs.form_fitting_main_panel_no_buttons": {
           "$panel_size": [ 320, "100%cm" ],
           "size": "$panel_size",
@@ -1508,7 +1475,6 @@
           "$title_panel": "common_dialogs.standard_title_label",
           "$text_name": "#title_text",
           "$title_text_binding_type": "global",
-          // Don't show default close button, we want our own
           "$show_close_button": false,
           "$custom_background": "common_dialogs.dialog_background_opaque_with_child",
           "bindings": [

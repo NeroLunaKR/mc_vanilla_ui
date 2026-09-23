@@ -26,7 +26,6 @@
     ],
     "$is_full_screen_layout": true,
     "$fill_alpha": 1,
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -227,7 +226,6 @@
     "size": [ "100% - 4px", "100%c" ],
     "controls": [
       {
-        //hack for controller input so the buy now button can change which tab is focused without triggering the tab change on focus logic when we switch focus from the content area to the selector area
         "focus_reset_input_panel": {
           "type": "input_panel",
           "focus_enabled": true,
@@ -260,7 +258,6 @@
                 "$pressed_button_name": "button.signin",
                 "$font_type": "MinecraftTen",
                 "$anchor": "top_left",
-
                 "$default_button_texture": "textures/ui/csb_button_borderless_default",
                 "$hover_button_texture": "textures/ui/csb_button_borderless_hover",
                 "$pressed_button_texture": "textures/ui/csb_button_borderless_hover_pressed",
@@ -285,11 +282,9 @@
     "size": [ "100%", 20 ],
     "$button_size_override": [ "100%", "100% + 1px" ],
     "$button_type_panel": "csb.tab_button_text",
-
     "$radio_toggle_group": true,
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": "$csb_toggle_index",
-
     "$toggle_tab_focus_binding_type": "global",
     "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
     "$toggle_on_hover_binding_type": "global",
@@ -305,19 +300,16 @@
     "layer": 3,
     "color": "$text_color",
     "alpha": "$content_alpha",
-
     "$button_text_binding_type|default": "none",
     "$button_text_grid_collection_name|default": "",
     "$button_text_binding_condition|default": "none",
-
     "variables": [
       {
-        "requires": "(not $is_low_memory_device and not $is_ps4)", // We don't load MinecraftTen in these cases so we need to revert to Mojangles.
+        "requires": "(not $is_low_memory_device and not $is_ps4)",
         "font_scale_factor": 1.2,
-        "offset": [ 0, -4 ] // Because of how the font is rendered it looks like it is offset down from the center of the render area
+        "offset": [ 0, -4 ]
       }
     ],
-
     "bindings": [
       {
         "binding_type": "$button_text_binding_type",
@@ -372,14 +364,11 @@
     "$toggle_view_binding_name": "buy_now_toggle",
     "$toggle_group_forced_index": "$buy_now_toggle_index",
     "$button_text": "store.csb.buyNow",
-
     "$default_texture": "textures/ui/csb_button_borderless_default",
     "$hover_texture": "textures/ui/csb_button_borderless_hover",
     "$pressed_texture": "textures/ui/csb_button_borderless_hover_pressed",
     "$pressed_no_hover_texture": "textures/ui/csb_button_borderless_pressed",
-
     "$default_checked_text_color": "$dark_toggle_hover_text_color",
-
     "bindings": [
       {
         "binding_name": "#buy_now_tab_visible",
@@ -398,14 +387,12 @@
     "texture": "textures/ui/Banners"
   },
 
-  // right side
   "content_area": {
     "type": "panel",
     "size": [ "fill", "100%" ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "layer": 1,
-
     "focus_container": true,
     "use_last_focus": false,
     "$focus_navigation_mode_override_down|default": "contained",
@@ -416,7 +403,6 @@
     "focus_navigation_mode_up": "$focus_navigation_mode_override_up",
     "focus_navigation_mode_left": "$focus_navigation_mode_override_left",
     "focus_navigation_mode_right": "$focus_navigation_mode_override_right",
-
     "controls": [
       {
         "control": {
@@ -474,12 +460,8 @@
 
   "buy_now_content_section@csb.section_base": {
     "controls": [
-      {
-        "vertical_padding@csb.vertical_padding_4px": {}
-      },
-      {
-        "content@csb_buy.buy_now_content": {}
-      }
+      { "vertical_padding@csb.vertical_padding_4px": {} },
+      { "content@csb_buy.buy_now_content": {} }
     ]
   },
 

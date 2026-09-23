@@ -1,8 +1,3 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "auto_save_info",
 
@@ -110,7 +105,6 @@
             }
           ],
           "text": "$auto_save_info_message",
-
           "bindings": [
             {
               "binding_name": "#tts_dialog_body",
@@ -122,9 +116,7 @@
           }
         }
       },
-      {
-        "save_icon@auto_save_info.auto_save": {}
-      },
+      { "save_icon@auto_save_info.auto_save": {} },
       {
         "a@auto_save_info.accept_button": {
           "size": [ "94%", "17%" ],
@@ -133,9 +125,7 @@
           "offset": [ 0, "-3%" ]
         }
       },
-      {
-        "gamepad_helpers@auto_save_info.gamepad_helpers": {}
-      }
+      { "gamepad_helpers@auto_save_info.gamepad_helpers": {} }
     ]
   },
 
@@ -145,7 +135,7 @@
     "controls": [
       {
         "gamepad_helper_a@common.gamepad_helper_a": {
-          "offset":  [ 0, "105%" ],
+          "offset": [ 0, "105%" ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
         }
@@ -153,11 +143,6 @@
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
   "auto_save_info_screen@common.base_screen": {
     "$screen_content": "auto_save_info.auto_save_info_screen_content"
   },
@@ -169,7 +154,11 @@
         "root_panel": {
           "type": "panel",
           "controls": [
-            { "main_panel@auto_save_info.main_panel": { "layer": 1 } }
+            {
+              "main_panel@auto_save_info.main_panel": {
+                "layer": 1
+              }
+            }
           ]
         }
       }

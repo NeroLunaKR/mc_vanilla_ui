@@ -1,25 +1,21 @@
 {
   "namespace": "resource_packs",
 
-  //---------------------------------------------------------------------------
-  // Common Resources
-  //---------------------------------------------------------------------------
-
   "black_image": {
     "type": "image",
     "texture": "textures/ui/Black"
-  }, //pack item background
+  },
 
   "gray_image": {
     "type": "image",
     "texture": "textures/ui/Gray"
-  }, //pack buttons background
+  },
 
   "yellow_image": {
     "type": "image",
     "texture": "textures/ui/White",
     "color": [ 1.0, 0.9098, 0.4 ]
-  }, //addons warning background
+  },
 
   "white_image": {
     "type": "panel",
@@ -34,7 +30,7 @@
         }
       }
     ]
-  }, //image white boarder
+  },
 
   "icon_image": {
     "type": "image",
@@ -63,7 +59,7 @@
         "binding_type": "collection"
       }
     ]
-  }, //pack image
+  },
 
   "resource_packs_toggle_button_control": {
     "type": "panel",
@@ -120,28 +116,24 @@
         }
       }
     ]
-  }, //menu button, no edit
+  },
 
   "resource_packs_section_toggle_base@common_toggles.light_ui_toggle": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "100%", "30px" ],
     "$button_size_override": [ "100%", "100% + 1px" ],
-
     "$button_type_panel": "resource_packs.resource_packs_toggle_button_control",
-
     "$radio_toggle_group": true,
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": "$default_selector_toggle_index",
-
     "$toggle_tab_focus_binding_type": "global",
     "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
     "$toggle_on_hover_binding_type": "global",
     "$toggle_on_hover_binding_name": "#toggle_on_hover",
-
     "$toggle_tts_override_toggle_value": " ",
-    "$toggle_tts_name": "" // We don't want to say 'toggle' for section toggles
-  }, //menu button, no edit
+    "$toggle_tts_name": ""
+  },
 
   "selected_icon_image@resource_packs.icon_image": {
     "$icon_collection_name": "$selected_pack_items"
@@ -167,13 +159,13 @@
     "type": "image",
     "size": [ 11, 3 ],
     "texture": "textures/ui/minus"
-  }, //minus image
+  },
 
   "plus_image": {
     "type": "image",
     "size": [ 11, 11 ],
     "texture": "textures/ui/plus"
-  }, //plus image
+  },
 
   "minus_text@resource_packs.gray_label": {
     "size": [ "default", 10 ],
@@ -197,7 +189,7 @@
     "type": "image",
     "size": [ 9, 14 ],
     "texture": "textures/ui/ErrorGlyph"
-  }, //red exclaimation
+  },
 
   "error_image_hover": {
     "type": "image",
@@ -226,7 +218,7 @@
     "type": "image",
     "size": [ 9, 14 ],
     "texture": "textures/ui/Caution"
-  }, //yellow exclaimation
+  },
 
   "warning_image_hover": {
     "type": "image",
@@ -255,7 +247,7 @@
     "type": "image",
     "size": [ 14, 12 ],
     "texture": "textures/ui/confirm"
-  }, //check image
+  },
 
   "no_error_image_hover": {
     "type": "image",
@@ -286,14 +278,14 @@
     "texture": "textures/ui/up_arrow",
     "size": [ 14, 14 ],
     "color": "$dark_button_secondary_default_text_color"
-  }, //up arrow image
+  },
 
   "down_arrow_image": {
     "type": "image",
     "texture": "textures/ui/down_arrow",
     "size": [ 14, 14 ],
     "color": "$dark_button_secondary_default_text_color"
-  }, //down arrow image
+  },
 
   "up_arrow_image_hover": {
     "offset": [ 0, 2 ],
@@ -388,7 +380,7 @@
     "uv_size": [ 64, 8 ],
     "uv": "@common.bar_animation",
     "color": [ 0.7, 0.7, 0.7, 1.0 ]
-  }, //tiny loading in button
+  },
 
   "warning_image_wrapper": {
     "type": "panel",
@@ -444,7 +436,7 @@
         }
       }
     ]
-  }, //far right button for packs (can be check, exclaimation, or loading)
+  },
 
   "tooltip_image_wrapper": {
     "type": "panel",
@@ -477,7 +469,7 @@
         }
       }
     ]
-  }, //far right button for packs (can be check, exclaimation, or loading)
+  },
 
   "options_image": {
     "type": "image",
@@ -545,11 +537,7 @@
     "sound_volume": 1.0,
     "size": [ "100%", "100%c" ],
     "focus_enabled": true
-  }, //general button for a pack
-
-  //---------------------------------------------------------------------------
-  // Pack Button Layout
-  //---------------------------------------------------------------------------
+  },
 
   "available_text_panel": {
     "type": "stack_panel",
@@ -580,7 +568,6 @@
                 "size": [ "default", 10 ]
               }
             }
-
           ]
         }
       },
@@ -640,7 +627,6 @@
                 "size": [ "default", 10 ]
               }
             }
-
           ]
         }
       },
@@ -691,7 +677,6 @@
                 "size": [ "default", 10 ]
               }
             }
-
           ]
         }
       },
@@ -1802,12 +1787,11 @@
   "empty_resource_pack_button": {
     "type": "panel",
     "size": [ 0, 0 ]
-  }, //empty pack, no edit
+  },
 
   "resource_pack_button_padding": {
     "$resource_pack_button_variable|default": "",
     "type": "panel",
-    // If the button we are padding is the empty button, we shouldn't be visible.
     "visible": "(not ($resource_pack_button_variable = 'resource_packs.empty_resource_pack_button'))",
     "size": "$resource_pack_button_padding_size",
     "bindings": [
@@ -1826,7 +1810,6 @@
     "modal": true,
     "inline_modal": true,
     "focus_enabled": false,
-    // We need to set the visibility false or we try to set focus to this object since it's modal.
     "visible": false,
     "layer": 1,
     "size": [ "100%", 24 ],
@@ -1838,16 +1821,13 @@
           "texture": "textures/ui/packs_border",
           "alpha": 0.4,
           "layer": 2,
-
           "$resource_pack_button_0|default": "resource_packs.empty_resource_pack_button",
           "$resource_pack_button_1|default": "resource_packs.empty_resource_pack_button",
           "$resource_pack_button_2|default": "resource_packs.empty_resource_pack_button",
           "$resource_pack_button_3|default": "resource_packs.empty_resource_pack_button",
           "$resource_pack_button_4|default": "resource_packs.empty_resource_pack_button",
           "$resource_pack_button_5|default": "resource_packs.empty_resource_pack_button",
-
           "$resource_pack_button_padding_size|default": [ 2, "100%" ],
-
           "controls": [
             {
               "button_panel": {
@@ -2046,7 +2026,7 @@
         }
       }
     ]
-  }, //active pack button inside layout
+  },
 
   "selected_pack_button_layout_hover": {
     "type": "panel",
@@ -2200,8 +2180,6 @@
     "$visible_binding_type|default": "collection",
     "$enabled_binding_name|default": "#is_selected",
     "$enabled_binding_type|default": "collection",
-
-    // If $visible_binding_name isn't set we won't use that bind.
     "variables": [
       {
         "requires": "($visible_binding_name = '' and $visible_binding_type = collection)",
@@ -2212,7 +2190,6 @@
         "$enabled_binding_type": "none"
       }
     ],
-
     "size": [ 18, 18 ],
     "bindings": [
       {
@@ -2242,15 +2219,12 @@
     "$hover_button_texture": "",
     "$pressed_button_texture": "",
     "$locked_button_texture": "",
-
-    // If $visible_binding_name isn't set we won't use that bind.
     "variables": [
       {
         "requires": "($visible_binding_name = '' and $visible_binding_type = collection)",
         "$visible_binding_type": "none"
       }
     ],
-
     "size": [ 18, 18 ],
     "bindings": [
       {
@@ -2272,7 +2246,7 @@
     "$pressed_button_name": "$button.move_left",
     "$button_content": "resource_packs.minus_text",
     "$visible_binding_name": "#can_move"
-  }, //button to remove pack from active, edit text and size
+  },
 
   "selected_pack_plus_button@resource_packs.selected_pack_movement_button": {
     "size": [ "fill", 18 ],
@@ -2281,7 +2255,7 @@
     "$button_content": "resource_packs.plus_text",
     "$visible_binding_name": "#can_move",
     "$enabled_binding_name": "(not $platform_locked)"
-  }, //button to add pack to active, edit text and size
+  },
 
   "selected_pack_store_button@resource_packs.selected_pack_movement_button": {
     "size": [ 70, 18 ],
@@ -2289,7 +2263,7 @@
     "$pressed_button_name": "$button.store",
     "$button_content": "resource_packs.store_text",
     "$visible_binding_name": "#can_go_to_store"
-  }, //button to remove pack from active, edit text and size
+  },
 
   "selected_pack_store_button_fill@resource_packs.selected_pack_movement_button": {
     "size": [ "fill", 18 ],
@@ -2297,7 +2271,7 @@
     "$pressed_button_name": "$button.store",
     "$button_content": "resource_packs.store_text",
     "$visible_binding_name": "#can_go_to_store"
-  }, //button to remove pack from active, edit text and size
+  },
 
   "selected_pack_up_button@resource_packs.selected_pack_transparent_movement_button": {
     "$button_pressed_offset": [ 0, 0 ],
@@ -2305,7 +2279,7 @@
     "$button_content": "resource_packs.up_arrow_wrapper",
     "$visible_binding_name": "#can_sort_up",
     "$button_content_offset": [ 1, 1 ]
-  }, //button with up arrow, remove outline
+  },
 
   "selected_pack_down_button@resource_packs.selected_pack_transparent_movement_button": {
     "$button_pressed_offset": [ 0, 0 ],
@@ -2313,7 +2287,7 @@
     "$button_content": "resource_packs.down_arrow_wrapper",
     "$visible_binding_name": "#can_sort_down",
     "$button_content_offset": [ 1, 1 ]
-  }, //button with down arrow, remove outline
+  },
 
   "selected_pack_warning_button@common_buttons.transparent_content_button": {
     "$pressed_button_name": "$button.report_errors",
@@ -2341,7 +2315,7 @@
         "binding_type": "collection"
       }
     ]
-  }, //far right button with check/warning/loading glyph, remove button and move to settings button
+  },
 
   "selected_pack_options_button@common_buttons.transparent_content_button": {
     "size": [ 18, 14 ],
@@ -2351,7 +2325,6 @@
     "$hover_button_texture": "",
     "$pressed_button_texture": "",
     "$locked_button_texture": "",
-
     "bindings": [
       {
         "binding_type": "collection",
@@ -2366,19 +2339,15 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Common Text Labels
-  //---------------------------------------------------------------------------
-
   "white_label": {
     "type": "label",
     "color": "$main_header_text_color"
-  }, //white text, no edit
+  },
 
   "gray_label": {
     "type": "label",
     "color": "$dark_button_secondary_default_text_color"
-  }, //grey text,
+  },
 
   "suggested_content_offers_title_label@resource_packs.white_label": {
     "text": "$suggested_content_offers_label_text",
@@ -2564,30 +2533,28 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "text": "#name"
-  }, //pack name text,
+  },
 
   "size_label@resource_packs.white_label": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "text": "#size",
     "font_type": "smooth"
-  }, //pack size text,
+  },
 
   "description_label@resource_packs.white_label": {
     "text": "$bottom_description_text",
     "font_type": "smooth"
-  }, //white text for description, no edit
+  },
 
   "pack_label@resource_packs.white_label": {
     "text": "#description",
     "font_type": "smooth"
-  }, //grey text for description,
+  },
 
   "selected_pack_description_label@resource_packs.pack_label": {
     "$desc_collection_name": "$selected_pack_items",
-    "notify_on_ellipses": [
-      "read_more_button"
-    ],
+    "notify_on_ellipses": [ "read_more_button" ],
     "bindings": [
       {
         "binding_collection_name": "$desc_collection_name",
@@ -2595,11 +2562,11 @@
         "binding_type": "collection"
       }
     ]
-  }, //pack description text when active, no edit
+  },
 
   "available_pack_description_label@resource_packs.selected_pack_description_label": {
     "$desc_collection_name": "$available_pack_items"
-  }, //pack description text when available, no edit
+  },
 
   "realms_pack_description_label@resource_packs.selected_pack_description_label": {
     "$desc_collection_name": "$realms_pack_items"
@@ -2618,7 +2585,7 @@
         "binding_type": "collection"
       }
     ]
-  }, //pack name text when active, no edit
+  },
 
   "selected_file_size_label@resource_packs.size_label": {
     "$size_collection_name": "$selected_pack_items",
@@ -2629,15 +2596,15 @@
         "binding_type": "collection"
       }
     ]
-  }, //pack size text when active, no edit
+  },
 
   "available_pack_name_label@resource_packs.selected_pack_name_label": {
     "$name_collection_name": "$available_pack_items"
-  }, //pack name text when available, no edit
+  },
 
   "available_file_size_label@resource_packs.selected_file_size_label": {
     "$size_collection_name": "$available_pack_items"
-  }, //pack size text when available, no edit
+  },
 
   "realms_pack_name_label@resource_packs.selected_pack_name_label": {
     "$name_collection_name": "$realms_pack_items"
@@ -2657,15 +2624,11 @@
 
   "invalid_pack_name_label@resource_packs.selected_pack_name_label": {
     "$name_collection_name": "$invalid_pack_items"
-  }, //pack name text when invalid, no edit
+  },
 
   "invalid_pack_description_label@resource_packs.selected_pack_description_label": {
     "$desc_collection_name": "$invalid_pack_items"
   },
-
-  //---------------------------------------------------------------------------
-  // Page Layout
-  //---------------------------------------------------------------------------
 
   "available_panel": {
     "type": "panel",
@@ -2691,13 +2654,13 @@
         }
       }
     ]
-  }, //screen for pocket view, no edit
+  },
 
   "checkbox_visuals@common.toggle_visuals": {
     "size": [ 30, "100%" ],
     "anchor_from": "left_middle",
     "anchor_to": "left_middle"
-  }, //checkbox toggle
+  },
 
   "header_control@common.checkbox": {
     "size": [ "100%", "100%" ],
@@ -2708,10 +2671,8 @@
     "$toggle_enabled_binding_name": "#force_user_agreement_level_enabled",
     "$enabled|default": false,
     "enabled": "$enabled",
-
     "tts_control_type_order_priority": 100,
     "tts_value_order_priority": 101,
-
     "variables": [
       {
         "requires": "$show_checkbox",
@@ -2719,7 +2680,6 @@
         "$enabled": true
       }
     ],
-
     "controls": [
       {
         "header_description_stack_panel": {
@@ -2764,14 +2724,13 @@
         }
       }
     ]
-  }, //checkbox text at top of page for realms only
+  },
 
   "addon_header_control": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "layer": 3,
     "$black_color": [ 0.0, 0.0, 0.0 ],
-
     "controls": [
       {
         "header_description_stack_panel": {
@@ -2842,7 +2801,11 @@
   "panel_bg": {
     "type": "panel",
     "controls": [
-      { "black_background@resource_packs.black_image": { "layer": 1 } },
+      {
+        "black_background@resource_packs.black_image": {
+          "layer": 1
+        }
+      },
       {
         "gray@resource_packs.gray_image": {
           "size": [ "100%-2px", "100%-2px" ],
@@ -2855,7 +2818,11 @@
   "addon_panel_bg": {
     "type": "panel",
     "controls": [
-      { "black_background@resource_packs.black_image": { "layer": 1 } },
+      {
+        "black_background@resource_packs.black_image": {
+          "layer": 1
+        }
+      },
       {
         "yellow@resource_packs.yellow_image": {
           "size": [ "100%-2px", "100%-2px" ],
@@ -2897,7 +2864,6 @@
                         }
                       ]
                     }
-
                   }
                 ]
               }
@@ -2942,7 +2908,6 @@
           "size": [ "100%", 30 ],
           "$force_pack_download_binding_type|default": "none",
           "$focus_override_down": "addon_stacking_warning_panel",
-
           "controls": [
             { "panel_bg@resource_packs.panel_bg": {} },
             { "header_control@resource_packs.header_control": {} }
@@ -2972,7 +2937,6 @@
           "type": "panel",
           "size": [ "100%", 30 ],
           "$focus_id": "addon_stacking_warning_panel",
-
           "controls": [
             { "addon_panel_bg@resource_packs.addon_panel_bg": {} },
             { "header_control@resource_packs.addon_header_control": {} }
@@ -2999,9 +2963,7 @@
           "$button_collection_name": "$selected_pack_items",
           "$focus_override_up": "addon_stacking_warning_panel",
           "controls": [
-            {
-              "selected_packs_title_button@resource_packs.selected_packs_title_button": {}
-            },
+            { "selected_packs_title_button@resource_packs.selected_packs_title_button": {} },
             {
               "tooltip": {
                 "type": "panel",
@@ -3023,57 +2985,6 @@
                       "$pressed_button_name": "button.ignore_me"
                     }
                   }
-                  //TODO: Fix tooltip issues [Bug 249940]
-                  //{
-                  //  "tooltip_popup@common.button": {
-                  //    "size": [ 90, 30 ],
-                  //    "sound_volume": 0.0,
-                  //    //"$tooltip_button_content_size|default": [ "100%", "100%" ],
-                  //    "$tooltip_background_texture": "textures/ui/tooltip_default_background",
-
-                  //    "$pressed_button_name": "button.ignore_me",
-                  //    "$tooltip_button_collection_name": "",
-
-                  //    "$tooltip_button_binding_type": "none",
-                  //    "$tooltip_text_binding_name": "#warn_or_error",
-                  //    "$tooltip_text_binding_type": "none",
-                  //    "$tooltip_popup_override_image_panel": "resource_packs.tooltip_image_wrapper",
-                  //    "$override_tooltip_popup_image": true,
-                  //    "$tooltip_chevron_anchor": "top_right",
-
-                  //    "button_mappings": [
-                  //      {
-                  //        "from_button_id": "button.menu_select",
-                  //        "to_button_id": "$pressed_button_name",
-                  //        "mapping_type": "pressed"
-                  //      },
-                  //      {
-                  //        "from_button_id": "button.menu_ok",
-                  //        "to_button_id": "$pressed_button_name",
-                  //        "mapping_type": "focused"
-                  //      }
-                  //    ],
-
-                  //    "controls": [
-                  //      {
-                  //        "default@common.empty_panel": {}
-                  //      },
-                  //      {
-                  //        "hover@common.static_tooltip_popup_with_image_and_text": {}
-                  //      },
-                  //      {
-                  //        "pressed@common.static_tooltip_popup_with_image_and_text": {}
-                  //      }
-                  //    ],
-                  //    "bindings": [
-                  //      {
-                  //        "binding_name": "#warn_or_error",
-                  //        "binding_collection_name": "$button_collection_name",
-                  //        "binding_type": "collection"
-                  //      }
-                  //    ]
-                  //  }
-                  //}
                 ],
                 "bindings": [
                   {
@@ -3215,9 +3126,7 @@
           "size": [ "100%", 20 ],
           "$button_collection_name": "$available_pack_items",
           "controls": [
-            {
-              "available_packs_title_button@resource_packs.available_packs_title_button": {}
-            },
+            { "available_packs_title_button@resource_packs.available_packs_title_button": {} },
             {
               "tooltip": {
                 "type": "panel",
@@ -3239,57 +3148,6 @@
                       "$pressed_button_name": "button.ignore_me"
                     }
                   }
-                  //TODO: Fix tooltip issues [Bug 249940]
-                  //{
-                  //  "tooltip_popup@common.button": {
-                  //    "size": [ 90, 30 ],
-                  //    "sound_volume": 0.0,
-                  //    //"$tooltip_button_content_size|default": [ "100%", "100%" ],
-                  //    "$tooltip_background_texture": "textures/ui/tooltip_default_background",
-
-                  //    "$pressed_button_name": "button.ignore_me",
-                  //    "$tooltip_button_collection_name": "",
-
-                  //    "$tooltip_button_binding_type": "none",
-                  //    "$tooltip_text_binding_name": "#warn_or_error",
-                  //    "$tooltip_text_binding_type": "none",
-                  //    "$tooltip_popup_override_image_panel": "resource_packs.tooltip_image_wrapper",
-                  //    "$override_tooltip_popup_image": true,
-                  //    "$tooltip_chevron_anchor": "top_right",
-
-                  //    "button_mappings": [
-                  //      {
-                  //        "from_button_id": "button.menu_select",
-                  //        "to_button_id": "$pressed_button_name",
-                  //        "mapping_type": "pressed"
-                  //      },
-                  //      {
-                  //        "from_button_id": "button.menu_ok",
-                  //        "to_button_id": "$pressed_button_name",
-                  //        "mapping_type": "focused"
-                  //      }
-                  //    ],
-
-                  //    "controls": [
-                  //      {
-                  //        "default@common.empty_panel": {}
-                  //      },
-                  //      {
-                  //        "hover@common.static_tooltip_popup_with_image_and_text": {}
-                  //      },
-                  //      {
-                  //        "pressed@common.static_tooltip_popup_with_image_and_text": {}
-                  //      }
-                  //    ],
-                  //    "bindings": [
-                  //      {
-                  //        "binding_name": "#warn_or_error",
-                  //        "binding_collection_name": "$button_collection_name",
-                  //        "binding_type": "collection"
-                  //      }
-                  //    ]
-                  //  }
-                  //}
                 ],
                 "bindings": [
                   {
@@ -3526,23 +3384,21 @@
         }
       }
     ]
-  }, //whole screen, make dropdown toggle with title
+  },
 
   "available_stack_panel": {
     "type": "stack_panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
-      {
-        "available_packs_title_button@resource_packs.available_packs_title_button": {}
-      },
+      { "available_packs_title_button@resource_packs.available_packs_title_button": {} },
       {
         "available_pack_grid@resource_packs.available_pack_grid": {
           "size": [ "100%", "default" ]
         }
       }
     ]
-  }, //section for available packs for pocket view, make dropdown toggle with title
+  },
 
   "pack_background": {
     "type": "panel",
@@ -3605,10 +3461,7 @@
                 "type": "panel",
                 "size": [ "100%", "100%c" ],
                 "controls": [
-                  {
-                    "selected_pack_direction_buttons@resource_packs.input_button_panel": {
-                    }
-                  }
+                  { "selected_pack_direction_buttons@resource_packs.input_button_panel": {} }
                 ]
               }
             }
@@ -3661,10 +3514,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "available_pack_direction_buttons@resource_packs.input_button_panel": {
-              }
-            }
+            { "available_pack_direction_buttons@resource_packs.input_button_panel": {} }
           ]
         }
       },
@@ -3714,10 +3564,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "realms_pack_direction_buttons@resource_packs.input_button_panel": {
-              }
-            }
+            { "realms_pack_direction_buttons@resource_packs.input_button_panel": {} }
           ]
         }
       },
@@ -3765,10 +3612,7 @@
           "type": "panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-            {
-              "realms_pack_direction_buttons@resource_packs.input_button_panel": {
-              }
-            }
+            { "realms_pack_direction_buttons@resource_packs.input_button_panel": {} }
           ]
         }
       },
@@ -3809,9 +3653,7 @@
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "divider@common.horizontal_divider": {}
-      },
+      { "divider@common.horizontal_divider": {} },
       {
         "pad_1": {
           "type": "panel",
@@ -3824,12 +3666,10 @@
   "selected_pack_grid": {
     "type": "stack_panel",
     "orientation": "vertical",
-
     "factory": {
       "name": "selected_pack_factory",
       "control_name": "resource_packs.selected_pack_panel"
     },
-
     "collection_name": "$selected_pack_items",
     "bindings": [
       {
@@ -3837,17 +3677,15 @@
         "binding_name_override": "#collection_length"
       }
     ]
-  }, //space for active packs to populate
+  },
 
   "available_pack_grid": {
     "type": "stack_panel",
     "orientation": "vertical",
-
     "factory": {
       "name": "available_pack_factory",
       "control_name": "resource_packs.available_pack_panel"
     },
-
     "collection_name": "$available_pack_items",
     "$available_grid_visible_binding_name|default": "",
     "$available_grid_visible_binding_type|default": "none",
@@ -3862,18 +3700,16 @@
         "binding_type": "$available_grid_visible_binding_type"
       }
     ]
-  }, //space for available packs to populate
+  },
 
   "realms_pack_grid": {
     "type": "stack_panel",
     "orientation": "vertical",
     "visible": false,
-
     "factory": {
       "name": "realms_pack_factory",
       "control_name": "resource_packs.realms_pack_panel"
     },
-
     "collection_name": "$realms_pack_items",
     "$realms_grid_visible_binding_name|default": "",
     "$realms_grid_visible_binding_type|default": "none",
@@ -3894,12 +3730,10 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "visible": false,
-
     "factory": {
       "name": "unowned_pack_factory",
       "control_name": "resource_packs.unowned_pack_panel"
     },
-
     "collection_name": "$unowned_pack_items",
     "$unowned_grid_visible_binding_name|default": "",
     "$unowned_grid_visible_binding_type|default": "none",
@@ -3919,12 +3753,10 @@
   "invalid_pack_grid": {
     "type": "stack_panel",
     "orientation": "vertical",
-
     "factory": {
       "name": "invalid_pack_factory",
       "control_name": "resource_packs.invalid_pack_panel"
     },
-
     "collection_name": "$invalid_pack_items",
     "bindings": [
       {
@@ -3932,5 +3764,5 @@
         "binding_name_override": "#collection_length"
       }
     ]
-  } //space for invalid packs to populate
+  }
 }

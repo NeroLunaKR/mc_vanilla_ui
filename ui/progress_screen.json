@@ -1,14 +1,12 @@
 {
   "namespace": "progress",
 
-  //--------------------------------------------------------------------------------
-  // Popup Dialog for resource packs
   "popup_dialog_base@popup_dialog.popup_dialog": {
     "size": [ "90%", "90%" ],
-    "$left_button_press": "button.confirm_download", //"button.download_resourcepack",
-    "$left_button_text": "gui.close", //"progress.resourcepack.download",
-    "$right_button_press": "button.deny_packs", //"button.close_dialog",
-    "$right_button_text": "gui.close", //"progress.resourcepack.cancel",
+    "$left_button_press": "button.confirm_download",
+    "$left_button_text": "gui.close",
+    "$right_button_press": "button.deny_packs",
+    "$right_button_text": "gui.close",
     "controls": [
       { "background@popup_dialog.popup_dialog_bg": {} },
       {
@@ -24,7 +22,6 @@
         }
       },
       {
-        //total number of selected packs x/y
         "totalSelected": {
           "layer": 100,
           "type": "label",
@@ -42,7 +39,6 @@
         }
       },
       {
-        //total download size of selected packs
         "totalSelectedSize": {
           "type": "label",
           "size": [ "50c%", 10 ],
@@ -73,7 +69,6 @@
     ]
   },
 
-  // Checkbox with label
   "checkbox_visual": {
     "type": "panel",
     "size": [ "100%", 20 ],
@@ -137,7 +132,6 @@
     "$checked_locked_control": "progress.checkbox_visuals_checked_locked",
     "$checked_locked_hover_control": "progress.checkbox_visuals_checked_locked",
     "size": [ "100%", "100%c" ],
-
     "enabled": "$enabled"
   },
 
@@ -153,12 +147,9 @@
     ]
   },
 
-  // Resourcepack button & section
   "resource_pack_grid_item@progress.checkbox_with_label": {
-
     "$toggle_default_state": true,
     "$enabled": "$optional_pack",
-
     "$checkbox_label_text": "#resource_pack_name",
     "$checkbox_label_bindings": [
       {
@@ -181,19 +172,14 @@
     "anchor_to": "top_left",
     "$default_text_color": [ 0.3, 0.3, 0.3 ],
     "$active_text_color": [ 1.0, 1.0, 1.0 ],
-
     "controls": [
       {
         "required_resource_pack_list_grid": {
           "type": "grid",
           "size": [ "100%", "100%c" ],
-
           "grid_item_template": "progress.resource_pack_grid_item",
-          //for grid_item_template
           "$optional_pack": false,
           "$resource_pack_collection": "required_resourcepacks",
-
-
           "grid_dimension_binding": "#required_resource_pack_grid_dimension",
           "collection_name": "required_resourcepacks",
           "bindings": [
@@ -208,14 +194,9 @@
         "optional_resource_pack_list_grid": {
           "type": "grid",
           "size": [ "100%", "100%c" ],
-
-
           "grid_item_template": "progress.resource_pack_grid_item",
-          //for grid_item_template
           "$optional_pack": true,
           "$resource_pack_collection": "optional_resourcepacks",
-
-
           "grid_dimension_binding": "#optional_resource_pack_grid_dimension",
           "collection_name": "optional_resourcepacks",
           "bindings": [
@@ -229,13 +210,10 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-
   "simple_popup_dialog_base@popup_dialog.popup_dialog": {
     "size": [ "50%", "100%c" ],
     "max_size": [ "50%", "100% - 4px" ],
     "min_size": [ "50%", "50%" ],
-
     "$use_top_button|default": false,
     "$top_button_press|default": "",
     "$top_button_text|default": "",
@@ -272,7 +250,6 @@
         "scope": "view"
       }
     ],
-
     "controls": [
       {
         "dialog_background_hollow_3@common.dialog_background_hollow_3": {
@@ -430,10 +407,8 @@
 
   "resource_pack_download_server_required@progress.resource_pack_download_popup_base": {
     "$top_button_text": "#empty_binding",
-
     "$middle_button_press": "button.join_and_download_everything",
     "$middle_button_text": "#join_and_download_everything",
-
     "$bottom_button_press": "button.leave",
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
@@ -442,40 +417,33 @@
     "$use_top_button": true,
     "$top_button_press": "button.join_and_download_everything",
     "$top_button_text": "#join_and_download_everything",
-
     "$middle_button_press": "button.join_and_download_required",
     "$middle_button_text": "#join_and_download_required",
-
     "$bottom_button_press": "button.leave",
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
 
   "resource_pack_download_optional@progress.resource_pack_download_popup_base": {
     "$top_button_text": "#empty_binding",
-
     "$middle_button_press": "button.join_and_download_everything",
     "$middle_button_text": "#join_and_download_everything",
-
     "$bottom_button_press": "button.join",
     "$bottom_button_text": "progressScreen.dialog.button.join"
   },
 
   "resource_pack_download_required@progress.resource_pack_download_popup_base": {
     "$top_button_text": "#empty_binding",
-
     "$middle_button_press": "button.join_and_download_required",
     "$middle_button_text": "#join_and_download_required",
-
     "$bottom_button_press": "button.leave",
     "$bottom_button_text": "progressScreen.dialog.button.leave"
   },
-
-  //--------------------------------------------------------------------------------
 
   "normal_stroke_button": {
     "type": "image",
     "texture": "textures/ui/NormalButtonThinStroke"
   },
+
   "progress_screen_text": {
     "type": "label",
     "color": "$loading_text_color",
@@ -505,7 +473,9 @@
     "$progress_text_binding|default": "#progress_text",
     "text": "$progress_text_binding",
     "bindings": [
-      { "binding_name": "$progress_text_binding" }
+      {
+        "binding_name": "$progress_text_binding"
+      }
     ]
   },
 
@@ -514,7 +484,9 @@
     "max_size": [ "100% - 8px", 20 ],
     "text": "#code_text",
     "bindings": [
-      { "binding_name": "#code_text" }
+      {
+        "binding_name": "#code_text"
+      }
     ]
   },
 
@@ -524,7 +496,9 @@
     "text": "#code_number",
     "color": "$e_color_format",
     "bindings": [
-      { "binding_name": "#code_number" }
+      {
+        "binding_name": "#code_number"
+      }
     ]
   },
 
@@ -787,15 +761,9 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
-      {
-        "progress_title_text@progress.progress_title_text": {}
-      },
-      {
-        "progress_bar_text@progress.progress_bar_text": {}
-      },
-      {
-        "progress_bar@progress.progress_bar": {}
-      }
+      { "progress_title_text@progress.progress_title_text": {} },
+      { "progress_bar_text@progress.progress_bar_text": {} },
+      { "progress_bar@progress.progress_bar": {} }
     ]
   },
 
@@ -816,31 +784,21 @@
 
   "modal_button_panel@button_panel": {
     "controls": [
-      {
-        "cancel_button@progress.cancel_button": {}
-      }
+      { "cancel_button@progress.cancel_button": {} }
     ]
   },
 
   "modal_button_panel_with_retry@modal_button_panel": {
     "controls": [
-      {
-        "abort_button@progress.abort_button": {}
-      },
-      {
-        "cancel_button@progress.cancel_button": {}
-      },
-      {
-        "retry_button@progress.retry_button": {}
-      }
+      { "abort_button@progress.abort_button": {} },
+      { "cancel_button@progress.cancel_button": {} },
+      { "retry_button@progress.retry_button": {} }
     ]
   },
 
   "modal_ok_button_panel@button_panel": {
     "controls": [
-      {
-        "ok_button@progress.ok_button": {}
-      }
+      { "ok_button@progress.ok_button": {} }
     ]
   },
 
@@ -851,15 +809,9 @@
           "$button_text": "gui.ok"
         }
       },
-      {
-        "center_cancel_button@progress.cancel_button": {}
-      },
-      {
-        "center_ok_button@progress.ok_button": {}
-      },
-      {
-        "right_retry_button@progress.retry_button": {}
-      }
+      { "center_cancel_button@progress.cancel_button": {} },
+      { "center_ok_button@progress.ok_button": {} },
+      { "right_retry_button@progress.retry_button": {} }
     ]
   },
 
@@ -905,7 +857,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "fetch_world_image@progress.world_image": { "offset": [ -6, 0 ] } }
+            {
+              "fetch_world_image@progress.world_image": {
+                "offset": [ -6, 0 ]
+              }
+            }
           ]
         }
       },
@@ -929,7 +885,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "upload_cloud_image@progress.cloud_image": { "offset": [ 6, 3 ] } }
+            {
+              "upload_cloud_image@progress.cloud_image": {
+                "offset": [ 6, 3 ]
+              }
+            }
           ]
         }
       }
@@ -952,7 +912,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "fetch_cloud_image@progress.cloud_image": { "offset": [ -6, 3 ] } }
+            {
+              "fetch_cloud_image@progress.cloud_image": {
+                "offset": [ -6, 3 ]
+              }
+            }
           ]
         }
       },
@@ -977,7 +941,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "fetch_world_image@progress.world_image": { "offset": [ 6, 0 ] } }
+            {
+              "fetch_world_image@progress.world_image": {
+                "offset": [ 6, 0 ]
+              }
+            }
           ]
         }
       }
@@ -995,7 +963,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "download_cloud_image@progress.cloud_image": { "offset": [ -6, 5 ] } }
+            {
+              "download_cloud_image@progress.cloud_image": {
+                "offset": [ -6, 5 ]
+              }
+            }
           ]
         }
       },
@@ -1020,7 +992,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "download_world_image@progress.world_image": { "offset": [ 6, 1 ] } }
+            {
+              "download_world_image@progress.world_image": {
+                "offset": [ 6, 1 ]
+              }
+            }
           ]
         }
       }
@@ -1037,7 +1013,11 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "server_image@progress.server_image": { "offset": [ -6, 0 ] } }
+            {
+              "server_image@progress.server_image": {
+                "offset": [ -6, 0 ]
+              }
+            }
           ]
         }
       },
@@ -1062,16 +1042,16 @@
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "controls": [
-            { "server_image@progress.server_image": { "offset": [ 6, 0 ] } }
+            {
+              "server_image@progress.server_image": {
+                "offset": [ 6, 0 ]
+              }
+            }
           ]
         }
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
 
   "modal_progress_panel_no_cancel": {
     "type": "panel",
@@ -1090,16 +1070,11 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-12px" ],
           "offset": [ 6, 6 ],
           "controls": [
-            {
-              "title_panel@progress.title_panel": {}
-            },
-            {
-              "progress_loading_bars@progress.progress_loading_bars": {}
-            }
+            { "title_panel@progress.title_panel": {} },
+            { "progress_loading_bars@progress.progress_loading_bars": {} }
           ]
         }
       }
@@ -1123,16 +1098,11 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-60px" ],
           "offset": [ 6, 20 ],
           "controls": [
-            {
-              "title_panel@progress.title_panel": {}
-            },
-            {
-              "progress_loading_bars@progress.progress_loading_bars": {}
-            }
+            { "title_panel@progress.title_panel": {} },
+            { "progress_loading_bars@progress.progress_loading_bars": {} }
           ]
         }
       },
@@ -1150,15 +1120,9 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "progress_loading_bars@progress.progress_loading_bars": {}
-      },
-      {
-        "title_panel@progress.title_panel": {}
-      },
-      {
-        "button_panel@progress.button_panel": {}
-      }
+      { "progress_loading_bars@progress.progress_loading_bars": {} },
+      { "title_panel@progress.title_panel": {} },
+      { "button_panel@progress.button_panel": {} }
     ]
   },
 
@@ -1316,7 +1280,6 @@
     "$screen_animations": []
   },
 
-
   "world_convert_modal_progress_screen@progress.progress_screen": {
     "$screen_content": "progress.world_convert_modal_progress_screen_content"
   },
@@ -1327,7 +1290,6 @@
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade"
     ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -1373,12 +1335,8 @@
   "progress_content_panel": {
     "type": "panel",
     "controls": [
-      {
-        "progress_panel@progress.progress_panel": {}
-      },
-      {
-        "gamepad_helpers@progress.gamepad_helpers": {}
-      }
+      { "progress_panel@progress.progress_panel": {} },
+      { "gamepad_helpers@progress.gamepad_helpers": {} }
     ]
   },
 
@@ -1399,9 +1357,7 @@
       }
     ],
     "controls": [
-      {
-        "modal_progress_panel@progress.modal_progress_panel_with_cancel": {}
-      }
+      { "modal_progress_panel@progress.modal_progress_panel_with_cancel": {} }
     ]
   },
 
@@ -1442,7 +1398,6 @@
                 "type": "stack_panel",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                // magic offset to make the scroll clipping perfect
                 "size": [ "100%-12px", "100%c" ],
                 "offset": [ 6, 0 ],
                 "controls": [
@@ -1508,9 +1463,7 @@
                       "type": "panel",
                       "size": [ "100%", "100%c" ],
                       "controls": [
-                        {
-                          "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
-                        },
+                        { "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {} },
                         {
                           "progress_loading_bars@progress.progress_loading_bars": {
                             "offset": [ 0, 0 ]
@@ -1562,7 +1515,6 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-12px" ],
           "offset": [ 6, 6 ],
           "controls": [
@@ -1586,12 +1538,16 @@
                 "anchor_to": "center",
                 "text": "#progress_text",
                 "bindings": [
-                  { "binding_name": "#progress_text" }
+                  {
+                    "binding_name": "#progress_text"
+                  }
                 ]
               }
             },
             {
-              "edu_cloud_upload_image@progress.edu_cloud_upload_image": { "offset": [ 0, 10 ] }
+              "edu_cloud_upload_image@progress.edu_cloud_upload_image": {
+                "offset": [ 0, 10 ]
+              }
             },
             {
               "loading_bar_panel": {
@@ -1643,7 +1599,6 @@
                 "type": "panel",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                // magic offset to make the scroll clipping perfect
                 "size": [ "100%-12px", "100%c" ],
                 "offset": [ 6, 6 ],
                 "controls": [
@@ -1679,7 +1634,6 @@
                   {
                     "edu_cloud_error_text_wrapper": {
                       "type": "stack_panel",
-                      // magic offset to make the text wrapping perfect
                       "size": [ "100%-24px", "100%c" ],
                       "offset": [ 0, -8 ],
                       "controls": [
@@ -1695,7 +1649,9 @@
                             "text": "#progress_text",
                             "font_type": "smooth",
                             "bindings": [
-                              { "binding_name": "#progress_text" }
+                              {
+                                "binding_name": "#progress_text"
+                              }
                             ]
                           }
                         },
@@ -1808,9 +1764,7 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "modal_button_panel@$modal_button_panel_type": {}
-                  }
+                  { "modal_button_panel@$modal_button_panel_type": {} }
                 ]
               }
             },
@@ -1868,7 +1822,6 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-12px" ],
           "offset": [ 6, 6 ],
           "controls": [
@@ -1892,12 +1845,16 @@
                 "anchor_to": "center",
                 "text": "#progress_text",
                 "bindings": [
-                  { "binding_name": "#progress_text" }
+                  {
+                    "binding_name": "#progress_text"
+                  }
                 ]
               }
             },
             {
-              "edu_cloud_fetch_image@progress.edu_cloud_fetch_image": { "offset": [ 0, 10 ] }
+              "edu_cloud_fetch_image@progress.edu_cloud_fetch_image": {
+                "offset": [ 0, 10 ]
+              }
             },
             {
               "loading_bar_panel": {
@@ -1905,7 +1862,9 @@
                 "size": [ "100%", "100%c" ],
                 "controls": [
                   {
-                    "progress_loading_bars@progress.progress_loading_bars": { "offset": [ 0, 25 ] }
+                    "progress_loading_bars@progress.progress_loading_bars": {
+                      "offset": [ 0, 25 ]
+                    }
                   }
                 ]
               }
@@ -1954,12 +1913,16 @@
                 "anchor_to": "center",
                 "text": "#progress_text",
                 "bindings": [
-                  { "binding_name": "#progress_text" }
+                  {
+                    "binding_name": "#progress_text"
+                  }
                 ]
               }
             },
             {
-              "edu_server_fetch_image@progress.edu_server_fetch_image": { "offset": [ 0, 6 ] }
+              "edu_server_fetch_image@progress.edu_server_fetch_image": {
+                "offset": [ 0, 6 ]
+              }
             },
             {
               "loading_bar_panel": {
@@ -1967,7 +1930,9 @@
                 "size": [ "100%", "100%c" ],
                 "controls": [
                   {
-                    "progress_loading_bars@progress.progress_loading_bars": { "offset": [ 0, 25 ] }
+                    "progress_loading_bars@progress.progress_loading_bars": {
+                      "offset": [ 0, 25 ]
+                    }
                   }
                 ]
               }
@@ -1993,7 +1958,6 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-12px" ],
           "offset": [ 6, 6 ],
           "controls": [
@@ -2013,9 +1977,7 @@
                 "offset": [ 0, 5 ]
               }
             },
-            {
-              "edu_cloud_download_image@progress.edu_cloud_download_image": {}
-            }
+            { "edu_cloud_download_image@progress.edu_cloud_download_image": {} }
           ]
         }
       },
@@ -2046,7 +2008,6 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-45px" ],
           "offset": [ 6, 6 ],
           "controls": [
@@ -2070,12 +2031,16 @@
                 "anchor_to": "center",
                 "text": "#progress_text",
                 "bindings": [
-                  { "binding_name": "#progress_text" }
+                  {
+                    "binding_name": "#progress_text"
+                  }
                 ]
               }
             },
             {
-              "edu_server_fetch_image@progress.edu_server_fetch_image": { "offset": [ 0, 10 ] }
+              "edu_server_fetch_image@progress.edu_server_fetch_image": {
+                "offset": [ 0, 10 ]
+              }
             },
             {
               "loading_bar_panel": {
@@ -2083,7 +2048,9 @@
                 "size": [ "100%", "100%c" ],
                 "controls": [
                   {
-                    "progress_loading_bars@progress.progress_loading_bars": { "offset": [ 0, 25 ] }
+                    "progress_loading_bars@progress.progress_loading_bars": {
+                      "offset": [ 0, 25 ]
+                    }
                   }
                 ]
               }
@@ -2102,9 +2069,7 @@
 
   "world_convert_modal_progress_screen_content": {
     "type": "panel",
-
     "layer": 3,
-
     "controls": [
       { "mobile_data_icon@progress.mobile_data_icon": {} },
       {
@@ -2208,9 +2173,7 @@
           "$modal_button_panel_type": "progress.modal_button_panel_with_retry"
         }
       },
-      {
-        "save_icon@progress.auto_save": {}
-      },
+      { "save_icon@progress.auto_save": {} },
       { "popup_dialog_factory@progress.popup_dialog_factory": {} }
     ]
   },
@@ -2228,7 +2191,9 @@
       {
         "cloud_upload_panel@progress.cloud_upload_panel": {
           "bindings": [
-            { "binding_name": "#progress_text" },
+            {
+              "binding_name": "#progress_text"
+            },
             {
               "binding_name": "(not #edu_cloud_upload_error)",
               "binding_name_override": "#visible"
@@ -2240,7 +2205,9 @@
         "cloud_upload_error_panel@progress.cloud_error_panel": {
           "$modal_button_panel_type": "progress.modal_ok_button_panel",
           "bindings": [
-            { "binding_name": "#progress_text" },
+            {
+              "binding_name": "#progress_text"
+            },
             {
               "binding_name": "#edu_cloud_upload_error",
               "binding_name_override": "#visible"
@@ -2314,7 +2281,9 @@
       {
         "cloud_download_panel@progress.cloud_download_panel": {
           "bindings": [
-            { "binding_name": "#progress_text" },
+            {
+              "binding_name": "#progress_text"
+            },
             {
               "binding_name": "(not #edu_cloud_download_error)",
               "binding_name_override": "#visible"
@@ -2326,7 +2295,9 @@
         "cloud_download_error_panel@progress.cloud_error_panel": {
           "$modal_button_panel_type": "progress.modal_ok_button_panel",
           "bindings": [
-            { "binding_name": "#progress_text" },
+            {
+              "binding_name": "#progress_text"
+            },
             {
               "binding_name": "#edu_cloud_download_error",
               "binding_name_override": "#visible"
@@ -2427,4 +2398,3 @@
     ]
   }
 }
-

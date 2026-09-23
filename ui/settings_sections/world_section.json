@@ -1,14 +1,8 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "world_section",
 
   "selector_pane_content": {
     "type": "stack_panel",
-
     "$tts_section_header": "realmsSettingsScreen.worldSectionTitle",
     "variables": {
       "requires": "$is_pregame",
@@ -65,9 +59,7 @@
           "$button_text_max_size": [ "100%", 20 ]
         }
       },
-      {
-        "play_or_host_panel@world_section.play_or_host_stack_edu": {}
-      },
+      { "play_or_host_panel@world_section.play_or_host_stack_edu": {} },
       {
         "spacer": {
           "type": "panel",
@@ -83,7 +75,6 @@
               "binding_name_override": "#visible"
             }
           ],
-
           "controls": [
             {
               "selector_group_label_0@settings_common.selector_group_label": {
@@ -321,7 +312,6 @@
     ]
   },
 
-  // SERVER button & section
   "server_settings_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "server_settings_button_toggle",
     "$glyph_texture": "",
@@ -330,11 +320,9 @@
     "$button_text": "#title_text",
     "$button_text_binding_type": "global",
     "$button_text_binding_condition": "visible",
-
     "$custom_toggle_binding_type": "global",
     "$custom_toggle_state_binding_name": "#title_text",
     "$custom_toggle_state_binding_name_override": "#panel_title",
-
     "$glyph_color_bindings": [
       {
         "binding_name": "#server_icon",
@@ -350,7 +338,6 @@
         "target_property_name": "#visible"
       }
     ],
-
     "$glyph_bindings": [
       {
         "binding_name": "#server_outline_icon",
@@ -366,7 +353,6 @@
         "target_property_name": "#visible"
       }
     ],
-
     "$glyph_progress_bindings": [
       {
         "binding_name": "(#server_icon = 'loading')",
@@ -387,8 +373,6 @@
     ]
   },
 
-  // GAME button & section
-
   "game_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "game_button_toggle",
     "$glyph_texture": "textures/ui/controller_glyph",
@@ -401,10 +385,6 @@
   },
 
   "export_world_button@settings_common.action_button": {
-    // std pocket should not have export until bedrock wants it
-    // export is disabled in game
-    // Some platforms do not support file picking
-    // EDU supports file picking on all supported platforms except ios which is pocket
     "ignored": "(($pocket_edition or $export_disabled or not $file_picking_supported) and not $education_edition)",
     "size": [ "50%", 30 ],
     "anchor_from": "top_left",
@@ -444,9 +424,7 @@
     "orientation": "horizontal",
     "size": [ "100%", 30 ],
     "controls": [
-      {
-        "export@world_section.export_world_button": {}
-      },
+      { "export@world_section.export_world_button": {} },
       {
         "padding": {
           "type": "panel",
@@ -454,9 +432,7 @@
           "ignored": "($pocket_edition or $education_ios or not $file_picking_supported)"
         }
       },
-      {
-        "delete@world_section.delete_world_button": {}
-      }
+      { "delete@world_section.delete_world_button": {} }
     ]
   },
 
@@ -608,7 +584,6 @@
         }
       },
       {
-        // for world create
         "option_text_edit_0@settings_common.option_text_edit": {
           "ignored": "(not $is_world_create)",
           "$option_label": "$world_name_label",
@@ -620,8 +595,6 @@
           "$allow_data_binding": false
         }
       },
-
-      // Project tag header when in Editor
       {
         "project_section_divider_1": {
           "ignored": "(not $is_editor_mode_enabled)",
@@ -657,10 +630,7 @@
           "size": [ 0, 6 ]
         }
       },
-
       {
-        // for world edit/show (databound)
-        // edit is 'enabled', show is 'not enabled'
         "option_text_edit_1@settings_common.option_text_edit": {
           "ignored": "$is_world_create",
           "$option_label": "$world_name_label",
@@ -671,8 +641,6 @@
           "$tts_override_control_value": " "
         }
       },
-
-      // Export Settings tag header when in Editor
       {
         "export_settings_section_divider_1": {
           "ignored": "(not $is_editor_mode_enabled)",
@@ -714,7 +682,6 @@
           "size": [ 0, 6 ]
         }
       },
-
       {
         "option_dropdown_0@settings_common.option_dropdown_no_scroll": {
           "$option_label": "createWorldScreen.gameMode.default",
@@ -843,7 +810,6 @@
         }
       },
       {
-        // No button for edu since edu doesn't use xforge
         "level_seed_selector_edu@settings_common.option_text_edit": {
           "$tts_section_header": "createWorldScreen.worldPreferences",
           "ignored": "(not $education_edition)",
@@ -935,7 +901,7 @@
       },
       {
         "player_waypoints_toggle@settings_common.option_toggle": {
-          "ignored":  "(not $education_edition)",
+          "ignored": "(not $education_edition)",
           "$tts_section_header": "createWorldScreen.worldSettings",
           "$option_label": "createWorldScreen.playerWaypoints",
           "$option_enabled_binding_name": "#player_waypoints_enabled",
@@ -1088,14 +1054,12 @@
       {
         "experimental_toggles_label@settings_common.option_group_label": {
           "$text": "createWorldScreen.experimentalgameplay",
-          // Ignore education toggle in education since education doesn't allow experiments presently
           "ignored": "($is_publish and $education_edition)"
         }
       },
       {
         "experimental_toggles_label_info@settings_common.option_group_label": {
           "$text": "createWorldScreen.experimentalgameplayinfo",
-          // Ignore education toggle in education since education doesn't allow experiments presently
           "ignored": "($is_publish and $education_edition)"
         }
       },
@@ -1104,13 +1068,11 @@
           "type": "stack_panel",
           "orientation": "vertical",
           "size": [ "100%", "100%c" ],
-          // Ignore education toggle in education since education doesn't allow experiments presently
           "ignored": "($is_publish and $education_edition)",
           "factory": {
             "name": "experimental_toggle_factory",
             "control_name": "world_section.experimental_toggle"
           },
-
           "collection_name": "experimental_toggles",
           "bindings": [
             {
@@ -1146,7 +1108,6 @@
       {
         "education_toggle@settings_common.option_toggle": {
           "$tts_section_header": "createWorldScreen.cheatSettings",
-          // Ignore education toggle in education since education is always on in education
           "ignored": "$education_edition",
           "$option_label": "createWorldScreen.educationtoggle",
           "$option_binding_name": "#education_toggle",
@@ -1372,9 +1333,7 @@
                 ]
               }
             },
-            {
-              "export_template@world_section.export_template_button": {}
-            }
+            { "export_template@world_section.export_template_button": {} }
           ]
         }
       },
@@ -1382,7 +1341,6 @@
         "clear_player_data_panel": {
           "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_template_disabled or $education_edition or $is_publish)",
           "type": "stack_panel",
-
           "controls": [
             {
               "padding": {
@@ -1408,9 +1366,7 @@
           "type": "panel",
           "size": [ "100%", "100%c + 2px" ],
           "controls": [
-            {
-              "copy_world@world_section.copy_world_button": {}
-            }
+            { "copy_world@world_section.copy_world_button": {} }
           ]
         }
       },
@@ -1464,8 +1420,6 @@
     ]
   },
 
-  //TEXTURE PACKS
-
   "level_texture_pack_button@resource_packs.resource_packs_section_toggle_base": {
     "$toggle_view_binding_name": "level_texture_pack_button_toggle",
     "$cycling_icon_path": "#cycling_icon_path_level",
@@ -1477,7 +1431,6 @@
     }
   },
 
-  //resource_packs.selected_stack_panel
   "level_texture_pack_section@resource_packs.selected_stack_panel": {
     "$selected_pack_items": "#selected_pack_items_level",
     "$available_pack_items": "#available_pack_items_level",
@@ -1557,7 +1510,6 @@
     ]
   },
 
-  //ADDONS
   "addon_button@resource_packs.resource_packs_section_toggle_base": {
     "$toggle_view_binding_name": "addon_button_toggle",
     "$cycling_icon_path": "#cycling_icon_path_addon",
@@ -1671,19 +1623,7 @@
           "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
           "$radio_label_text": "createWorldScreen.gameMode.adventure"
         }
-      } /*,//Uncomment when Spectator, and Hardcore game modes are implemented
-      {
-        "world_spectator_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_game_mode_radio_spectator",
-          "$radio_label_text": "createWorldScreen.gameMode.spectator"
-        }
-      },
-      {
-        "world_hardcore_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_game_mode_radio_hardcore",
-          "$radio_label_text": "createWorldScreen.gameMode.hardcore"
-        }
-      }*/
+      }
     ]
   },
 
@@ -1778,13 +1718,7 @@
           "$toggle_state_binding_name": "#player_game_mode_radio_spectator",
           "$radio_label_text": "createWorldScreen.gameMode.spectator"
         }
-      } /*//Uncomment when Hardcore game mode is implemented,
-      {
-        "player_hardcore_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#player_game_mode_radio_hardcore",
-          "$radio_label_text": "createWorldScreen.gameMode.hardcore"
-        }
-      }*/
+      }
     ]
   },
 
@@ -1801,19 +1735,7 @@
           "$toggle_state_binding_name": "#world_type_radio_infinite",
           "$radio_label_text": "generator.infinite"
         }
-      }, /*Uncomment when Large Biome and Amplified world types are implemented
-      {
-        "large_biomees_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_large_biomees",
-          "$radio_label_text": "generator.largeBiomes"
-        }
       },
-      {
-        "amplified_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_amplified",
-          "$radio_label_text": "generator.amplified"
-        }
-      },*/
       {
         "old_world_type_toggle@settings_common.radio_with_label": {
           "ignored": "$is_publish",
@@ -1852,8 +1774,6 @@
       }
     ]
   },
-
-  // MULTIPLAYER button and section
 
   "multiplayer_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "multiplayer_button_toggle",
@@ -2266,8 +2186,6 @@
       }
     ]
   },
-
-  // Debug section and button
 
   "debug_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "world_debug_button_toggle",
@@ -2839,6 +2757,7 @@
       }
     ]
   },
+
   "debug_biome_override_dropdown_content@settings_common.option_radio_dropdown_group": {
     "$radio_buttons": [
       {

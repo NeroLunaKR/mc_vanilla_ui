@@ -1,10 +1,10 @@
 {
   "namespace": "pack_settings",
 
-   "background@common.screen_background": {
-     "alpha": 0.65,
-     "layer": 1
-   },
+  "background@common.screen_background": {
+    "alpha": 0.65,
+    "layer": 1
+  },
 
   "screen@common.base_screen": {
     "force_render_below": true,
@@ -49,12 +49,8 @@
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
     "controls": [
-      {
-        "content_tiering_panel@pack_settings.content_tiering_panel": {}
-      },
-      {
-        "generated_form@server_form.generated_contents": {}
-      }
+      { "content_tiering_panel@pack_settings.content_tiering_panel": {} },
+      { "generated_form@server_form.generated_contents": {} }
     ]
   },
 
@@ -135,19 +131,14 @@
                 "$slider_deselected_button": "button.menu_exit",
                 "size": [ "100% - 18px", 10 ],
                 "layer": 1,
-
                 "$slider_box_size": [ 10, 16 ],
                 "$slider_name": "content_tier_slider",
-
                 "$slider_binding_type": "global",
                 "$slider_value_binding_name": "#content_tier_value",
-
                 "$slider_steps_binding_type": "global",
                 "$slider_steps_binding_name": "#content_tier_steps",
-
                 "$slider_enabled_binding_type": "global",
                 "$slider_enabled_binding_name": "#has_content_tiering",
-
                 "$slider_tts_text_value": "#content_tier_slider_text_value"
               }
             }

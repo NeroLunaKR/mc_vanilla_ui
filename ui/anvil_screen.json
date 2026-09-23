@@ -1,14 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "anvil",
-
-  //---------------------------------------------------------------------------
-  // #region common items
-  //---------------------------------------------------------------------------
 
   "generic_label": {
     "type": "label",
@@ -17,12 +8,6 @@
     "color": "$title_text_color",
     "layer": 1
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region icon and text area (top quarter of screen)
-  //---------------------------------------------------------------------------
 
   "anvil_icon": {
     "type": "image",
@@ -35,24 +20,23 @@
 
   "title_label@anvil.generic_label": {
     "offset": [ 0, 3 ],
-    "anchor_from": "bottom_middle", // the parent
-    "anchor_to": "bottom_middle", // this control
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
     "text": "container.repair"
   },
 
-  // panel to position the icon
   "anvil_icon_panel": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
-      { "anvil_icon@anvil.anvil_icon": { } }
+      { "anvil_icon@anvil.anvil_icon": {} }
     ]
   },
 
   "text_edit_control@common.text_edit_box": {
-    "anchor_from": "top_left", // the parent
-    "anchor_to": "top_left", // this control
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "property_bag": {
       "#property_field": "#item_name"
     },
@@ -61,7 +45,6 @@
     "$text_edit_box_label_size": [ "default", 10 ]
   },
 
-  // panel to position the top quarter of screen
   "icon_and_text_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -69,12 +52,11 @@
     "size": [ "100%", "40%" ],
     "offset": [ 0, "5%" ],
     "controls": [
-      { "anvil_icon_panel@anvil.anvil_icon_panel": { } },
-      { "anvil_title_and_text_panel@anvil.anvil_title_and_text_panel": { } }
+      { "anvil_icon_panel@anvil.anvil_icon_panel": {} },
+      { "anvil_title_and_text_panel@anvil.anvil_title_and_text_panel": {} }
     ]
   },
 
-  // panel for the title label
   "title_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -82,23 +64,21 @@
     "size": [ "100%", "20%" ],
     "offset": [ 1, 0 ],
     "controls": [
-      { "title_label@anvil.title_label": { } }
+      { "title_label@anvil.title_label": {} }
     ]
   },
 
-  // panel for the text edit box
   "text_edit_panel": {
     "type": "panel",
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "size": [ "100%", "70%" ],
-    "offset": [0, 2],
+    "offset": [ 0, 2 ],
     "controls": [
-      { "text_edit_control@anvil.text_edit_control": { } }
+      { "text_edit_control@anvil.text_edit_control": {} }
     ]
   },
 
-  // panel to position title label and text edit control
   "anvil_title_and_text_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -106,16 +86,10 @@
     "size": [ "80%", "100%" ],
     "offset": [ "20%", 0 ],
     "controls": [
-      { "title_panel@anvil.title_panel": { } },
-      { "text_edit_panel@anvil.text_edit_panel": { } }
+      { "title_panel@anvil.title_panel": {} },
+      { "text_edit_panel@anvil.text_edit_panel": {} }
     ]
   },
-
-  //#endregion
-
-  //---------------------------------------------------------------------------
-  // #region recipe (input, material and results) area (2nd quarter of screen)
-  //---------------------------------------------------------------------------
 
   "plus_sign_icon": {
     "type": "image",
@@ -140,8 +114,6 @@
       }
     ]
   },
-
-  //#endregion
 
   "anvil_output_slot_button@common.container_slot_button_prototype": {
     "button_mappings": [
@@ -210,7 +182,7 @@
 
   "anvil_item_slot": {
     "type": "panel",
-    "size": [ 18,18 ],
+    "size": [ 18, 18 ],
     "controls": [
       {
         "container_item@common.container_item": {
@@ -232,10 +204,8 @@
         "input_item_slot@anvil.anvil_item_slot": {
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "anvil_input_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "anvil_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "anvil_material"
         }
@@ -253,13 +223,10 @@
         "material_item_slot@anvil.anvil_item_slot": {
           "grid_position": [ 2, 0 ],
           "$item_collection_name": "anvil_material_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "anvil_material",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "anvil_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "anvil_result"
         }
@@ -283,10 +250,8 @@
           "grid_position": [ 4, 0 ],
           "$item_collection_name": "anvil_result_items",
           "$button_ref": "anvil.anvil_output_slot_button",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "anvil_result",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "anvil_material"
         }
@@ -320,7 +285,7 @@
     "size": [ "100%", "60%" ],
     "offset": [ 0, "40%" ],
     "controls": [
-      { "recipe_grid@anvil.recipe_grid": { } },
+      { "recipe_grid@anvil.recipe_grid": {} },
       {
         "cost_label_0@anvil.cost_label": {
           "color": "$anvil_cost_fail_text_color",
@@ -354,12 +319,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region screen
-  //---------------------------------------------------------------------------
-
   "top_half_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -367,8 +326,8 @@
     "size": [ "100% - 14px", "50% - 14px" ],
     "offset": [ 7, 7 ],
     "controls": [
-      { "icon_and_text_panel@anvil.icon_and_text_panel": { } },
-      { "recipe_panel@anvil.recipe_panel": { } }
+      { "icon_and_text_panel@anvil.icon_and_text_panel": {} },
+      { "recipe_panel@anvil.recipe_panel": {} }
     ]
   },
 
@@ -400,9 +359,14 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 12
+        }
+      }
     ]
   },
+
   "anvil_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "close_on_player_hurt": "$close_on_player_hurt",
@@ -422,5 +386,3 @@
     ]
   }
 }
-
-// #endregion

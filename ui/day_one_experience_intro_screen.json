@@ -1,10 +1,6 @@
 {
   "namespace": "day_one_experience_intro",
 
-  //---------------------------------------------------------------------------
-  // Padding panels
-  //---------------------------------------------------------------------------
-
   "padding_horizontal": {
     "type": "panel",
     "size": [ 4, "100%" ]
@@ -14,10 +10,6 @@
     "type": "panel",
     "size": [ "100%", 8 ]
   },
-
-  //---------------------------------------------------------------------------
-  // Text Panel
-  //---------------------------------------------------------------------------
 
   "label_panel": {
     "type": "panel",
@@ -65,10 +57,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Image Panel
-  //---------------------------------------------------------------------------
-
   "dialog_image": {
     "type": "image",
     "layer": 2,
@@ -102,10 +90,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Main navigation tabs
-  //---------------------------------------------------------------------------
-
   "top_tab@common_tabs.tab_top": {
     "$toggle_focus_enabled": false,
     "$toggle_name": "navigation_tab",
@@ -116,10 +100,6 @@
     "$toggle_tts_toggle_off_text": ""
   },
 
-  //---------------------------------------------------------------------------
-  // Tabs layout panels
-  //---------------------------------------------------------------------------
-
   "common_tab_navigation_panel_layout": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -129,9 +109,7 @@
   "tabbed_tab_navigation_panel_layout@day_one_experience_intro.common_tab_navigation_panel_layout": {
     "$tab_size|default": [ "fill", "54%x" ],
     "controls": [
-      {
-        "nav_padding_01@day_one_experience_intro.padding_horizontal": {}
-      },
+      { "nav_padding_01@day_one_experience_intro.padding_horizontal": {} },
       {
         "gamepad_helper_with_offset_left_bumper": {
           "type": "panel",
@@ -164,9 +142,7 @@
           "$top_tab_tts_name": "$tab_tts_name_welcome"
         }
       },
-      {
-        "nav_padding_03@day_one_experience_intro.padding_horizontal": {}
-      },
+      { "nav_padding_03@day_one_experience_intro.padding_horizontal": {} },
       {
         "marketplace_navigation_tab@day_one_experience_intro.top_tab": {
           "size": "$tab_size",
@@ -178,9 +154,7 @@
           "$top_tab_tts_name": "$tab_tts_name_marketplace"
         }
       },
-      {
-        "nav_padding_04@day_one_experience_intro.padding_horizontal": {}
-      },
+      { "nav_padding_04@day_one_experience_intro.padding_horizontal": {} },
       {
         "cross_platform_navigation_tab@day_one_experience_intro.top_tab": {
           "size": "$tab_size",
@@ -192,9 +166,7 @@
           "$top_tab_tts_name": "$tab_tts_name_cross_platform"
         }
       },
-      {
-        "nav_padding_05@day_one_experience_intro.padding_horizontal": {}
-      },
+      { "nav_padding_05@day_one_experience_intro.padding_horizontal": {} },
       {
         "realms_navigation_tab@day_one_experience_intro.top_tab": {
           "size": "$tab_size",
@@ -223,9 +195,7 @@
           "$top_tab_tts_name": "$tab_tts_name_villagers"
         }
       },
-      {
-        "nav_padding_07@day_one_experience_intro.padding_horizontal": {}
-      },
+      { "nav_padding_07@day_one_experience_intro.padding_horizontal": {} },
       {
         "gamepad_helper_with_offset_right_bumper": {
           "type": "panel",
@@ -234,7 +204,7 @@
             {
               "gamepad_helper_right_bumper@common.gamepad_helper_right_bumper": {
                 "layer": 20,
-                "offset": [0,-7],
+                "offset": [ 0, -7 ],
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle"
               }
@@ -242,16 +212,9 @@
           ]
         }
       },
-      {
-        "nav_padding_08@day_one_experience_intro.padding_horizontal": {}
-      }
+      { "nav_padding_08@day_one_experience_intro.padding_horizontal": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Content layout panels
-  //---------------------------------------------------------------------------
-
 
   "tab_header_image_panel": {
     "type": "panel",
@@ -259,23 +222,15 @@
     "anchor_from": "top_middle",
     "size": [ "100%", "30%x" ],
     "controls": [
-      {
-        "welcome_tab_content@day_one_experience_intro.welcome_tab_header_image_panel": {}
-      },
-      {
-        "marketplace_tab_content@day_one_experience_intro.marketplace_tab_header_image_panel": {}
-      },
-      {
-        "cross_platform_tab_content@day_one_experience_intro.cross_platform_tab_header_image_panel": {}
-      },
+      { "welcome_tab_content@day_one_experience_intro.welcome_tab_header_image_panel": {} },
+      { "marketplace_tab_content@day_one_experience_intro.marketplace_tab_header_image_panel": {} },
+      { "cross_platform_tab_content@day_one_experience_intro.cross_platform_tab_header_image_panel": {} },
       {
         "realms_tab_content@day_one_experience_intro.realms_tab_header_image_panel": {
           "ignored": "(not $is_realms_enabled)"
         }
       },
-      {
-        "villager_tab_content@day_one_experience_intro.villager_tab_header_image_panel": {}
-      }
+      { "villager_tab_content@day_one_experience_intro.villager_tab_header_image_panel": {} }
     ]
   },
 
@@ -284,29 +239,18 @@
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "controls": [
-      {
-        "welcome_tab_content@day_one_experience_intro.welcome_tab_content_panel": {}
-      },
-      {
-        "marketplace_tab_content@day_one_experience_intro.marketplace_tab_content_panel": {}
-      },
-      {
-        "cross_platform_tab_content@day_one_experience_intro.cross_platform_tab_content_panel": {}
-      },
+      { "welcome_tab_content@day_one_experience_intro.welcome_tab_content_panel": {} },
+      { "marketplace_tab_content@day_one_experience_intro.marketplace_tab_content_panel": {} },
+      { "cross_platform_tab_content@day_one_experience_intro.cross_platform_tab_content_panel": {} },
       {
         "realms_tab_content@day_one_experience_intro.realms_tab_content_panel": {
           "ignored": "(not $is_realms_enabled)"
         }
       },
-      {
-        "villager_tab_content@day_one_experience_intro.villager_tab_content_panel": {}
-      }
+      { "villager_tab_content@day_one_experience_intro.villager_tab_content_panel": {} }
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Content tabs panel
-  //---------------------------------------------------------------------------
   "common_tab_header_image_panel": {
     "type": "panel",
     "controls": [
@@ -397,7 +341,6 @@
     "$visible_bind_toggle_source_control": "realms_navigation_tab_toggle",
     "$header_texture": "textures/ui/day_one_carousel_realms",
     "ignored": "(not $is_realms_enabled)"
-
   },
 
   "realms_tab_content_panel@day_one_experience_intro.common_tab_content_panel": {
@@ -405,7 +348,6 @@
     "$scroll_tab_content": "day_one_experience_intro.text_panel",
     "$description_text": "dayOneExperience.carousel.realms",
     "ignored": "(not $is_realms_enabled)"
-
   },
 
   "villager_tab_header_image_panel@day_one_experience_intro.common_tab_header_image_panel": {
@@ -419,23 +361,13 @@
     "$description_text": "dayOneExperience.carousel.villager"
   },
 
-
-
-  //---------------------------------------------------------------------------
-  // Tab main Panel
-  //---------------------------------------------------------------------------
-
   "tab_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%" ],
     "orientation": "vertical",
     "controls": [
-      {
-        "tab_header_image@day_one_experience_intro.tab_header_image_panel": {}
-      },
-      {
-        "padding_00@day_one_experience_intro.padding_vertical": {}
-      },
+      { "tab_header_image@day_one_experience_intro.tab_header_image_panel": {} },
+      { "padding_00@day_one_experience_intro.padding_vertical": {} },
       {
         "tab_navigation_panel@day_one_experience_intro.tabbed_tab_navigation_panel_layout": {
           "size": [ "100%", "18%" ],
@@ -448,9 +380,7 @@
           "ttsSectionContainer": true
         }
       },
-      {
-        "padding_4@day_one_experience_intro.padding_vertical": {}
-      },
+      { "padding_4@day_one_experience_intro.padding_vertical": {} },
       {
         "continue_button_panel": {
           "type": "panel",
@@ -473,10 +403,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
 
   "day_one_experience_intro_screen@common.base_screen": {
     "button_mappings": [

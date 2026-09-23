@@ -40,8 +40,6 @@
     ]
   },
 
-  // General Content
-
   "invite_link_url@realms_settings.label_text": {
     "text": "#realm_invite_link_url",
     "tts_override_control_value": "#realm_invite_link_url_TTS",
@@ -400,7 +398,6 @@
     ]
   },
 
-  // Left side
   "selector_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%c + 4px" ],
@@ -451,7 +448,6 @@
     ]
   },
 
-  // Right side
   "section_content_panels": {
     "type": "panel",
     "size": [ "100%", "100%c" ],

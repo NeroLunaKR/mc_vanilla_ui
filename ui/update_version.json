@@ -27,18 +27,14 @@
     "size": [ "100% - 2px", "100% - 2px" ],
     "offset": [ 1, 1 ],
     "controls": [
-      {
-        "top_of_version_panel@update_version.picture_and_patch_notes": {}
-      },
+      { "top_of_version_panel@update_version.picture_and_patch_notes": {} },
       {
         "spacer_1px": {
           "type": "panel",
           "size": [ "100%", "1px" ]
         }
       },
-      {
-        "update_body_text@update_version.update_body_text": {}
-      },
+      { "update_body_text@update_version.update_body_text": {} },
       {
         "spacer_1px_2": {
           "type": "panel",
@@ -69,7 +65,6 @@
           "$show_background": true,
           "$scroll_bar_contained": true,
           "$scroll_bar_contained_touch": true
-
         }
       }
     ]
@@ -143,5 +138,4 @@
     "$pressed_button_name": "button.update",
     "$button_text": "updateScreen.update"
   }
-
 }

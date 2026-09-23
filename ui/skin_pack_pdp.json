@@ -36,7 +36,6 @@
           "offset": "$skin_model_offset",
           "renderer": "paper_doll_renderer",
           "layer": 5,
-
           "animation_reset_name": "screen_animation_reset",
           "$skin_model_animations|default": [],
           "variables": [
@@ -49,7 +48,6 @@
               ]
             }
           ],
-
           "anims": "$skin_model_animations",
           "anchor_from": "$skin_model_anchor_from",
           "anchor_to": "$skin_model_anchor_to",
@@ -67,7 +65,6 @@
               "binding_name": "#skin_index"
             },
             {
-              // Used to hide the long animation when popping
               "binding_type": "collection",
               "binding_collection_name": "skins_collection",
               "binding_name_override": "#visible",
@@ -132,27 +129,22 @@
           "pressed_control": "pressed",
           "$pressed_button_name": "button.equip_skin",
           "$highlight_size|default": [ "100% - 1px", "100%" ],
-
           "$button_offset|default": [ 0, 0 ],
           "$button_pressed_offset|default": [ 0, 1 ],
           "$pressed_alpha|default": 1,
           "$button_type_panel|default": "common_buttons.button_content_panel",
           "$button_content|default": "common.empty_panel",
           "$button_state_panel|default": "common_buttons.new_ui_button_panel",
-
           "$default_button_alpha|default": 1,
           "$default_hover_alpha|default": 1,
           "$default_pressed_alpha|default": 1,
           "$border_default_alpha|default": 1,
-
-          // These states are for passing the button state to the button content - do not set these in a parent!
           "$default_state|default": false,
           "$hover_state|default": false,
           "$pressed_state|default": false,
           "$default_state_border_visible|default": true,
           "$hover_state_border_visible|default": true,
           "$pressed_state_border_visible|default": true,
-
           "$default_button_texture|default": "textures/ui/button_borderless_light",
           "$default_content_alpha|default": 1,
           "$hover_content_alpha|default": 1,
@@ -160,7 +152,6 @@
           "$pressed_button_texture|default": "textures/ui/button_borderless_lightpressed",
           "$default_font|default": "default",
           "$font_type": "$default_font",
-
           "bindings": [
             {
               "binding_type": "$store_factory_collection_details",
@@ -352,7 +343,6 @@
     ]
   },
 
-  //Main panel that decides which skin_pad_panel to show the player
   "skin_button_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -435,15 +425,9 @@
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "controls": [
-      {
-        "model@skin_pack_pdp.skin_model": {}
-      },
-      {
-        "lock@skin_pack_pdp.skin_lock": {}
-      },
-      {
-        "button@skin_pack_pdp.skin_button_panel": {}
-      }
+      { "model@skin_pack_pdp.skin_model": {} },
+      { "lock@skin_pack_pdp.skin_lock": {} },
+      { "button@skin_pack_pdp.skin_button_panel": {} }
     ],
     "bindings": [
       {
@@ -500,16 +484,12 @@
         "bg": {
           "type": "panel",
           "size": "$grid_size",
-
           "$cycle_pack_button_factory_collection_details": "$store_factory_collection_details",
           "$cycle_pack_button_factory_collection_prefix": "$store_factory_collection_prefix",
           "$cycle_pack_button_factory_collection_name": "$store_factory_collection_name",
-
           "$cycle_pack_button_binding_type": "$store_factory_binding_type",
           "$cycle_pack_button_collection": "$store_factory_collection_name",
-
           "$ignore_cycle_buttons": false,
-
           "controls": [
             {
               "left@skin_pack_pdp.cycle_pack_left_button": {
@@ -542,12 +522,9 @@
                     "progress_loading_outline": {
                       "type": "button",
                       "layer": 12,
-
                       "focus_enabled": true,
                       "focus_wrap_enabled": false,
-
                       "hover_control": "hover",
-
                       "bindings": [
                         {
                           "binding_type": "$store_factory_collection_details",

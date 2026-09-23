@@ -1,12 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "controls_section",
-
-  //Button with text-binding capabilities
 
   "binding_button@common_buttons.light_content_button": {
     "$pressed_button_name": "button.binding_button",
@@ -37,8 +30,6 @@
       }
     ]
   },
-
-  // Image binding button
 
   "image_binding_button@common_buttons.light_content_button": {
     "$pressed_button_name": "button.binding_button",
@@ -84,8 +75,6 @@
     ]
   },
 
-  // reset binding button
-
   "arrow_reset": {
     "type": "image",
     "layer": 2,
@@ -99,16 +88,13 @@
     "$pressed_button_name": "button.reset_binding"
   },
 
-  // keyboard controls
   "keymapping_item_parent": {
     "type": "stack_panel",
     "orientation": "vertical",
     "layer": 1,
     "size": [ "100%", "100%c + 15px" ],
     "controls": [
-      {
-        "keymapping_row@controls_section.keymapping_item_frame": {}
-      }
+      { "keymapping_row@controls_section.keymapping_item_frame": {} }
     ]
   },
 
@@ -119,17 +105,13 @@
     "size": [ "100%", "100%c" ],
     "$is_command_macro_keymapping|default": false,
     "controls": [
-      {
-        "keymap@controls_section.keymapping_item": {}
-      },
-      {
-        "command_macro_command@controls_section.command_macro_command_textbox": {}
-      }
+      { "keymap@controls_section.keymapping_item": {} },
+      { "command_macro_command@controls_section.command_macro_command_textbox": {} }
     ]
   },
 
   "command_macro_command_textbox": {
-    "type": "panel", 
+    "type": "panel",
     "size": [ "100%", "100%c" ],
     "visible": "$is_command_macro_keymapping",
     "controls": [
@@ -236,14 +218,11 @@
     ]
   },
 
-  // Key mappings to mimic mouse functionality if full keyboard gameplay is enabled
   "full_keymapping_grid@controls_section.keymapping_grid": {
     "$keymapping_grid_dimension": "#keyboard_full_grid_dimension",
     "$keymapping_collection": "keyboard_full_collection"
   },
 
-
-  // gamepad controls
   "gamepad_mapping_item": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -419,8 +398,6 @@
     ]
   },
 
-  // Keyboard and Mouse button & section
-
   "keyboard_and_mouse_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
     "$glyph_texture": "textures/ui/keyboard_and_mouse_glyph",
@@ -497,7 +474,7 @@
       },
       {
         "option_toggle_2@settings_common.option_toggle": {
-          "ignored": true, // Remove this line when Options::TOGGLE_CROUCH actually affects crouch behavior (User Story 30117)
+          "ignored": true,
           "$option_label": "options.toggleCrouch",
           "$option_binding_name": "#keyboard_mouse_toggle_crouch",
           "$option_enabled_binding_name": "#keyboard_mouse_toggle_crouch_enabled",
@@ -534,13 +511,11 @@
         }
       },
       {
-        // Section that shows the keymappings for the standard keyboard layout
         "keyboard_section": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "bindings": [
             {
-              // Hide this section when another keyboard type/layout is enabled
               "binding_name": "#keyboard_show_standard_keyboard_options",
               "binding_name_override": "#visible"
             }
@@ -551,16 +526,13 @@
                 "$text": "options.keyboardLayout"
               }
             },
-            {
-              "keyboard_keymapping_grid@controls_section.keymapping_grid": {}
-            },
+            { "keyboard_keymapping_grid@controls_section.keymapping_grid": {} },
             {
               "control_alt_chords_standard_keyboard_section": {
                 "type": "stack_panel",
                 "size": [ "100%", "100%c" ],
                 "bindings": [
                   {
-                    // Show full keyboard section when the full keyboard toggle is enabled
                     "binding_name": "#show_standard_copy_coordinates_keys",
                     "binding_name_override": "#visible"
                   }
@@ -590,13 +562,11 @@
         }
       },
       {
-        // Section that shows the keymappings for the full keyboard layout
         "full_keyboard_section": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "bindings": [
             {
-              // Show full keyboard section when the full keyboard toggle is enabled
               "binding_name": "#keyboard_show_full_keyboard_options",
               "binding_name_override": "#visible"
             }
@@ -622,16 +592,13 @@
                 "$text": "options.fullKeyboardLayout"
               }
             },
-            {
-              "keyboard_full_keymapping_grid@controls_section.full_keymapping_grid": {}
-            },
+            { "keyboard_full_keymapping_grid@controls_section.full_keymapping_grid": {} },
             {
               "control_alt_chords_full_keyboard_section": {
                 "type": "stack_panel",
                 "size": [ "100%", "100%c" ],
                 "bindings": [
                   {
-                    // Show full keyboard section when the full keyboard toggle is enabled
                     "binding_name": "#show_full_copy_coordinates_keys",
                     "binding_name_override": "#visible"
                   }
@@ -652,10 +619,10 @@
               }
             },
             {
-                "command_macros@controls_section.keyboard_command_macros_grid": {
-                    "$keymapping_grid_dimension": "#keyboard_full_command_macro_grid_dimension",
-                    "$keymapping_collection": "keyboard_full_command_macro_collection"
-                }
+              "command_macros@controls_section.keyboard_command_macros_grid": {
+                "$keymapping_grid_dimension": "#keyboard_full_command_macro_grid_dimension",
+                "$keymapping_collection": "keyboard_full_command_macro_collection"
+              }
             }
           ]
         }
@@ -669,8 +636,6 @@
       }
     ]
   },
-
-  // Controller button & section
 
   "controller_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "controller_button_toggle",
@@ -828,7 +793,7 @@
       },
       {
         "option_toggle_3@settings_common.option_toggle": {
-          "ignored": true, // Remove this line when Options::TOGGLE_CROUCH actually affects crouch behavior (User Story 30117)
+          "ignored": true,
           "$option_label": "options.toggleCrouch",
           "$option_binding_name": "#controller_toggle_crouch",
           "$option_enabled_binding_name": "#controller_toggle_crouch_enabled",
@@ -838,7 +803,7 @@
       },
       {
         "option_toggle_4@settings_common.option_toggle": {
-          "ignored": true, // TODO: Remove this line when we add in haptic feedback (User Story 41617)
+          "ignored": true,
           "$option_label": "options.destroyvibration",
           "$option_binding_name": "#controller_destroy_vibration",
           "$option_enabled_binding_name": "#controller_destroy_vibration_enabled",
@@ -848,7 +813,7 @@
       },
       {
         "option_toggle_5@settings_common.option_toggle": {
-          "ignored": true, // TODO: Remove this line when we add in haptic feedback (User Story 41617)
+          "ignored": true,
           "$option_label": "options.splitvibration",
           "$option_binding_name": "#controller_split_vibration",
           "$option_enabled_binding_name": "#controller_split_vibration_enabled",
@@ -856,7 +821,6 @@
           "$focus_override_right": "FOCUS_OVERRIDE_STOP"
         }
       },
-
       {
         "option_group_label@settings_common.option_group_label": {
           "ignored": "$ignore_controller_layout",
@@ -877,8 +841,6 @@
       }
     ]
   },
-
-  // Touch button & section
 
   "touch_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "touch_button_toggle",
@@ -1091,9 +1053,7 @@
                       ]
                     }
                   },
-                  {
-                    "customize_tooltip_option@controls_section.customize_tooltip_option": {}
-                  },
+                  { "customize_tooltip_option@controls_section.customize_tooltip_option": {} },
                   {
                     "padding": {
                       "type": "panel",
@@ -1224,11 +1184,11 @@
             {
               "top_button_scale@settings_common.option_dropdown": {
                 "$option_label": "options.topButtonScale",
-                  "$dropdown_content": "controls_section.top_button_scale_dropdown_content",
-                  "$dropdown_area": "content_area",
-                  "$dropdown_name": "top_button_scale_dropdown",
-                  "$options_dropdown_toggle_label_binding": "#top_button_scale_dropdown_toggle_label",
-                  "$dropdown_scroll_content_size": [ "100%", "240%" ]
+                "$dropdown_content": "controls_section.top_button_scale_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "top_button_scale_dropdown",
+                "$options_dropdown_toggle_label_binding": "#top_button_scale_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", "240%" ]
               }
             },
             {
@@ -1462,9 +1422,7 @@
           ]
         }
       },
-      {
-        "customize_tooltip_option_popup@controls_section.customize_tooltip_option_popup": {}
-      }
+      { "customize_tooltip_option_popup@controls_section.customize_tooltip_option_popup": {} }
     ],
     "bindings": [
       {

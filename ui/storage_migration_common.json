@@ -73,9 +73,7 @@
                 "type": "panel",
                 "size": [ "100%", "100%c" ],
                 "controls": [
-                  {
-                    "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
-                  },
+                  { "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {} },
                   {
                     "progress_loading_bars@progress.progress_loading_bars": {
                       "offset": [ 0, 0 ]
@@ -195,9 +193,6 @@
     ]
   },
 
-  // No Buttons Modal - Required Vars
-  // $text_name - Modal title
-  // $tts_label_panel - Content of the modal. Scrollable and TTS enabled.
   "modal_no_buttons@common_dialogs.main_panel_no_buttons": {
     "$title_size": [ "100% - 14px", 10 ],
     "size": [ 300, 180 ],
@@ -206,10 +201,6 @@
     "$scrolling_content": "common.tts_label_focus_wrapper"
   },
 
-  // One Button Modal - Required Vars
-  // $text_name - Modal title
-  // $button_panel - Control containing button
-  // $tts_label_panel - Content of the modal. Scrollable and TTS enabled.
   "modal_one_button@common_dialogs.main_panel_one_button": {
     "$title_size": [ "100% - 14px", 10 ],
     "size": [ 300, 180 ],
@@ -218,11 +209,6 @@
     "$scrolling_content": "common.tts_label_focus_wrapper"
   },
 
-  // Two Button Modal - Required Vars
-  // $text_name - Modal title
-  // $top_button_panel - Control containing button
-  // $bottom_button_panel - Control containing button
-  // $tts_label_panel - Content of the modal. Scrollable and TTS enabled.
   "modal_two_buttons@common_dialogs.main_panel_two_buttons": {
     "$title_size": [ "100% - 14px", 10 ],
     "size": [ 300, 180 ],
@@ -365,22 +351,17 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "file_size@storage_migration_common.file_size_description": {}
-      },
+      { "file_size@storage_migration_common.file_size_description": {} },
       {
         "padding": {
           "type": "panel",
           "size": [ 0, 14 ]
         }
       },
-      {
-        "error_icon_and_description@storage_migration_common.error_icon_and_description": {}
-      }
+      { "error_icon_and_description@storage_migration_common.error_icon_and_description": {} }
     ]
   },
 
-  // Start Transfer
   "start_transfer@storage_migration_common.modal_one_button": {
     "size": [ 300, 160 ],
     "$text_name": "storage_migration.start_transfer.uwp.title",
@@ -393,7 +374,6 @@
     "$description_text|default": "storage_migration.start_transfer.description"
   },
 
-  // Resume Transfer
   "resume_transfer@storage_migration_common.modal_one_button": {
     "size": [ 300, 160 ],
     "$show_close_button": false,
@@ -406,13 +386,10 @@
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "file_size@storage_migration_common.file_size_description": {}
-      }
+      { "file_size@storage_migration_common.file_size_description": {} }
     ]
   },
 
-  // Transfer Error - Out of Space
   "transfer_error_out_of_space@storage_migration_common.modal_one_button": {
     "$text_name": "storage_migration.transfer_error_out_of_space.title",
     "$button_panel": "storage_migration_common.continue_out_of_space_button",

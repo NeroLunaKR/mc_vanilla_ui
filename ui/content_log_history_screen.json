@@ -24,10 +24,7 @@
                 "type": "panel",
                 "size": [ "100%c", "100%" ],
                 "controls": [
-                  {
-                    "icon@content_log_history.clipboard_icon": {
-                    }
-                  }
+                  { "icon@content_log_history.clipboard_icon": {} }
                 ]
               }
             },
@@ -51,7 +48,6 @@
                   }
                 ]
               }
-
             }
           ]
         }
@@ -88,10 +84,7 @@
                 "type": "panel",
                 "size": [ "100%c", "100%" ],
                 "controls": [
-                  {
-                    "icon@content_log_history.clear_icon": {
-                    }
-                  }
+                  { "icon@content_log_history.clear_icon": {} }
                 ]
               }
             },
@@ -115,7 +108,6 @@
                   }
                 ]
               }
-
             }
           ]
         }
@@ -134,14 +126,8 @@
     "orientation": "horizontal",
     "$button_size|default": [ "50% - 1px", 30 ],
     "controls": [
-      {
-        "clipboard_button@content_log_history.clipboard_button": {
-        }
-      },
-      {
-        "clear_button@content_log_history.clear_button": {
-        }
-      }
+      { "clipboard_button@content_log_history.clipboard_button": {} },
+      { "clear_button@content_log_history.clear_button": {} }
     ]
   },
 
@@ -168,10 +154,7 @@
     "type": "panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "content_log_message@content_log_history.content_log_message": {
-        }
-      }
+      { "content_log_message@content_log_history.content_log_message": {} }
     ]
   },
 
@@ -179,10 +162,7 @@
     "type": "panel",
     "size": [ "100%", "100%cm" ],
     "controls": [
-      {
-        "content_log_message_panel@content_log_history.content_log_message_panel": {
-        }
-      }
+      { "content_log_message_panel@content_log_history.content_log_message_panel": {} }
     ]
   },
 
@@ -217,7 +197,6 @@
     "$jump_to_bottom_on_update": true,
     "$show_background": false,
     "$always_handle_scrolling": true
-
   },
 
   "main_stack_panel": {
@@ -225,17 +204,12 @@
     "orientation": "vertical",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "messages_scrolling_panel@content_log_history.messages_scrolling_panel": {
-        }
-      }
+      { "messages_scrolling_panel@content_log_history.messages_scrolling_panel": {} }
     ]
   },
 
   "content_log_history_panel": {
     "type": "panel",
-    // If we don't support the clipboard, we shouldn't show the clipboard button
-    // Use the no buttons dialog in this case.
     "$dialog_control|default": "common_dialogs.main_panel_no_buttons",
     "variables": [
       {
@@ -243,7 +217,6 @@
         "$dialog_control": "common_dialogs.main_panel_one_button"
       }
     ],
-
     "controls": [
       {
         "content_log_history_dialog@$dialog_control": {

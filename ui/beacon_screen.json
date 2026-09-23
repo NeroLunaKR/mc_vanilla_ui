@@ -1,8 +1,5 @@
 {
   "namespace": "beacon",
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
 
   "selected_item_details@common.selected_item_details": {
     "offset": [ 0, 0 ]
@@ -59,7 +56,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 12 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 12
+        }
+      }
     ]
   },
 
@@ -131,12 +132,14 @@
       }
     ]
   },
+
   "item_seperator@beacon.image_atlas": {
     "size": [ 5, 18 ],
     "texture": "textures/ui/item_seperator",
     "anchor_to": "top_left",
     "anchor_from": "top_left"
   },
+
   "item_renderer": {
     "type": "custom",
     "renderer": "inventory_item_renderer",
@@ -144,6 +147,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left"
   },
+
   "usable_items_panel": {
     "type": "panel",
     "size": [ 104, 18 ],
@@ -222,6 +226,7 @@
       }
     ]
   },
+
   "base_image@beacon.image_atlas": {
     "$image_size|default": [ 18, 18 ],
     "size": "$image_size",
@@ -235,6 +240,7 @@
       }
     ]
   },
+
   "hover_text@common.hover_text": {
     "bindings": [
       {
@@ -245,6 +251,7 @@
       }
     ]
   },
+
   "hover_state": {
     "type": "image",
     "texture": "",
@@ -256,6 +263,7 @@
   "button_unchecked_default@beacon.image_atlas": {
     "texture": "textures/ui/beacon_button_default"
   },
+
   "button_unchecked_hover@beacon.image_atlas": {
     "size": [ 22, 22 ],
     "texture": "textures/ui/beacon_button_hover",
@@ -263,24 +271,29 @@
       { "hover_text@beacon.hover_text": {} }
     ]
   },
+
   "button_checked_hover@beacon.image_atlas": {
     "texture": "textures/ui/beacon_button_pressed",
     "controls": [
       { "hover_text@beacon.hover_text": {} }
     ]
   },
+
   "button_locked@beacon.image_atlas": {
     "texture": "textures/ui/beacon_button_locked"
   },
+
   "button_locked_hover@beacon.image_atlas": {
     "texture": "textures/ui/beacon_button_locked",
     "controls": [
       { "hover_text@beacon.hover_text": {} }
     ]
   },
+
   "button_checked@beacon.image_atlas": {
     "texture": "textures/ui/beacon_button_pressed"
   },
+
   "toggle_button@common.toggle": {
     "size": [ 22, 22 ],
     "layer": 1,
@@ -294,7 +307,6 @@
     "$checked_locked_control": "beacon.button_locked",
     "$unchecked_locked_hover_control": "beacon.button_locked_hover",
     "$checked_locked_hover_control": "beacon.button_locked_hover",
-
     "bindings": [
       {
         "binding_name": "#button_visible",
@@ -332,6 +344,7 @@
       }
     ]
   },
+
   "base_button@common.button": {
     "size": [ 22, 22 ],
     "layer": 0,
@@ -366,10 +379,10 @@
           "type": "image",
           "texture": "textures/ui/beacon_button_pressed"
         }
-
       }
     ]
   },
+
   "active_button@beacon.base_button": {
     "$button_active": "#active",
     "button_mappings": [
@@ -391,6 +404,7 @@
       }
     ]
   },
+
   "inactive_button@beacon.base_button": {
     "$button_active": "#inactive",
     "pressed_control": "",
@@ -409,6 +423,7 @@
       }
     ]
   },
+
   "selected_button@beacon.base_button": {
     "$button_active": "#selected",
     "button_mappings": [],
@@ -428,6 +443,7 @@
       }
     ]
   },
+
   "secondary_effect_base@beacon.base_image": {
     "bindings": [
       {
@@ -438,26 +454,32 @@
       }
     ]
   },
+
   "speed_secondary@beacon.secondary_effect_base": {
     "$effect_name": "speed",
     "$image_texture": "textures/ui/speed_effect"
   },
+
   "haste_secondary@beacon.secondary_effect_base": {
     "$effect_name": "haste",
     "$image_texture": "textures/ui/haste_effect"
   },
+
   "resist_secondary@beacon.secondary_effect_base": {
     "$effect_name": "resist",
     "$image_texture": "textures/ui/resistance_effect"
   },
+
   "jump_secondary@beacon.secondary_effect_base": {
     "$effect_name": "jump",
     "$image_texture": "textures/ui/jump_boost_effect"
   },
+
   "strength_secondary@beacon.secondary_effect_base": {
     "$effect_name": "strength",
     "$image_texture": "textures/ui/strength_effect"
   },
+
   "image_template": {
     "type": "panel",
     "size": [ 18, 18 ],
@@ -466,6 +488,7 @@
       { "base_image@beacon.base_image": {} }
     ]
   },
+
   "secondary_effect_images@beacon.image_template": {
     "controls": [
       { "speed_secondary@beacon.speed_secondary": {} },
@@ -475,6 +498,7 @@
       { "strength_secondary@beacon.strength_secondary": {} }
     ]
   },
+
   "toggle_template": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -484,6 +508,7 @@
       { "$image_control@$image_control": {} }
     ]
   },
+
   "button_template@beacon.toggle_template": {
     "controls": [
       { "active_button@beacon.active_button": {} },
@@ -491,6 +516,7 @@
       { "image_template@beacon.image_template": {} }
     ]
   },
+
   "panel_template": {
     "type": "panel",
     "size": [ 22, 22 ],
@@ -510,6 +536,7 @@
       { "$button_control@$button_control": {} }
     ]
   },
+
   "button_panel": {
     "type": "panel",
     "controls": [
@@ -571,8 +598,6 @@
     ]
   },
 
-  // Payment Panel //
-
   "payment_panel": {
     "type": "panel",
     "size": [ "100%", 22 ],
@@ -623,6 +648,7 @@
     "color": "$beacon_power_title_text_color",
     "shadow": true
   },
+
   "beacon_inner_panel": {
     "type": "image",
     "texture": "textures/ui/effect_background",
@@ -631,7 +657,11 @@
     "anchor_to": "top_middle",
     "controls": [
       { "button_panel@beacon.button_panel": {} },
-      { "pyramid_panel@beacon.pyramid_panel": { "layer": 1 } },
+      {
+        "pyramid_panel@beacon.pyramid_panel": {
+          "layer": 1
+        }
+      },
       {
         "middle_strip@beacon.image_atlas": {
           "offset": [ 0, 3 ],

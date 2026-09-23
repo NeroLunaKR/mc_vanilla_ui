@@ -1,10 +1,6 @@
 {
   "namespace": "day_one_experience",
 
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
-
   "alpha_scroll_background": {
     "type": "image",
     "texture": "textures/ui/banners_dark"
@@ -44,10 +40,6 @@
     "$arrow_texture": "textures/ui/tip_arrows_right"
   },
 
-  //---------------------------------------------------------------------------
-  // common labels
-  //---------------------------------------------------------------------------
-
   "import_time": {
     "type": "custom",
     "renderer": "name_tag_renderer",
@@ -60,10 +52,6 @@
       "#x_padding": 5
     }
   },
-
-  //---------------------------------------------------------------------------
-  // Skin Import Panels
-  //---------------------------------------------------------------------------
 
   "skins_tip_image": {
     "type": "image",
@@ -353,10 +341,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Advanced World Panels
-  //---------------------------------------------------------------------------
-
   "legacy_world_item": {
     "type": "stack_panel",
     "anchor_from": "top_left",
@@ -415,7 +399,7 @@
       {
         "loading_legacy_worlds_panel@play.label_background": {
           "size": [ "100%", "100%c - 12px" ],
-          "min_size": [ "100%", 39 ], // Grid item size is 29 + 10 for label, grid items overdraw by 1px
+          "min_size": [ "100%", 39 ],
           "controls": [
             {
               "loading_legacy_worlds_label": {
@@ -513,18 +497,12 @@
           "type": "panel",
           "size": [ "100%", 8 ],
           "controls": [
-            {
-              "import_time_label@day_one_experience.import_time": {}
-            }
+            { "import_time_label@day_one_experience.import_time": {} }
           ]
         }
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Buttons
-  //---------------------------------------------------------------------------
 
   "next_screen_button_content": {
     "type": "panel",
@@ -563,7 +541,6 @@
                 "anchor_to": "right_middle",
                 "texture": "textures/ui/arrowRight"
               }
-
             }
           ],
           "bindings": [
@@ -617,10 +594,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Scroll panels
-  //---------------------------------------------------------------------------
-
   "common_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
     "$scrolling_pane_size": [ "100%", "100%" ],
@@ -634,24 +607,16 @@
   "skin_tip_scroll_panel": {
     "type": "panel",
     "controls": [
-      {
-        "skin_tip_screen@day_one_experience.skin_tip_screen": {}
-      }
+      { "skin_tip_screen@day_one_experience.skin_tip_screen": {} }
     ]
   },
 
   "worlds_import_scroll_panel": {
     "type": "panel",
     "controls": [
-      {
-        "advanced_screen@day_one_experience.advanced_worlds_screen": {}
-      }
+      { "advanced_screen@day_one_experience.advanced_worlds_screen": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Scroll content
-  //---------------------------------------------------------------------------
 
   "common_content": {
     "type": "panel",
@@ -685,10 +650,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Content layout panels
-  //---------------------------------------------------------------------------
-
   "default_tab_content_panel_layout": {
     "type": "panel",
     "controls": [
@@ -715,10 +676,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Default panels
-  //---------------------------------------------------------------------------
-
   "default_wizard_screen": {
     "type": "panel",
     "controls": [
@@ -737,9 +694,7 @@
   "wizard_screen_content": {
     "type": "panel",
     "controls": [
-      {
-        "main_control@day_one_experience.default_wizard_screen": {}
-      },
+      { "main_control@day_one_experience.default_wizard_screen": {} },
       {
         "next_button@day_one_experience.next_panel": {
           "layer": 10

@@ -1,8 +1,6 @@
 {
   "namespace": "smithing_table_pocket",
 
-  // Backgrounds //
-
   "ingot_image@smithing_table.smithing_image": {
     "anchor_to": "center",
     "anchor_from": "center",
@@ -15,8 +13,6 @@
     "size": [ "85%", "85%" ],
     "texture": "textures/ui/background_panel"
   },
-
-  // Arrow //
 
   "arrow_icon": {
     "type": "image",
@@ -32,8 +28,6 @@
     "anchor_to": "bottom_left"
   },
 
-  // Labels //
-
   "upgrade_label": {
     "type": "label",
     "color": "$pocket_title_text_color",
@@ -42,8 +36,6 @@
     "anchor_from": "center",
     "anchor_to": "center"
   },
-
-  // Text Edit //
 
   "smithing_icon_panel": {
     "type": "panel",
@@ -75,8 +67,6 @@
       }
     ]
   },
-
-  // Slots //
 
   "slots_panel": {
     "type": "panel",
@@ -144,8 +134,6 @@
     ]
   },
 
-  // smithing_table Panel //
-
   "smithing_table_contents_panel": {
     "type": "stack_panel",
     "size": [ 144, 100 ],
@@ -165,8 +153,6 @@
       }
     ]
   },
-
-  // Inventory Grids //
 
   "inventory_grid": {
     "type": "grid",
@@ -199,8 +185,6 @@
     ]
   },
 
-  // Half Screens //
-
   "inventory_and_smithing_table_panel": {
     "type": "panel",
     "controls": [
@@ -210,7 +194,6 @@
           "size": [ "50%", "100%" ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-
           "controls": [
             { "inventory_content@smithing_table_pocket.inventory_content": {} }
           ]
@@ -222,7 +205,6 @@
           "size": [ "50%", "100%" ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-
           "controls": [
             { "smithing_table_content@smithing_table_pocket.smithing_table_contents_panel": {} }
           ]
@@ -230,9 +212,6 @@
       }
     ]
   },
-
-
-  // Header //
 
   "header": {
     "type": "panel",
@@ -247,7 +226,9 @@
         }
       },
       {
-        "close_button@common.legacy_pocket_close_button": { "offset": [ -3, 3 ] }
+        "close_button@common.legacy_pocket_close_button": {
+          "offset": [ -3, 3 ]
+        }
       },
       {
         "panel": {
@@ -267,14 +248,16 @@
     ]
   },
 
-
-  // Header and content
   "header_and_content_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "85%", "85%" ],
     "controls": [
-      { "header@smithing_table_pocket.header": { "layer": 2 } },
+      {
+        "header@smithing_table_pocket.header": {
+          "layer": 2
+        }
+      },
       {
         "inventory_and_smithing_table_panel@smithing_table_pocket.inventory_and_smithing_table_panel": {
           "size": [ "100%", "fill" ]
@@ -283,16 +266,22 @@
     ]
   },
 
-  // smithing_table Screen //
-
   "smithing_table_panel": {
     "type": "panel",
     "controls": [
       { "bg@smithing_table_pocket.background_image": {} },
-      { "root_panel@common.root_panel": { "size": [ "85%", "85%" ], "layer": 1 } },
+      {
+        "root_panel@common.root_panel": {
+          "size": [ "85%", "85%" ],
+          "layer": 1
+        }
+      },
       { "header_and_content_stack_panel@smithing_table_pocket.header_and_content_stack_panel": {} },
-
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { "layer": 2 } },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {
+          "layer": 2
+        }
+      },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "hold_icon@common.inventory_take_progress_icon_button": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
@@ -301,7 +290,11 @@
           "$offset": [ 0, "85%" ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 21
+        }
+      }
     ]
   }
 }

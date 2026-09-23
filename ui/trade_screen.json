@@ -1,12 +1,6 @@
 {
   "namespace": "trade",
 
-  //---------------------------------------------------------------------------
-  // Common Controls
-  //---------------------------------------------------------------------------
-
-  // Buttons //
-
   "cycle_recipe_button@common_buttons.light_content_button": {
     "$button_content": "common_store.direction_button_panel",
     "bindings": [
@@ -75,7 +69,6 @@
     ]
   },
 
-  // Images //
   "arrow_image": {
     "type": "image",
     "texture": "textures/ui/arrow_large",
@@ -287,10 +280,6 @@
     "$button_ref": "trade.trade_item_slot_result_button"
   },
 
-  //---------------------------------------------------------------------------
-  // Panels
-  //---------------------------------------------------------------------------
-
   "arrow": {
     "type": "panel",
     "$item_collection_name": "arrow_text",
@@ -298,8 +287,16 @@
     "size": [ 26, 26 ],
     "controls": [
       { "arrow_image@trade.arrow_image": {} },
-      { "cross_out_icon@trade.cross_out_icon": { "layer": 2 } },
-      { "recipe_button@trade.recipe_button": { "ignored": "$pocket_screen" } }
+      {
+        "cross_out_icon@trade.cross_out_icon": {
+          "layer": 2
+        }
+      },
+      {
+        "recipe_button@trade.recipe_button": {
+          "ignored": "$pocket_screen"
+        }
+      }
     ]
   },
 
@@ -501,10 +498,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
   "trade_panel": {
     "type": "panel",
     "controls": [
@@ -531,7 +524,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 21
+        }
+      }
     ]
   },
 

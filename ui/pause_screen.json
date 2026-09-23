@@ -52,7 +52,7 @@
     "layer": 3,
     "size": [ 14, 14 ]
   },
-  
+
   "store_icon": {
     "type": "image",
     "texture": "textures/ui/marketplace_pause_menu_icon",
@@ -102,10 +102,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Skins Panel
-  //---------------------------------------------------------------------------
 
   "dressing_room_controller_button_content": {
     "type": "panel",
@@ -340,7 +336,6 @@
           "size": [ "100%", "100% - 10px" ],
           "$paper_doll_offset|default": [ 0, -22 ],
           "offset": "$paper_doll_offset",
-
           "controls": [
             {
               "paper_doll": {
@@ -404,7 +399,7 @@
             }
           ]
         }
-     }
+      }
     ]
   },
 
@@ -412,9 +407,7 @@
     "type": "panel",
     "size": [ "50% - 75px", "100%" ],
     "controls": [
-      {
-        "interior@pause.skin_panel_interior": {}
-      }
+      { "interior@pause.skin_panel_interior": {} }
     ]
   },
 
@@ -518,7 +511,6 @@
           ]
         }
       }
-
     ]
   },
 
@@ -573,15 +565,9 @@
 
   "realms_stories_button@pause.pause_button_template": {
     "$pressed_button_name": "button.realms_access",
-    "$button_text": "#realms_access_button_text",
-    "$button_text_binding_type": "global",
+    "$button_text": "pauseScreen.realmsHub",
     "anchor_to": "top_middle",
-    "anchor_from": "top_middle",
-    "bindings": [
-      {
-        "binding_name": "#realms_access_button_text"
-      }
-    ]
+    "anchor_from": "top_middle"
   },
 
   "unread_story_count_panel": {
@@ -924,7 +910,11 @@
     "size": [ 24, 24 ],
     "controls": [
       { "button@pause.how_to_play_button_small": {} },
-      { "tooltip_trigger@pause.icon_button_tooltip_trigger": { "$tooltip_text": "menu.howToPlay" } }
+      {
+        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
+          "$tooltip_text": "menu.howToPlay"
+        }
+      }
     ]
   },
 
@@ -940,7 +930,11 @@
     ],
     "controls": [
       { "button@pause.achievements_button_small": {} },
-      { "tooltip_trigger@pause.icon_button_tooltip_trigger": { "$tooltip_text": "menu.achievements" } }
+      {
+        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
+          "$tooltip_text": "menu.achievements"
+        }
+      }
     ]
   },
 
@@ -959,8 +953,16 @@
     "size": [ 24, 24 ],
     "$focus_change_left|default": "",
     "controls": [
-      { "button@pause.settings_button_small": { "focus_change_left": "$focus_change_left" } },
-      { "tooltip_trigger@pause.icon_button_tooltip_trigger": { "$tooltip_text": "menu.settings" } }
+      {
+        "button@pause.settings_button_small": {
+          "focus_change_left": "$focus_change_left"
+        }
+      },
+      {
+        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
+          "$tooltip_text": "menu.settings"
+        }
+      }
     ]
   },
 
@@ -990,7 +992,11 @@
     ],
     "controls": [
       { "button@pause.take_screenshot_button": {} },
-      { "tooltip_trigger@pause.icon_button_tooltip_trigger": { "$tooltip_text": "key.screenshot" } }
+      {
+        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
+          "$tooltip_text": "key.screenshot"
+        }
+      }
     ]
   },
 
@@ -1006,7 +1012,11 @@
     ],
     "controls": [
       { "button@pause.take_screenshot_gamepad_button": {} },
-      { "tooltip_trigger@pause.icon_button_tooltip_trigger": { "$tooltip_text": "key.screenshot" } }
+      {
+        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
+          "$tooltip_text": "key.screenshot"
+        }
+      }
     ]
   },
 
@@ -1070,7 +1080,11 @@
           ]
         }
       },
-      { "tooltip_trigger@pause.icon_button_tooltip_trigger": { "$tooltip_text": "menu.store" } }
+      {
+        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
+          "$tooltip_text": "menu.store"
+        }
+      }
     ]
   },
 
@@ -1078,7 +1092,7 @@
     "$pressed_button_name": "button.realms_access",
     "$focus_id": "icon_panel_main_focus",
     "focus_change_down": "return_to_game",
-    "$button_tts_header": "#realms_access_button_text",
+    "$button_tts_header": "pauseScreen.realmsHub",
     "size": [ 24, 24 ],
     "$button_content": "pause.realms_stories_icon",
     "$pressed_alpha": 0.65,
@@ -1087,9 +1101,6 @@
         "binding_name": "#realms_stories_button_secondary_visible",
         "binding_name_override": "#visible",
         "binding_type": "global"
-      },
-      {
-        "binding_name": "#realms_access_button_text"
       }
     ]
   },
@@ -1107,27 +1118,8 @@
     "controls": [
       { "button@pause.realms_stories_button_small": {} },
       {
-        "tooltip_trigger@pause.icon_button_tooltip_trigger": {
-          "$tooltip_text": "pauseScreen.realmsStories",
-          "bindings": [
-            {
-              "binding_name": "(not #realms_hub_enabled)",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-            }
-          ]
-        }
-      },
-      {
         "tooltip_trigger_hub@pause.icon_button_tooltip_trigger": {
-          "$tooltip_text": "pauseScreen.realmsHub",
-          "bindings": [
-            {
-              "binding_name": "#realms_hub_enabled",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-            }
-          ]
+          "$tooltip_text": "pauseScreen.realmsHub"
         }
       }
     ]
@@ -1135,14 +1127,12 @@
 
   "pause_screen@common.base_screen": {
     "cache_screen": true,
-
     "$screen_animations": [
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade",
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -1173,7 +1163,6 @@
         "scope": "view"
       }
     ],
-
     "variables": [
       {
         "requires": "$ignore_edu_pause",
@@ -1231,10 +1220,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------
-  // Top right panel (contains pause announcement and friends drawer)
-  //--------------------------------------------------------------------------
-
   "top_right_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -1249,15 +1234,9 @@
           "ignored": "$pause_menu_icon_settings_layout"
         }
       },
-      {
-        "friendsdrawer_button_panel@pause.friendsdrawer_button_panel": {}
-      }
+      { "friendsdrawer_button_panel@pause.friendsdrawer_button_panel": {} }
     ]
   },
-
-  //--------------------------------------------------------------------------
-  // Friends drawer button panel
-  //--------------------------------------------------------------------------
 
   "friendsdrawer_button_panel": {
     "type": "panel",
@@ -1291,7 +1270,7 @@
           "controls": [
             {
               "friends_drawer_ftue_popup@friendsbutton.friends_drawer_popup": {
-                "offset": [ -100, 28 ], // Adjusted by ~half of popup width in order to position correctly
+                "offset": [ -100, 28 ],
                 "focus_enabled": false
               }
             }
@@ -1315,9 +1294,7 @@
     "size": [ "113%", "113%" ],
     "$achievements_ignored|default": false,
     "controls": [
-      {
-        "menu@pause.left_buttons_panel": {}
-      }
+      { "menu@pause.left_buttons_panel": {} }
     ]
   },
 
@@ -1382,14 +1359,12 @@
                 "size": [ "fill", "100%" ]
               }
             },
-
             {
               "side_padding": {
                 "type": "panel",
                 "size": [ 5, 0 ]
               }
             },
-
             {
               "small_settings_button": {
                 "type": "input_panel",
@@ -1419,7 +1394,6 @@
                 "ignored": "(not $pause_menu_icon_settings_layout)"
               }
             },
-
             {
               "small_achievements_button": {
                 "type": "input_panel",
@@ -1670,9 +1644,7 @@
           "size": [ "fill", "100%" ]
         }
       },
-      {
-        "pause_menu@pause.menu_the_rest_panel": {}
-      },
+      { "pause_menu@pause.menu_the_rest_panel": {} },
       {
         "fill_3": {
           "type": "panel",
@@ -1703,9 +1675,7 @@
     "size": [ "100%c + 16px", 24 ],
     "$screen_background_alpha": 0.8,
     "controls": [
-      {
-        "pause@paused_text": {}
-      }
+      { "pause@paused_text": {} }
     ]
   },
 
@@ -1734,9 +1704,7 @@
                 "size": [ 3, 0 ]
               }
             },
-            {
-              "pause@paused_text": {}
-            }
+            { "pause@paused_text": {} }
           ]
         }
       }
@@ -1871,7 +1839,7 @@
     "layer": 1,
     "anchor_from": "center",
     "anchor_to": "center",
-	"offset": [ "13%", "0%" ],
+    "offset": [ "13%", "0%" ],
     "controls": [
       {
         "button_panel": {
@@ -1903,9 +1871,22 @@
               }
             },
             { "return_to_game_button@pause.return_to_game_button": {} },
-            { "return@pause.vertical_padding": { "size": [ 0, 3 ] } },
-            { "settings_button@pause.settings_button": { "ignored": "$pause_menu_icon_settings_layout" } },
-            { "settings@pause.vertical_padding": { "size": [ 0, 3 ], "ignored": "$pause_menu_icon_settings_layout" } },
+            {
+              "return@pause.vertical_padding": {
+                "size": [ 0, 3 ]
+              }
+            },
+            {
+              "settings_button@pause.settings_button": {
+                "ignored": "$pause_menu_icon_settings_layout"
+              }
+            },
+            {
+              "settings@pause.vertical_padding": {
+                "size": [ 0, 3 ],
+                "ignored": "$pause_menu_icon_settings_layout"
+              }
+            },
             { "feedback_button_primary_panel@pause.feedback_button_primary_panel": {} },
             {
               "feedback@pause.vertical_padding": {
@@ -1949,7 +1930,7 @@
             {
               "store_button_panel_padding@pause.vertical_padding": {
                 "ignored": "$is_secondary_client",
-                "size": [0, 3],
+                "size": [ 0, 3 ],
                 "bindings": [
                   {
                     "binding_name": "(not #store_button_secondary_visible)",
@@ -1961,7 +1942,6 @@
             },
             { "quit_button@pause.quit_button": {} },
             { "smaller_buttons@pause.smaller_buttons_panel": {} },
-
             {
               "pause_panel@pause.pause_announcement_panel_green": {
                 "ignored": "(not $pause_menu_icon_settings_layout)"
@@ -1972,7 +1952,6 @@
       }
     ]
   },
-
 
   "info_panel_content_list": {
     "type": "stack_panel",
@@ -2031,9 +2010,7 @@
           "size": [ 0, 8 ]
         }
       },
-      {
-        "social_buttons_panel@pause.social_buttons_panel": {}
-      },
+      { "social_buttons_panel@pause.social_buttons_panel": {} },
       {
         "players_label@pause.players_label": {
           "ignored": "$education_edition"
@@ -2182,9 +2159,7 @@
     "type": "panel",
     "size": [ "100% - 1px", "100%c" ],
     "controls": [
-      {
-        "invite_players_button@pause.invite_players_button": {}
-      }
+      { "invite_players_button@pause.invite_players_button": {} }
     ]
   },
 
@@ -2202,7 +2177,6 @@
       }
     ]
   },
-
 
   "players_label": {
     "type": "label",
@@ -2231,7 +2205,6 @@
     "bindings": [
       {
         "binding_name": "#players_grid_dimension",
-        // Necessary do to a bug with grid item bindings not refreshing when the grid is inside a stack panel
         "binding_condition": "always"
       }
     ]
@@ -2247,7 +2220,6 @@
 
   "player_grid_item_content": {
     "type": "panel",
-
     "controls": [
       {
         "player_button_panel": {
@@ -2506,9 +2478,7 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "controls": [
-      {
-        "gamertag@pause.player_gamertag": {}
-      }
+      { "gamertag@pause.player_gamertag": {} }
     ]
   },
 

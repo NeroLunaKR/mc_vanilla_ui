@@ -1,10 +1,6 @@
 {
   "namespace": "smithing_table",
 
-  //---------------------------------------------------------------------------
-  // #region icon and text area (top quarter of screen)
-  //---------------------------------------------------------------------------
-
   "smithing_image": {
     "type": "image"
   },
@@ -38,7 +34,6 @@
     "text": "container.smithing_table.upgrade"
   },
 
-  // panel to position the top quarter of screen
   "icon_and_text_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -46,27 +41,19 @@
     "size": [ "65%", "40%" ],
     "offset": [ "7%", 0 ],
     "controls": [
-      { "smithing_icon_panel@smithing_table.smithing_icon_panel": { } },
-      { "upgrade_label@smithing_table.upgrade_label": { } }
+      { "smithing_icon_panel@smithing_table.smithing_icon_panel": {} },
+      { "upgrade_label@smithing_table.upgrade_label": {} }
     ]
   },
 
-  // panel to position the icon
   "smithing_icon_panel": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
-      { "smithing_icon@smithing_table.smithing_icon": { } }
+      { "smithing_icon@smithing_table.smithing_icon": {} }
     ]
   },
-
-
-  //#endregion
-
-  //---------------------------------------------------------------------------
-  // #region recipe (input, material and results) area (2nd quarter of screen)
-  //---------------------------------------------------------------------------
 
   "plus_sign_icon": {
     "type": "image",
@@ -91,8 +78,6 @@
       }
     ]
   },
-
-  //#endregion
 
   "smithing_table_output_slot_button@common.container_slot_button_prototype": {
     "button_mappings": [
@@ -182,10 +167,8 @@
         "input_item_slot@smithing_table.smithing_table_item_slot": {
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "smithing_table_input_items",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "smithing_table_material"
         }
@@ -204,13 +187,10 @@
           "grid_position": [ 2, 0 ],
           "$item_collection_name": "smithing_table_material_items",
           "$cell_overlay_ref": "smithing_table.ingot_image",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_material",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "smithing_table_input",
-
           "$focus_override_right_binding_type": "none",
           "$focus_override_right": "smithing_table_result"
         }
@@ -234,10 +214,8 @@
           "grid_position": [ 4, 0 ],
           "$item_collection_name": "smithing_table_result_items",
           "$button_ref": "smithing_table.smithing_table_output_slot_button",
-
           "$focus_id_binding_type": "none",
           "$focus_id": "smithing_table_result",
-
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "smithing_table_material"
         }
@@ -252,15 +230,9 @@
     "size": [ "100%", "60%" ],
     "offset": [ 0, "40%" ],
     "controls": [
-      { "recipe_grid@smithing_table.recipe_grid": { } }
+      { "recipe_grid@smithing_table.recipe_grid": {} }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region screen
-  //---------------------------------------------------------------------------
 
   "top_half_panel": {
     "type": "panel",
@@ -269,8 +241,8 @@
     "size": [ "100% - 14px", "50% - 14px" ],
     "offset": [ 7, 7 ],
     "controls": [
-      { "icon_and_text_panel@smithing_table.icon_and_text_panel": { } },
-      { "recipe_panel@smithing_table.recipe_panel": { } }
+      { "icon_and_text_panel@smithing_table.icon_and_text_panel": {} },
+      { "recipe_panel@smithing_table.recipe_panel": {} }
     ]
   },
 
@@ -302,9 +274,14 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 21
+        }
+      }
     ]
   },
+
   "smithing_table_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "close_on_player_hurt": "$close_on_player_hurt",
@@ -332,5 +309,3 @@
     ]
   }
 }
-
-// #endregion

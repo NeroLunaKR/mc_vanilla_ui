@@ -84,6 +84,7 @@
                       "controls": [
                         {
                           "learn_more_left@common_csb.csb_gold_button": {
+                            "$button_text": "#mpp_plan_picker_cta_text",
                             "$button_content": "csb_upsell.csb_learn_more",
                             "$pressed_button_name": "button.left_learn_more",
                             "size": [ "65%", 20 ]
@@ -149,7 +150,7 @@
                             "type": "button",
                             "anchor_from": "bottom_middle",
                             "anchor_to": "bottom_middle",
-                            "$button_text": "store.csb.upsell.learn_more",
+                            "$button_text": "#realms_plus_plan_picker_cta_text",
                             "$button_content": "csb_upsell.csb_learn_more",
                             "$pressed_button_name": "button.right_learn_more",
                             "$default_button_texture": "textures/ui/realmsContent",
@@ -233,18 +234,14 @@
           "orientation": "vertical",
           "size": [ "100%", "50% -8px" ],
           "controls": [
-            {
-              "padding_b@csb_big_padding": {}
-            },
+            { "padding_b@csb_big_padding": {} },
             {
               "bullet_one@csb_bullet_point": {
                 "$bullet_color": "$header_first_line_color",
                 "$bullet_text": "$bullet_text_one"
               }
             },
-            {
-              "padding_0@csb_bullet_padding": {}
-            },
+            { "padding_0@csb_bullet_padding": {} },
             {
               "bullet_two@csb_bullet_point": {
                 "$bullet_color": "$header_first_line_color",
@@ -252,9 +249,7 @@
                 "$max_size": [ "100%", 10 ]
               }
             },
-            {
-              "padding_1@csb_bullet_padding": {}
-            },
+            { "padding_1@csb_bullet_padding": {} },
             {
               "bullet_three@csb_bullet_point": {
                 "$bullet_color": "$header_first_line_color",
@@ -357,27 +352,21 @@
           "orientation": "vertical",
           "size": [ "100%", "50% -8px" ],
           "controls": [
-            {
-              "padding_b@csb_big_padding": {}
-            },
+            { "padding_b@csb_big_padding": {} },
             {
               "bullet_one@csb_bullet_point": {
                 "$bullet_color": "$header_first_line_color",
                 "$bullet_text": "$bullet_text_one"
               }
             },
-            {
-              "padding_1@csb_bullet_padding": {}
-            },
+            { "padding_1@csb_bullet_padding": {} },
             {
               "bullet_two@csb_bullet_point": {
                 "$bullet_color": "$header_first_line_color",
                 "$bullet_text": "$bullet_text_two"
               }
             },
-            {
-              "padding_0@csb_bullet_padding": {}
-            },
+            { "padding_0@csb_bullet_padding": {} },
             {
               "bullet_three@csb_bullet_split_point": {
                 "$bullet_text_first": "$bullet_text_three",
@@ -638,9 +627,15 @@
       {
         "learn_more": {
           "type": "label",
-          "text": "store.csb.upsell.learnMore",
+          "text": "$button_text",
           "color": "$text_color",
-          "max_size": [ "100%", "100%" ]
+          "max_size": [ "100%", "100%" ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "$button_text"
+            }
+          ]
         }
       }
     ]

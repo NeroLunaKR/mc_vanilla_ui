@@ -66,26 +66,20 @@
           "size": [ "100%", 9 ]
         }
       },
-      {
-        "buttons@discovery_dialog.service_buttons": {
-        }
-      }
+      { "buttons@discovery_dialog.service_buttons": {} }
     ]
   },
 
   "service_dialog@popup_dialog.form_fit_modal_dialog_popup": {
-    // Above EVERYTHING
     "layer": 1000,
     "$modal_title": "#service_title_text",
     "$modal_title_binding_type": "global",
     "$modal_title_binding_condition": "once",
-
     "$modal_contents": "discovery_dialog.content",
     "$modal_contents_padding": [ 6, 6 ],
     "$popup_dialog_escape_button_name": "button.close"
   },
 
-  // Put this in the screen that will present the dialog
   "discovery_dialog_factory": {
     "type": "factory",
     "control_ids": {

@@ -33,7 +33,7 @@
               }
             }
           ]
-         }
+        }
       }
     ]
   },
@@ -102,7 +102,6 @@
                     "$header_size": [ "100%-6px", "100%c" ]
                   }
                 ],
-
                 "$header_size|default": [ "100%-6px", "50%c" ],
                 "size": "$header_size"
               }
@@ -133,12 +132,11 @@
       }
     ]
   },
+
   "button_content": {
     "type": "panel",
     "controls": [
-      {
-        "button_label2@patch_notes.button_label_panel": {}
-      }
+      { "button_label2@patch_notes.button_label_panel": {} }
     ]
   },
 
@@ -166,7 +164,6 @@
       }
     ]
   },
-
 
   "patch_notes_header_content_with_offer": {
     "type": "stack_panel",
@@ -239,7 +236,7 @@
       },
       {
         "loading_animation@pdp.focus_border": {
-          "size": ["100%", "60px"],
+          "size": [ "100%", "60px" ],
           "bindings": [
             {
               "binding_name": "#loading_patch_notes",
@@ -264,7 +261,6 @@
             {
               "requires": "$show_button",
               "$header_content": "patch_notes_header_content_with_offer"
-
             }
           ],
           "$header_content|default": "patch_notes_header_content_without_offer"
@@ -368,12 +364,10 @@
 
   "patch_notes_dialog@common_dialogs.main_panel_small_title_one_button": {
     "size": "$patch_notes_screen_size",
-
     "$custom_title_label": "common_dialogs.standard_title_label",
     "$text_name": "#dialog_title",
     "$title_text_binding_type": "global",
     "$use_custom_title_control": true,
-
     "$child_control": "patch_notes.patch_notes_content",
     "$button_panel": "patch_notes.continue_button"
   },
@@ -415,7 +409,6 @@
           "size": [ "100%", "20px" ]
         }
       },
-
       {
         "padding_2": {
           "type": "panel",
@@ -430,11 +423,9 @@
           "size": [ "100%", 10 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-      
           "tts_control_type_order_priority": 100,
           "tts_value_order_priority": 101,
           "$toggle_enabled_binding_type": "global",
-      
           "controls": [
             {
               "header_description_stack_panel": {
@@ -443,7 +434,6 @@
                 "size": [ "100%", "100%" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-      
                 "controls": [
                   {
                     "checkbox_visuals@common.toggle_visuals": {
@@ -504,12 +494,10 @@
 
   "sunsetting_dialog@common_dialogs.main_panel_small_title_one_button": {
     "size": "$patch_notes_screen_size",
-
     "$custom_title_label": "common_dialogs.standard_title_label",
     "$text_name": "#dialog_title",
     "$title_text_binding_type": "global",
     "$use_custom_title_control": true,
-
     "$child_control": "patch_notes.sunsetting_content",
     "$button_panel": "patch_notes.sunsetting_button_panel",
     "$button_panel_size": [ "100% - 14px", 60 ]

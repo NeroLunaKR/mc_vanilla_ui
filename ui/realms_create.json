@@ -1,7 +1,3 @@
-// The screen used to purchase (or trial use) a realm; pops up and gives
-// the player a chance to ... name and decide purchase options.  Next
-// screen is screen for Invite Players To Your Realm.
-
 {
   "namespace": "realms_create",
 
@@ -20,10 +16,6 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left"
   },
-
-  //--------------------------------------------------------------------------------
-  // Controls
-  //--------------------------------------------------------------------------------
 
   "enter_name_panel": {
     "type": "panel",
@@ -315,9 +307,7 @@
           "size": [ 1, "100%" ]
         }
       },
-      {
-        "create_realms_text_panel@realms_create.create_realms_text_panel": {}
-      }
+      { "create_realms_text_panel@realms_create.create_realms_text_panel": {} }
     ]
   },
 
@@ -552,9 +542,7 @@
           "size": [ 0, 2 ]
         }
       },
-      {
-        "confirmation_panel@realms_create.confirmation_panel": {}
-      },
+      { "confirmation_panel@realms_create.confirmation_panel": {} },
       {
         "padding_1": {
           "type": "panel",
@@ -564,10 +552,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
-
   "content": {
     "type": "panel",
     "anchor_from": "top_middle",
@@ -575,9 +559,7 @@
     "size": [ "100%", "100%" ],
     "offset": [ 0, 0 ],
     "controls": [
-      {
-        "main_panel@main_panel": {}
-      }
+      { "main_panel@main_panel": {} }
     ]
   },
 
@@ -605,7 +587,6 @@
       },
       {
         "popup_dialog_factory": {
-
           "type": "factory",
           "control_ids": {
             "play_on_realm": "@realms_common.popup_dialog__play_on_realm"

@@ -1,10 +1,6 @@
 {
   "namespace": "persona_popups",
 
-  //--------------------------------------------------------------------------------
-  // Popup Common
-  //--------------------------------------------------------------------------------
-
   "no_content_panel": {
     "type": "panel",
     "size": [ 0, 0 ]
@@ -17,7 +13,6 @@
     "$image|default": "#texture",
     "$image_binding_name|default": "#none",
     "$image_binding_type|default": "none",
-
     "bindings": [
       {
         "binding_type": "$image_binding_type",
@@ -131,10 +126,13 @@
     "$show_close_button": true,
     "$close_button_offset": [ -2, 2 ],
     "$close_button_visible_binding_type": "global",
-
     "controls": [
       { "title_label@persona_popups.popup_title": {} },
-      { "close_button@common.close_button": { "ignored": "$ignore_close_button" } },
+      {
+        "close_button@common.close_button": {
+          "ignored": "$ignore_close_button"
+        }
+      },
       { "content@persona_popups.popup_content": {} },
       { "ok_button@persona_popups.popup_ok_button": {} }
     ]
@@ -196,7 +194,6 @@
                 "offset": "$persona_popup_title_offset",
                 "text": "$persona_popup_title_text",
                 "color": "$light_button_default_text_color",
-
                 "$persona_popup_title_bindings|default": [],
                 "bindings": "$persona_popup_title_bindings"
               }
@@ -213,7 +210,11 @@
     "$title_font_type|default": "default",
     "controls": [
       { "icon@persona_popups.common_icon": {} },
-      { "padding@common.empty_panel": { "size": [ 5, "100%cm" ] } },
+      {
+        "padding@common.empty_panel": {
+          "size": [ 5, "100%cm" ]
+        }
+      },
       {
         "text_title_panel@persona_popups.title_text": {
           "$font_type": "$title_font_type"
@@ -243,9 +244,7 @@
           "texture": "textures/ui/greyBorder",
           "anims": "$alpha_anims",
           "controls": [
-            {
-              "text_stack_panel@persona_popups.popup_title": {}
-            }
+            { "text_stack_panel@persona_popups.popup_title": {} }
           ]
         }
       }
@@ -276,10 +275,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Skin vs Persona Difference Information
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__difference_information@persona_popups.common_dialog": {
     "$ignore_close_button": true,
@@ -330,7 +325,11 @@
     "size": [ "fill", "100%c" ],
     "controls": [
       { "title_bar@persona_popups.icon_title_bar": {} },
-      { "padding_1@common.empty_panel": { "size": [ "100%", 5 ] } },
+      {
+        "padding_1@common.empty_panel": {
+          "size": [ "100%", 5 ]
+        }
+      },
       { "details@persona_popups.differences_left_details": {} }
     ]
   },
@@ -349,7 +348,11 @@
     "$details_font_type": "smooth",
     "controls": [
       { "left@persona_popups.differences_left_section": {} },
-      { "padding_1@common.empty_panel": { "size": [ "5%", "100%cm" ] } },
+      {
+        "padding_1@common.empty_panel": {
+          "size": [ "5%", "100%cm" ]
+        }
+      },
       { "right@persona_popups.differences_detail_image": {} }
     ]
   },
@@ -361,7 +364,6 @@
     "$description_image": "textures/ui/persona_key_comp"
   },
 
-  // for classic skin details
   "differences_classic_skin_detail_section@persona_popups.differences_title_card_display": {
     "$title_text": "profileScreen.differences_classic_skin_title",
     "$title_text_anchor": "top_left",
@@ -375,14 +377,22 @@
     "offset": [ 8, 4 ],
     "controls": [
       { "character_display@persona_popups.differences_persona_detail_section": {} },
-      { "item_1_padding@common.empty_panel": { "size": [ 0, 10 ] } },
+      {
+        "item_1_padding@common.empty_panel": {
+          "size": [ 0, 10 ]
+        }
+      },
       {
         "divider@common.horizontal_divider": {
           "size": [ "100% - 10px", 1 ],
           "offset": [ 5, 0 ]
         }
       },
-      { "item_2_padding@common.empty_panel": { "size": [ 0, 10 ] } },
+      {
+        "item_2_padding@common.empty_panel": {
+          "size": [ 0, 10 ]
+        }
+      },
       { "classic_skin_display@persona_popups.differences_classic_skin_detail_section": {} }
     ]
   },
@@ -390,10 +400,6 @@
   "popup_dialog__preview_difference_information@persona_popups.popup_dialog__difference_information": {
     "$confirm_button_name": "button.close_entry_prompt_dialog"
   },
-
-  //--------------------------------------------------------------------------------
-  // Delete Persona
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__delete_persona@popup_dialog.popup_dialog": {
     "debug": "red",
@@ -450,7 +456,11 @@
     "offset": [ 0, "67%" ],
     "controls": [
       { "left_button@persona_popups.delete_persona_left_button": {} },
-      { "padding@common.empty_panel": { "size": [ 4, "100%" ] } },
+      {
+        "padding@common.empty_panel": {
+          "size": [ 4, "100%" ]
+        }
+      },
       { "right_button@persona_popups.delete_persona_right_button": {} }
     ]
   },
@@ -495,10 +505,6 @@
     "offset": [ 0, 0 ],
     "$new_ui_label_offset": [ 0, 0 ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Create Persona
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__create_persona@persona_popups.common_dialog": {
     "$title_text": "profileScreen.create_persona_title",
@@ -556,7 +562,11 @@
   "create_persona_display@common.vertical_stack_panel": {
     "offset": [ 4, 2 ],
     "controls": [
-      { "vertical_padding_2px@common.empty_panel": { "size": [ "100%", 2 ] } },
+      {
+        "vertical_padding_2px@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      },
       { "stack_content@persona_popups.create_persona_choice_stack": {} }
     ]
   },
@@ -576,7 +586,6 @@
   "create_persona_choice_character": {
     "type": "panel",
     "size": [ "100%c", "100%c" ],
-
     "$title_text": "profileScreen.differences_character_creator_title",
     "$create_persona_description": "profileScreen.create_persona_character_details",
     "$icon_image": "textures/ui/sidebar_icons/character_creator",
@@ -584,7 +593,6 @@
     "$toggle_default_state": true,
     "$choice_bottom_content": "persona_popups.select_default_character_button_vertical_panel",
     "$toggle_view_binding_name": "persona_choice_character_toggle",
-
     "controls": [
       { "create_persona_choice_character@persona_popups.create_persona_choice_button": {} }
     ]
@@ -594,12 +602,14 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
-
     "$default_glyph_color": "$light_glyph_default_color",
     "$button_image_color": [ 1.0, 1.0, 1.0 ],
-
     "controls": [
-      { "padding@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "padding@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       {
         "select_default_character_button_panel": {
           "type": "panel",
@@ -620,7 +630,6 @@
     "$button_text_binding_type": "none",
     "$button_text": "profileScreen.selectPrebuiltCharacter",
     "focus_identifier": "select_default_character_button",
-
     "consume_hover_events": false,
     "button_mappings": [
       {
@@ -634,7 +643,6 @@
         "mapping_type": "focused"
       }
     ],
-
     "$button_bindings": [
       {
         "binding_type": "view",
@@ -657,26 +665,19 @@
   "create_persona_choice_button": {
     "type": "panel",
     "size": [ 233, "100%c" ],
-
     "$button_size_override": [ "100%", "100%c" ],
-
     "$toggle_name": "toggle_create_persona_choice",
     "$toggle_binding_type": "collection",
     "$toggle_state_binding_name": "#persona_type_toggle_state",
-
     "$toggle_grid_collection_name": "persona_type_toggles_collection",
     "$toggle_collection_details_type": "collection_details",
     "$toggle_collection_detail_name": "persona_type_toggles_collection",
-
     "$checked_image": "persona_popups.create_persona_choice_checked_image",
     "$unchecked_image": "persona_popups.create_persona_choice_unchecked_image",
-
     "$default_texture": "textures/ui/disabledButtonNoBorder",
     "$hover_texture_color": "$profile_create_character_unselected_color",
     "$hover_checked_texture_color": "$profile_create_character_selected_color",
-
     "$toggle_button_type_panel": "persona_popups.create_persona_choice_background",
-
     "controls": [
       {
         "choice_toggle@common_toggles.dark_vertical_form_fitting_content_toggle": {
@@ -692,9 +693,7 @@
     "offset": [ 0, 2 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-
     "$choice_bottom_content|default": "persona_popups.no_content_panel",
-
     "controls": [
       { "choice_title_bar@persona_popups.create_persona_choice_title_bar": {} },
       { "choice_details_body@persona_popups.create_persona_choice_detail_panel": {} },
@@ -706,10 +705,13 @@
     "size": [ "100%c", "100%cm" ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-
     "controls": [
       { "checkbox@persona_popups.create_persona_choice_check_positioning": {} },
-      { "spacing@common.empty_panel": { "size": [ 2, 0 ] } },
+      {
+        "spacing@common.empty_panel": {
+          "size": [ 2, 0 ]
+        }
+      },
       { "icon_title@persona_popups.create_persona_choice_icon_title": {} }
     ]
   },
@@ -736,7 +738,11 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
-      { "spacing@common.empty_panel": { "size": [ 5, 0 ] } },
+      {
+        "spacing@common.empty_panel": {
+          "size": [ 5, 0 ]
+        }
+      },
       { "choice_details_body@persona_popups.create_persona_choice_detail": {} }
     ]
   },
@@ -748,10 +754,6 @@
     "text": "$create_persona_description",
     "$font_type": "smooth"
   },
-
-  //--------------------------------------------------------------------------------
-  // Invalid Custom Skin
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__invalid_custom_skin@popup_dialog.popup_dialog": {
     "$middle_button_press": "button.close_dialog",
@@ -768,7 +770,7 @@
       }
     ]
   },
-  
+
   "popup_dialog__custom_skin_file_error@persona_popups.popup_dialog__invalid_custom_skin": {
     "$message_text": "dr.classic_skins.invalidCustomSkinFile"
   },
@@ -789,10 +791,6 @@
   "popup_dialog__upsell_without_store@persona_popups.popup_dialog__invalid_custom_skin": {
     "$message_text": "dr.classic_skins.upsellWithoutStore"
   },
-
-  //--------------------------------------------------------------------------------
-  // Custom Skin Size
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__choose_skin_type@popup_dialog.popup_dialog": {
     "$message_text": "dr.classic_skins.select_skin",
@@ -876,16 +874,14 @@
               "binding_collection_name": "$store_factory_collection_name",
               "binding_collection_prefix": "$store_factory_collection_prefix"
             },
-            { "binding_name": "$button_model_type" }
+            {
+              "binding_name": "$button_model_type"
+            }
           ]
         }
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Custom Skin Info
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__custom_skin_info@popup_dialog.popup_dialog": {
     "size": [ "100%", "100%" ],
@@ -946,7 +942,11 @@
     "anchor_to": "bottom_middle",
     "controls": [
       { "settings@persona_popups.usage_limited_settings_profile_button": {} },
-      { "vertical_4_padding@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "vertical_4_padding@common.empty_panel": {
+          "size": [ "100%", 4 ]
+        }
+      },
       { "close@persona_popups.popup_dialog_close_button": {} }
     ]
   },
@@ -1022,10 +1022,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Emote Wheel
-  //--------------------------------------------------------------------------------
-
   "popup_dialog__emote_equip_slot_editor@popup_dialog.popup_dialog": {
     "size": [ "100%", "100%" ],
     "layer": 990,
@@ -1049,7 +1045,6 @@
         "mapping_type": "global"
       }
     ],
-
     "controls": [
       {
         "background_image": {
@@ -1074,9 +1069,7 @@
           "$persona_popup_title_font_type": "default",
           "$show_close_button": false,
           "$dialog_content": "persona_popups.emote_equip_slot_content",
-
           "$dialog_size|default": [ "60%", "90%" ],
-
           "variables": [
             {
               "requires": "(($pocket_edition or $is_ios) and $touch)",
@@ -1084,7 +1077,6 @@
             }
           ],
           "size": "$dialog_size",
-
           "$persona_popup_title_bindings": [
             {
               "binding_name": "#emote_popup_title"
@@ -1097,9 +1089,7 @@
 
   "emote_equip_slot_content": {
     "type": "panel",
-
     "$close_button_visible_binding_type": "global",
-
     "controls": [
       {
         "close@common.close_button": {
@@ -1109,12 +1099,8 @@
       {
         "emote_wheel_content_panel": {
           "type": "panel",
-
-          // shrink size to that of the content section of popup
           "size": [ "100% - 16px", "100% - 31px" ],
-          // center control to the content section of popup
           "offset": [ 0, 7 ],
-
           "controls": [
             {
               "cancel@persona_popups.close_emote_popup_controller": {
@@ -1146,7 +1132,6 @@
         }
       }
     ],
-
     "bindings": [
       {
         "binding_name": "#is_using_gamepad",
@@ -1160,10 +1145,6 @@
     "size": [ "100%", "100%" ],
     "layer": 2
   },
-
-  //--------------------------------------------------------------------------------
-  // Realms Plus Extra Info
-  //--------------------------------------------------------------------------------
 
   "popup_dialog__realms_plus_extra_info@popup_dialog.popup_dialog": {
     "size": [ "100%", "100%" ],
@@ -1263,12 +1244,20 @@
           "offset": [ 7, 6 ],
           "controls": [
             { "pack_image@persona_popups.realms_extra_info_pack_info": {} },
-            { "horizontal_6_padding@common.empty_panel": { "size": [ 6, "100%" ] } },
+            {
+              "horizontal_6_padding@common.empty_panel": {
+                "size": [ 6, "100%" ]
+              }
+            },
             {
               "the_info_stack@common.vertical_stack_panel": {
                 "controls": [
                   { "skins_and_world@persona_popups.pack_information_skins_and_world": {} },
-                  { "padding@common.empty_panel": { "size": [ "100%", 6 ] } },
+                  {
+                    "padding@common.empty_panel": {
+                      "size": [ "100%", 6 ]
+                    }
+                  },
                   { "textures_and_usage@persona_popups.pack_information_textures_and_usage_tooltip": {} }
                 ]
               }
@@ -1289,7 +1278,11 @@
           "$text_binding_name": "#skin_pack_right_panel_texture_pack_count_text"
         }
       },
-      { "mid_padding@common.empty_panel": { "size": [ "100%", 2 ] } },
+      {
+        "mid_padding@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      },
       { "appearance_status@persona_popups.roamable_status_notification_panel": {} }
     ]
   },
@@ -1335,7 +1328,7 @@
           "$tooltip_chevron_anchor": "bottom_middle",
           "$tooltip_text_font_type": "smooth",
           "$button_tts_name": "$text_binding_name",
-          "$section_name":  "rows",
+          "$section_name": "rows",
           "property_bag": {
             "#section_name": "$section_name"
           },
@@ -1441,7 +1434,11 @@
           "$text_binding_name": "#skin_pack_right_panel_skin_count_text"
         }
       },
-      { "mid_padding@common.empty_panel": { "size": [ "100%", 2 ] } },
+      {
+        "mid_padding@common.empty_panel": {
+          "size": [ "100%", 2 ]
+        }
+      },
       {
         "worlds@persona_popups.skin_info_label_and_image": {
           "size": [ "100%", 10 ],
@@ -1480,9 +1477,9 @@
         "binding_name": "$text_binding_name"
       },
       {
-         "binding_type": "$store_factory_collection_details",
-         "binding_collection_name": "$store_factory_collection_name",
-         "binding_collection_prefix": "$store_factory_collection_prefix"
+        "binding_type": "$store_factory_collection_details",
+        "binding_collection_name": "$store_factory_collection_name",
+        "binding_collection_prefix": "$store_factory_collection_prefix"
       }
     ]
   },
@@ -1501,7 +1498,11 @@
     "anchor_to": "left_middle",
     "controls": [
       { "image_panel@persona_popups.skin_info_image_panel": {} },
-      { "horizontal_2_padding@common.empty_panel": { "size": [ 2, "100%" ] } },
+      {
+        "horizontal_2_padding@common.empty_panel": {
+          "size": [ 2, "100%" ]
+        }
+      },
       { "label_panel@persona_popups.skin_info_label_panel": {} }
     ]
   },
@@ -1522,10 +1523,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Toast
-  //--------------------------------------------------------------------------------
-
   "popup_toast@persona_popups.popup_common": {
     "layer": 100,
     "$display_time": 0.75,
@@ -1542,6 +1539,4 @@
       "@persona_sdl.popup_anim_start"
     ]
   }
-
 }
-

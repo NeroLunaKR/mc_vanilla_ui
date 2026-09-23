@@ -65,11 +65,6 @@
     ]
   },
 
-
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
   "late_join_pregame_screen@common.base_screen": {
     "$screen_content": "late_join.late_join_screen_content",
     "button_mappings": [
@@ -84,12 +79,8 @@
   "late_join_screen_content": {
     "type": "panel",
     "controls": [
-      {
-        "animation_panel@late_join.animation_panel": {}
-      },
-      {
-        "gamepad_helpers@late_join.gamepad_helpers": {}
-      }
+      { "animation_panel@late_join.animation_panel": {} },
+      { "gamepad_helpers@late_join.gamepad_helpers": {} }
     ]
   }
 }

@@ -1,14 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
 {
   "namespace": "loom",
-
-  //---------------------------------------------------------------------------
-  // #region common images
-  //---------------------------------------------------------------------------
 
   "loom_label": {
     "type": "label",
@@ -44,7 +35,6 @@
     "$cell_images_binding_condition|default": "visible",
     "size": "$cell_image_size",
     "$cell_image_size|default": [ "default", "default" ],
-
     "bindings": [
       {
         "binding_name": "#container_cell_background_texture",
@@ -94,12 +84,6 @@
     "texture": "textures/ui/toolbar_background"
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region pattern book
-  //---------------------------------------------------------------------------
-
   "highlight_slot_panel": {
     "type": "panel",
     "controls": [
@@ -130,19 +114,16 @@
 
   "pattern_slot_button": {
     "type": "button",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
     "$focus_override_left|default": "",
     "$focus_override_right|default": "",
-
     "$focus_id_binding_type|default": "collection",
     "$focus_override_down_binding_type|default": "collection",
     "$focus_override_up_binding_type|default": "collection",
     "$focus_override_left_binding_type|default": "collection",
     "$focus_override_right_binding_type|default": "collection",
-
     "focus_identifier": "$focus_id",
     "focus_change_down": "$focus_override_down",
     "focus_change_up": "$focus_override_up",
@@ -152,11 +133,9 @@
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
     "$highlight_control|default": "loom.highlight_slot_panel",
-
     "sound_name": "ui.loom.select_pattern",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
-
     "default_focus_precedence": 1,
     "hover_control": "hover",
     "layer": 1,
@@ -255,9 +234,7 @@
       }
     ],
     "controls": [
-      {
-        "hover@$highlight_control": {}
-      }
+      { "hover@$highlight_control": {} }
     ]
   },
 
@@ -287,7 +264,6 @@
     "$banner_pattern_ref|default": "loom.banner_pattern",
     "$background_images|default": "loom.pattern_cell_image",
     "$background_image_control_name|default": "bg",
-
     "controls": [
       {
         "$background_image_control_name@$background_images": {
@@ -309,10 +285,8 @@
     "layer": 1,
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-
     "$binding_condition|default": "visible",
     "$grid_item_template|default": "loom.pattern_button",
-
     "collection_name": "$collection_name",
     "grid_rescaling_type": "horizontal",
     "grid_item_template": "$grid_item_template",
@@ -337,7 +311,6 @@
 
   "scroll_panel@common.container_scroll_panel": {
     "size": [ "100% - 12px", "100% - 12px" ],
-
     "$scrolling_content": "loom.scroll_grid_panel",
     "$collection_name": "patterns"
   },
@@ -353,12 +326,6 @@
       { "scroll_panel@loom.scroll_panel": {} }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region top half item slots
-  //---------------------------------------------------------------------------
 
   "result_slot_button@common.no_coalesce_container_slot_button": {
     "button_mappings": [
@@ -468,12 +435,6 @@
       { "material_item_slot@loom.material_item_slot": {} }
     ]
   },
-
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region right panel, inventory and loom crafting
-  //---------------------------------------------------------------------------
 
   "result_banner_renderer": {
     "type": "custom",
@@ -600,12 +561,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region screen
-  //---------------------------------------------------------------------------
-
   "help_button@common.help_button": {
     "layer": 5,
     "$focus_id": "help_button",
@@ -621,18 +576,15 @@
           "offset": [ 0, -3 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-
           "controls": [
             {
               "toolbar_stack_panel": {
                 "type": "stack_panel",
                 "orientation": "horizontal",
-
                 "size": [ "default", "100% - 8px" ],
                 "offset": [ 0, 3 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
-
                 "controls": [
                   {
                     "padding_1": {
@@ -700,12 +652,6 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
-  // #region screen
-  //---------------------------------------------------------------------------
-
   "center_fold@common.root_panel": {
     "size": [ 4, 166 ],
     "controls": [
@@ -735,13 +681,16 @@
     "type": "panel",
     "controls": [
       { "screen_stack_panel@loom.screen_stack_panel": {} },
-
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   },
 
@@ -750,7 +699,6 @@
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.4,
     "button_mappings": "$button_mappings",
-
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -858,7 +806,6 @@
         ]
       }
     ],
-
     "$button_mappings|default": [
       {
         "from_button_id": "button.menu_cancel",
@@ -993,5 +940,3 @@
     ]
   }
 }
-
-// #endregion

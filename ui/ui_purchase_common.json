@@ -1,11 +1,6 @@
 {
   "namespace": "purchase_common",
 
-
-  //--------------------------------------------------------------------------------
-  // Common Controls
-  //--------------------------------------------------------------------------------
-
   "banner_fill": {
     "type": "image",
     "texture": "textures/ui/Banners",
@@ -106,14 +101,8 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "hover@common.focus_border_white": {
-                    }
-                  },
-                  {
-                    "pressed@common.focus_border_white": {
-                    }
-                  }
+                  { "hover@common.focus_border_white": {} },
+                  { "pressed@common.focus_border_white": {} }
                 ]
               }
             }
@@ -203,7 +192,6 @@
             {
               "offer_button": {
                 "type": "button",
-
                 "$focus_id|default": "",
                 "$focus_override_down|default": "",
                 "$focus_override_up|default": "",
@@ -215,7 +203,6 @@
                 "focus_change_left": "$focus_override_left",
                 "focus_change_right": "$focus_override_right",
                 "focus_enabled": true,
-
                 "layer": 4,
                 "default_control": "",
                 "hover_control": "hover",
@@ -245,14 +232,8 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "hover@common.square_image_border_white": {
-                    }
-                  },
-                  {
-                    "pressed@common.square_image_border_white": {
-                    }
-                  }
+                  { "hover@common.square_image_border_white": {} },
+                  { "pressed@common.square_image_border_white": {} }
                 ]
               }
             }
@@ -288,10 +269,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Root Controls
-  //--------------------------------------------------------------------------------
 
   "key_art_and_text": {
     "type": "stack_panel",
@@ -342,5 +319,4 @@
       }
     ]
   }
-
 }

@@ -1,14 +1,5 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                      *
-+*   (c) Microsoft. All rights reserved.                  *
-+*********************************************************/
-
 {
   "namespace": "authentication",
-
-  //---------------------------------------------------------------------------
-  // Common
-  //---------------------------------------------------------------------------
 
   "nothing@common.empty_panel": {
     "size": [ 0, 0 ]
@@ -39,7 +30,6 @@
           "$button_a|default": "common.empty_panel",
           "$button_b|default": "commont.empty_panel",
           "$padding_size|default": [ 5, "100%" ],
-
           "orientation": "$orientation",
           "size": "$panel_size",
           "offset": "$panel_offset",
@@ -179,7 +169,6 @@
           "size": [ "100%", "100%c + 8px" ],
           "$button_a": "authentication.eula_hyperlink",
           "$button_b": "authentication.accept_eula_button",
-
           "$panel_size": [ "100% - 20px", 18 ],
           "$panel_offset": [ 16, 0 ],
           "$button_size": [ 100, "100%" ],
@@ -199,38 +188,33 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "size": [ "50%", "100%" ],
-    "controls": 
-      [
-        {
-          "label": {            
-            "type": "label",
-            "color": "$main_header_text_color",
-            "layer": 2,
-            "text": "$version",
-            "size": [ "default", 10 ],
-            "max_size": [ "100%", "100%" ],
-            "anchor_from": "top_right",
-            "anchor_to": "top_right"
-          }
-        },
-        {
-          "label_background": {
-            "type": "image",
-            "texture": "textures/ui/Black",
-            "anchor_from": "top_right",
-            "anchor_to": "top_right",
-            "offset": [1, -1],
-            "alpha": 0.6,
-            "size": [ "100%sm + 2px", "100%sm + 2px" ],
-            "layer": 1
-          }
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "layer": 2,
+          "text": "$version",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
         }
-      ]
+      },
+      {
+        "label_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 1, -1 ],
+          "alpha": 0.6,
+          "size": [ "100%sm + 2px", "100%sm + 2px" ],
+          "layer": 1
+        }
+      }
+    ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Controls
-  //--------------------------------------------------------------------------------
 
   "view_terms_button@common_buttons.hyperlink_button": {
     "$button_text": "authentication.store.viewTermsAndConditions",
@@ -426,10 +410,7 @@
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "confirmation_panel@authentication.confirmation_panel": {
-        }
-      },
+      { "confirmation_panel@authentication.confirmation_panel": {} },
       {
         "padding@common.empty_panel": {
           "size": [ "100%", 4 ]
@@ -578,7 +559,11 @@
                 "$single_line_label_text": "authentication.error.generic.link2"
               }
             },
-            { "padding@common.empty_panel": { "size": [ "100%", 8 ] } }
+            {
+              "padding@common.empty_panel": {
+                "size": [ "100%", 8 ]
+              }
+            }
           ]
         }
       }
@@ -591,16 +576,9 @@
     ]
   },
 
-  // -----------------------------------------------
-  //
-  //    screen
-  //
-  // -----------------------------------------------
-
   "auth_screen@common.base_screen": {
     "$screen_content": "authentication.authentication_screen_content",
     "$default_text_color": [ 0.3, 0.3, 0.3 ],
-    // Default directions from base_screen plus a cancel mapping for quit
     "button_mappings": [
       {
         "from_button_id": "button.menu_up",
@@ -627,7 +605,6 @@
         "scope": "view"
       },
       {
-        // Let the user quit the game if they can't sign in
         "from_button_id": "button.menu_cancel",
         "to_button_id": "button.auth_cancel",
         "mapping_type": "global"
@@ -700,9 +677,7 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "controls": [
-            {
-              "version@authentication.version": {}
-            }
+            { "version@authentication.version": {} }
           ]
         }
       },
@@ -799,7 +774,6 @@
     ]
   },
 
-  // Every popup has a title and body message, then anything after that as $additional_popup_content
   "popup_content_base": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -824,10 +798,7 @@
           ]
         }
       },
-      {
-        "content@$additional_popup_content": {
-        }
-      },
+      { "content@$additional_popup_content": {} },
       {
         "footer_padding@common.empty_panel": {
           "size": [ "100%", 4 ]
@@ -846,10 +817,7 @@
     "$dialog_title_text_binding_condition": "once",
     "$dialog_content": "authentication.popup_content_base",
     "controls": [
-      {
-        "dialog@authentication_modals.modal_dialog_frame": {
-        }
-      }
+      { "dialog@authentication_modals.modal_dialog_frame": {} }
     ],
     "button_mappings": [
       {
@@ -897,7 +865,6 @@
     ]
   },
 
-  // Quite different for ios since we can't include the external link or have a button that quits the game, which then also means a different background looks better
   "popup_dialog_trial_info_ios@authentication.popup_dialog": {
     "$popup_content_size": [ 280, "100%c" ],
     "$additional_popup_content": "authentication.trial_info_ios_additional_content"
@@ -965,11 +932,12 @@
           "layer": 1
         }
       },
+      { "extra_message@authentication.student_message_panel": {} },
       {
-        "extra_message@authentication.student_message_panel": {
+        "padding@common.empty_panel": {
+          "size": [ "100%", 4 ]
         }
-      },
-      { "padding@common.empty_panel": { "size": [ "100%", 4 ] } }
+      }
     ]
   },
 
@@ -1031,7 +999,11 @@
     "type": "stack_panel",
     "size": [ 274, "100%c" ],
     "controls": [
-      { "top_padding@common.empty_panel": { "size": [ "100%", 5 ] } },
+      {
+        "top_padding@common.empty_panel": {
+          "size": [ "100%", 5 ]
+        }
+      },
       {
         "loading_text_panel@edu_common.vertical_stack_item": {
           "controls": [
@@ -1063,7 +1035,11 @@
           ]
         }
       },
-      { "loading_padding@common.empty_panel": { "size": [ "100%", 5 ] } },
+      {
+        "loading_padding@common.empty_panel": {
+          "size": [ "100%", 5 ]
+        }
+      },
       {
         "skip_panel@edu_common.vertical_stack_item": {
           "controls": [
@@ -1082,7 +1058,11 @@
           ]
         }
       },
-      { "bottom_padding@common.empty_panel": { "size": [ "100%", 5 ] } }
+      {
+        "bottom_padding@common.empty_panel": {
+          "size": [ "100%", 5 ]
+        }
+      }
     ]
   },
 
@@ -1189,7 +1169,6 @@
     }
   },
 
-  // Debug functionality for flipping through ui states without relying on platform or service
   "debug_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -1268,7 +1247,11 @@
       }
     ],
     "controls": [
-      { "top_padding@common.empty_panel": { "size": [ "100%", 10 ] } },
+      {
+        "top_padding@common.empty_panel": {
+          "size": [ "100%", 10 ]
+        }
+      },
       { "link_button@edu_common.underline_button": {} }
     ],
     "bindings": [
@@ -1283,7 +1266,11 @@
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      { "initial_padding@common.empty_panel": { "size": [ "100%", 3 ] } },
+      {
+        "initial_padding@common.empty_panel": {
+          "size": [ "100%", 3 ]
+        }
+      },
       {
         "body@authentication.smooth_bound_label": {
           "font_scale_factor": 1,
@@ -1301,7 +1288,11 @@
           "$link_type": "open_demo"
         }
       },
-      { "end_padding@common.empty_panel": { "size": [ "100%", 3 ] } }
+      {
+        "end_padding@common.empty_panel": {
+          "size": [ "100%", 3 ]
+        }
+      }
     ]
   },
 
@@ -1318,11 +1309,8 @@
 
   "authentication_popup_content_panel@authentication.resizeable_scrolling_panel": {
     "size": [ 254, "100%c" ],
-
-    // 185 fills the screen at its smallest
     "$scroll_view_port_max_size": [ "100%", 185 ],
     "$scroll_view_port_max_size_touch": [ "100%", 185 ],
-
     "$scrolling_content": "authentication.authentication_popup_contents",
     "$show_background": false,
     "$scroll_bar_left_padding_size": [ 0, 0 ],
@@ -1337,7 +1325,6 @@
     "$button_text": "('#popup_' + $button_pos + '_lower_button_text')",
     "$button_text_binding_type": "global",
     "$button_binding_condition": "visible",
-
     "$pressed_button_name": "('button.' + $button_pos + '_lower_popup_button')",
     "size": [ "fill", "100%" ]
   },
@@ -1370,7 +1357,11 @@
           "$button_pos": "first"
         }
       },
-      { "button_padding@common.empty_panel": { "size": [ 2, "100%" ] } },
+      {
+        "button_padding@common.empty_panel": {
+          "size": [ 2, "100%" ]
+        }
+      },
       {
         "second_button@authentication.authentication_popup_button": {
           "$button_pos": "second"
@@ -1395,14 +1386,11 @@
 
   "authentication_popup@popup_dialog.form_fit_modal_dialog_popup": {
     "$popup_dialog_escape_button_name": "button.close_dialog",
-
     "$modal_title": "#popup_title",
     "$modal_title_binding_type": "global",
     "$modal_title_binding_condition": "visible",
-
     "$modal_contents": "authentication.authentication_popup_content_panel",
     "$modal_contents_padding": [ 6, 0 ],
-
     "$popup_type": "popup_dialog.form_fit_screen_with_title_and_close_and_bottom_buttons",
     "$lower_button_control": "authentication.authentication_popup_lower_button_panel"
   }

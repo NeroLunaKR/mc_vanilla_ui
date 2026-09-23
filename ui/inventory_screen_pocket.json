@@ -1,10 +1,6 @@
 {
   "namespace": "crafting_pocket",
 
-  //---------------------------------------------------------------------------
-  // Creative Tabs Pocket
-  //---------------------------------------------------------------------------
-
   "survival_icon@crafting.item_renderer": {
     "layer": 3,
     "property_bag": {
@@ -12,8 +8,7 @@
       "#collection_name": "inventory_tab",
       "#collection_index": 0
     },
-
-    "tts_override_control_value": " " // Left empty because otherwise it would narrate "Chest"
+    "tts_override_control_value": " "
   },
 
   "full_screen_icon@common.tab_icon_image": {
@@ -61,7 +56,7 @@
     "$toggle_focus_enabled": false,
     "$radio_toggle_group": true,
     "$toggle_name": "right_inventory_navigation_tab",
-    "$toggle_group_default_selected": "$crafting_index", //Crafting Tab,
+    "$toggle_group_default_selected": "$crafting_index",
     "$tab_content": "crafting_pocket.empty_tab_panel"
   },
 
@@ -71,7 +66,6 @@
     "$toggle_group_forced_index": "$full_screen_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_right_tab_fullscreen",
-
     "$toggle_tts_header": "craftingScreen.tts.tab.fullscreen"
   },
 
@@ -81,7 +75,6 @@
     "$toggle_group_forced_index": "$crafting_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_right_tab_crafting",
-
     "$toggle_tts_header_binding_type": "global",
     "$toggle_tts_header": "#pocket_crafting_tab_tts"
   },
@@ -93,7 +86,6 @@
     "$toggle_group_forced_index": "$armor_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_right_tab_armor",
-
     "$toggle_tts_header": "craftingScreen.tab.armor"
   },
 
@@ -104,7 +96,6 @@
     "$toggle_group_forced_index": "$search_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_search",
-
     "$toggle_tts_header_binding_type": "global",
     "$toggle_tts_header": "#search_tab_tts"
   },
@@ -115,7 +106,6 @@
     "$toggle_group_forced_index": "$construction_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_construct",
-
     "$toggle_tts_header": "craftingScreen.tab.construction"
   },
 
@@ -125,7 +115,6 @@
     "$toggle_group_forced_index": "$equipment_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_equipment",
-
     "$toggle_tts_header": "craftingScreen.tab.equipment"
   },
 
@@ -135,7 +124,6 @@
     "$toggle_group_forced_index": "$items_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_items",
-
     "$toggle_tts_header": "craftingScreen.tab.items"
   },
 
@@ -145,7 +133,6 @@
     "$toggle_group_forced_index": "$nature_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_nature",
-
     "$toggle_tts_header": "craftingScreen.tab.nature"
   },
 
@@ -156,7 +143,6 @@
     "$toggle_group_forced_index": "$survival_index",
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_inventory",
-
     "$toggle_tts_header": "craftingScreen.tts.tab.inventory"
   },
 
@@ -199,9 +185,7 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "construction_tab@crafting_pocket.construction_tab": {}
-                  }
+                  { "construction_tab@crafting_pocket.construction_tab": {} }
                 ]
               }
             },
@@ -217,9 +201,7 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "equipment_tab@crafting_pocket.equipment_tab": {}
-                  }
+                  { "equipment_tab@crafting_pocket.equipment_tab": {} }
                 ]
               }
             },
@@ -235,9 +217,7 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "items_tab@crafting_pocket.items_tab": {}
-                  }
+                  { "items_tab@crafting_pocket.items_tab": {} }
                 ]
               }
             },
@@ -253,9 +233,7 @@
                   }
                 ],
                 "controls": [
-                  {
-                    "nature_tab@crafting_pocket.nature_tab": {}
-                  }
+                  { "nature_tab@crafting_pocket.nature_tab": {} }
                 ]
               }
             },
@@ -293,7 +271,6 @@
                 "type": "image",
                 "texture": "textures/ui/TabRightBackTopMost",
                 "size": [ "100%", 29 ],
-
                 "controls": [
                   {
                     "nodrop_zone@common.root_panel": {
@@ -331,7 +308,6 @@
                 "orientation": "vertical",
                 "size": [ "100%", 87 ],
                 "ttsSectionContainer": true,
-
                 "controls": [
                   {
                     "full_screen_tab@crafting_pocket.full_screen_tab": {
@@ -375,7 +351,6 @@
     ]
   },
 
-
   "recipe_book_tab_content@crafting.tab_content": {
     "$text_alignment": "left",
     "$is_pocket_mode": true,
@@ -411,10 +386,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Crafting panels, 2x2 and 3x3
-  //---------------------------------------------------------------------------
 
   "crafting_input_grid_item@crafting.inventory_container_item": {
     "$item_collection_name": "crafting_input_items",
@@ -591,10 +562,6 @@
     "$scrolling_content": "crafting_pocket.survival_inventory_grid",
     "$collection_name": "inventory_items"
   },
-
-  //---------------------------------------------------------------------------
-  // Player and armor
-  //---------------------------------------------------------------------------
 
   "pocket_armor_tab_content": {
     "type": "stack_panel",
@@ -787,7 +754,6 @@
                                         "type": "panel",
                                         "size": [ "40%", "40%" ],
                                         "offset": [ 0, "-20%" ],
-
                                         "controls": [
                                           {
                                             "player_renderer": {
@@ -826,12 +792,6 @@
     ]
   },
 
-
-
-  //---------------------------------------------------------------------------
-  // Hotbar
-  //---------------------------------------------------------------------------
-
   "hotbar_panel": {
     "type": "input_panel",
     "size": [ 260, 36 ],
@@ -867,10 +827,6 @@
     "$button_ref": "crafting.inventory_container_slot_button",
     "$background_images": "crafting.container_cell_images"
   },
-
-  //---------------------------------------------------------------------------
-  // Base Panels Pocket
-  //---------------------------------------------------------------------------
 
   "survival_panel_pocket": {
     "type": "panel",
@@ -959,9 +915,6 @@
       }
     ]
   },
-
-  //---------------------------
-  //---------------------------
 
   "inventory_screen_pocket_base@common.inventory_screen_common": {
     "button_mappings": [
@@ -1174,7 +1127,6 @@
           "anchor_to": "top_right",
           "offset": [ "-7px", "7px" ],
           "visible": "$show_inventory_screen_button",
-
           "$default_texture": "textures/ui/how_to_play_button_default",
           "$hover_texture": "textures/ui/how_to_play_button_hover",
           "$pressed_texture": "textures/ui/how_to_play_button_pressed"
@@ -1250,7 +1202,6 @@
       }
     ]
   },
-
 
   "gamepad_helper_border": {
     "type": "stack_panel",
@@ -1396,9 +1347,7 @@
           "$helper_b_control": "crafting.inventory_b_gamepad_helper"
         }
       },
-      {
-        "toast_screen_content@toast_screen.toast_screen_content": {}
-      },
+      { "toast_screen_content@toast_screen.toast_screen_content": {} },
       {
         "selected_item_details_factory@common.selected_item_details_factory": {
           "$offset": [ 0, "-37px" ]
@@ -1432,7 +1381,11 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 20 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 20
+        }
+      }
     ],
     "button_mappings": [
       {

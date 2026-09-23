@@ -1,6 +1,6 @@
 {
   "namespace": "non_xbl_user_management",
-  
+
   "black_tint_image": {
     "type": "image",
     "texture": "textures/ui/Black",
@@ -25,7 +25,7 @@
       {
         "binding_name": "#modal_title_text"
       }
-    ]    
+    ]
   },
 
   "modal_label_text": {
@@ -57,7 +57,7 @@
             {
               "binding_name": "#modal_label_text"
             }
-          ]    
+          ]
         }
       }
     ]
@@ -85,7 +85,7 @@
       {
         "binding_name": "#modal_left_button_text"
       }
-    ]    
+    ]
   },
 
   "modal_middle_button@common_buttons.light_text_button": {
@@ -98,7 +98,7 @@
       {
         "binding_name": "#modal_middle_button_text"
       }
-    ]    
+    ]
   },
 
   "modal_rightcancel_button@common_buttons.light_text_button": {
@@ -111,7 +111,7 @@
       {
         "binding_name": "#modal_rightcancel_button_text"
       }
-    ]    
+    ]
   },
 
   "three_buttons_panel": {
@@ -152,10 +152,10 @@
     "$left_button_focus_precedence|default": 0,
     "$right_button_focus_precedence|default": 1,
     "controls": [
-      { 
-        "left@non_xbl_user_management.modal_left_button": { 
+      {
+        "left@non_xbl_user_management.modal_left_button": {
           "default_focus_precedence": "$left_button_focus_precedence"
-        } 
+        }
       },
       {
         "right@non_xbl_user_management.modal_rightcancel_button": {
@@ -172,7 +172,11 @@
     "size": [ "100%-14px", 30 ],
     "offset": [ 0, -7 ],
     "controls": [
-      { "left@non_xbl_user_management.modal_middle_button": { "size": [ "100%", "100%" ] } }
+      {
+        "left@non_xbl_user_management.modal_middle_button": {
+          "size": [ "100%", "100%" ]
+        }
+      }
     ]
   },
 
@@ -195,9 +199,7 @@
           "size": "$modal_panel_label_size"
         }
       },
-      {
-        "button_panel@$button_panel": {}
-      }
+      { "button_panel@$button_panel": {} }
     ]
   },
 
@@ -252,11 +254,11 @@
   "user_confirm_dialog_screen_content": {
     "type": "panel",
     "$button_text_binding_type": "global",
-    "$button_text_max_size": [ "100%", "100%" ],    
+    "$button_text_max_size": [ "100%", "100%" ],
     "$modal_screen_size|default": [ 204, 140 ],
     "$title_text_anchor": "top_middle",
     "$title_text_alignment": "center",
-    "$title_text_offset": [0, 9],
+    "$title_text_offset": [ 0, 9 ],
     "variables": [
       {
         "requires": "($modal_dialog_popup_size = small)",
@@ -274,13 +276,13 @@
         "requires": "$two_buttons_visible",
         "$dialog_background_override": "dialog_background_hollow_1",
         "$button_panel": "non_xbl_user_management.two_buttons_panel",
-        "$modal_panel_label_size": ["100% - 16px", "100% - 96px"]
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 96px" ]
       },
       {
         "requires": "$single_button_visible",
         "$dialog_background_override": "dialog_background_hollow_2",
         "$button_panel": "non_xbl_user_management.single_button_panel",
-        "$modal_panel_label_size": ["100% - 16px", "100% - 62px"]
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 62px" ]
       },
       {
         "requires": "$no_buttons_visible",
@@ -293,9 +295,7 @@
       {
         "modal_input@non_xbl_user_management.modal_input_panel": {
           "controls": [
-            {
-              "modal_bg_buttons@non_xbl_user_management.modal_dialog_with_buttons": {}
-            }
+            { "modal_bg_buttons@non_xbl_user_management.modal_dialog_with_buttons": {} }
           ]
         }
       }
@@ -304,5 +304,5 @@
 
   "user_confirm_dialog_screen@common.base_screen": {
     "$screen_content": "non_xbl_user_management.user_confirm_dialog_screen_content"
-  }   
+  }
 }

@@ -12,7 +12,6 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
-
     "factory": {
       "name": "promo_banner_factory",
       "control_ids": {
@@ -21,12 +20,7 @@
         "mpass_banner_portal": "@csb_banner.csb_banner_portal",
         "promo_banner": "@promo_timeline.promo_banner_holiday_panel"
       },
-      "factory_variables": [
-        "$store_factory_collection_details",
-        "$store_factory_collection_prefix",
-        "$store_factory_collection_name",
-        "$section_name"
-      ]
+      "factory_variables": [ "$store_factory_collection_details", "$store_factory_collection_prefix", "$store_factory_collection_name", "$section_name" ]
     },
     "bindings": [
       {
@@ -111,9 +105,7 @@
     "type": "panel",
     "size": [ "100% - 8px", "100%cm + 8px" ],
     "controls": [
-      {
-        "banner_image@promo_timeline.promo_banner_image": {}
-      },
+      { "banner_image@promo_timeline.promo_banner_image": {} },
       {
         "banner_text_panel": {
           "type": "stack_panel",
@@ -145,7 +137,6 @@
                       "$alignment_binding_type": "global",
                       "$left_padding_visible_binding": "#banner_title_left_padding_visible",
                       "$right_padding_visible_binding": "#banner_title_right_padding_visible"
-
                     }
                   }
                 ]
@@ -173,10 +164,8 @@
           "offset": [ 2, -6 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
-
           "$left_padding_visible_binding": "#banner_button_left_padding_visible",
           "$right_padding_visible_binding": "#banner_button_right_padding_visible",
-
           "controls": [
             {
               "left_offset": {
@@ -239,20 +228,16 @@
           "$focus_id": "banner_full_button",
           "$focus_override_down": "banner_button",
           "$pressed_button_name": "button.promotion_page",
-
           "$button_offset|default": [ 0, 0 ],
           "$button_pressed_offset|default": [ 0, 1 ],
           "$pressed_alpha|default": 1,
           "$button_type_panel|default": "common_buttons.button_content_panel",
           "$button_content|default": "common.empty_panel",
           "$button_state_panel|default": "common_buttons.new_ui_button_panel",
-
           "$default_button_alpha|default": 1,
           "$default_hover_alpha|default": 1,
           "$default_pressed_alpha|default": 1,
           "$border_default_alpha|default": 1,
-
-          // These states are for passing the button state to the button content - do not set these in a parent!
           "$default_state|default": false,
           "$hover_state|default": false,
           "$pressed_state|default": false,
@@ -261,18 +246,14 @@
           "$hover_state_border_visible|default": true,
           "$pressed_state_border_visible|default": true,
           "$locked_state_border_visible|default": true,
-
           "$default_text_color|default": "$light_button_default_text_color",
-
           "$default_button_texture|default": "textures/ui/button_borderless_light",
           "$default_content_alpha|default": 1,
           "$hover_content_alpha|default": 1,
           "$hover_button_texture|default": "textures/ui/button_borderless_lighthover",
           "$pressed_button_texture|default": "textures/ui/button_borderless_lightpressed",
           "$locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
-
           "locked_control": "",
-
           "$default_font|default": "default",
           "$font_type": "$default_font",
           "$locked_alpha": 1,
@@ -346,9 +327,7 @@
     "size": [ "100%", "100%c" ],
     "orientation": "vertical",
     "controls": [
-      {
-        "image_message_row_content@promo_timeline.image_message_row_content": {}
-      },
+      { "image_message_row_content@promo_timeline.image_message_row_content": {} },
       {
         "padding_0": {
           "type": "panel",
@@ -391,9 +370,7 @@
                 ]
               }
             },
-            {
-              "row_image@promo_timeline.promo_image_panel": {}
-            }
+            { "row_image@promo_timeline.promo_image_panel": {} }
           ]
         }
       },
@@ -435,7 +412,7 @@
               "binding_collection_prefix": "$store_factory_collection_prefix"
             },
             {
-              "binding_name": "(#store_row_image_animation_name = '')", // static image is visible if no animation is available
+              "binding_name": "(#store_row_image_animation_name = '')",
               "binding_name_override": "#visible"
             }
           ]
@@ -452,7 +429,7 @@
               "binding_collection_prefix": "$store_factory_collection_prefix"
             },
             {
-              "binding_name": "(not (#store_row_image_animation_name = ''))", // animation is visible if service response contains animation field
+              "binding_name": "(not (#store_row_image_animation_name = ''))",
               "binding_name_override": "#visible"
             }
           ]
@@ -568,7 +545,6 @@
     "$right_padding_visible_binding|default": "",
     "$alignment_binding_type|default": "none",
     "$alignment_collection_name|default": "",
-
     "$aligned_control|default": "common.empty_panel",
     "controls": [
       {
@@ -590,9 +566,7 @@
           ]
         }
       },
-      {
-        "control@$aligned_control": {}
-      },
+      { "control@$aligned_control": {} },
       {
         "right_padding_panel": {
           "size": [ "fill", "100%sm" ],
@@ -668,10 +642,6 @@
       }
     ]
   },
-
-  //--------------------------------------------------------------------------------
-  // Reusable Promotion Landing
-  //--------------------------------------------------------------------------------
 
   "colored_direction_button_panel": {
     "type": "panel",
@@ -767,9 +737,7 @@
           "size": [ "100%", "100%c" ],
           "offset": [ -2, 2 ],
           "controls": [
-            {
-              "promo_top@promo_timeline.promotion_screen_top_section": {}
-            },
+            { "promo_top@promo_timeline.promotion_screen_top_section": {} },
             {
               "pad_0": {
                 "type": "panel",
@@ -833,9 +801,7 @@
                                   ]
                                 }
                               },
-                              {
-                                "offer_grid@promo_timeline.promotion_period_offer_panel": {}
-                              },
+                              { "offer_grid@promo_timeline.promotion_period_offer_panel": {} },
                               {
                                 "right_button_panel": {
                                   "type": "panel",
@@ -888,12 +854,8 @@
           ]
         }
       },
-      {
-        "left_corner_art@promo_timeline.left_corner_art": {}
-      },
-      {
-        "right_corner_art@promo_timeline.right_corner_art": {}
-      }
+      { "left_corner_art@promo_timeline.left_corner_art": {} },
+      { "right_corner_art@promo_timeline.right_corner_art": {} }
     ]
   },
 
@@ -902,9 +864,7 @@
     "size": [ "100%", "100%c" ],
     "layer": 1,
     "controls": [
-      {
-        "main_panel@promo_timeline.promotion_top_main_panel": {}
-      }
+      { "main_panel@promo_timeline.promotion_top_main_panel": {} }
     ]
   },
 
@@ -920,9 +880,7 @@
           "orientation": "vertical",
           "size": [ "100% - 2px", "100%c" ],
           "controls": [
-            {
-              "main_panel_title@promo_timeline.main_panel_title": {}
-            },
+            { "main_panel_title@promo_timeline.main_panel_title": {} },
             {
               "promo_single_top": {
                 "type": "input_panel",
@@ -952,7 +910,7 @@
             },
             {
               "promo_multi_item@common.scrolling_panel": {
-                "size": [ "100%", "28.125%x + 22px" ], //Half of the original aspect accounting for static elements
+                "size": [ "100%", "28.125%x + 22px" ],
                 "$scrolling_pane_size": [ "100%", "100%" ],
                 "$scrolling_pane_offset": [ 0, 0 ],
                 "$scroll_size": [ 5, "100% - 8px" ],
@@ -1210,7 +1168,7 @@
                 "controls": [
                   {
                     "key_art_frame@common.focus_border_black": {
-                      "size": [ "100%cm + 1.1249px", "100%" ], // additive px based on aspect up the tree
+                      "size": [ "100%cm + 1.1249px", "100%" ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 2,
@@ -1218,7 +1176,7 @@
                         {
                           "sizing_panel": {
                             "type": "panel",
-                            "size": [ "177.78%y", "100% - 2px" ] //rounded width based on height
+                            "size": [ "177.78%y", "100% - 2px" ]
                           }
                         },
                         {
@@ -1269,7 +1227,7 @@
                 "controls": [
                   {
                     "key_art_frame@common.square_image_border_white": {
-                      "size": [ "100%c + 1.1249px", "100%" ], // additive px based on aspect up the tree
+                      "size": [ "100%c + 1.1249px", "100%" ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 2,
@@ -1277,7 +1235,7 @@
                         {
                           "sizing_panel": {
                             "type": "panel",
-                            "size": [ "177.78%y", "100% - 2px" ] //rounded width based on height
+                            "size": [ "177.78%y", "100% - 2px" ]
                           }
                         }
                       ]
@@ -1301,7 +1259,7 @@
           "controls": [
             {
               "key_art_frame@common.square_image_border_white": {
-                "size": [ "100%c + 1.1249px", "100%" ], //additive px based on aspect up the tree
+                "size": [ "100%c + 1.1249px", "100%" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "layer": 2,
@@ -1309,7 +1267,7 @@
                   {
                     "sizing_panel": {
                       "type": "panel",
-                      "size": [ "177.78%y", "100% - 2px" ] //rounded width based on height
+                      "size": [ "177.78%y", "100% - 2px" ]
                     }
                   }
                 ]
@@ -1349,9 +1307,7 @@
           "size": [ "100% - 4px", "100% - 4px" ]
         }
       },
-      {
-        "platform_restricted_error_multi_item@promo_timeline.platform_restricted_error": {}
-      }
+      { "platform_restricted_error_multi_item@promo_timeline.platform_restricted_error": {} }
     ]
   },
 
@@ -1371,9 +1327,7 @@
                 "layer": 5
               }
             },
-            {
-              "hover@common.square_image_border_white": {}
-            },
+            { "hover@common.square_image_border_white": {} },
             {
               "pressed": {
                 "type": "panel",
@@ -1416,7 +1370,7 @@
         "thumbnail_image": {
           "type": "image",
           "bilinear": true,
-          "size": [ "177.78%y", "100%" ], //rounded width based on height
+          "size": [ "177.78%y", "100%" ],
           "layer": 1,
           "bindings": [
             {
@@ -1702,9 +1656,7 @@
                             "type": "panel",
                             "size": [ "90%", "100%x" ],
                             "controls": [
-                              {
-                                "item_button@promo_timeline.promotion_period_grid_item": {}
-                              }
+                              { "item_button@promo_timeline.promotion_period_grid_item": {} }
                             ]
                           }
                         }
@@ -1847,7 +1799,7 @@
           "controls": [
             {
               "image_loading_panel@common_store.progress_loading": {
-                "layer": 100, // Make this on top
+                "layer": 100,
                 "$hide_failure_text": true,
                 "$hide_progress_loading_outline": true,
                 "$source_control_name": "key_art_image",
@@ -1912,14 +1864,12 @@
     "type": "panel",
     "$size": [ "100%", "100%" ],
     "$is_world_item|default": false,
-
     "variables": [
       {
         "requires": "(not $is_world_item)",
         "$size": [ "100%", "100%x" ]
       }
     ],
-
     "controls": [
       {
         "frame": {
@@ -1945,10 +1895,8 @@
                       "$pressed_texture": "textures/ui/button_borderless_dark",
                       "$pressed_no_hover_texture": "textures/ui/button_borderless_dark",
                       "$toggle_enabled_binding_name": "#promotion_offer_visible",
-
                       "$toggle_tab_focus_override_right": "#promo_day_focus_override_right",
                       "$toggle_tab_focus_override_right_binding_type": "collection",
-
                       "$button_mappings": [
                         {
                           "from_button_id": "button.menu_tab_right",
@@ -2093,10 +2041,6 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Single Item View For Reusable Promo
-  //--------------------------------------------------------------------------------
-
   "vertical_padding_2px": {
     "type": "panel",
     "size": [ 1, 2 ]
@@ -2151,9 +2095,7 @@
       }
     ],
     "controls": [
-      {
-        "default@common.empty_panel": {}
-      },
+      { "default@common.empty_panel": {} },
       {
         "hover@common.dynamic_tooltip_popup_with_image_and_text": {
           "anchor_to": "top_left",
@@ -2200,9 +2142,7 @@
       }
     ],
     "controls": [
-      {
-        "default@common.empty_panel": {}
-      },
+      { "default@common.empty_panel": {} },
       {
         "hover@common.dynamic_tooltip_popup_with_image_and_text": {
           "offset": [ "-100%x + 12px", 7 ],
@@ -2238,15 +2178,9 @@
     "$tooltip_text_binding_type": "$valid_tooltip_binding_type",
     "$tooltip_button_collection_name": "$valid_tooltip_binding_collection_name",
     "controls": [
-      {
-        "default@common.empty_panel": {}
-      },
-      {
-        "hover@common.empty_panel": {}
-      },
-      {
-        "pressed@common.empty_panel": {}
-      }
+      { "default@common.empty_panel": {} },
+      { "hover@common.empty_panel": {} },
+      { "pressed@common.empty_panel": {} }
     ]
   },
 
@@ -2527,9 +2461,7 @@
                 ]
               }
             },
-            {
-              "item_glyph_panel_padding@pdp.horizontal_padding_8px": {}
-            }
+            { "item_glyph_panel_padding@pdp.horizontal_padding_8px": {} }
           ]
         }
       }
@@ -2541,12 +2473,8 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "controls": [
-      {
-        "glyph_content@promo_timeline.glyph_panel": {}
-      },
-      {
-        "bottom_glyph_content_padding@promo_timeline.vertical_padding_2px": {}
-      }
+      { "glyph_content@promo_timeline.glyph_panel": {} },
+      { "bottom_glyph_content_padding@promo_timeline.vertical_padding_2px": {} }
     ],
     "bindings": [
       {
@@ -2569,18 +2497,15 @@
     "layer": 2,
     "anchor_to": "top_right",
     "anchor_from": "top_right",
-
     "controls": [
       {
         "glyphs": {
           "type": "stack_panel",
           "orientation": "$glyph_section_orientation",
           "size": "$glyph_section_size",
-
           "$mashup_collection_binding_type|default": "global",
           "$mashup_collection_name|default": "",
           "$glyph_section_only_show_count|default": false,
-
           "controls": [
             {
               "skin_glyph_section@$glyph_section_content": {
@@ -2642,7 +2567,7 @@
       {
         "world_panel": {
           "type": "panel",
-          "size": [ "50%", "56.25%x" ], //image aspect ratio
+          "size": [ "50%", "56.25%x" ],
           "controls": [
             {
               "border@common.square_image_border_white": {
@@ -2694,7 +2619,7 @@
       {
         "persona_panel": {
           "type": "panel",
-          "size": [ "25%", "100%x" ], //image aspect ratio
+          "size": [ "25%", "100%x" ],
           "controls": [
             {
               "border@common.square_image_border_white": {
@@ -2798,9 +2723,7 @@
           "orientation": "vertical",
           "size": [ "fill", "100%sm" ],
           "controls": [
-            {
-              "summary_title_and_author_panel@promo_timeline.title_and_author_panel": {}
-            },
+            { "summary_title_and_author_panel@promo_timeline.title_and_author_panel": {} },
             {
               "glyph_section": {
                 "type": "panel",
@@ -3116,9 +3039,7 @@
           "size": [ 4, "100%sm" ]
         }
       },
-      {
-        "title_panel@promo_timeline.offer_title_panel": {}
-      }
+      { "title_panel@promo_timeline.offer_title_panel": {} }
     ]
   },
 
@@ -3159,12 +3080,8 @@
           "orientation": "vertical",
           "size": [ "100%-4px", "100%c" ],
           "controls": [
-            {
-              "details@promo_timeline.image_glyphs_panel": {}
-            },
-            {
-              "description@promo_timeline.description_section_panel": {}
-            }
+            { "details@promo_timeline.image_glyphs_panel": {} },
+            { "description@promo_timeline.description_section_panel": {} }
           ]
         }
       }
@@ -3176,21 +3093,15 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "offset_title_panel@promo_timeline.offset_title_offer": {}
-      },
-      {
-        "offsetted_promo_timer@promo_timeline.offset_promo_timer": {}
-      },
+      { "offset_title_panel@promo_timeline.offset_title_offer": {} },
+      { "offsetted_promo_timer@promo_timeline.offset_promo_timer": {} },
       {
         "pad_0": {
           "type": "panel",
           "size": [ "100%", 2 ]
         }
       },
-      {
-        "offsetted_details@promo_timeline.offset_image_glyphs_panel": {}
-      },
+      { "offsetted_details@promo_timeline.offset_image_glyphs_panel": {} },
       {
         "pad_1": {
           "type": "panel",
@@ -3204,9 +3115,7 @@
     "type": "input_panel",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {
-        "details@promo_timeline.promo_pack_detail_panel": {}
-      }
+      { "details@promo_timeline.promo_pack_detail_panel": {} }
     ]
   },
 
@@ -3229,9 +3138,7 @@
           "$bar_visible": false
         }
       },
-      {
-        "padding2@promo_timeline.vertical_padding_2px": {}
-      }
+      { "padding2@promo_timeline.vertical_padding_2px": {} }
     ]
   },
 
@@ -3342,13 +3249,11 @@
   "promo_left_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
-    "size": [ "fill", "56.25%x + 18.2px" ], //image aspect ratio + some buffer space
+    "size": [ "fill", "56.25%x + 18.2px" ],
     "anchor_to": "bottom_left",
     "anchor_from": "bottom_left",
     "controls": [
-      {
-        "top@promo_timeline.promo_left_inner_top": {}
-      },
+      { "top@promo_timeline.promo_left_inner_top": {} },
       {
         "bottom_buttons_padded": {
           "type": "stack_panel",
@@ -3361,9 +3266,7 @@
                 "size": [ "4px", "100%sm" ]
               }
             },
-            {
-              "bottom@promo_timeline.promo_left_inner_bottom": {}
-            }
+            { "bottom@promo_timeline.promo_left_inner_bottom": {} }
           ]
         }
       },
@@ -3745,9 +3648,7 @@
             }
           ],
           "controls": [
-            {
-              "world_panel@promo_timeline.promo_world_panel": {}
-            }
+            { "world_panel@promo_timeline.promo_world_panel": {} }
           ]
         }
       },
@@ -3813,7 +3714,6 @@
           "$skin_collection_details": "collection_details",
           "$skin_collection_name": "expanded_skin_pack_collection",
           "$skin_collection_prefix": "expanded_skin_pack",
-
           "$skin_dimension_binding|default": "#expanded_pack_dimensions",
           "grid_dimension_binding": "$skin_dimension_binding",
           "grid_item_template": "persona_sdl.persona_skin_picker_skin_button",
@@ -3845,18 +3745,14 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%cm" ],
     "controls": [
-      {
-        "detail@promo_timeline.promo_left_panel": {}
-      },
+      { "detail@promo_timeline.promo_left_panel": {} },
       {
         "center_spacing": {
           "type": "panel",
           "size": [ 8, 0 ]
         }
       },
-      {
-        "right@promo_timeline.promo_right_panel": {}
-      }
+      { "right@promo_timeline.promo_right_panel": {} }
     ]
   },
 
@@ -3881,13 +3777,7 @@
           "control_ids": {
             "toast_message": "@promo_timeline.promo_popup_toast"
           },
-          "factory_variables": [
-            "$store_factory_collection_details",
-            "$store_factory_collection_name",
-            "$store_factory_collection_prefix",
-            "$store_factory_binding_type",
-            "$section_name"
-          ]
+          "factory_variables": [ "$store_factory_collection_details", "$store_factory_collection_name", "$store_factory_collection_prefix", "$store_factory_binding_type", "$section_name" ]
         }
       },
       {
@@ -3975,7 +3865,7 @@
     "layer": 100,
     "$display_time": 2.0,
     "$transition_in_time": 0.15,
-    "$transition_out_time": 0.30,
+    "$transition_out_time": 0.3,
     "$popup_size": [ "100% - 4px", "100%cm" ],
     "$toast_text_offset": [ 0, 0 ],
     "$toast_text_alignment": "center",

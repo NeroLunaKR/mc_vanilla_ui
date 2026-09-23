@@ -20,7 +20,6 @@
   "readable_label": {
     "$default_font_scale_factor|default": 1.0,
     "$normalized_font_scale_factor|default": 1.0,
-    // Using normalized font size for rendering non-smooth font, particularly for unicode languages
     "variables": [
       {
         "requires": "($use_normalized_font_size)",
@@ -43,13 +42,11 @@
     "text_alignment": "left"
   },
 
-  // Requires specifying "$toggle_state_binding_name", "$toggle_enabled_binding_name", "$toggle_name"
   "slider_toggle@settings_common.option_toggle_control": {
     "size": [ "100%c", "100%c" ],
     "$enabled": true,
     "$toggle_enabled_binding_name|default": "#not_bound",
     "$option_enabled_binding_name": "#not_bound",
-    // Doesn't need to be used but must exist as it'll be resolved as the default value of $toggle_state_binding_name
     "$option_binding_name": "#not_bound",
     "variables": []
   },
@@ -86,7 +83,6 @@
     ]
   },
 
-  // A modal downloading window originally used by library_item_screen, moved here so it could be used by other screens.
   "download_progress_modal_panel@common.input_panel": {
     "layer": 201,
     "size": [ "100%", "100%" ],
@@ -167,7 +163,6 @@
           "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          // magic offset to make the scroll clipping perfect
           "size": [ "100%-12px", "100%-60px" ],
           "offset": [ 6, 20 ],
           "controls": [
@@ -218,7 +213,6 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "layer": 1,
-          // magic offset to make the scroll clipping perfect
           "size": [ "100% - 12px", "100% - 12px" ],
           "offset": [ 6, 6 ],
           "controls": [
@@ -274,8 +268,7 @@
     "uv_size": [ 64, 64 ]
   },
 
-  "edu_loading_animation@edu_common.book_animation": {
-  },
+  "edu_loading_animation@edu_common.book_animation": {},
 
   "horizontal_stack_item": {
     "type": "panel",
@@ -298,7 +291,11 @@
       }
     ],
     "controls": [
-      { "back_button_padding_before@common.empty_panel": { "size": [ 2, "100%sm" ] } },
+      {
+        "back_button_padding_before@common.empty_panel": {
+          "size": [ 2, "100%sm" ]
+        }
+      },
       {
         "back_button@common.back_title_button": {
           "$button_text": ""
@@ -371,10 +368,6 @@
     ]
   },
 
-  // Requires
-  // - $title_text
-  // - (if image): $title_has_image: true and $title_texture
-  // - (if templates screen): $title_is_templates_screen: true
   "edu_screen_header@common.top_bar": {
     "layer": 1,
     "controls": [
@@ -446,7 +439,11 @@
                 ]
               }
             },
-            { "title_text_padding@common.empty_panel": { "size": [ 3, "100%" ] } },
+            {
+              "title_text_padding@common.empty_panel": {
+                "size": [ 3, "100%" ]
+              }
+            },
             {
               "title_item@edu_common.horizontal_stack_item": {
                 "layer": 1,
@@ -473,9 +470,6 @@
     ]
   },
 
-  // Share text popup
-
-  //header
   "share_dialog_title": {
     "type": "label",
     "color": "$title_text_color",
@@ -514,19 +508,16 @@
     "$popup_title_text": "($share_source + '.item.sharepopup.title.addResource')"
   },
 
-  //body
   "body_panel": {
     "type": "panel",
     "size": [ 300, "100%cm" ],
     "layer": 1,
-
     "$body_stack|default": "edu_common.body_content_stack",
     "controls": [
       { "body_stack@$body_stack": {} }
     ]
   },
 
-  //teams_body
   "teams_body_panel@edu_common.body_panel": {
     "$body_stack": "edu_common.teams_body_content_stack"
   },
@@ -551,21 +542,32 @@
     "type": "stack_panel",
     "controls": [
       { "icon_stack_panel@edu_common.icon_stack_panel": {} },
-      { "icon_padding@common.empty_panel": { "size": [ "100%", 18 ] } }
+      {
+        "icon_padding@common.empty_panel": {
+          "size": [ "100%", 18 ]
+        }
+      }
     ]
   },
 
-  // Panel for adding A url resources to an edu world's pause menu.
   "add_resources_section": {
     "type": "stack_panel",
     "controls": [
-      { "divider@edu_common.horizontal_divider": { "size": [ "100%", 20 ] } },
+      {
+        "divider@edu_common.horizontal_divider": {
+          "size": [ "100%", 20 ]
+        }
+      },
       {
         "add_resource_label@edu_common.share_dialog_body_text": {
           "$popup_body_text": "($share_source + '.item.sharepopup.secondaryText')"
         }
       },
-      { "teams_padding_middle@common.empty_panel": { "size": [ "100%", 8 ] } },
+      {
+        "teams_padding_middle@common.empty_panel": {
+          "size": [ "100%", 8 ]
+        }
+      },
       {
         "resource_button@common_buttons.light_text_button": {
           "$focus_override_up": "copy_button",
@@ -590,13 +592,21 @@
   "edit_resources_section": {
     "type": "stack_panel",
     "controls": [
-      { "divider@edu_common.horizontal_divider": { "size": [ "100%", 20 ] } },
+      {
+        "divider@edu_common.horizontal_divider": {
+          "size": [ "100%", 20 ]
+        }
+      },
       {
         "resource_label_text@edu_common.share_dialog_body_text": {
           "$popup_body_text": "($share_source + '.item.sharepopup.editResourceLabel')"
         }
       },
-      { "teams_padding_middle@common.empty_panel": { "size": [ "100%", 8 ] } },
+      {
+        "teams_padding_middle@common.empty_panel": {
+          "size": [ "100%", 8 ]
+        }
+      },
       {
         "edit_resource_body_button_stack": {
           "type": "stack_panel",
@@ -612,7 +622,11 @@
                 "size": [ "fill", "100%sm" ]
               }
             },
-            { "padding_middle@common.empty_panel": { "size": [ 1, 4 ] } },
+            {
+              "padding_middle@common.empty_panel": {
+                "size": [ 1, 4 ]
+              }
+            },
             {
               "edit_resource_uri_button@common_buttons.light_glyph_button": {
                 "$focus_id": "edit_resource_uri_button",
@@ -642,10 +656,8 @@
     "orientation": "vertical",
     "layer": 5,
     "size": [ "100%", "100%c" ],
-
     "$icons_ignored|default": true,
     "$resource_uri_state|default": "",
-
     "controls": [
       {
         "body_text_centering_panel@edu_common.vertical_stack_item": {
@@ -654,7 +666,11 @@
           ]
         }
       },
-      { "padding_middle@common.empty_panel": { "size": [ "100%sm", 4 ] } },
+      {
+        "padding_middle@common.empty_panel": {
+          "size": [ "100%sm", 4 ]
+        }
+      },
       {
         "icons@edu_common.icon_section": {
           "ignored": "$icons_ignored",
@@ -678,8 +694,16 @@
           ]
         }
       },
-      { "add_resources@edu_common.add_resources_section": { "ignored": "(not ($resource_uri_state = 'add_resource'))" } },
-      { "edit_resources@edu_common.edit_resources_section": { "ignored": "(not ($resource_uri_state = 'edit_resource'))" } }
+      {
+        "add_resources@edu_common.add_resources_section": {
+          "ignored": "(not ($resource_uri_state = 'add_resource'))"
+        }
+      },
+      {
+        "edit_resources@edu_common.edit_resources_section": {
+          "ignored": "(not ($resource_uri_state = 'edit_resource'))"
+        }
+      }
     ]
   },
 
@@ -716,10 +740,8 @@
     "orientation": "vertical",
     "layer": 5,
     "size": [ "100%", "default" ],
-
     "$set_resource_url_text": "($share_source + '.item.sharepopup.addResource.urlLabel')",
     "$set_resource_button_text": "($share_source + '.item.sharepopup.addResource.buttonNameLabel')",
-
     "controls": [
       {
         "label_one_centering_panel@edu_common.vertical_stack_item": {
@@ -732,7 +754,11 @@
           ]
         }
       },
-      { "label_padding_middle@common.empty_panel": { "size": [ "100%sm", 5 ] } },
+      {
+        "label_padding_middle@common.empty_panel": {
+          "size": [ "100%sm", 5 ]
+        }
+      },
       {
         "label_two_centering_panel@edu_common.vertical_stack_item": {
           "controls": [
@@ -744,7 +770,11 @@
           ]
         }
       },
-      { "learn_more_padding_middle@common.empty_panel": { "size": [ "100%sm", 5 ] } },
+      {
+        "learn_more_padding_middle@common.empty_panel": {
+          "size": [ "100%sm", 5 ]
+        }
+      },
       {
         "link1@edu_common.underline_button": {
           "$single_label_size": [ "default", "default" ],
@@ -758,7 +788,11 @@
           "$focus_override_down": "url_textbox"
         }
       },
-      { "url_padding_middle@common.empty_panel": { "size": [ "100%sm", 10 ] } },
+      {
+        "url_padding_middle@common.empty_panel": {
+          "size": [ "100%sm", 10 ]
+        }
+      },
       {
         "url_label@edu_common.share_dialog_body_text": {
           "$popup_body_text": "$set_resource_url_text",
@@ -793,14 +827,22 @@
           ]
         }
       },
-      { "inline_notification_spacer@common.empty_panel": { "size": [ "100%sm", 5 ] } },
+      {
+        "inline_notification_spacer@common.empty_panel": {
+          "size": [ "100%sm", 5 ]
+        }
+      },
       {
         "button_name_label@edu_common.share_dialog_body_text": {
           "$popup_body_text": "$set_resource_button_text",
           "$focus_id": "button_name"
         }
       },
-      { "button_middle_spacer@common.empty_panel": { "size": [ "100%sm", 2 ] } },
+      {
+        "button_middle_spacer@common.empty_panel": {
+          "size": [ "100%sm", 2 ]
+        }
+      },
       {
         "button_name_textbox@common.text_edit_box": {
           "layer": 2,
@@ -894,7 +936,11 @@
           ]
         }
       },
-      { "button_padding@common.empty_panel": { "size": [ 2, "100%" ] } },
+      {
+        "button_padding@common.empty_panel": {
+          "size": [ 2, "100%" ]
+        }
+      },
       {
         "back_button_panel": {
           "size": [ "fill", "100%" ],
@@ -976,7 +1022,6 @@
     "$body_font_size|default": 1.0,
     "$body_size|default": [ "100%", "default" ],
     "$popup_body_text|default": "($share_source + '.item.sharepopup.body')",
-
     "type": "panel",
     "size": [ "100%", "100%cm" ],
     "anchor_from": "top_middle",
@@ -1054,10 +1099,7 @@
             }
           ],
           "controls": [
-            {
-              "link_share@edu_common.share_icon": {
-              }
-            }
+            { "link_share@edu_common.share_icon": {} }
           ]
         }
       }
@@ -1071,7 +1113,6 @@
     "$placeholder_text": "#share_link",
     "$focus_left|default": "classrooms_button",
     "$focus_right|default": "resource_button",
-
     "$clipboard_share": "($supports_clipboard_set and not $supports_share)",
     "variables": [
       {
@@ -1083,7 +1124,6 @@
         "$button_tts_header": "share.deviceShare.tts"
       }
     ],
-
     "controls": [
       {
         "link_box@common.text_edit_box": {
@@ -1118,7 +1158,11 @@
     "$focus_down|default": "copy_button",
     "$wrap_focus_left|default": "copy_button",
     "controls": [
-      { "padding_left@common.empty_panel": { "size": [ "fill", "100%" ] } },
+      {
+        "padding_left@common.empty_panel": {
+          "size": [ "fill", "100%" ]
+        }
+      },
       {
         "teams_button@edu_common.default_share_button": {
           "$focus_id": "teams_button",
@@ -1162,7 +1206,11 @@
           "$image_size": [ "100% - 4px", "100% - 4px" ]
         }
       },
-      { "padding_right@common.empty_panel": { "size": [ "fill", "100%" ] } }
+      {
+        "padding_right@common.empty_panel": {
+          "size": [ "fill", "100%" ]
+        }
+      }
     ]
   },
 
@@ -1328,13 +1376,6 @@
     ]
   },
 
-  // Requires
-  // - $grid_collection_prefix
-  // - $stack_grid_item
-  // - To get position in grid add collection detail bindings for row and column
-  // -- "binding_collection_name": "($grid_collection_prefix + '_<row/column>_collection')",
-  // -- "binding_collection_prefix": "($grid_collection_prefix + '_<row/column>')"
-  //
   "stack_panel_grid": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
@@ -1357,9 +1398,6 @@
     "texture": "textures/ui/black_border"
   },
 
-  // Requires
-  // - $ignore_page_description
-  // - $page_description
   "description_panel": {
     "type": "image",
     "texture": "textures/ui/Black",
@@ -1395,7 +1433,6 @@
     ]
   },
 
-  // Popup dialog and factory
   "edu_share_text_popup@popup_dialog.form_fit_modal_dialog_popup": {
     "$modal_title": "($share_source + '.item.sharepopup.title.simple')",
     "$modal_contents": "edu_common.body_panel",
@@ -1433,11 +1470,9 @@
 
   "add_resource_dialog@popup_dialog.form_fit_modal_dialog_popup": {
     "$popup_dialog_escape_button_name": "button.cancel_add_resource_button",
-
     "$modal_title": "($share_source + '.item.sharepopup.title.addResource')",
     "$modal_contents": "edu_common.add_resource_body_panel",
     "$modal_contents_padding": [ 6, 6 ],
-
     "$popup_type": "popup_dialog.form_fit_screen_with_title_and_close_and_bottom_buttons",
     "$lower_button_control": "edu_common.add_resource_popup_lower_button_panel"
   },
@@ -1547,7 +1582,7 @@
             {
               "search_bar@common.text_edit_box": {
                 "size": [ "100%", 16 ],
-                "offset": [ 1, 0 ], // Overlaps the search button as per Figma
+                "offset": [ 1, 0 ],
                 "max_length": 50,
                 "$placeholder_label_size": [ "100%", 10 ],
                 "$place_holder_text": "library.search.placeholder",
@@ -1568,9 +1603,21 @@
           "$button_tts_header": "store.search.button"
         }
       },
-      { "search_pad@common.empty_panel": { "size": [ 2, "100%" ] } },
-      { "home_button@edu_common.home_button": { "size": [ 18, "100%" ] } },
-      { "end_pad@common.empty_panel": { "size": [ 3, "100%" ] } }
+      {
+        "search_pad@common.empty_panel": {
+          "size": [ 2, "100%" ]
+        }
+      },
+      {
+        "home_button@edu_common.home_button": {
+          "size": [ 18, "100%" ]
+        }
+      },
+      {
+        "end_pad@common.empty_panel": {
+          "size": [ 3, "100%" ]
+        }
+      }
     ]
   },
 
@@ -1671,7 +1718,6 @@
           ]
         }
       },
-      //Worlds icon is one complete image, so need 2 separate flows
       {
         "button_image_worlds": {
           "size": [ "100%y - 2px", "100%" ],
@@ -1696,12 +1742,15 @@
           ]
         }
       },
-      { "left_edge_text_padding@common.empty_panel": { "size": [ 4, "100%sm" ] } }
+      {
+        "left_edge_text_padding@common.empty_panel": {
+          "size": [ 4, "100%sm" ]
+        }
+      }
     ]
   },
 
   "worlds_and_templates_search_bar": {
-    //Top level image background, holds a stack panel that organizes elements
     "type": "image",
     "size": [ "100%", 33 ],
     "texture": "textures/ui/edu_worlds_search_bar",
@@ -1715,7 +1764,6 @@
           "anchor_to": "top_right",
           "controls": [
             {
-              //Each element needs to be set in a wrapper panel to use offsets
               "search_bar_wrapper": {
                 "type": "panel",
                 "size": [ "fill", 26 ],
@@ -1726,7 +1774,6 @@
                       "offset": [ 4, 3 ],
                       "max_length": 50,
                       "$placeholder_label_size": [ "100%", 10 ],
-                      // Variable expected to be overwritten where element is used
                       "$place_holder_text": "$place_holder_text",
                       "$text_box_name": "$text_box_name"
                     }
@@ -1734,10 +1781,11 @@
                 ]
               }
             },
-            //3px space + 4 offset of search_bar
-            //Will be updated with addition of sort button later
-            { "temp_padding@common.empty_panel": { "size": [ 7, "100%sm" ] } },
-            //Space for Sort dropdown
+            {
+              "temp_padding@common.empty_panel": {
+                "size": [ 7, "100%sm" ]
+              }
+            },
             {
               "view_toggle_background": {
                 "type": "image",
@@ -1750,7 +1798,11 @@
                       "orientation": "horizontal",
                       "size": [ "100%c", 26 ],
                       "controls": [
-                        { "left_edge_padding@common.empty_panel": { "size": [ 4, "100%sm" ] } },
+                        {
+                          "left_edge_padding@common.empty_panel": {
+                            "size": [ 4, "100%sm" ]
+                          }
+                        },
                         {
                           "view_toggle_button@common_buttons.dark_content_form_fitting_button": {
                             "size": [ "100%c", 26 ],
@@ -1762,7 +1814,11 @@
                             "$button_content": "edu_common.view_toggle_content"
                           }
                         },
-                        { "right_edge_padding@common.empty_panel": { "size": [ 3, "100%sm" ] } }
+                        {
+                          "right_edge_padding@common.empty_panel": {
+                            "size": [ 3, "100%sm" ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -1828,7 +1884,11 @@
           ]
         }
       },
-      { "padding1@common.empty_panel": { "size": [ "100%sm", 10 ] } },
+      {
+        "padding1@common.empty_panel": {
+          "size": [ "100%sm", 10 ]
+        }
+      },
       {
         "world_info_wrapper": {
           "type": "panel",
@@ -1917,7 +1977,11 @@
           ]
         }
       },
-      { "padding2@common.empty_panel": { "size": [ "100%sm", 10 ] } },
+      {
+        "padding2@common.empty_panel": {
+          "size": [ "100%sm", 10 ]
+        }
+      },
       {
         "keep_local_button@common_buttons.light_text_button": {
           "size": [ "100%", 24 ],
@@ -1942,7 +2006,6 @@
     ]
   },
 
-  // Used in Worlds screen and Server screen to define nested buttons in world tiles
   "nested_buttons_base_definition": {
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
@@ -1951,8 +2014,6 @@
     "anchor_to": "top_middle"
   },
 
-  // A Text Edit Box with a Label above it
-  // - Typically used with a hoverable_label and dynamic_tooltip
   "edit_label_and_box": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
@@ -1960,17 +2021,14 @@
     "$max_length|default": "",
     "$text_type|default": "ExtendedASCII",
     "$placeholder_label|default": "",
-
     "$content_binding_name|default": "",
     "$binding_condition|default": "visible",
-
     "$label_focus_id|default": "",
     "$edit_focus_id|default": "",
     "$box_size|default": [ "100%", 20 ],
     "$box_focus_override_right|default": "",
     "$box_focus_override_right_binding_type|default": "none",
     "$box_focus_override_left|default": "",
-
     "controls": [
       {
         "tooltip_panel@$tooltip_panel": {
@@ -1987,11 +2045,9 @@
           "$text_edit_box_text_type": "$text_type",
           "$place_holder_text": "$placeholder_label",
           "$text_edit_box_binding_condition": "$binding_condition",
-
           "$focus_id": "$edit_focus_id",
           "$focus_override_right": "$box_focus_override_right",
           "$focus_override_left": "$box_focus_override_left",
-
           "bindings": [
             {
               "binding_name": "$box_focus_override_right",
@@ -2004,16 +2060,11 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Game Tooltips
-  //---------------------------------------------------------------------------
-  // Displays a "Tooltip" Label, aka a Label with the InfoBulb Texture 
   "game_tip_label": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "100%cm", "100%cm" ],
-
     "controls": [
       {
         "offset_wrap": {
@@ -2022,7 +2073,6 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "size": [ "100%c", "100%cm" ],
-
           "controls": [
             {
               "info_bulb": {
@@ -2044,11 +2094,9 @@
                 "layer": 3,
                 "size": [ "default", 10 ],
                 "max_size": [ 174, 10 ],
-
                 "text": "$label_text",
                 "tts_override_control_value": "$label_tts",
                 "color": "$body_text_color",
-
                 "$label_text|default": "",
                 "$label_tts|default": ""
               }
@@ -2063,16 +2111,11 @@
           "size": [ "100%sm", "100%sm" ],
           "consume_hover_events": false,
           "tts_inherit_siblings": true,
-          // Expose a way for the parent to announce the tooltip in addition to the text from the label above
           "$tts_tooltip_header|default": "$tts_text_binding_name",
           "tts_control_header": "$tts_tooltip_header",
-
           "$focus_border_visible_binding|default": "#tts_enabled",
-          // Making this optional so tts_tooltip_header can use non-dynamic text as well
           "$tts_text_binding_name|default": "",
-          // Default the binding type to none so it doesn't throw an error before the binding name is actually used
           "$tts_text_binding_type|default": "none",
-
           "bindings": [
             {
               "binding_name": "$focus_border_visible_binding",
@@ -2088,51 +2131,36 @@
     ]
   },
 
-  // Displays a Dynamic Tooltip that is initially hidden and does not add its size to the Parent Container
-  // Can be displayed with "$tooltip_popup_visible_binding"
-  // - Typically used with a hoverable_label's "$hovered_button_id"
   "dynamic_tooltip": {
     "type": "panel",
-
-    // Stack Panel Parent will ignore this element when calculating Size
     "size": [ "100%", 0 ],
-
     "$tooltip_popup_image": "textures/ui/infobulb",
     "$tooltip_button_content_size|default": [ "100%", "100%" ],
     "$tooltip_button_binding_type|default": "global",
     "$tooltip_button_collection_name|default": "",
     "$tooltip_animation_reset_name|default": "",
     "$tooltip_anims|default": [],
-
     "controls": [
       {
         "tooltip@common.dynamic_tooltip_popup_with_image_and_text": {
           "$tool_tip_text_max_size": [ 200, "default" ],
           "$tooltip_chevron_anchor": "bottom_left",
           "$tooltip_popup_chevron_offset": [ "30%x", "100%y - 3px" ],
-
           "$tooltip_panel_offset|default": [ 0, -10 ],
-
           "animation_reset_name": "$tooltip_animation_reset_name",
           "anims": "$tooltip_anims",
-
           "allow_clipping": false
         }
       }
     ]
   },
 
-  // Displays a Label which receives Hover Input
-  // - Typically used with game_tip_label
   "hoverable_label": {
     "type": "input_panel",
     "size": [ "100%cm", "100%cm" ],
-
     "$hovered_button_id:default": "",
     "$tts_ignore_count|default": false,
-
     "tts_ignore_count": "$tts_ignore_count",
-
     "button_mappings": [
       {
         "to_button_id": "$hovered_button_id",
@@ -2143,5 +2171,4 @@
       { "label@$label": {} }
     ]
   }
-
 }

@@ -1,10 +1,6 @@
 {
   "namespace": "host_options",
 
-  //////////////////////////////////////////////////////////////////////////
-  // Host Panel
-  //////////////////////////////////////////////////////////////////////////
-
   "button_label": {
     "type": "label",
     "text": "$button_text",
@@ -17,12 +13,9 @@
     "anchor_to": "$button_label_anchor_to",
     "offset": "$button_label_offset",
     "color": "$button_text_color",
-
-    // For text bindings
     "$button_text_binding_type|default": "none",
     "$button_binding_condition|default": "none",
     "$button_text_grid_collection_name|default": "",
-
     "bindings": [
       {
         "binding_type": "$button_text_binding_type",
@@ -54,18 +47,13 @@
     "offset": "$offset_glyph",
     "anchor_from": "$button_glyph_anchor_from",
     "anchor_to": "$button_glyph_anchor_to",
-
     "texture": "$button_glyph_texture",
-
-    // For texture bindings
     "$button_glyph_binding_type|default": "none",
     "$button_glyph_binding_condition|default": "none",
     "$button_glyph_grid_collection_name|default": "",
-
     "$button_glyph_visible_binding_type|default": "none",
     "$button_glyph_visible_binding_condition|default": "none",
     "$button_glyph_visible_collection_name|default": "",
-
     "bindings": [
       {
         "binding_type": "$button_glyph_binding_type",
@@ -84,17 +72,13 @@
     ]
   },
 
-  // Scrollable Panel //
-
   "scrollable_selector_area@common.scrolling_panel": {
     "$size_scrollable_panel|default": [ "100%", "100%" ],
     "$offset_scrollable_panel|default": [ 0, 0 ],
-
     "offset": "$offset_scrollable_panel",
     "size": "$size_scrollable_panel",
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-
     "$scroll_size": [ 5, "100%" ],
     "$show_background": false,
     "$scroll_bar_contained": false
@@ -128,15 +112,12 @@
     "size": [ "100%", "100%" ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-
     "$main_scrolling_content|default": "host_main_buttons",
     "$main_offset_scrollable_panel|default": [ 0, -1 ],
     "$main_offset_background|default": [ -2, 0 ],
     "$main_size_scrollable_panel|default": [ "100% - 2px", "100% - 4px" ],
     "$main_background_visible": true,
-
     "$scroll_bar_right_padding_size": [ 0, 0 ],
-
     "controls": [
       {
         "background": {
@@ -167,7 +148,6 @@
     "$button_glyph_texture|default": "textures/ui/arrowRight",
     "$glyph_size|default": [ 8, 8 ],
     "$button_content_offset_glyph|default": [ 0, 0 ],
-
     "type": "panel",
     "controls": [
       {
@@ -203,8 +183,6 @@
     "$glyph_size": [ "20px", "20px" ]
   },
 
-  // Sub command helper grid //
-
   "host_grid": {
     "type": "grid",
     "size": [ "100%", "default" ],
@@ -220,8 +198,6 @@
     ]
   },
 
-  // Button for the sub command grid //
-
   "host_sub_command_grid_item": {
     "type": "panel",
     "size": [ "100%", 30 ],
@@ -232,16 +208,13 @@
           "$button_text_binding_type": "collection",
           "$button_text_grid_collection_name": "$grid_collection_name",
           "$pressed_button_name": "button.sub_command",
-
           "$button_glyph_anchor_from": "left_middle",
           "$button_glyph_anchor_to": "left_middle",
           "$button_content_offset_glyph": [ 2, 0 ],
           "$button_label_offset": [ 30, 0 ],
-
           "$button_glyph_texture": "#texture",
           "$button_glyph_binding_type": "collection",
           "$button_glyph_grid_collection_name": "$grid_collection_name",
-
           "property_bag": {
             "#sub_command": ""
           },
@@ -257,8 +230,6 @@
     ]
   },
 
-  // Return to the main panel button (requires the button_text field) //
-
   "return_from_sub_command_button@host_options.main_light_button": {
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
@@ -271,11 +242,6 @@
     "$button_content_offset_glyph": [ 10, 0 ]
   },
 
-  //////////////////////////////////////////////////////////////////////////
-  // Teleport
-  //////////////////////////////////////////////////////////////////////////
-
-  // This is defined in the pause namespace, stealing it from there
   "platform_icon_panel@pause.platform_icon_panel": {
     "$icon_panel_size": [ "100%c + 2px", "100%" ]
   },
@@ -326,7 +292,6 @@
           "$button_text": "#gamertag",
           "$pressed_button_name": "button.sub_command",
           "$button_content": "host_options.player_button_content",
-
           "bindings": [
             {
               "binding_name": "#gamertag",
@@ -358,38 +323,29 @@
     ]
   },
 
-  // Who and where
   "host_teleport_grid_item": {
     "type": "panel",
     "size": [ "100%", 30 ],
-
     "controls": [
       {
         "host_option_toggle@common_toggles.light_text_toggle_collection": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [ "100%", "100%" ],
-
           "$button_label_offset": [ 10, 0 ],
           "$button_type_panel": "host_options.button_content",
-
           "$button_glyph_anchor_from": "right_middle",
           "$button_glyph_anchor_to": "right_middle",
           "$button_content_offset_glyph": [ -10, 0 ],
-
           "$toggle_group_default_selected": 0,
           "$radio_toggle_group": true,
           "$toggle_name": "navigation_tab",
-
           "$button_text": "#button_text",
           "$button_text_binding_type": "collection",
           "$button_text_grid_collection_name": "$grid_collection_name",
-
           "$toggle_grid_collection_name": "$grid_collection_name",
-
           "$toggle_state_binding_name": "#toggle_selected",
           "$toggle_binding_type": "collection",
-
           "bindings": [
             {
               "binding_name": "#host_teleport_visible",
@@ -401,7 +357,6 @@
         }
       },
       {
-        // The inverse button for undoing tele comand, shadow tele
         "host_option_button@main_dark_button": {
           "$button_text": "#tele_name",
           "$button_text_binding_type": "collection",
@@ -409,14 +364,12 @@
           "$pressed_button_name": "button.teleport_clear",
           "$button_glyph_texture": "textures/ui/arrowRight",
           "$glyph_size": [ 8, 8 ],
-
           "$button_glyph_anchor_from": "right_middle",
           "$button_glyph_anchor_to": "right_middle",
           "$button_content_offset_glyph": [ -10, 0 ],
           "$button_label_offset": [ 10, 0 ],
-
           "property_bag": {
-            "#button_navigation": 0 // For knowing what button is pressed
+            "#button_navigation": 0
           },
           "bindings": [
             {
@@ -506,10 +459,6 @@
     ]
   },
 
-  //////////////////////////////////////////////////////////////////////////
-  // Time Buttons
-  //////////////////////////////////////////////////////////////////////////
-
   "host_time_buttons": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -549,10 +498,6 @@
     ]
   },
 
-  //////////////////////////////////////////////////////////////////////////
-  // Weather Buttons
-  //////////////////////////////////////////////////////////////////////////
-
   "host_weather_buttons": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -588,10 +533,6 @@
       }
     ]
   },
-
-  //////////////////////////////////////////////////////////////////////////
-  // Main Buttons
-  //////////////////////////////////////////////////////////////////////////
 
   "host_menu_grid_item": {
     "type": "panel",
@@ -678,10 +619,6 @@
       }
     ]
   },
-
-  //////////////////////////////////////////////////////////////////////////
-  // Host Panel
-  //////////////////////////////////////////////////////////////////////////
 
   "host_panel": {
     "type": "panel",

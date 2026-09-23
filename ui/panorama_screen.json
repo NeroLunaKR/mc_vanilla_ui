@@ -1,7 +1,6 @@
 {
   "namespace": "panorama",
 
-  // This is what is referenced in the mashup screen
   "panorama_view": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -118,7 +117,6 @@
     "$cycle_pack_button_name_left": "button.pan_left",
     "$cycle_pack_button_up_right_refusal": true,
     "$gamepad_helper_icon_size": [ 15, 15 ],
-
     "$cycle_pack_enabled_source_control_name": "panorama_key_art",
     "$cycle_pack_enabled_source_property_name": "#can_scroll_left",
     "$cycle_pack_enabled_use_sibling_scope": true
@@ -136,7 +134,6 @@
     "$cycle_pack_button_name_left": "button.pan_left",
     "$cycle_pack_button_up_right_refusal": true,
     "$gamepad_helper_icon_size": [ 15, 15 ],
-
     "$cycle_pack_enabled_source_control_name": "panorama_key_art",
     "$cycle_pack_enabled_source_property_name": "#can_scroll_right",
     "$cycle_pack_enabled_use_sibling_scope": true

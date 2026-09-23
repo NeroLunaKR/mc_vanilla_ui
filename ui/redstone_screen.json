@@ -1,8 +1,5 @@
 {
   "namespace": "redstone",
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
 
   "item_dropper_label": {
     "type": "label",
@@ -16,14 +13,11 @@
     "enable_profanity_filter": true
   },
 
-  "dispenser_label@item_dropper_label": {
-  },
+  "dispenser_label@item_dropper_label": {},
 
-  "crafter_label@item_dropper_label": {
-  },
+  "crafter_label@item_dropper_label": {},
 
-  "dropper_label@item_dropper_label": {
-  },
+  "dropper_label@item_dropper_label": {},
 
   "hopper_label@item_dropper_label": {
     "offset": [ 7, 7 ],
@@ -52,6 +46,7 @@
       { "redstone_input_grid@redstone.redstone_input_grid": {} }
     ]
   },
+
   "panel": {
     "type": "panel",
     "controls": [
@@ -82,9 +77,14 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 21
+        }
+      }
     ]
   },
+
   "crafter_input_grid": {
     "type": "grid",
     "anchor_from": "center",
@@ -95,6 +95,7 @@
     "grid_item_template": "redstone.crafter_enabled_slot_template",
     "$item_collection_name": "container_items"
   },
+
   "cell_image": {
     "type": "image",
     "texture": "textures/ui/slot_enabled",
@@ -107,9 +108,11 @@
     "size": [ "100% - 2px", "100% - 2px" ],
     "alpha": 0.8
   },
+
   "crafter_container_slot_button_prototype@common.container_slot_button_prototype": {
     "$highlight_control|default": "redstone.crafter_highlight_slot_panel"
   },
+
   "crafter_highlight_slot_panel": {
     "type": "panel",
     "controls": [
@@ -151,6 +154,7 @@
       }
     ]
   },
+
   "crafter_enabled_slot_template@common.container_item": {
     "$background_images|default": "redstone.cell_image",
     "$button_ref|default": "redstone.crafter_container_slot_button_prototype"
@@ -184,6 +188,7 @@
       }
     ]
   },
+
   "output_slot_hover_info": {
     "type": "button",
     "layer": 1,
@@ -265,6 +270,7 @@
       }
     ]
   },
+
   "panel_crafter": {
     "type": "panel",
     "controls": [
@@ -398,9 +404,7 @@
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "controls": [
-                        {
-                          "crafter_input_grid@redstone.crafter_input_grid": {}
-                        }
+                        { "crafter_input_grid@redstone.crafter_input_grid": {} }
                       ]
                     }
                   },
@@ -423,9 +427,7 @@
                       ]
                     }
                   },
-                  {
-                    "crafter_output@redstone.output_slot_hover_info": {}
-                  }
+                  { "crafter_output@redstone.output_slot_hover_info": {} }
                 ]
               }
             },
@@ -435,9 +437,14 @@
           ]
         }
       },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      }
     ]
   },
+
   "hopper_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "$use_custom_pocket_toast|default": false,
@@ -485,6 +492,7 @@
       }
     ]
   },
+
   "crafter_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "$use_custom_pocket_toast|default": false,

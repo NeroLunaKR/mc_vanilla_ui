@@ -1,10 +1,6 @@
 {
   "namespace": "game_tip",
 
-  //---------------------------------------------------------------------------
-  // Game Tip UI elements
-  //---------------------------------------------------------------------------
-
   "fade_animation": {
     "anim_type": "alpha",
     "easing": "linear",
@@ -46,13 +42,11 @@
 
   "game_tip_animation_panel": {
     "type": "panel",
-    "size": [ "100%c", "0px" ], // Animation can be higher than game tip frame, so it's height shouldn't be counted.
+    "size": [ "100%c", "0px" ],
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "controls": [
-      {
-        "animated_icon@game_tip.game_tip_animation": {}
-      }
+      { "animated_icon@game_tip.game_tip_animation": {} }
     ]
   },
 
@@ -79,34 +73,39 @@
     "type": "stack_panel",
     "size": [ "100%c", "100%c" ],
     "controls": [
-      { "upper_padding": { "type": "panel", "size": [ 0, 5 ]} },
       {
-        "label@game_tip.game_tip_label": {}
+        "upper_padding": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
       },
-      { "lower_padding": { "type": "panel", "size": [ 0, 5 ]} }
+      { "label@game_tip.game_tip_label": {} },
+      {
+        "lower_padding": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
+      }
     ]
   },
 
   "game_tip_arrow_image": {
     "type": "image",
     "alpha": 1.0,
-
     "anchor_from": "$arrow_anchor_point",
     "anchor_to": "$arrow_anchor_point",
-
     "texture": "$arrow_texture",
     "size": "$arrow_size"
   },
 
   "game_tip_arrow_panel": {
     "type": "panel",
-    "size": [ "0px", "0px" ], // Arrow shouldn't be included in size calculation for the game tip frame.
+    "size": [ "0px", "0px" ],
     "$arrow_offset|default": [ 25, -3 ],
     "$arrow_texture|default": "textures/ui/gameTipArrow_down",
     "$arrow_anchor_point|default": "left_middle",
     "$arrow_size|default": [ 8, 12 ],
     "$arrow_direction|default": "bottom_left",
-
     "variables": [
       {
         "requires": "($arrow_direction = 'left')",
@@ -129,15 +128,11 @@
         "$arrow_size": [ 28, 15 ]
       }
     ],
-
     "anchor_from": "$arrow_anchor_point",
     "anchor_to": "$arrow_anchor_point",
     "offset": "$arrow_offset",
-
     "controls": [
-      {
-        "tip_arrow@game_tip.game_tip_arrow_image": {}
-      }
+      { "tip_arrow@game_tip.game_tip_arrow_image": {} }
     ]
   },
 
@@ -148,9 +143,19 @@
     "use_child_anchors": true,
     "controls": [
       { "animated_panel@game_tip.game_tip_animation_panel": {} },
-      { "middle_padding": { "type": "panel", "size": [ 7, 0 ]} }, // Padding between animation and text.
+      {
+        "middle_padding": {
+          "type": "panel",
+          "size": [ 7, 0 ]
+        }
+      },
       { "label@game_tip.game_tip_text_panel": {} },
-      { "right_padding": { "type": "panel", "size": [ 9, 0 ]} } // 7px padding between text and frame + 2px frame border.
+      {
+        "right_padding": {
+          "type": "panel",
+          "size": [ 9, 0 ]
+        }
+      }
     ]
   },
 
@@ -158,22 +163,17 @@
     "type": "image",
     "texture": "textures/ui/gameTipBorder",
     "layer": 50,
-
     "min_size": [ "default", 40 ],
     "size": [ "100%c", "100%cm" ],
-
     "$tip_anchor_from|default": "top_right",
     "$tip_anchor_to|default": "top_right",
     "$game_tip_offset|default": [ 0, 0 ],
     "$ignore_arrow|default": false,
-
     "anchor_from": "$tip_anchor_from",
     "anchor_to": "$tip_anchor_to",
     "offset": "$game_tip_offset",
-
     "alpha": "@game_tip.fade_animation",
     "propagate_alpha": true,
-
     "controls": [
       { "horizontal_container@game_tip.game_tip_panel": {} },
       {
@@ -183,10 +183,6 @@
       }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // UI helpers
-  //---------------------------------------------------------------------------
 
   "chat_stack_game_tip_panel": {
     "type": "stack_panel",
@@ -201,10 +197,6 @@
       { "game_tip_background@game_tip.game_tip_item_background": {} }
     ]
   },
-
-  //---------------------------------------------------------------------------
-  // Game Tip Factories 
-  //---------------------------------------------------------------------------
 
   "game_tip_factory": {
     "type": "panel",
