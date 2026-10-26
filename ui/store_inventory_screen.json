@@ -971,6 +971,36 @@
         }
       },
       {
+        "audio@store_inventory.category_panel_button": {
+          "$category_label": "store.search.filter.audio",
+          "$category_icon": "textures/ui/glyph_audio_pack_small",
+          "$category_count": "#audio_count",
+          "$category_pressed_button_name": "button.audio",
+          "$icon_visible": "#category_audio_icon_visible",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$dropdown_collection_name",
+              "binding_name": "#audio_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "divider_2@store_inventory.divider_panel": {
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$dropdown_collection_name",
+              "binding_name": "#audio_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "skins@store_inventory.category_panel_button": {
           "$category_label": "store.search.filter.skinPacks",
           "$category_icon": "textures/ui/glyph_skin_pack_small",
@@ -980,7 +1010,7 @@
         }
       },
       {
-        "divider_2@store_inventory.divider_panel": {
+        "divider_3@store_inventory.divider_panel": {
           "layer": 2
         }
       },
@@ -994,7 +1024,7 @@
         }
       },
       {
-        "divider_3@store_inventory.divider_panel": {
+        "divider_4@store_inventory.divider_panel": {
           "layer": 2
         }
       },
@@ -1008,7 +1038,7 @@
         }
       },
       {
-        "divider_4@store_inventory.divider_panel": {
+        "divider_5@store_inventory.divider_panel": {
           "layer": 2
         }
       },
